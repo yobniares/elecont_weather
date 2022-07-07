@@ -215,4 +215,38 @@ class AbstractClass
         $month = date('n')-1;
         return date('d') . ' ' .$arr[$month].' '.date('Y');
     }
+
+    public function generateUrl($postArray)
+    {
+        if (isset($postArray['city'])) {
+            $string = 'city='.'"'.$postArray['city'].'"';
+        }
+        if (isset($postArray['font_family']) && $postArray['font_family']!=='') {
+            $string.= '&font_family='.'"'.$postArray['font_family'].'"';
+        }
+        if (isset($postArray['color_fon']) && $postArray['color_fon'] !=='') {
+            $string.= '&color_fon='.'"'.$postArray['color_fon']. '"';
+        }
+        if (isset($postArray['font_text']) && $postArray['font_text'] !=='') {
+            $string.= '&font_text='.'"'.$postArray['font_text']. '"';
+        }
+        if (isset($postArray['font_tempo']) && $postArray['font_tempo'] !=='') {
+            $string.= '&font_tempo='.'"'.$postArray['font_tempo']. '"';
+        }
+        if (isset($postArray['weather_tip']) && $postArray['weather_tip'] !=='') {
+            //$string.= '&weather_tip='.'"'.$postArray['weather_tip']. '"';
+        }
+        if (isset($postArray['weather_wide']) && $postArray['weather_wide'] !=='') {
+            //$string.= '&weather_wide='.'"'.$postArray['weather_wide']. '"';
+        }
+
+        if (isset($_SERVER['HTTPS']) &&
+            ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
+            isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
+            $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+            return 'https://'.$_SERVER['HTTP_HOST'] .'/?'. $string;
+        } else {
+            return 'http://'.$_SERVER['HTTP_HOST'] .'/?'. $string;
+        }
+    }
 }

@@ -36,12 +36,12 @@ const MAX_ITERATION = '3';
     </tr>
     <tr>
         <td width="15%">
-            <img src='../assets/img/informer_1/icon_<?php echo $object['icon'] ?>.svg' style="max-width: 65%;" />
+            <img src='assets/img/informer_1/icon_<?php echo $object['icon'] ?>.svg' style="max-width: 65%;" />
         </td>
         <?php for ($i=0; $i < MAX_ITERATION; $i++) {
         ?>
             <td width="15%">
-                <img src='../assets/img/informer_1/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg' style="max-width: 65%;" />
+                <img src='assets/img/informer_1/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg' style="max-width: 65%;" />
             </td>
         <?php
     }?>
@@ -52,7 +52,7 @@ const MAX_ITERATION = '3';
         <?php for ($i=0; $i < MAX_ITERATION; $i++) {
         ?>
             <td>
-                <p class="tempo"><?php echo $forecatsArr[$i]['tempC']; ?>&deg;</p>
+                <p class="tempo">+<?php echo $forecatsArr[$i]['tempC']; ?>&deg;</p>
             </td>
         <?php
     }?>

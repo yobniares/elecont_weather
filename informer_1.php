@@ -1,10 +1,9 @@
 <?php
 
+//https://yandexinformers.ddev.site/?city=%D0%9D%D0%B5%D0%B2%D0%B5%D0%BB%D1%8C
 // Include css and js
 $css = 'assets/style.css';
-$farbasticCss = 'assets/farbtastic/farbtastic.css';
-$mainJs = 'assets/main.js';
-$farbasticJs = 'assets/farbtastic/farbtastic.js';
+$js = 'assets/main.js';
 include 'templates/partials/header.php';
 
 // Include classes
@@ -21,18 +20,10 @@ $additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=4';
 $xmlData = new XmlDataClass($mainUrl, $key, $additionalParams);
 $objects = $xmlData->getObjects();
 $abstractData = new AbstractClass();
-$template = new RenderClass();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Render ifrmae with params
-    echo $template->renderTemplate('iframes/iframe1', ['postArray' => $_POST, 'abstractData' => $abstractData]);
-} else {
-    // Render ifrmae without params
-    // Render raw informer 1
-    echo $template->renderTemplate('informer_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-    // Render select form template
-    echo $template->renderTemplate('select_form');
-}
+// Render template
+$template = new RenderClass();
+echo $template->renderTemplate('informer_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
 
 // Include footer
 include 'templates/partials/footer.php';
