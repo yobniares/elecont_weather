@@ -8,6 +8,12 @@ date_default_timezone_set('Europe/Moscow');
 <head>
     <meta charset="UTF-8" />
     <title>Weather</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="<?php echo($farbasticJs); ?>"></script>
+    <script src="<?php echo($mainJs); ?>"></script>
+
+    <link rel="stylesheet" href="<?php echo($farbasticCss); ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo($css); ?>" type="text/css">
     <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -18,9 +24,13 @@ date_default_timezone_set('Europe/Moscow');
         echo "<link href='https://fonts.googleapis.com/css?family=".str_replace(" ", "+", $font)."' rel='stylesheet' type='text/css'>\n";
     }
     ?>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="<?php echo($js); ?>"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#demo').hide();
+            $('#picker_fon').farbtastic('#color_fon');
+            $('#picker_font_text').farbtastic('#font_text');
+            $('#picker_font_tempo').farbtastic('#font_tempo');
+        });
+    </script>
 </head>
 <body>
