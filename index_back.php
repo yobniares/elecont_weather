@@ -1,6 +1,5 @@
 <?php
 
-//https://yandexinformers.ddev.site/?city=%D0%9D%D0%B5%D0%B2%D0%B5%D0%BB%D1%8C
 // Include css and js
 $css = 'assets/style.css';
 $js = 'assets/main.js';
@@ -23,7 +22,28 @@ $abstractData = new AbstractClass();
 
 // Render template
 $template = new RenderClass();
-echo $template->renderTemplate('informer_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+echo $template->renderTemplate('index', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+
+
+// Citites
+/*if (isset($_GET['city'])) $city=urldecode($_GET['city']); else $city=urldecode($_POST['city']);
+//https://yandexinformers.ddev.site/?city=%D0%9D%D0%B5%D0%B2%D0%B5%D0%BB%D1%8C
+//$content = file_get_contents('https://s.prtv.su/informers/cities.json');
+$content = file_get_contents('data/cities.json');
+if($content == '')
+    $result = array();
+else
+    $result = json_decode($content);
+
+foreach ($result as $val) {
+    if($val->name==$city) {
+        $lon = $val->lon;
+        $lat = $val->lat;
+    }
+}*/
+
+//print_r($lon);
+
 
 // Include footer
 include 'templates/partials/footer.php';

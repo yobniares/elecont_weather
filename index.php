@@ -23,21 +23,28 @@ $objects = $xmlData->getObjects();
 $abstractData = new AbstractClass();
 $template = new RenderClass();
 
-if (isset($_POST['submit'])) {
-    //if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Render ifrmae with params
-
-    echo $template->renderTemplate('weather_wide', ['object' => $objects['0'], 'objects' => $objects, 'requestArray' => $_REQUEST, 'abstractData' => $abstractData]);
+//if (isset($_POST['submit'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Render informer with params // Get dynamic template
+    $abstractData->getTemplate($template, $objects, $abstractData);
     echo $template->renderTemplate('partials/code_informer_form', ['requestArray' => $_REQUEST, 'abstractData' => $abstractData]);
 } else {
-    // Render ifrmae without params
-    // Render raw informer 1
-    echo $template->renderTemplate('weather_wide', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-    echo $template->renderTemplate('partials/select_form');
+    // Render informer without params
+    if (empty($_REQUEST)) {
+        echo '<h4>Информер № 1 (узкий, на всю ширину слайда)</h4>';
+        echo $template->renderTemplate('weather_wide', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '<br /><br />';
+
+        echo '<h4>ИНФОРМЕР № 2 (КОМПАКТНЫЙ)</h4>';
+        echo $template->renderTemplate('weather_narrow', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '<br /><br />';
+
+        echo $template->renderTemplate('partials/select_form');
+    } else {
+        // Get dynamic template
+        $abstractData->getTemplate($template, $objects, $abstractData);
+    }
 }
 
 // Include footer
 include 'templates/partials/footer.php';
-
-
-// if (!isset($_POST['submit'])) {
