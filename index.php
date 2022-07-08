@@ -23,16 +23,21 @@ $objects = $xmlData->getObjects();
 $abstractData = new AbstractClass();
 $template = new RenderClass();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['submit'])) {
+    //if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Render ifrmae with params
-    echo $template->renderTemplate('iframes/iframe1', ['postArray' => $_POST, 'abstractData' => $abstractData]);
+
+    echo $template->renderTemplate('weather_wide', ['object' => $objects['0'], 'objects' => $objects, 'requestArray' => $_REQUEST, 'abstractData' => $abstractData]);
+    echo $template->renderTemplate('partials/code_informer_form', ['requestArray' => $_REQUEST, 'abstractData' => $abstractData]);
 } else {
     // Render ifrmae without params
     // Render raw informer 1
-    echo $template->renderTemplate('informer_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-    // Render select form template
-    echo $template->renderTemplate('select_form');
+    echo $template->renderTemplate('weather_wide', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+    echo $template->renderTemplate('partials/select_form');
 }
 
 // Include footer
 include 'templates/partials/footer.php';
+
+
+// if (!isset($_POST['submit'])) {

@@ -216,37 +216,36 @@ class AbstractClass
         return date('d') . ' ' .$arr[$month].' '.date('Y');
     }
 
-    public function generateUrl($postArray)
+    public function generateUrl($requestArray)
     {
-        if (isset($postArray['city'])) {
-            $string = 'city='.'"'.$postArray['city'].'"';
+        if (isset($requestArray['weather_tip']) && $requestArray['weather_tip'] !=='') {
+            if ($requestArray['weather_tip'] == 'weather_wide') {
+                $string = '?template=weather_wide';
+            }
         }
-        if (isset($postArray['font_family']) && $postArray['font_family']!=='') {
-            $string.= '&font_family='.'"'.$postArray['font_family'].'"';
+        if (isset($requestArray['city']) && $requestArray['city'] !=='') {
+            $string = '&city='.$requestArray['city'];
         }
-        if (isset($postArray['color_fon']) && $postArray['color_fon'] !=='') {
-            $string.= '&color_fon='.'"'.$postArray['color_fon']. '"';
+        if (isset($requestArray['font_family']) && $requestArray['font_family'] !=='') {
+            $string.= '&font_family='.$requestArray['font_family'];
         }
-        if (isset($postArray['font_text']) && $postArray['font_text'] !=='') {
-            $string.= '&font_text='.'"'.$postArray['font_text']. '"';
+        if (isset($requestArray['color_fon']) && $requestArray['color_fon'] !=='') {
+            $string.= '&color_fon='.urlencode($requestArray['color_fon']);
         }
-        if (isset($postArray['font_tempo']) && $postArray['font_tempo'] !=='') {
-            $string.= '&font_tempo='.'"'.$postArray['font_tempo']. '"';
+        if (isset($requestArray['font_text']) && $requestArray['font_text'] !=='') {
+            $string.= '&font_text='.urlencode($requestArray['font_text']);
         }
-        if (isset($postArray['weather_tip']) && $postArray['weather_tip'] !=='') {
-            //$string.= '&weather_tip='.'"'.$postArray['weather_tip']. '"';
-        }
-        if (isset($postArray['weather_wide']) && $postArray['weather_wide'] !=='') {
-            //$string.= '&weather_wide='.'"'.$postArray['weather_wide']. '"';
+        if (isset($requestArray['font_tempo']) && $requestArray['font_tempo'] !=='') {
+            $string.= '&font_tempo='.urlencode($requestArray['font_tempo']);
         }
 
         if (isset($_SERVER['HTTPS']) &&
             ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
             isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
             $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
-            return 'https://'.$_SERVER['HTTP_HOST'] .'/?'. $string;
+            return 'https://'.$_SERVER['HTTP_HOST'] .'/'. $string;
         } else {
-            return 'http://'.$_SERVER['HTTP_HOST'] .'/?'. $string;
+            return 'http://'.$_SERVER['HTTP_HOST'] .'/'. $string;
         }
     }
 }
