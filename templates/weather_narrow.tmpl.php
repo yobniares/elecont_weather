@@ -2,7 +2,6 @@
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
-const MAX_ITERATION = '3';
 ?>
 
 <table class="compakt" style="background-color:<?php echo $_REQUEST['color_fon'] ?>"  bgcolor="#dcdcdc">
@@ -13,7 +12,7 @@ const MAX_ITERATION = '3';
             <h3><?php echo $abstractData->getWeek() ?></h3>
         </td>
         <td width="33%">
-            <img src='assets/img/<?php echo $_REQUEST['weather_tip_img']?>/icon_<?php echo $object['icon'] ?>.svg' style="max-width: 55%;" />
+            <img src='assets/img/<?php if(!empty($_REQUEST['weather_tip_img'])) {echo $_REQUEST['weather_tip_img'];} else{echo 'img_7_svg';} ?>/icon_<?php echo $object['icon'] ?>.svg' style="max-width: 55%;" />
             <p style="margin-bottom:10px; font-size: 120%"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
         </td>
         <td width="33%"><h3></h3>
@@ -25,11 +24,10 @@ const MAX_ITERATION = '3';
             </p>
         </td>
     </tr>
-
     <tr>
-        <?php for ($i=0; $i < MAX_ITERATION; $i++) {?>
+        <?php for ($i=0; $i < 3; $i++) {?>
             <td style="border-right: solid 1px #CCCCCC;"><p class="tip"><?php echo $forecatsArr[$i]['dt']; ?></p>
-                <img src='assets/img/<?php echo $_REQUEST['weather_tip_img']?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg' style="max-width: 40%;" />
+                <img src='assets/img/<?php if(!empty($_REQUEST['weather_tip_img'])) {echo $_REQUEST['weather_tip_img'];} else{echo 'img_7_svg';} ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg' style="max-width: 40%;" />
                 <p class="tempo_comp temper"><?php echo $forecatsArr[$i]['tempC']; ?>&deg;</p>
             </td>
         <?php }?>

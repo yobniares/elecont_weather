@@ -11,7 +11,6 @@ const MAX_ITERATION = '3';
             <h3><?php echo $object['name'] .' - '. $abstractData->getWeek() .', '. $abstractData->getFullDate() ?></h3>
         </td>
     </tr>
-
     <tr>
         <td><?php echo $object['dt'] ?></td>
         <td rowspan="4" width="28%" style="text-align:left;">
@@ -22,30 +21,26 @@ const MAX_ITERATION = '3';
                 Давление: <?php echo $object['psl'] ?> дюйм рт. ст.
             </p>
         </td>
-
         <?php for ($i=0; $i < MAX_ITERATION; $i++) {?>
             <td><?php echo $forecatsArr[$i]['dt']; ?></td>
         <?php }?>
     </tr>
-
     <tr>
         <td width="15%">
-            <img src='assets/img/<?php echo $_REQUEST['weather_tip_img']?>/icon_<?php echo $object['icon'] ?>.svg' style="max-width: 65%;" />
+            <img src='assets/img/<?php if(!empty($_REQUEST['weather_tip_img'])) {echo $_REQUEST['weather_tip_img'];} else{echo 'img_7_svg';} ?>/icon_<?php echo $object['icon'] ?>.svg' style="max-width: 65%;" />
         </td>
         <?php for ($i=0; $i < MAX_ITERATION; $i++) {?>
             <td width="15%">
-                <img src='assets/img/<?php echo $_REQUEST['weather_tip_img']?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg' style="max-width: 65%;" />
+                <img src='assets/img/<?php if(!empty($_REQUEST['weather_tip_img'])) {echo $_REQUEST['weather_tip_img'];} else{echo 'img_7_svg';} ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg' style="max-width: 65%;" />
             </td>
         <?php }?>
     </tr>
-
     <tr>
-        <td><p class="tempo">+<?php echo $object['tempC'] ?>&deg;</p></td>
+        <td><p class="tempo"><?php echo $object['tempC'] ?>&deg;</p></td>
         <?php for ($i=0; $i < MAX_ITERATION; $i++) {?>
             <td>
-                <p class="tempo">+<?php echo $forecatsArr[$i]['tempC']; ?>&deg;</p>
+                <p class="tempo"><?php echo $forecatsArr[$i]['tempC']; ?>&deg;</p>
             </td>
         <?php }?>
     </tr>
-
 </table>

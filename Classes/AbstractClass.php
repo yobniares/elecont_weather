@@ -242,9 +242,14 @@ class AbstractClass
             if ($requestArray['weather_tip'] == 'weather_narrow') {
                 $string = '?weather_tip=weather_narrow';
             }
+            if ($requestArray['weather_tip'] == 'weather_wide_litle') {
+                $string = '?weather_tip=weather_wide_litle';
+            }
         }
         if (isset($requestArray['weather_tip_img']) && $requestArray['weather_tip_img'] !=='') {
             $string.= '&weather_tip_img='.$requestArray['weather_tip_img'];
+        } else {
+            $string.= '&weather_tip_img=img_7_svg';
         }
         if (isset($requestArray['city']) && $requestArray['city'] !=='') {
             $string = '&city='.$requestArray['city'];
@@ -288,6 +293,11 @@ class AbstractClass
         // Template weather_narrow
         if ($_REQUEST['weather_tip'] == 'weather_narrow') {
             echo $template->renderTemplate('weather_narrow', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        }
+
+        // Template weather_wide_litle
+        if ($_REQUEST['weather_tip'] == 'weather_wide_litle') {
+            echo $template->renderTemplate('weather_wide_litle', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
         }
     }
 }

@@ -39,6 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo $template->renderTemplate('weather_narrow', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
         echo '<br /><br />';
 
+        echo '<h4>ИНФОРМЕР № 3 (МИНИМАЛЬНОЙ ВЫСОТЫ)</h4>';
+        echo $template->renderTemplate('weather_wide_litle', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '<br /><br />';
+
+        // Select params form
         echo $template->renderTemplate('partials/select_form');
     } else {
         // Get dynamic template
