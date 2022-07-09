@@ -189,6 +189,15 @@ class AbstractClass
     /**
      * @return string
      */
+    public function getDate($format)
+    {
+        $date = date($format);
+        return $date;
+    }
+
+    /**
+     * @return string
+     */
     public function getWeek()
     {
         $weekArr = [
@@ -236,14 +245,17 @@ class AbstractClass
     public function generateUrl($requestArray)
     {
         if (isset($requestArray['weather_tip']) && $requestArray['weather_tip'] !=='') {
-            if ($requestArray['weather_tip'] == 'weather_wide') {
-                $string = '?weather_tip=weather_wide';
+            if ($requestArray['weather_tip'] == 'weather_1') {
+                $string = '?weather_tip=weather_1';
             }
-            if ($requestArray['weather_tip'] == 'weather_narrow') {
-                $string = '?weather_tip=weather_narrow';
+            if ($requestArray['weather_tip'] == 'weather_2') {
+                $string = '?weather_tip=weather_2';
             }
-            if ($requestArray['weather_tip'] == 'weather_wide_litle') {
-                $string = '?weather_tip=weather_wide_litle';
+            if ($requestArray['weather_tip'] == 'weather_3') {
+                $string = '?weather_tip=weather_3';
+            }
+            if ($requestArray['weather_tip'] == 'weather_4') {
+                $string = '?weather_tip=weather_color_flexible';
             }
         }
         if (isset($requestArray['weather_tip_img']) && $requestArray['weather_tip_img'] !=='') {
@@ -287,17 +299,22 @@ class AbstractClass
     {
 
         // Template weather_wide
-        if ($_REQUEST['weather_tip'] == 'weather_wide') {
-            echo $template->renderTemplate('weather_wide', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        if ($_REQUEST['weather_tip'] == 'weather_1') {
+            echo $template->renderTemplate('weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
         }
-        // Template weather_narrow
-        if ($_REQUEST['weather_tip'] == 'weather_narrow') {
-            echo $template->renderTemplate('weather_narrow', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        // Template weather_2
+        if ($_REQUEST['weather_tip'] == 'weather_2') {
+            echo $template->renderTemplate('weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
         }
 
-        // Template weather_wide_litle
-        if ($_REQUEST['weather_tip'] == 'weather_wide_litle') {
-            echo $template->renderTemplate('weather_wide_litle', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        // Template weather_3
+        if ($_REQUEST['weather_tip'] == 'weather_3') {
+            echo $template->renderTemplate('weather_3', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        }
+
+        // Template weather_color_flexible
+        if ($_REQUEST['weather_tip'] == 'weather_4') {
+            echo $template->renderTemplate('weather_4', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
         }
     }
 }

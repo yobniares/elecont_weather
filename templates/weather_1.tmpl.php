@@ -27,11 +27,19 @@ const MAX_ITERATION = '3';
     </tr>
     <tr>
         <td width="15%">
-            <img src='assets/img/<?php if(!empty($_REQUEST['weather_tip_img'])) {echo $_REQUEST['weather_tip_img'];} else{echo 'img_7_svg';} ?>/icon_<?php echo $object['icon'] ?>.svg' style="max-width: 65%;" />
+            <img src='assets/img/<?php if (!empty($_REQUEST['weather_tip_img'])) {
+    echo $_REQUEST['weather_tip_img'];
+} else {
+    echo 'img_7_svg';
+} ?>/icon_<?php echo $object['icon'] ?>.svg' style="max-width: 65%;" />
         </td>
         <?php for ($i=0; $i < MAX_ITERATION; $i++) {?>
             <td width="15%">
-                <img src='assets/img/<?php if(!empty($_REQUEST['weather_tip_img'])) {echo $_REQUEST['weather_tip_img'];} else{echo 'img_7_svg';} ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg' style="max-width: 65%;" />
+                <img src='assets/img/<?php if (!empty($_REQUEST['weather_tip_img'])) {
+    echo $_REQUEST['weather_tip_img'];
+} else {
+    echo 'img_7_svg';
+} ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg' style="max-width: 65%;" />
             </td>
         <?php }?>
     </tr>

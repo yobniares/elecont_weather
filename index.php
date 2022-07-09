@@ -1,7 +1,8 @@
 <?php
 
 // Include css and js
-$css = 'assets/style.css';
+//$css = 'assets/style.css';
+$css = 'assets/css_inform.css';
 $farbasticCss = 'assets/farbtastic/farbtastic.css';
 $mainJs = 'assets/main.js';
 $farbasticJs = 'assets/farbtastic/farbtastic.js';
@@ -30,18 +31,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $template->renderTemplate('partials/code_informer_form', ['requestArray' => $_REQUEST, 'abstractData' => $abstractData]);
 } else {
     // Render informer without params
-    if (empty($_REQUEST)) {
+    if (empty($_POST) || empty($_GET)) {
         echo '<h4>Информер № 1 (узкий, на всю ширину слайда)</h4>';
-        echo $template->renderTemplate('weather_wide', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-        echo '<br /><br />';
+        echo '<p><br /></p>';
+        echo '<div style="width:100%;">';
+        echo $template->renderTemplate('weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
 
         echo '<h4>ИНФОРМЕР № 2 (КОМПАКТНЫЙ)</h4>';
-        echo $template->renderTemplate('weather_narrow', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-        echo '<br /><br />';
+        echo '<p><br /></p>';
+        echo '<div style="width:50%;">';
+        echo $template->renderTemplate('weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
 
         echo '<h4>ИНФОРМЕР № 3 (МИНИМАЛЬНОЙ ВЫСОТЫ)</h4>';
-        echo $template->renderTemplate('weather_wide_litle', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-        echo '<br /><br />';
+        echo '<p><br /></p>';
+        echo '<div style="width:100%;">';
+        echo $template->renderTemplate('weather_3', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
+
+        echo '<h4>ИНФОРМЕР № 4 (ДЕЛОВОЙ)</h4>';
+        echo '<div style="width:65%;">';
+        echo $template->renderTemplate('weather_4', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
 
         // Select params form
         echo $template->renderTemplate('partials/select_form');
