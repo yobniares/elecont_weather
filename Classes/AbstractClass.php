@@ -263,6 +263,9 @@ class AbstractClass
             if ($requestArray['weather_tip'] == 'weather_6') {
                 $string = '?weather_tip=weather_6';
             }
+            if ($requestArray['weather_tip'] == 'weather_7') {
+                $string = '?weather_tip=weather_7';
+            }
         }
         if (isset($requestArray['weather_tip_img']) && $requestArray['weather_tip_img'] !=='') {
             $string.= '&weather_tip_img='.$requestArray['weather_tip_img'];
@@ -292,6 +295,21 @@ class AbstractClass
             return 'https://'.$_SERVER['HTTP_HOST'] .'/'. $string;
         } else {
             return 'http://'.$_SERVER['HTTP_HOST'] .'/'. $string;
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getDomain()
+    {
+        if (isset($_SERVER['HTTPS']) &&
+            ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
+            isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
+            $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+            return 'https://'.$_SERVER['HTTP_HOST'] .'/';
+        } else {
+            return 'http://'.$_SERVER['HTTP_HOST'] .'/';
         }
     }
 
@@ -331,6 +349,11 @@ class AbstractClass
         // Template weather_6
         if ($_REQUEST['weather_tip'] == 'weather_6') {
             echo $template->renderTemplate('weather_6', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        }
+
+        // Template weather_7
+        if ($_REQUEST['weather_tip'] == 'weather_7') {
+            echo $template->renderTemplate('weather_7', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
         }
     }
 }

@@ -113,6 +113,9 @@
                 <input type="radio" class="radio" id="radio-6" name="weather_tip" value="weather_6">
                 <label for="radio-6"> Информер № 6</label>
                 <p><br /></p>
+                <input type="radio" class="radio" id="radio-7" name="weather_tip" value="weather_7">
+                <label for="radio-7"> Информер № 7</label>
+                <p><br /></p>
                 <input type='submit' name="submit" value='Сформировать код информера' class="knop"></td>
         </tr>
     </table>

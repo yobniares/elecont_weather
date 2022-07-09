@@ -21,6 +21,10 @@ if (empty($_REQUEST['weather_tip'])) {
         $css = 'assets/css_inform_flexible.css';
         include_once 'templates/partials/headers/header_weather6.php';
     }
+    if ($_REQUEST['weather_tip'] =='weather_7') {
+        $css = 'assets/css_inform_flexible.css';
+        include_once 'templates/partials/headers/header_weather7.php';
+    }
 }
 
 // Include classes
@@ -46,9 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $template->renderTemplate('partials/code_informer_form', ['requestArray' => $_REQUEST, 'abstractData' => $abstractData]);
 } else {
     // Render informer without params
-    // ToDo: make something with request
-    //if (empty($_POST) || empty($_GET)) {
-
     if (empty($_REQUEST['weather_tip'])) {
         echo '<h4>Информер № 1 (узкий, на всю ширину слайда)</h4>';
         echo '<p><br /></p>';
@@ -79,15 +80,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo '<h4>ИНФОРМЕР № 5</h4>';
         echo '<div style="width:65%;">';
-        //echo $template->renderTemplate('weather_5', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-        echo '<iframe src="https://yandexinformers.ddev.site/?weather_tip=weather_5&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
+        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_5&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
         echo '</div>';
         echo '<p class="otst"><br /></p>';
 
         echo '<h4>ИНФОРМЕР № 6</h4>';
         echo '<div style="width:65%;">';
-        //echo $template->renderTemplate('weather_6', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-        echo '<iframe src="https://yandexinformers.ddev.site/?weather_tip=weather_6&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="310"></iframe>';
+        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_6&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
+
+        echo '<h4>ИНФОРМЕР № 7</h4>';
+        echo '<div style="width:30%;">';
+        //echo $template->renderTemplate('weather_7', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_7&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="500"></iframe>';
         echo '</div>';
         echo '<p class="otst"><br /></p>';
 
