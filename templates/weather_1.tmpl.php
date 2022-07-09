@@ -1,11 +1,14 @@
 <?php
+
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
 const MAX_ITERATION = '3';
 ?>
 
-<table id="fon_table" align="center" style="background-color:<?php echo $_REQUEST['color_fon'] ?>"  bgcolor="#dcdcdc">
+<table id="fon_table" align="center" <?php if (isset($_REQUEST['color_fon'])) {
+    echo 'style="background-color:' . $_REQUEST['color_fon'];
+}?>  bgcolor="#dcdcdc">
     <tr>
         <td colspan="5" class="den_nedeli">
             <h3><?php echo $object['name'] .' - '. $abstractData->getWeek() .', '. $abstractData->getFullDate() ?></h3>

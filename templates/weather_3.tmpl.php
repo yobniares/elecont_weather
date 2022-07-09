@@ -4,7 +4,9 @@ foreach ($objects['0'] as $forecast) {
 }
 ?>
 
-<table  align="center"  class="compakt litl" style="background-color:<?php echo $_REQUEST['color_fon'] ?>" bgcolor="#dcdcdc">
+<table  align="center"  class="compakt litl" <?php if (isset($_REQUEST['color_fon'])) {
+    echo 'style="background-color:' . $_REQUEST['color_fon'];
+}?> bgcolor="#dcdcdc">
     <tr><td width="30%" rowspan="2" class="den_nedeli">
             <h3 style="font-size: 120%;"><?php echo $abstractData->getFullDate(); ?></h3>
             <p class="tempo" style="font-size: 140%;"><?php echo $abstractData->getTime(); ?>  <span><?php echo $abstractData->getWeek(); ?> </span></p>

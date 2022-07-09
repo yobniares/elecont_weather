@@ -18,7 +18,7 @@ date_default_timezone_set('Europe/Moscow');
     <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-    <?php if (!empty($_REQUEST)) {?>
+    <?php if (!empty($_REQUEST['weather_tip'])) {?>
         <style>
             *{font-family:<?php echo $_REQUEST['font_family'] ?>;}
             #fon_table {

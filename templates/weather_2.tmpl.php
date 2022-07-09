@@ -4,7 +4,9 @@ foreach ($objects['0'] as $forecast) {
 }
 ?>
 
-<table class="compakt" style="background-color:<?php echo $_REQUEST['color_fon'] ?>"  bgcolor="#dcdcdc">
+<table class="compakt" <?php if (isset($_REQUEST['color_fon'])) {
+    echo 'style="background-color:' . $_REQUEST['color_fon'];
+}?>  bgcolor="#dcdcdc">
     <tr>
         <td width="33%">
             <h3><?php echo $abstractData->getFullDate() ?></h3>
