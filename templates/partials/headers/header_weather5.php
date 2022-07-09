@@ -6,12 +6,12 @@
     <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <?php if (!empty($_REQUEST['weather_tip'])) {?>
         <style>
-            *{font-family:<?php echo $_REQUEST['font_family'] ?>;}
+            .body {font-family:<?php echo $_REQUEST['font_family'] ?>;}
         </style>
     <?php }?>
 
     <style>
-        *{font-family:<?php if (isset($_GET['font_family'])) {
+        .body {font-family:<?php if (isset($_GET['font_family'])) {
     echo urldecode($_GET['font_family']);
 } else {
     echo urldecode($_POST['font_family']);

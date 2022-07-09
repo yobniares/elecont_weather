@@ -260,6 +260,9 @@ class AbstractClass
             if ($requestArray['weather_tip'] == 'weather_5') {
                 $string = '?weather_tip=weather_5';
             }
+            if ($requestArray['weather_tip'] == 'weather_6') {
+                $string = '?weather_tip=weather_6';
+            }
         }
         if (isset($requestArray['weather_tip_img']) && $requestArray['weather_tip_img'] !=='') {
             $string.= '&weather_tip_img='.$requestArray['weather_tip_img'];
@@ -323,6 +326,11 @@ class AbstractClass
         // Template weather_5
         if ($_REQUEST['weather_tip'] == 'weather_5') {
             echo $template->renderTemplate('weather_5', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        }
+
+        // Template weather_6
+        if ($_REQUEST['weather_tip'] == 'weather_6') {
+            echo $template->renderTemplate('weather_6', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
         }
     }
 }

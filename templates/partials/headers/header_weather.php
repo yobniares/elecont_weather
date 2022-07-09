@@ -7,7 +7,7 @@
     <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <?php if (!empty($_REQUEST['weather_tip'])) {?>
         <style>
-            *{font-family:<?php echo $_REQUEST['font_family'] ?>;}
+            .body {font-family:<?php echo $_REQUEST['font_family'] ?>;}
             #fon_table {
                 color:<?php echo $_REQUEST['font_text'] ?>;
             }

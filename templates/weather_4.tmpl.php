@@ -25,57 +25,59 @@ foreach ($objects['0'] as $forecast) {
     }
 </style>
 
-<table class="st-4 " style="width: 100%;  border-collapse: collapse;
+<div class="body">
+    <table class="st-4 " style="width: 100%;  border-collapse: collapse;
 background-image: linear-gradient(to bottom right, rgba(41, 125, 146, 0.6), rgba(41, 125, 146, 0.9));
 border-radius: 10px; text-align: left;" border="0">
-    <tr>
-        <td colspan="3">
-            <p style="text-transform: uppercase; font-size:5vw; font-weight:bold; padding-left:20px;">
-                <img src="assets/img/svg/marker_map.svg" style="max-width: 4%;" />
-                Москва
-            </p>
-        </td>
-    </tr>
-    <tr><td colspan="3" class="hr-top" style=" padding: 0px;"></td></tr>
-    <tr style=" background:rgba(1, 95, 121, 0.69);">
-        <td width="60%" colspan="2">
-            <p style="font-weight:bold; padding-left:20px; text-transform: uppercase;text-shadow: 1px 1px 2px #015b71;"><?php echo $abstractData->getWeek(); ?></p>
-        </td>
-        <td width="30%"><p style="text-align:right; padding-right:20px;"><?php echo $abstractData->getDate('d.m.Y'); ?></p></td>
-    </tr>
-    <tr><td colspan="3" class="hr-top" style=" padding: 0px;"></td></tr>
-    <tr>
-        <td style="text-align:center;">
-            <img src='assets/img/<?php if (!empty($_REQUEST['weather_tip_img'])) {
+        <tr>
+            <td colspan="3">
+                <p style="text-transform: uppercase; font-size:5vw; font-weight:bold; padding-left:20px;">
+                    <img src="assets/img/svg/marker_map.svg" style="max-width: 4%;" />
+                    Москва
+                </p>
+            </td>
+        </tr>
+        <tr><td colspan="3" class="hr-top" style=" padding: 0px;"></td></tr>
+        <tr style=" background:rgba(1, 95, 121, 0.69);">
+            <td width="60%" colspan="2">
+                <p style="font-weight:bold; padding-left:20px; text-transform: uppercase;text-shadow: 1px 1px 2px #015b71;"><?php echo $abstractData->getWeek(); ?></p>
+            </td>
+            <td width="30%"><p style="text-align:right; padding-right:20px;"><?php echo $abstractData->getDate('d.m.Y'); ?></p></td>
+        </tr>
+        <tr><td colspan="3" class="hr-top" style=" padding: 0px;"></td></tr>
+        <tr>
+            <td style="text-align:center;">
+                <img src='assets/img/<?php if (!empty($_REQUEST['weather_tip_img'])) {
     echo $_REQUEST['weather_tip_img'];
 } else {
     echo 'img_7_svg';
 } ?>/icon_<?php echo $object['icon'] ?>.svg' style="max-width: 65%;" />
-            <p  style="text-align:center;"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
-        </td>
-        <td style="text-align:center; font-size:2em;">
-            <span style="font-size:15vw; text-shadow: 1px 1px 2px #015b71;"><?php echo $object['tempC'] ?>&deg;	</span>
-        </td>
-        <td style=" vertical-align:bottom; ">
-            <p><img src="assets/img/svg/wind_blue.svg" style="max-width: 18%; padding:0px 10px 0px 0px; vertical-align: bottom;" />: <?php echo $object['ws'] ?> м/час</p>
-            <p style="padding-top: 15px;">
-                <img src="assets/img/svg/drop-silhouette_blue.svg" style="max-width: 18%; padding:0px 10px 0px 0px; vertical-align: bottom;" />: <?php echo $object['rh'] ?>%
-            </p>
-        </td>
-    </tr>
-    <tr><td colspan="3" class="hr-top" style=" padding: 0px;"></td></tr>
-    <tr>
-        <?php for ($i=0; $i < 3; $i++) {?>
-            <td class="st-4-nm"  width="30%">
-                <p  style="margin-left: 10px;">
-                    <img src='assets/img/<?php if (!empty($_REQUEST['weather_tip_img'])) {
+                <p  style="text-align:center;"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
+            </td>
+            <td style="text-align:center; font-size:2em;">
+                <span style="font-size:15vw; text-shadow: 1px 1px 2px #015b71;"><?php echo $object['tempC'] ?>&deg;	</span>
+            </td>
+            <td style=" vertical-align:bottom; ">
+                <p><img src="assets/img/svg/wind_blue.svg" style="max-width: 18%; padding:0px 10px 0px 0px; vertical-align: bottom;" />: <?php echo $object['ws'] ?> м/час</p>
+                <p style="padding-top: 15px;">
+                    <img src="assets/img/svg/drop-silhouette_blue.svg" style="max-width: 18%; padding:0px 10px 0px 0px; vertical-align: bottom;" />: <?php echo $object['rh'] ?>%
+                </p>
+            </td>
+        </tr>
+        <tr><td colspan="3" class="hr-top" style=" padding: 0px;"></td></tr>
+        <tr>
+            <?php for ($i=0; $i < 3; $i++) {?>
+                <td class="st-4-nm"  width="30%">
+                    <p  style="margin-left: 10px;">
+                        <img src='assets/img/<?php if (!empty($_REQUEST['weather_tip_img'])) {
     echo $_REQUEST['weather_tip_img'];
 } else {
     echo 'img_7_svg';
 } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg' style="max-width: 30%;" />
-                    <span><?php echo $forecatsArr[$i]['tempC']; ?>&deg;</span>
-                </p>
-            </td>
-        <?php }?>
-    </tr>
-</table>
+                        <span><?php echo $forecatsArr[$i]['tempC']; ?>&deg;</span>
+                    </p>
+                </td>
+            <?php }?>
+        </tr>
+    </table>
+</div>

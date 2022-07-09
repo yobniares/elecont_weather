@@ -7,15 +7,19 @@ $farbasticJs = 'assets/farbtastic/farbtastic.js';
 
 if (empty($_REQUEST['weather_tip'])) {
     $css = 'assets/css_inform.css';
-    include_once 'templates/partials/header.php';
+    include_once 'templates/partials/headers/header.php';
 } else {
     if ($_REQUEST['weather_tip'] =='weather_1' || $_REQUEST['weather_tip'] =='weather_2' || $_REQUEST['weather_tip'] =='weather_3') {
         $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/header_weather.php';
+        include_once 'templates/partials/headers/header_weather.php';
     }
     if ($_REQUEST['weather_tip'] =='weather_5') {
         $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/header_weather5.php';
+        include_once 'templates/partials/headers/header_weather5.php';
+    }
+    if ($_REQUEST['weather_tip'] =='weather_6') {
+        $css = 'assets/css_inform_flexible.css';
+        include_once 'templates/partials/headers/header_weather6.php';
     }
 }
 
@@ -77,6 +81,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<div style="width:65%;">';
         //echo $template->renderTemplate('weather_5', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
         echo '<iframe src="https://yandexinformers.ddev.site/?weather_tip=weather_5&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
+
+        echo '<h4>ИНФОРМЕР № 6</h4>';
+        echo '<div style="width:65%;">';
+        //echo $template->renderTemplate('weather_6', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '<iframe src="https://yandexinformers.ddev.site/?weather_tip=weather_6&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="310"></iframe>';
         echo '</div>';
         echo '<p class="otst"><br /></p>';
 
