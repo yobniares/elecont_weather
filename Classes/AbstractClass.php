@@ -14,19 +14,24 @@ class AbstractClass
     {
         switch ($code) {
             case 0:
-                $result = 'Tornado';
+                //$result = 'Tornado';
+                $result = 'Торнадо';
                 break;
             case 1:
-                $result = 'Tropical Storm';
+                //$result = 'Tropical Storm';
+                $result = 'Тропический шторм';
                 break;
             case 2:
-                $result = 'Hurricane';
+                //$result = 'Hurricane';
+                $result = 'Ураган';
                 break;
             case 3:
-                $result = 'Strong Storms';
+                //$result = 'Strong Storms';
+                $result = 'Сильные бури';
                 break;
             case 4:
-                $result = 'Thunderstorms';
+                //$result = 'Thunderstorms';
+                $result = 'Грозы';
                 break;
             case 5:
                 //$result = 'Rain / Snow';
@@ -34,64 +39,83 @@ class AbstractClass
                 break;
             case 6:
                 $result = 'Rain / Sleet';
+                $result = 'Дождь/мокрый снег';
                 break;
             case 7:
-                $result = 'Wintry Mix';
+                //$result = 'Wintry Mix';
+                $result = 'Зимний микс';
                 break;
             case 8:
-                $result = 'Freezing Drizzle';
+                //$result = 'Freezing Drizzle';
+                $result = 'Изморозь';
                 break;
             case 9:
-                $result = 'Drizzle';
+                //$result = 'Drizzle';
+                $result = 'Морось';
                 break;
             case 10:
-                $result = 'Freezing Rain';
+                //$result = 'Freezing Rain';
+                $result = 'Холодный дождь';
                 break;
             case 11:
-                $result = 'Showers';
+                //$result = 'Showers';
+                $result = 'Ливень';
                 break;
             case 12:
                 //$result = 'Rain';
                 $result = 'Дождь';
                 break;
             case 13:
-                $result = 'Flurries';
+                //$result = 'Flurries';
+                $result = 'Порывистый ветер';
                 break;
             case 14:
-                $result = 'Snow Showers';
+                //$result = 'Snow Showers';
+                $result = 'Снегопады';
                 break;
             case 15:
-                $result = 'Blowing / Drifting Snow';
+                //$result = 'Blowing / Drifting Snow';
+                $result = 'Метель / Поземка';
                 break;
             case 16:
-                $result = 'Snow';
+                //$result = 'Snow';
+                $result = 'Снег';
                 break;
             case 17:
-                $result = 'Hail';
+                //$result = 'Hail';
+                $result = 'Град';
                 break;
             case 18:
-                $result = 'Sleet';
+                //$result = 'Sleet';
+                $result = 'Мокрый снег';
                 break;
             case 19:
-                $result = 'Blowing Dust / Sandstorm';
+                //$result = 'Blowing Dust / Sandstorm';
+                $result = 'Пыль / Песчаная буря';
                 break;
             case 20:
-                $result = 'Foggy';
+                //$result = 'Foggy';
+                $result = 'Туманно';
                 break;
             case 21:
-                $result = 'Haze';
+                //$result = 'Haze';
+                $result = 'Туман';
                 break;
             case 22:
-                $result = 'Smoke';
+                //$result = 'Smoke';
+                $result = 'Дым';
                 break;
             case 23:
-                $result = 'Breezy';
+                //$result = 'Breezy';
+                $result = 'Прохладно';
                 break;
             case 24:
-                $result = 'Windy';
+                //$result = 'Windy';
+                $result = 'Ветрено';
                 break;
             case 25:
-                $result = 'Frigid / Ice Crystals';
+                //$result = 'Frigid / Ice Crystals';
+                $result = 'Ледяные кристаллы';
                 break;
             case 26:
                 //$result = 'Cloudy';
@@ -106,71 +130,92 @@ class AbstractClass
                 $result = 'Преимущественно облачный день';
                 break;
             case 29:
-                $result = 'Partly Cloudy Night';
+                //$result = 'Partly Cloudy Night';
+                $result = 'Переменная облачность';
                 break;
             case 30:
-                $result = 'Partly Cloudy Day';
+                //$result = 'Partly Cloudy Day';
+                $result = 'Переменная облачность';
                 break;
             case 31:
-                $result = 'Clear Night';
+                //$result = 'Clear Night';
+                $result = 'Ясная ночь';
                 break;
             case 32:
-                $result = 'Sunny Day';
+                $result = 'Солнечно';
+                //$result = 'Sunny Day';
                 break;
             case 33:
-                $result = 'Fair / Mostly Clear Night';
+                //$result = 'Fair / Mostly Clear Night';
+                $result = 'Преимущественно ясная ночь';
                 break;
             case 34:
                 //$result = 'Fair / Mostly Sunny Day';
-                $result = 'Ясно / Преимущественно солнечный день';
+                $result = 'Преимущественно солнечный день';
                 break;
             case 35:
-                $result = 'Mixed Rain and Hail';
+                //$result = 'Mixed Rain and Hail';
+                $result = 'Дождь и град';
                 break;
             case 36:
-                $result = 'Hot Day';
+                //$result = 'Hot Day';
+                $result = 'Жарко';
                 break;
             case 37:
-                $result = 'Isolated Thunderstorms';
+                //$result = 'Isolated Thunderstorms';
+                $result = 'Местами грозы';
                 break;
             case 38:
-                $result = 'Scattered Thunderstorms';
+                //$result = 'Scattered Thunderstorms';
+                $result = 'Рассеянные грозы';
                 break;
             case 39:
-                $result = 'Scattered Showers Day';
+                //$result = 'Scattered Showers Day';
+                $result = 'Местами дожди';
                 break;
             case 40:
-                $result = 'Heavy Raint';
+                //$result = 'Heavy Raint';
+                $result = 'Ливень';
                 break;
             case 41:
-                $result = 'Scattered Snow Showers Day';
+                //$result = 'Scattered Snow Showers Day';
+                $result = 'Местами снежные дожди';
                 break;
             case 42:
-                $result = 'Heavy Snow';
+                //$result = 'Heavy Snow';
+                $result = 'Сильный снегопад';
                 break;
             case 43:
-                $result = 'Blizzard';
+                //$result = 'Blizzard';
+                $result = 'Снежная буря';
                 break;
             case 44:
-                $result = 'Not Available (N/A)';
+                //$result = 'Not Available (N/A)';
+                $result = 'Недоступно';
                 break;
             case 45:
-                $result = 'Scattered Showers Night';
+                //$result = 'Scattered Showers Night';
+                $result = 'Ночью местами дождь';
                 break;
             case 46:
-                $result = 'Scattered Snow Showers Night';
+                //$result = 'Scattered Snow Showers Night';
+                $result = 'Ночью местами дождь';
                 break;
             case 47:
-                $result = 'Scattered Thunderstorms Night';
+                //$result = 'Scattered Thunderstorms Night';
+                $result = 'Ночью местами гроза';
                 break;
             case 48:
-                $result = 'Not Available (N/A)';
+                //$result = 'Not Available (N/A)';
+                $result = 'Недоступно';
                 break;
             case 49:
-                $result = 'light rain';
+                //$result = 'light rain';
+                $result = 'Небольшой дождь';
                 break;
             case 50:
-                $result = 'light rain';
+                //$result = 'light rain';
+                $result = 'Небольшой дождь';
                 break;
         }
 

@@ -85,14 +85,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<p class="otst"><br /></p>';
 
         echo '<h4>ИНФОРМЕР № 6</h4>';
-        echo '<div style="width:65%;">';
+        echo '<div style="width:45%;">';
         echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_6&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
         echo '</div>';
         echo '<p class="otst"><br /></p>';
 
         echo '<h4>ИНФОРМЕР № 7</h4>';
-        echo '<div style="width:30%;">';
-        //echo $template->renderTemplate('weather_7', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '<div style="width:25%;">';
         echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_7&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="500"></iframe>';
         echo '</div>';
         echo '<p class="otst"><br /></p>';
