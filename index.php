@@ -91,8 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<p class="otst"><br /></p>';
 
         echo '<h4>ИНФОРМЕР № 7</h4>';
-        echo '<div style="width:25%;">';
-        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_7&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="500"></iframe>';
+        echo '<div style="width:35%;">';
+        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_7&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="600"></iframe>';
         echo '</div>';
         echo '<p class="otst"><br /></p>';
 

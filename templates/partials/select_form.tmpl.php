@@ -85,9 +85,10 @@
                 <input type="radio" class="radio" id="radio-30" name="weather_tip_img" value="img_10_svg">
                 <label for="radio-30"> № 4 svg <img src="assets/img/img_10_svg.png" height="80"  style="margin-bottom: -30px;"/> </label>
                 <p class="otst"><br /></p>
-                <input type="radio" class="radio" id="radio-21" name="weather_tip_img" value="img">
+
+                <!--<input type="radio" class="radio" id="radio-21" name="weather_tip_img" value="img">
                 <label for="radio-21"> № 5 	&nbsp;	&nbsp;	&nbsp;<img src="assets/img/img.png" height="80"  style="margin-bottom: -30px;"/></label>
-                <p class="otst"><br /></p>
+                <p class="otst"><br /></p>-->
             </td>
         </tr>
 
