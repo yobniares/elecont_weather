@@ -289,6 +289,9 @@ class AbstractClass
      */
     public function generateUrl($requestArray)
     {
+        $iniArr = parse_ini_file('app.ini');
+        $scriptPath = $iniArr['scriptPath'];
+
         if (isset($requestArray['weather_tip']) && $requestArray['weather_tip'] !=='') {
             if ($requestArray['weather_tip'] == 'weather_1') {
                 $string = '?weather_tip=weather_1';
@@ -337,9 +340,9 @@ class AbstractClass
             ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
             isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
             $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
-            return 'https://'.$_SERVER['HTTP_HOST'] .'/'. $string;
+            return 'https://'.$_SERVER['HTTP_HOST'] . $scriptPath . $string;
         } else {
-            return 'http://'.$_SERVER['HTTP_HOST'] .'/'. $string;
+            return 'http://'.$_SERVER['HTTP_HOST'] . $scriptPath . $string;
         }
     }
 
@@ -348,13 +351,16 @@ class AbstractClass
      */
     public function getDomain()
     {
+        $iniArr = parse_ini_file('app.ini');
+        $scriptPath = $iniArr['scriptPath'];
+
         if (isset($_SERVER['HTTPS']) &&
             ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
             isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
             $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
-            return 'https://'.$_SERVER['HTTP_HOST'] .'/';
+            return 'https://'.$_SERVER['HTTP_HOST'] . $scriptPath;
         } else {
-            return 'http://'.$_SERVER['HTTP_HOST'] .'/';
+            return 'http://'.$_SERVER['HTTP_HOST'] . $scriptPath;
         }
     }
 
