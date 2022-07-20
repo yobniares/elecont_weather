@@ -15,6 +15,7 @@ date_default_timezone_set('Europe/Moscow');
 
     <link rel="stylesheet" href="<?php echo($farbasticCss); ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo($css); ?>" type="text/css">
+
     <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 

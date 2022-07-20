@@ -1,1 +1,2 @@
 key = Your app key
+scriptPath = Path to your script directory // e.g /informers/weather_elecont/

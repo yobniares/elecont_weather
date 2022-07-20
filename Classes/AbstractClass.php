@@ -284,6 +284,56 @@ class AbstractClass
     }
 
     /**
+     * @param $degree
+     * @return string
+     */
+    public function getWwindDirection($degree)
+    {
+        $direction = $degree / 22.5 + .5;
+        $cardinal_array = [
+            "Северный", // N
+            "Северо-северо-восточный", // NNE
+            "Северо-восточный", // NE
+            "Востоко-северо-восточный", // ENE
+            "Восточный", // E
+            "Востоко-юго-восток", // ESE
+            "Юго-восточный", // SE
+            "Юго-юго-восточный", // SSE
+            "Южный", // S
+            "Юго-юго-западный", // SSW
+            "Юго-западный", // SW
+            "Западо-юго-западный", //  WSW
+            "Западный", // W
+            "Западо-северо-западный", // WNW
+            "Северо-западный", // NW
+            "Северо-северо-запад" // NNW
+        ];
+        $cardinal = $cardinal_array[ ($direction % 16) ];
+
+        return $cardinal . ' ветер';
+    }
+
+    /**
+     * @param $value
+     * @return string
+     */
+    public function getMetersPerSecond($value)
+    {
+        $meterPerSecond = ($value * 0.44704);
+        return number_format($meterPerSecond, '2', '.', '');
+    }
+
+    /**
+     * @param $value
+     * @return string
+     */
+    public function getMillimetersOfMercury($value)
+    {
+        $millimetersOfMercury = ($value * 25.4);
+        return number_format($millimetersOfMercury, '0', '.', '');
+    }
+
+    /**
      * @param $requestArray
      * @return string
      */

@@ -1,0 +1,299 @@
+@import url("fonts/geometria/stylesheet.css");
+
+body {
+    font-family: 'Geometria';
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+.view-1-classic {
+    height: 1520px;
+    width: 270px;
+    background: #2A88CD;
+    box-sizing: border-box;
+    padding-top: 8px;
+}
+
+.view-1-classic-content {
+    /* margin: 0 auto; */
+    position: relative;
+    box-sizing: border-box;
+    width: 244px;
+    height: 1494px;
+    border: 2px solid #FFFFFF;
+    margin: 13px 14px;
+    padding: 1px;
+}
+
+.view-1-classic-city-day {
+    position: absolute;
+    width: 225px;
+    height: 172px;
+    background: #ABCDE5;
+    /* opacity: 0.4; */
+    border: 7px solid #2A88CD;
+    /* padding-top: 20px; */
+    border-radius: 0px 0px 50px 50px;
+    /* transform: rotate(90deg); */
+    z-index: 7;
+   
+}
+
+.view-1-classic-city-day-info {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.view-1-classic-city-day-info-container {
+    padding: 20px;
+}
+
+.view-1-classic-custom {
+    background-image: url("img/view-1-custom.png");
+}
+
+
+
+.view-1-classic-maincontent {
+    position: absolute;
+    border: 7px solid #2A88CD;
+    border-radius: 0px 0px 50px 50px;
+    width: 225px;
+    height: 680.98px;
+    background: #7BB3DC;
+  
+    z-index: 6;
+    margin-top: 150px;
+}
+
+.view-1-classic-longcustom {
+    background-image: url("img/view-1-longcustom.png");
+}
+
+.view-1-classic-morning,
+.view-1-classic-0 {
+    position: absolute;
+    width: 225px;
+    height: 247px;
+    background: #7BB3DC;
+    border: 7px solid #2A88CD;
+    /* transform: rotate(90deg); */
+    z-index: 5;
+    margin-top: 800px;
+}
+
+.view-1-classic-day,
+.view-1-classic-1 {
+    position: absolute;
+    width: 225px;
+    height: 205px;
+    background: #7BB3DC;
+    border: 7px solid #2A88CD;
+    /* transform: rotate(90deg); */
+    z-index: 5;
+    margin-top: 1005px;
+}
+
+.view-1-classic-evening,
+.view-1-classic-2 {
+    position: absolute;
+    width: 225px;
+    height: 250px;
+    background: #7BB3DC;
+    border: 7px solid #2A88CD;
+    border-radius: 0px 0px 50px 50px;
+    z-index: 5;
+    margin-top: 1220px;
+}
+
+.view-1-classic-weather {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 44px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+.view-1-classic-weather-icon {
+    background-image: url("icons/cloudy-night.svg");
+    background-size: 96px 127px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 127.24px;
+    margin: 0 auto;
+    height: 98px;
+    text-align: center;
+}
+
+.view-1-classic-dergees-cels {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 75px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+
+.view-1-classic-dergees-far {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+
+.view-1-classic-typeofwind {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    background-image: url("icons/wind-route-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 50px;
+}
+
+.view-1-classic-windspeed {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    background-image: url("icons/speed-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 45px;
+}
+
+.view-1-classic-degrees {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    background-image: url("icons/grade.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 45px;
+}
+
+.view-1-classic-wet {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    background-image: url("icons/wet-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 45px;
+}
+
+.view-1-classic-pressure {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    background-image: url("icons/pressure.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 45px;
+}
+
+.view-1-classic-timeofday {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.view-1-classic-morning .view-1-classic-timeofday,
+.view-1-classic-0 .view-1-classic-timeofday{
+    margin-top: 50px;
+}
+
+.view-1-classic-morning  .view-1-classic-timeofday-icon,
+.view-1-classic-0  .view-1-classic-timeofday-icon{
+    /*background-image: url("icons/one-cloud.svg");*/
+    width: 86.74px;
+    height: 56.42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+
+.view-1-classic-day .view-1-classic-timeofday-icon,
+.view-1-classic-1 .view-1-classic-timeofday-icon {
+    /*background-image: url("icons/sun.svg");*/
+    width: 86.74px;
+    height: 56.42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+.view-1-classic-evening .view-1-classic-timeofday-icon,
+.view-1-classic-2 .view-1-classic-timeofday-icon{
+    /*background-image: url("icons/two-clouds.svg");*/
+    width: 86.74px;
+    height: 56.42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+.view-1-classic-temp {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+
+.view-1-classic-morning .view-1-classic-temp,
+.view-1-classic-0 .view-1-classic-temp{
+    margin-top: -1px;
+}

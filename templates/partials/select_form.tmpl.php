@@ -51,7 +51,6 @@
         <tr>
             <td colspan="3" align="center" style="background-color: #dddddd;">
                 <h1>Выберите цвет фона и текста для вашего информера</h1></td></tr>
-
         <tr>
             <td> <div class="form-item">
                     <label for="color_fon">Цвет фона:</label> <input type="text" id="color_fon" name="color_fon" value="#dcdcdc" style="width:60px;" />
@@ -73,9 +72,10 @@
         <tr>
             <td colspan="3" align="center">
                 <p><br /></p>
-                <input type="radio" class="radio" id="radio-27" name="weather_tip_img" value="img_7_svg"  checked="checked">
+                <input type="radio" class="radio" id="radio-27" name="weather_tip_img" value="img_1_svg"  checked="checked">
                 <label for="radio-27"> № 1 svg <img src="assets/img/img_7_svg.png" height="80" style="margin-bottom: -30px;" /></label>
-                <p class="otst"><br /></p>
+
+                <!--<p class="otst"><br /></p>
                 <input type="radio" class="radio" id="radio-28" name="weather_tip_img" value="img_8_svg">
                 <label for="radio-28"> № 2 svg <img src="assets/img/img_8_svg.png" height="80"  style="margin-bottom: -30px;"/> </label>
                 <p class="otst"><br /></p>
@@ -84,11 +84,8 @@
                 <p class="otst"><br /></p>
                 <input type="radio" class="radio" id="radio-30" name="weather_tip_img" value="img_10_svg">
                 <label for="radio-30"> № 4 svg <img src="assets/img/img_10_svg.png" height="80"  style="margin-bottom: -30px;"/> </label>
-                <p class="otst"><br /></p>
-
-                <!--<input type="radio" class="radio" id="radio-21" name="weather_tip_img" value="img">
-                <label for="radio-21"> № 5 	&nbsp;	&nbsp;	&nbsp;<img src="assets/img/img.png" height="80"  style="margin-bottom: -30px;"/></label>
                 <p class="otst"><br /></p>-->
+
             </td>
         </tr>
 
@@ -99,7 +96,9 @@
             <td colspan="3" align="center">
                 <input type="radio" class="radio" id="radio-1" name="weather_tip" value="weather_1" checked="checked">
                 <label for="radio-1"> Информер № 1</label> <p><br /></p>
-                <input type="radio" class="radio" id="radio-2" name="weather_tip" value="weather_2">
+
+
+                <!--<input type="radio" class="radio" id="radio-2" name="weather_tip" value="weather_2">
                 <label for="radio-2"> Информер № 2</label>
                 <p><br /></p>
                 <input type="radio" class="radio" id="radio-3" name="weather_tip" value="weather_3">
@@ -116,8 +115,10 @@
                 <p><br /></p>
                 <input type="radio" class="radio" id="radio-7" name="weather_tip" value="weather_7">
                 <label for="radio-7"> Информер № 7</label>
-                <p><br /></p>
-                <input type='submit' name="submit" value='Сформировать код информера' class="knop"></td>
+                <p><br /></p>-->
+                <input type='submit' name="submit" value='Сформировать код информера' class="knop">
+
+            </td>
         </tr>
     </table>
 </form>
