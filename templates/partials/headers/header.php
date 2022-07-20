@@ -19,21 +19,8 @@ date_default_timezone_set('Europe/Moscow');
     <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-    <?php if (!empty($_REQUEST['weather_tip'])) {?>
-        <style>
-            .body {font-family:<?php echo $_REQUEST['font_family'] ?>;}
-            #fon_table {
-                color:<?php echo $_REQUEST['font_text'] ?>;
-            }
-            .tempo {
-                color:<?php echo $_REQUEST['font_tempo'] ?>;
-            }
-            .compakt td {color:<?php echo $_REQUEST['font_text'] ?>;}
-        </style>
-    <?php }?>
-
     <?php
-    $fonts = array('Bad Script','Comfortaa','Indie Flower','Fira Code','Forum','Jura','El Messiri','Kurale','Kelly Slab','Lobster','Marck Script','Neucha','Open Sans','Oswald','Pangolin','Play','Poiret One','Pacifico','Press Start 2P','Pattaya','Roboto','Ruslan Display','Russo One','Rubik Mono One','Seymour One','Stalinist One','Underdog');
+    $fonts = array('Aldrich', 'Bad Script','Comfortaa','Indie Flower','Fira Code','Forum','Jura','El Messiri','Kurale','Kelly Slab','Lobster','Marck Script','Neucha','Open Sans','Oswald','Pangolin','Play','Poiret One','Pacifico','Press Start 2P','Pattaya','Roboto','Ruslan Display','Russo One','Rubik Mono One','Seymour One','Stalinist One','Underdog');
     foreach ($fonts as $font) {
         echo "<link href='https://fonts.googleapis.com/css?family=".str_replace(" ", "+", $font)."' rel='stylesheet' type='text/css'>\n";
     }

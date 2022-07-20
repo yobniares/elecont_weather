@@ -17,7 +17,7 @@
             <td colspan="3" align="center">
                 <p><label for="color_fon">Выберите шрифт:</label>
                     <select name='font_family' class='font_family'/>
-                    <option value="Geometria" STYLE="font-family: Geometria;" selected>Geometria</option>
+                    <option value="Aldrich" STYLE="font-family: Aldrich;" selected>Aldrich</option>
                     <option value="Bad Script" STYLE="font-family: Bad Script;">Bad Script</option>
                     <option value="Comfortaa" STYLE="font-family: Comfortaa;">Comfortaa</option>
                     <option value="Indie Flower" STYLE="font-family: Indie Flower;">Indie Flower</option>
