@@ -11,7 +11,11 @@ date_default_timezone_set('Europe/Moscow');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <?php if (!empty($_REQUEST['font_family'])) {?>
+        <link href='https://fonts.googleapis.com/css?family=<?php echo $_REQUEST['font_family'] ?>' rel='stylesheet' type='text/css'>
+    <?php } else {?>
+        <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <?php }?>
     <link rel="stylesheet" href="<?php echo($geometria); ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo($css); ?>" type="text/css">
     <title>View 1 Classic</title>

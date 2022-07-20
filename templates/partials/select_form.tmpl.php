@@ -17,6 +17,7 @@
             <td colspan="3" align="center">
                 <p><label for="color_fon">Выберите шрифт:</label>
                     <select name='font_family' class='font_family'/>
+                    <option value="Geometria" STYLE="font-family: Geometria;" selected>Geometria</option>
                     <option value="Bad Script" STYLE="font-family: Bad Script;">Bad Script</option>
                     <option value="Comfortaa" STYLE="font-family: Comfortaa;">Comfortaa</option>
                     <option value="Indie Flower" STYLE="font-family: Indie Flower;">Indie Flower</option>
@@ -37,7 +38,7 @@
                     <option value="Pacifico" STYLE="font-family: Pacifico;">Pacifico</option>
                     <option value="Press Start 2P" STYLE="font-family: Press Start 2P;">Press Start 2P</option>
                     <option value="Pattaya" STYLE="font-family: Pattaya;">Pattaya</option>
-                    <option value="Roboto" STYLE="font-family: Roboto;" selected >Roboto</option>
+                    <option value="Roboto" STYLE="font-family: Roboto;">Roboto</option>
                     <option value="Ruslan Display" STYLE="font-family: Ruslan Display;">Ruslan Display</option>
                     <option value="Russo One" STYLE="font-family: Russo One;">Russo One</option>
                     <option value="Rubik Mono One" STYLE="font-family: Rubik Mono One;">Rubik Mono One</option>
@@ -53,15 +54,15 @@
                 <h1>Выберите цвет фона и текста для вашего информера</h1></td></tr>
         <tr>
             <td> <div class="form-item">
-                    <label for="color_fon">Цвет фона:</label> <input type="text" id="color_fon" name="color_fon" value="#dcdcdc" style="width:60px;" />
+                    <label for="color_fon">Цвет фона:</label> <input type="text" id="color_fon" name="color_fon" value="#2A88CD" style="width:60px;" />
                 </div>
                 <div id="picker_fon" style="padding-top:20px;"></div></td>
             <td><div class="form-item">
-                    <label for="font_text">Цвет текста:</label> <input type="text" id="font_text" name="font_text" value="#000000" style="width:60px;"/>
+                    <label for="font_text">Цвет текста:</label> <input type="text" id="font_text" name="font_text" value="#ffffff" style="width:60px;"/>
                 </div>
                 <div id="picker_font_text" style="padding-top:20px;"></div></td>
             <td><div class="form-item">
-                    <label for="font_tempo">Цвет температуры:</label> <input type="text" id="font_tempo" name="font_tempo" value="#000000" style="width:60px;"/>
+                    <label for="font_tempo">Цвет температуры:</label> <input type="text" id="font_tempo" name="font_tempo" value="#ffffff" style="width:60px;"/>
                 </div>
                 <div id="picker_font_tempo" style="padding-top:20px;"></div></td>
         </tr>

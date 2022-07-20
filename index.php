@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<h4>Информер № 1 (узкий, на всю ширину слайда)</h4>';
         echo '<p><br /></p>';
         echo '<div style="width:100%;">';
-        echo $template->renderTemplate('weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_1&weather_tip_img=img_1_svg&font_family=Roboto&color_fon=%232A88CD&font_text=%23fff&font_tempo=%23fff" frameborder="0" height="700"></iframe>';
         echo '</div>';
         echo '<p class="otst"><br /></p>';
 
