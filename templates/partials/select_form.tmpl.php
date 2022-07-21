@@ -73,20 +73,16 @@
         <tr>
             <td colspan="3" align="center">
                 <p><br /></p>
-                <input type="radio" class="radio" id="radio-27" name="weather_tip_img" value="img_1_svg"  checked="checked">
-                <label for="radio-27"> № 1 svg <img src="assets/img/img_7_svg.png" height="80" style="margin-bottom: -30px;" /></label>
-
-                <!--<p class="otst"><br /></p>
-                <input type="radio" class="radio" id="radio-28" name="weather_tip_img" value="img_8_svg">
-                <label for="radio-28"> № 2 svg <img src="assets/img/img_8_svg.png" height="80"  style="margin-bottom: -30px;"/> </label>
                 <p class="otst"><br /></p>
-                <input type="radio" class="radio" id="radio-29" name="weather_tip_img" value="img_9_svg">
-                <label for="radio-29"> № 3 svg <img src="assets/img/img_9_svg.png" height="80"  style="margin-bottom: -30px;"/> </label>
+                <input type="radio" class="radio" id="radio-28" name="weather_tip_img" value="classic" checked>
+                <label for="radio-28"> № 1 (Classic) <img src="assets/img/img_8_svg.png" height="80"  style="margin-bottom: -30px;"/> </label>
                 <p class="otst"><br /></p>
-                <input type="radio" class="radio" id="radio-30" name="weather_tip_img" value="img_10_svg">
-                <label for="radio-30"> № 4 svg <img src="assets/img/img_10_svg.png" height="80"  style="margin-bottom: -30px;"/> </label>
-                <p class="otst"><br /></p>-->
-
+                <input type="radio" class="radio" id="radio-29" name="weather_tip_img" value="ht">
+                <label for="radio-29"> № 2 (Hi-Tech) <img src="assets/img/img_9_svg.png" height="80"  style="margin-bottom: -30px;"/> </label>
+                <p class="otst"><br /></p>
+                <input type="radio" class="radio" id="radio-30" name="weather_tip_img" value="neon">
+                <label for="radio-30"> № 3 (Neon) <img src="assets/img/img_10_svg.png" height="80"  style="margin-bottom: -30px;"/> </label>
+                <p class="otst"><br /></p>
             </td>
         </tr>
 

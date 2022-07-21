@@ -61,43 +61,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '</div>';
         echo '<p class="otst"><br /></p>';
 
-        /*echo '<h4>ИНФОРМЕР № 2 (КОМПАКТНЫЙ)</h4>';
-         echo '<p><br /></p>';
-         echo '<div style="width:50%;">';
-         echo $template->renderTemplate('weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
+        echo '<h4>ИНФОРМЕР № 2 (КОМПАКТНЫЙ)</h4>';
+        echo '<p><br /></p>';
+        echo '<div style="width:50%;">';
+        echo $template->renderTemplate('weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
 
-         echo '<h4>ИНФОРМЕР № 3 (МИНИМАЛЬНОЙ ВЫСОТЫ)</h4>';
-         echo '<p><br /></p>';
-         echo '<div style="width:100%;">';
-         echo $template->renderTemplate('weather_3', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
+        echo '<h4>ИНФОРМЕР № 3 (МИНИМАЛЬНОЙ ВЫСОТЫ)</h4>';
+        echo '<p><br /></p>';
+        echo '<div style="width:100%;">';
+        echo $template->renderTemplate('weather_3', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
 
-         echo '<h4>ИНФОРМЕР № 4 (ДЕЛОВОЙ)</h4>';
-         echo '<div style="width:65%;">';
-         echo $template->renderTemplate('weather_4', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
+        echo '<h4>ИНФОРМЕР № 4 (ДЕЛОВОЙ)</h4>';
+        echo '<div style="width:65%;">';
+        echo $template->renderTemplate('weather_4', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
 
-         echo '<h4>ИНФОРМЕР № 5</h4>';
-         echo '<div style="width:65%;">';
-         echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_5&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
+        echo '<h4>ИНФОРМЕР № 5</h4>';
+        echo '<div style="width:65%;">';
+        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_5&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
 
-         echo '<h4>ИНФОРМЕР № 6</h4>';
-         echo '<div style="width:45%;">';
-         echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_6&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
+        echo '<h4>ИНФОРМЕР № 6</h4>';
+        echo '<div style="width:45%;">';
+        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_6&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
 
-         echo '<h4>ИНФОРМЕР № 7</h4>';
-         echo '<div style="width:35%;">';
-         echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_7&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="600"></iframe>';
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';*/
+        echo '<h4>ИНФОРМЕР № 7</h4>';
+        echo '<div style="width:35%;">';
+        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_7&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="600"></iframe>';
+        echo '</div>';
+        echo '<p class="otst"><br /></p>';
 
         // Select params form
         echo $template->renderTemplate('partials/select_form');

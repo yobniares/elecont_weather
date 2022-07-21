@@ -1,0 +1,19 @@
+<svg width="838" height="227" viewBox="0 0 838 227" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 28C3 14.1929 14.1929 3 28 3H775C808.137 3 835 29.8629 835 63V164C835 197.137 808.137 224 775 224H28C14.1929 224 3 212.807 3 199V28Z" fill="#F3F3F3" stroke="url(#paint0_radial_388_14)" stroke-width="5"/>
+<path d="M255 50L255 170" stroke="url(#paint1_radial_388_14)" stroke-width="2" stroke-linecap="round"/>
+<path d="M559 50L559 170" stroke="url(#paint2_radial_388_14)" stroke-width="2" stroke-linecap="round"/>
+<defs>
+<radialGradient id="paint0_radial_388_14" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(419 138) scale(416 1566.12)">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_388_14" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(254.5 110) rotate(-180) scale(0.5 60)">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_388_14" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(558.5 110) rotate(-180) scale(0.5 60)">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

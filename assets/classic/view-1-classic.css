@@ -234,12 +234,17 @@ body {
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 700;
-    font-size: 25px;
+    /*font-size: 25px;*/
+    font-size: 23px;
     line-height: 31px;
     text-align: center;
     text-transform: uppercase;
-
     color: #FFFFFF;
+}
+
+.view-1-classic-timeofday-icon img {
+    min-width: 80px;
+    max-width: 80px;
 }
 
 .view-1-classic-morning .view-1-classic-timeofday,

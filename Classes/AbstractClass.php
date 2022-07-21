@@ -334,6 +334,28 @@ class AbstractClass
     }
 
     /**
+     * @return string|void
+     */
+    public function getTimesOfDay()
+    {
+        date_default_timezone_set('Europe/Moscow');
+        $time = date('H:i', time());
+
+        if ($time >= 5 && $time <= 10) {
+            return 'Утро';
+        }
+        if ($time >= 10 && $time <= 18) {
+            return 'День';
+        }
+        if ($time >= 18 && $time <= 23) {
+            return 'Вечер';
+        }
+        if ($time >= 23 && $time <= 5) {
+            return 'Ночь';
+        }
+    }
+
+    /**
      * @param $requestArray
      * @return string
      */
@@ -425,7 +447,15 @@ class AbstractClass
 
         // Template weather_wide
         if ($_REQUEST['weather_tip'] == 'weather_1') {
-            echo $template->renderTemplate('weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            if ($_REQUEST['weather_tip_img'] == 'classic') {
+                echo $template->renderTemplate('classic/weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
+            if ($_REQUEST['weather_tip_img'] == 'ht') {
+                echo $template->renderTemplate('high-tech/weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
+            if ($_REQUEST['weather_tip_img'] == 'neon') {
+                echo $template->renderTemplate('neon/weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
         }
         // Template weather_2
         if ($_REQUEST['weather_tip'] == 'weather_2') {

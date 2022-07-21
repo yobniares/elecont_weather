@@ -5,32 +5,31 @@ $farbasticCss = 'assets/farbtastic/farbtastic.css';
 $mainJs = 'assets/main.js';
 $farbasticJs = 'assets/farbtastic/farbtastic.js';
 
-if (empty($_REQUEST['weather_tip'])) {
+/*if (!empty($_REQUEST['weather_tip_img'])) {
+    if($_REQUEST['weather_tip_img'] == 'classic') {
+        $css = 'assets/classic/view-1-classic.css';
+    }
+    if($_REQUEST['weather_tip_img'] == 'ht') {
+        $css = 'assets/ht/view-1-ht.css';
+    }
+    if($_REQUEST['weather_tip_img'] == 'neon') {
+        $css = 'assets/neon/view-1-neon.css';
+    }
+}*/
+
+if (!empty($_REQUEST['weather_tip_img'])) {
+    $css = 'assets/' . $_REQUEST['weather_tip_img'] . '/view-1-' . $_REQUEST['weather_tip_img'] . '.css';
+} else {
     $css = 'assets/css_inform.css';
+}
+
+if (empty($_REQUEST['weather_tip'])) {
     include_once 'templates/partials/headers/header.php';
 } else {
     if ($_REQUEST['weather_tip'] =='weather_1') {
         $geometria = 'fonts/geometria/stylesheet.css';
-        $css = 'assets/classic/view-1-classic.css';
         include_once 'templates/partials/headers/header_weather.php';
     }
-
-    /*if ($_REQUEST['weather_tip'] =='weather_1' || $_REQUEST['weather_tip'] =='weather_2' || $_REQUEST['weather_tip'] =='weather_3') {
-        $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/headers/header_weather.php';
-    }
-    if ($_REQUEST['weather_tip'] =='weather_5') {
-        $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/headers/header_weather5.php';
-    }
-    if ($_REQUEST['weather_tip'] =='weather_6') {
-        $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/headers/header_weather6.php';
-    }
-    if ($_REQUEST['weather_tip'] =='weather_7') {
-        $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/headers/header_weather7.php';
-    }*/
 }
 
 // Include classes
@@ -50,8 +49,6 @@ $objects = $xmlData->getObjects();
 $abstractData = new AbstractClass();
 $template = new RenderClass();
 
-//var_dump($objects['0']);
-
 //if (isset($_POST['submit'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Render informer with params // Get dynamic template
@@ -60,50 +57,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     // Render informer without params
     if (empty($_REQUEST['weather_tip'])) {
-        echo '<h4>Информер № 1 (узкий, на всю ширину слайда)</h4>';
+
+        /*echo '<h4>Информер № 1 (узкий, в столбик)</h4>';
         echo '<p><br /></p>';
         echo '<div style="width:100%;">';
-        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_1&weather_tip_img=img_1_svg&font_family=Roboto&color_fon=%232A88CD&font_text=%23fff&font_tempo=%23fff" frameborder="0" height="700"></iframe>';
+        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_1&weather_tip_img=classic&font_family=Aldrich&color_fon=%232A88CD&font_text=%23fff&font_tempo=%23fff" frameborder="0" height="700"></iframe>';
         echo '</div>';
-        echo '<p class="otst"><br /></p>';
-
-        /*echo '<h4>ИНФОРМЕР № 2 (КОМПАКТНЫЙ)</h4>';
-         echo '<p><br /></p>';
-         echo '<div style="width:50%;">';
-         echo $template->renderTemplate('weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
-
-         echo '<h4>ИНФОРМЕР № 3 (МИНИМАЛЬНОЙ ВЫСОТЫ)</h4>';
-         echo '<p><br /></p>';
-         echo '<div style="width:100%;">';
-         echo $template->renderTemplate('weather_3', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
-
-         echo '<h4>ИНФОРМЕР № 4 (ДЕЛОВОЙ)</h4>';
-         echo '<div style="width:65%;">';
-         echo $template->renderTemplate('weather_4', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
-
-         echo '<h4>ИНФОРМЕР № 5</h4>';
-         echo '<div style="width:65%;">';
-         echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_5&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
-
-         echo '<h4>ИНФОРМЕР № 6</h4>';
-         echo '<div style="width:45%;">';
-         echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_6&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="700"></iframe>';
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';
-
-         echo '<h4>ИНФОРМЕР № 7</h4>';
-         echo '<div style="width:35%;">';
-         echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_7&weather_tip_img=img_7_svg&font_family=Roboto&color_fon=%23dcdcdc&font_text=%23000000&font_tempo=%23000000" frameborder="0" width="100%" height="600"></iframe>';
-         echo '</div>';
-         echo '<p class="otst"><br /></p>';*/
+        echo '<p class="otst"><br /></p>';*/
 
         // Select params form
         echo $template->renderTemplate('partials/select_form');
