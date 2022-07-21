@@ -18,6 +18,42 @@ date_default_timezone_set('Europe/Moscow');
     <?php }?>
     <link rel="stylesheet" href="<?php echo($geometria); ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo($css); ?>" type="text/css">
-    <title>View 1 Classic</title>
+    <?php if (!empty($_REQUEST['weather_tip'])) {?>
+        <style>
+            body,
+            ._view-1-<?php echo $_REQUEST['weather_tip_img']?>-city-day-info,
+            ._view-1-<?php echo $_REQUEST['weather_tip_img']?>-weather,
+            ._view-1-<?php echo $_REQUEST['weather_tip_img']?>-dergees-cels,
+            ._view-1-<?php echo $_REQUEST['weather_tip_img']?>-dergees-far,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-timeofday,
+            ._view-1-<?php echo $_REQUEST['weather_tip_img']?>-temp,
+            ._view-1-<?php echo $_REQUEST['weather_tip_img']?>-typeofwind,
+            ._view-1-<?php echo $_REQUEST['weather_tip_img']?>-windspeed,
+            ._view-1-<?php echo $_REQUEST['weather_tip_img']?>-degrees,
+            ._view-1-<?php echo $_REQUEST['weather_tip_img']?>-wet {
+                font-family:<?php echo $_REQUEST['font_family'] ?>;
+            }
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-1,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?> {
+                background:<?php echo $_REQUEST['color_fon'] ?>;
+            }
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-city-day-info,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-weather,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-typeofwind,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-windspeed,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-degrees,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-wet,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-pressure,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-timeofday {
+                color: <?php echo  $_REQUEST['font_text'] ?>;
+            }
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-dergees-cels,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-dergees-far,
+            .view-1-<?php echo $_REQUEST['weather_tip_img']?>-temp {
+                color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            }
+        </style>
+    <?php }?>
+
 </head>
 <body>

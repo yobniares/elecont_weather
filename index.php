@@ -4,6 +4,7 @@
 $farbasticCss = 'assets/farbtastic/farbtastic.css';
 $mainJs = 'assets/main.js';
 $farbasticJs = 'assets/farbtastic/farbtastic.js';
+$geometria = 'assets/' .$_REQUEST['weather_tip_img'] .'/fonts/geometria/stylesheet.css';
 
 /*if (!empty($_REQUEST['weather_tip_img'])) {
     if($_REQUEST['weather_tip_img'] == 'classic') {
@@ -18,7 +19,7 @@ $farbasticJs = 'assets/farbtastic/farbtastic.js';
 }*/
 
 if (!empty($_REQUEST['weather_tip_img'])) {
-    $css = 'assets/' . $_REQUEST['weather_tip_img'] . '/view-1-' . $_REQUEST['weather_tip_img'] . '.css';
+    $css = 'assets/' . $_REQUEST['weather_tip_img'] . '/' . $_REQUEST['weather_tip'] . '_'. $_REQUEST['weather_tip_img'] . '.css';
 } else {
     $css = 'assets/css_inform.css';
 }
@@ -26,10 +27,7 @@ if (!empty($_REQUEST['weather_tip_img'])) {
 if (empty($_REQUEST['weather_tip'])) {
     include_once 'templates/partials/headers/header.php';
 } else {
-    if ($_REQUEST['weather_tip'] =='weather_1') {
-        $geometria = 'fonts/geometria/stylesheet.css';
-        include_once 'templates/partials/headers/header_weather.php';
-    }
+    include_once 'templates/partials/headers/header_weather.php';
 }
 
 // Include classes
@@ -43,11 +41,17 @@ $iniArr = parse_ini_file('app.ini');
 $key = $iniArr['key'];
 
 $additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=4';
+if ($_REQUEST['weather_tip'] == 'weather_2') {
+    $additionalParams = 'la=ru&weather=1&aqi=0';
+}
+
 //$additionalParams = 'la=ru&weather=1&aqi=0&hour=1&number=4&step=4';
 $xmlData = new XmlDataClass($mainUrl, $key, $additionalParams);
 $objects = $xmlData->getObjects();
 $abstractData = new AbstractClass();
 $template = new RenderClass();
+
+//var_dump($objects[0]);
 
 //if (isset($_POST['submit'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -93,6 +93,9 @@
             <td colspan="3" align="center">
                 <input type="radio" class="radio" id="radio-1" name="weather_tip" value="weather_1" checked="checked">
                 <label for="radio-1"> Информер № 1</label> <p><br /></p>
+                <input type="radio" class="radio" id="radio-2" name="weather_tip" value="weather_2">
+                <label for="radio-2"> Информер № 2</label>
+                <p><br /></p>
 
 
                 <!--<input type="radio" class="radio" id="radio-2" name="weather_tip" value="weather_2">

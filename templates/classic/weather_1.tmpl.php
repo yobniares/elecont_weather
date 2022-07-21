@@ -4,44 +4,6 @@
     }
 ?>
 
-<?php if (!empty($_REQUEST['weather_tip'])) {?>
-    <style>
-        body,
-        ._view-1-classic-city-day-info,
-        ._view-1-classic-weather,
-        ._view-1-classic-dergees-cels,
-        ._view-1-classic-dergees-far,
-        .view-1-classic-timeofday,
-        ._view-1-classic-temp,
-        ._view-1-classic-typeofwind,
-        ._view-1-classic-windspeed,
-        ._view-1-classic-degrees,
-        ._view-1-classic-wet {
-            font-family:<?php echo $_REQUEST['font_family'] ?>;
-        }
-
-        .view-1-classic {
-            font-family:<?php echo $_REQUEST['color_fon'] ?>;
-        }
-
-        .view-1-classic-city-day-info,
-        .view-1-classic-weather,
-        .view-1-classic-typeofwind,
-        .view-1-classic-windspeed,
-        .view-1-classic-degrees,
-        .view-1-classic-wet,
-        .view-1-classic-pressure,
-        .view-1-classic-timeofday {
-            color: <?php echo  $_REQUEST['font_text'] ?>;
-        }
-        .view-1-classic-dergees-cels,
-        .view-1-classic-dergees-far,
-        .view-1-classic-temp {
-            color: <?php echo  $_REQUEST['font_tempo'] ?>;
-        }
-    </style>
-<?php }?>
-
 <body>
 <section class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-container">
 <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>" >

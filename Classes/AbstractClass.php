@@ -334,6 +334,15 @@ class AbstractClass
     }
 
     /**
+     * @param $value
+     * @return string
+     */
+    public function getPopulate($value)
+    {
+        return number_format($value, '0', ',', ' ');
+    }
+
+    /**
      * @return string|void
      */
     public function getTimesOfDay()
@@ -353,6 +362,18 @@ class AbstractClass
         if ($time >= 23 && $time <= 5) {
             return 'Ночь';
         }
+    }
+
+    /**
+     * @param $gmtMin
+     * @param $timeString
+     * @return string
+     */
+    public function getGmtTime($gmtMin, $timeString)
+    {
+        $gmt = $gmtMin/60;
+        $time = date('H:i', strtotime($timeString. ' + ' . $gmt . 'hours'));
+        return $time;
     }
 
     /**
@@ -459,7 +480,15 @@ class AbstractClass
         }
         // Template weather_2
         if ($_REQUEST['weather_tip'] == 'weather_2') {
-            echo $template->renderTemplate('weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            if ($_REQUEST['weather_tip_img'] == 'classic') {
+                echo $template->renderTemplate('classic/weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
+            if ($_REQUEST['weather_tip_img'] == 'ht') {
+                echo $template->renderTemplate('high-tech/weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
+            if ($_REQUEST['weather_tip_img'] == 'neon') {
+                echo $template->renderTemplate('neon/weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
         }
 
         // Template weather_3

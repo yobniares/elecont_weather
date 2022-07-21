@@ -10,23 +10,23 @@ $farbasticJs = 'assets/farbtastic/farbtastic.js';
 
 if (empty($_REQUEST['weather_tip'])) {
     $css = 'assets/classic/view-1-classic.css';
-    include_once 'templates/partials/headers/header.php';
+    include_once 'partials/headers/header.php';
 } else {
     /*if ($_REQUEST['weather_tip'] =='weather_1' || $_REQUEST['weather_tip'] =='weather_2' || $_REQUEST['weather_tip'] =='weather_3') {
         $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/headers/header_weather.php';
+        include_once 'partials/headers/header_weather.php';
     }
     if ($_REQUEST['weather_tip'] =='weather_5') {
         $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/headers/header_weather5.php';
+        include_once 'partials/headers/header_weather5.php';
     }
     if ($_REQUEST['weather_tip'] =='weather_6') {
         $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/headers/header_weather6.php';
+        include_once 'partials/headers/header_weather6.php';
     }
     if ($_REQUEST['weather_tip'] =='weather_7') {
         $css = 'assets/css_inform_flexible.css';
-        include_once 'templates/partials/headers/header_weather7.php';
+        include_once 'partials/headers/header_weather7.php';
     }*/
 }
 
@@ -108,4 +108,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Include footer
-include 'templates/partials/footer.php';
+include 'partials/footer.php';
