@@ -79,8 +79,7 @@ body {
     background-image: url("img/view-1-longcustom.png");
 }
 
-.view-1-classic-morning,
-.view-1-classic-0 {
+.view-1-classic-morning {
     position: absolute;
     width: 225px;
     height: 247px;
@@ -91,8 +90,7 @@ body {
     margin-top: 800px;
 }
 
-.view-1-classic-day,
-.view-1-classic-1 {
+.view-1-classic-day {
     position: absolute;
     width: 225px;
     height: 205px;
@@ -103,8 +101,7 @@ body {
     margin-top: 1005px;
 }
 
-.view-1-classic-evening,
-.view-1-classic-2 {
+.view-1-classic-evening {
     position: absolute;
     width: 225px;
     height: 250px;

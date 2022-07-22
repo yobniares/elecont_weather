@@ -34,16 +34,16 @@ if (!empty($_REQUEST['weather_tip'])) {
     if ($_REQUEST['weather_tip'] == '2') {
         $additionalParamsSingeObject = 'la=ru&weather=1&aqi=0';
         $additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=7';
+        $xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
+        $mainObject = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
+    } else {
+        $mainObject = [];
     }
 }
 
-//$additionalParams = 'la=ru&weather=1&aqi=0&hour=1&number=4&step=4';
 $xmlData = new XmlDataClass($mainUrl, $key, $additionalParams);
-$xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
-
 // Data for template
 $objects = $xmlData->getObjects();
-$mainObject = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
 $abstractData = new AbstractClass();
 $template = new RenderClass();
 

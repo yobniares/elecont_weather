@@ -1,0 +1,297 @@
+@import url("fonts/geometria/stylesheet.css");
+
+body {
+    font-family: 'Geometria';
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+.view-3-classic {
+    width: 850px;
+    height: 1000px;
+    background: #2A88CD;
+    box-sizing: border-box;
+    padding-top: 3px;
+    
+
+}
+
+.view-3-classic-custom-light {
+    background-image: url("img/sunny-3.png");
+    background-repeat: no-repeat;
+}
+
+.view-3-classic-custom-dark {
+    background-image: url("img/dark-3.png");
+    background-repeat: no-repeat;
+}
+
+.view-3-classic-content {
+    width: 826px;
+    height: 974px;
+    border: 2px solid #FFFFFF;
+    margin: 12px;
+    box-sizing: border-box;
+}
+
+.view-3-classic-city {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 57px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    color: #FFFFFF;
+}
+
+.view-3-classic-selected-timeofday {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-left: 500px;
+    margin-top: -100px
+
+
+}
+
+.view-3-classic-daynumber {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    color: #FFFFFF;
+    margin-left: 30px;
+
+}
+
+.view-3-classic-weekday {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-left: 350px;
+    margin-top: -95px
+}
+
+.view-3-classic-iconday img {
+    width: 310px;
+    height: 233.88px;
+}
+
+.view-3-classic-iconday {
+    /*background-image: url("icons/cloudy-night-2.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 310px;
+    height: 233.88px;
+    margin-left: 490px;
+    margin-top: -160px
+}
+
+.view-3-classic-temp {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    text-transform: uppercase;
+    margin-left: 30px;
+    margin-top: -80px;
+    color: #FFFFFF;
+
+}
+
+.view-3-classic-line {
+    width: 700px;
+    height: 0px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.view-3-classic-params {
+    margin:  0 auto;
+    display: flex;
+    width: 710px;
+    justify-content: space-between;
+    /* margin-top: -20px; */
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+.view-3-classic-typeofwind {
+    background-image: url("icons/wind-route.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+}
+
+
+.view-3-classic-windspeed {
+    background-image: url("icons/speed.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 27px;
+}
+
+.view-3-classic-degree {
+    background-image: url("icons/grade.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 27px;
+}
+
+.view-3-classic-wet {
+    background-image: url("icons/wet.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+}
+
+.view-3-classic-pressure {
+    background-image: url("icons/pressure.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-3-classic-bottom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 578px;
+    justify-content: space-around;
+    margin-top: 6px;
+}
+
+.view-3-classic-day1 {
+    width: 792px;
+    height: 185px;
+    background: #7FB8E1;
+    border-radius: 60px 60px 0px 0px;
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+.view-3-classic-day2,
+.view-3-classic-day3 {
+    width: 792px;
+    height: 185px;
+    background: #7FB8E1;
+    margin: 0 auto;
+}
+
+.custom-bottom .view-3-classic-day1 {
+  
+    border: 15px solid #2A88CD;
+    border-radius: 60px 60px 0px 0px;   
+    width: 820px;
+    border-bottom: none;
+    margin-left: -14px;
+    
+}
+
+.custom-bottom .view-3-classic-day2,
+.custom-bottom .view-3-classic-day3 {
+
+    border: 15px solid #2A88CD;
+    width: 820px;
+    border-bottom: none;
+    margin-left: -14px;
+    
+   
+}
+
+.view-3-classic-day1 {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.view-3-classic-day2 {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.view-3-classic-weekday-next {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.view-3-classic-daynumber-next {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+.view-3-classic-temp-next {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 53px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    }
+
+.view-3-classic-icon-thu,
+.view-3-classic-icon-1 {
+    /*background-image: url("icons/one-cloud-2.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 192px;
+    height: 124.89px;
+
+}
+
+.view-3-classic-icon-fri,
+.view-3-classic-icon-2 {
+    /*background-image: url("icons/sunny-2.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 149.52px;
+    height: 146.91px;
+
+}
+
+.view-3-classic-icon-sat,
+.view-3-classic-icon-3 {
+    /*background-image: url("icons/two-clouds-2.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 197px;
+    height: 168px;
+
+}
+
+.view-3-classic-icon-1 img,
+.view-3-classic-icon-2 img,
+.view-3-classic-icon-3 img {
+    width: 149.52px;
+    height: 146.91px;
+}
+

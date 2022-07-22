@@ -267,7 +267,7 @@ class AbstractClass
 
         $weekArr = [
             'ВС',
-            'ПП',
+            'ПН',
             'ВТ',
             'СР',
             'ЧТ',
@@ -437,8 +437,8 @@ class AbstractClass
             if ($requestArray['weather_tip'] == '2') {
                 $string = '?weather_tip=2';
             }
-            if ($requestArray['weather_tip'] == 'weather_3') {
-                $string = '?weather_tip=weather_3';
+            if ($requestArray['weather_tip'] == '3') {
+                $string = '?weather_tip=3';
             }
             if ($requestArray['weather_tip'] == 'weather_4') {
                 $string = '?weather_tip=weather_4';
@@ -512,8 +512,7 @@ class AbstractClass
     public function getTemplate($template, $objects, $mainObject, $abstractData)
     {
 
-        // Template weather_wide
-        // weather_1
+        // Template weather_wide weather_1
         if ($_REQUEST['weather_tip'] == '1') {
             if ($_REQUEST['weather_tip_img'] == 'classic') {
                 echo $template->renderTemplate('classic/weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
@@ -544,8 +543,10 @@ class AbstractClass
         }
 
         // Template weather_3
-        if ($_REQUEST['weather_tip'] == 'weather_3') {
-            echo $template->renderTemplate('weather_3', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        if ($_REQUEST['weather_tip'] == '3') {
+            if ($_REQUEST['weather_tip_img'] == 'classic') {
+                echo $template->renderTemplate('classic/weather_3', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
         }
 
         // Template weather_4

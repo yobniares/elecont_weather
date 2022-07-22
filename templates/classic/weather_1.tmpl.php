@@ -42,9 +42,17 @@
                     Давление: <?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм. рт. ст.
                 </div>
             </div>
-
-            <?php for ($i=0; $i < 3; $i++) {?>
-                <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-<?php echo $i ?>" >
+            <?php for ($i=0; $i < 3; $i++) {
+                if ($i == 0) {
+                    $className = 'morning';
+                }
+                if ($i == 1) {
+                    $className = 'day';
+                }
+                if ($i == 2) {
+                    $className = 'evening';
+                } ?>
+                <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-<?php echo $className ?>" >
                     <p class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-timeofday" >
                         <?php echo $forecatsArr[$i]['dt']; ?>
                     </p>
