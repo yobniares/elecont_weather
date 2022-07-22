@@ -3,24 +3,18 @@ foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
 
-//$the_date = "7/23/22 12:00 AM"; // The date from the previous section
-//$nameOfTheDay = date('d', strtotime($the_date));
-//echo "The date " . $the_date . " falls on a " . $nameOfTheDay;
-
 ?>
 
 <body>
-
 <section class="view-2-classic-container">
-
     <div class="view-2-classic">
         <div class="view-2-classic-content">
             <div class="view-2-classic-sunrise-sunset-time">
                 <div class="view-2-classic-sunrisetime">
-                    Восход: <span class="time"><?php echo $abstractData->getGmtTime($object['gmtMin'], $object['sr']); ?></span>
+                    Восход: <span class="time"><?php echo $abstractData->getGmtTime($object['gmtMin'], $mainObject['sr']); ?></span>
                 </div>
                 <div class="view-2-classic-sunsettime">
-                    Закат: <span class="time"><?php echo $abstractData->getGmtTime($object['gmtMin'], $object['ss']); ?></span>
+                    Закат: <span class="time"><?php echo $abstractData->getGmtTime($object['gmtMin'], $mainObject['ss']); ?></span>
                 </div>
             </div>
             <div class="view-2-classic-content-dayofweek">
@@ -94,14 +88,13 @@ foreach ($objects['0'] as $forecast) {
                                     <?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм рт.ст.
                                 </li>
                                 <li class="view-2-classic-dpf">
-                                    dpF <?php echo $object['dpF'] ?>°
+                                    dpF <?php echo $mainObject['dpF'] ?>°
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="view-2-classic-population">
                         <?php echo $abstractData->getPopulate((string)$object['pop']) ?> жителей
-                        <!--4.991 млн жителей-->
                     </div>
                 </div>
             </ul>

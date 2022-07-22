@@ -4,22 +4,10 @@
 $farbasticCss = 'assets/farbtastic/farbtastic.css';
 $mainJs = 'assets/main.js';
 $farbasticJs = 'assets/farbtastic/farbtastic.js';
-$geometria = 'assets/' .$_REQUEST['weather_tip_img'] .'/fonts/geometria/stylesheet.css';
-
-/*if (!empty($_REQUEST['weather_tip_img'])) {
-    if($_REQUEST['weather_tip_img'] == 'classic') {
-        $css = 'assets/classic/view-1-classic.css';
-    }
-    if($_REQUEST['weather_tip_img'] == 'ht') {
-        $css = 'assets/ht/view-1-ht.css';
-    }
-    if($_REQUEST['weather_tip_img'] == 'neon') {
-        $css = 'assets/neon/view-1-neon.css';
-    }
-}*/
 
 if (!empty($_REQUEST['weather_tip_img'])) {
-    $css = 'assets/' . $_REQUEST['weather_tip_img'] . '/' . $_REQUEST['weather_tip'] . '_'. $_REQUEST['weather_tip_img'] . '.css';
+    $geometria = 'assets/' .$_REQUEST['weather_tip_img'] .'/fonts/geometria/stylesheet.css';
+    $css = 'assets/' . $_REQUEST['weather_tip_img'] . '/weather_' . $_REQUEST['weather_tip'] . '_'. $_REQUEST['weather_tip_img'] . '.css';
 } else {
     $css = 'assets/css_inform.css';
 }
@@ -40,23 +28,29 @@ $mainUrl = 'http://airquality.elecont.com/ElecontAirQuality/?top=55.9&left=36.8&
 $iniArr = parse_ini_file('app.ini');
 $key = $iniArr['key'];
 
-$additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=7';
-if ($_REQUEST['weather_tip'] == 'weather_2') {
-    ///$additionalParams = 'la=ru&weather=1&aqi=0';
+$additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=4';
+
+if (!empty($_REQUEST['weather_tip'])) {
+    if ($_REQUEST['weather_tip'] == '2') {
+        $additionalParamsSingeObject = 'la=ru&weather=1&aqi=0';
+        $additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=7';
+    }
 }
 
 //$additionalParams = 'la=ru&weather=1&aqi=0&hour=1&number=4&step=4';
 $xmlData = new XmlDataClass($mainUrl, $key, $additionalParams);
+$xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
+
+// Data for template
 $objects = $xmlData->getObjects();
+$mainObject = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
 $abstractData = new AbstractClass();
 $template = new RenderClass();
-
-//var_dump($objects[0]);
 
 //if (isset($_POST['submit'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Render informer with params // Get dynamic template
-    $abstractData->getTemplate($template, $objects, $abstractData);
+    $abstractData->getTemplate($template, $objects, $mainObject, $abstractData);
     echo $template->renderTemplate('partials/code_informer_form', ['requestArray' => $_REQUEST, 'abstractData' => $abstractData]);
 } else {
     // Render informer without params

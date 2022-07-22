@@ -212,7 +212,8 @@ body {
     margin-left: 210px;
 }
 
-.view-2-classic-temp-sat {
+.view-2-classic-temp-sat,
+.view-2-classic-temp-saturday {
     margin-top: -75px;
     margin-left: 240px;
 }

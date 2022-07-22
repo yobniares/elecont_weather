@@ -91,31 +91,11 @@
                 <h1>Выберите нужный вам тип информера</h1></td></tr>
         <tr>
             <td colspan="3" align="center">
-                <input type="radio" class="radio" id="radio-1" name="weather_tip" value="weather_1" checked="checked">
+                <input type="radio" class="radio" id="radio-1" name="weather_tip" value="1" checked="checked">
                 <label for="radio-1"> Информер № 1</label> <p><br /></p>
-                <input type="radio" class="radio" id="radio-2" name="weather_tip" value="weather_2">
+                <input type="radio" class="radio" id="radio-2" name="weather_tip" value="2">
                 <label for="radio-2"> Информер № 2</label>
                 <p><br /></p>
-
-
-                <!--<input type="radio" class="radio" id="radio-2" name="weather_tip" value="weather_2">
-                <label for="radio-2"> Информер № 2</label>
-                <p><br /></p>
-                <input type="radio" class="radio" id="radio-3" name="weather_tip" value="weather_3">
-                <label for="radio-3"> Информер № 3</label>
-                <p><br /></p>
-                <input type="radio" class="radio" id="radio-4" name="weather_tip" value="weather_4">
-                <label for="radio-4"> Информер № 4</label>
-                <p><br /></p>
-                <input type="radio" class="radio" id="radio-5" name="weather_tip" value="weather_5">
-                <label for="radio-5"> Информер № 5</label>
-                <p><br /></p>
-                <input type="radio" class="radio" id="radio-6" name="weather_tip" value="weather_6">
-                <label for="radio-6"> Информер № 6</label>
-                <p><br /></p>
-                <input type="radio" class="radio" id="radio-7" name="weather_tip" value="weather_7">
-                <label for="radio-7"> Информер № 7</label>
-                <p><br /></p>-->
                 <input type='submit' name="submit" value='Сформировать код информера' class="knop">
 
             </td>
