@@ -260,6 +260,51 @@ class AbstractClass
     }
 
     /**
+     * @param $date
+     * @return string
+     */
+    public function getNameOfTheDate($date) {
+
+        $weekArr = [
+            'ВС',
+            'ПП',
+            'ВТ',
+            'СР',
+            'ЧТ',
+            'ПТ',
+            'СБ'
+        ];
+
+        $nameOfTheDay = date('w', strtotime($date));
+        return $weekArr[$nameOfTheDay];
+    }
+
+    public function getDateFromString($dateString, $format) {
+        return date($format, strtotime($dateString));
+    }
+
+    public function getMonthFromString($dateString) {
+
+        $arr = [
+            'Январь',
+            'Февраль',
+            'Март',
+            'Апрель',
+            'Май',
+            'Июнь',
+            'Июль',
+            'Август',
+            'Сентябрь',
+            'Октябрь',
+            'Ноябрь',
+            'Декабрь'
+        ];
+
+        $month =  date('n', strtotime($dateString))-1;
+        return $arr[$month];
+    }
+
+    /**
      * @return string
      */
     public function getFullDate()

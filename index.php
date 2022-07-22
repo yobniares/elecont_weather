@@ -40,9 +40,9 @@ $mainUrl = 'http://airquality.elecont.com/ElecontAirQuality/?top=55.9&left=36.8&
 $iniArr = parse_ini_file('app.ini');
 $key = $iniArr['key'];
 
-$additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=4';
+$additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=7';
 if ($_REQUEST['weather_tip'] == 'weather_2') {
-    $additionalParams = 'la=ru&weather=1&aqi=0';
+    ///$additionalParams = 'la=ru&weather=1&aqi=0';
 }
 
 //$additionalParams = 'la=ru&weather=1&aqi=0&hour=1&number=4&step=4';

@@ -182,27 +182,32 @@ body {
     color: #FFFFFF;
 }
 
-.view-2-classic-temp-mon {
+.view-2-classic-temp-mon,
+.view-2-classic-temp-monday {
     margin-top: -65px;
     margin-left: 250px;
 }
 
-.view-2-classic-temp-tue {
+.view-2-classic-temp-tue,
+.view-2-classic-temp-tuesday {
     margin-top: -55px;
     margin-left: 210px;
 }
 
-.view-2-classic-temp-wed {
+.view-2-classic-temp-wed,
+.view-2-classic-temp-wednesday {
     margin-top: -65px;
     margin-left: 195px;
 }
 
-.view-2-classic-temp-thu {
+.view-2-classic-temp-thu,
+.view-2-classic-temp-thursday {
     margin-top: -50px;
     margin-left: 190px;
 }
 
-.view-2-classic-temp-fri {
+.view-2-classic-temp-fri,
+.view-2-classic-temp-friday {
     margin-top: -65px;
     margin-left: 210px;
 }
