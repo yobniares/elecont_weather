@@ -12,9 +12,6 @@ p {
     padding: 0;
 }
 
-
-
-
 .view-5-classic {
     width: 780px;
     height: 402px;
@@ -232,7 +229,7 @@ p {
 }
 
 .view-5-classic-morning {
-    background-image: url("icons/one-cloud-3.svg");
+    /*background-image: url("icons/one-cloud-3.svg");*/
     background-repeat: no-repeat;
     background-position: center;
     width: 86.74px;
@@ -262,7 +259,7 @@ p {
 }
 
 .view-5-classic-day {
-    background-image: url("icons/sun.svg");
+    /*background-image: url("icons/sun.svg");*/
     background-repeat: no-repeat;
     background-position: center;
     width: 86.74px;
@@ -280,12 +277,20 @@ p {
 }
 
 .view-5-classic-evening {
-    background-image: url("icons/two-clouds.svg");
+    /*background-image: url("icons/two-clouds.svg");*/
     background-repeat: no-repeat;
     background-position: center;
     width: 73px;
     height: 62px;
 }
+
+.view-5-classic-morning img,
+.view-5-classic-day img,
+.view-5-classic-next-evening img {
+    width: 73px;
+    height: 62px;
+}
+
 
 .view-5-classic-custom-1-1 {
     background-image: url("icons/view5-cl-1-1.png");

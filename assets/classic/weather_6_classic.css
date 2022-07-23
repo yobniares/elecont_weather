@@ -1,0 +1,167 @@
+@import url("fonts/geometria/stylesheet.css");
+
+body {
+    font-family: 'Geometria';
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro;
+    
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.view-6-classic-type-1 {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    background: #2A88CD;
+    background-image: url("icons/hours.svg");
+    background-position: center;
+    border: 12px solid #FFFFFF;
+    border-radius: 500px;
+    box-sizing: border-box;
+}
+
+.view-6-classic-type-2 {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    background-image: url("icons/hours.svg"), url("img/moon-round.png");
+    background-repeat: no-repeat;
+    background-position: center, center;
+    border-radius: 500px;
+}
+
+
+.view-6-classic-type-3 {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    background-image: url("icons/hours.svg"), url("img/sunny-round.png");
+    background-repeat: no-repeat;
+    background-position: center, center;
+    border-radius: 500px;
+}
+
+/*.view-6-classic-circle {
+    width: 50px;
+    height: 50px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%,-50%);
+}*/
+
+.view-6-classic-icon {
+    position: absolute; 
+    /*background-image: url("icons/night-cloud-2.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 190.73px;
+    height: 143.89px;
+    left: 50%; 
+    top: 25%; 
+    transform: translate(-50%,-50%);
+}
+
+.view-6-classic-icon img {
+    width: 190.73px;
+    height: 143.89px;
+}
+
+/*.view-6-classic-arrow-big {
+    position: absolute;
+    width: 367.15px;
+    height: 3.17px;
+    background-color: #FFFFFF;
+    border: 5px solid #FFFFFF;
+    left: 17%; 
+    top: 36%; 
+    box-sizing: border-box;
+    transform: rotate(-136.21deg);
+}
+
+.view-6-classic-arrow-small {
+    position: absolute;
+    width: 3px;
+    box-sizing: border-box;
+    height: 220px;
+    border: 7px solid #FFFFFF;
+    transform: rotate(20deg);
+    left: 53%;
+    top: 30%;
+    background-color: #FFFFFF;
+}*/
+
+.view-6-classic-temp {
+    position: absolute;
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 150px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    left: 50%; 
+    top: 65%; 
+    transform: translate(-50%,-50%);
+
+}
+
+.view-6-classic-date {
+    position: absolute;
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    /* or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    left: 50%; 
+    top: 80%; 
+    transform: translate(-50%,-50%);
+}
+
+
+/* Custom js clock */
+#clock {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    list-style: none;
+}
+#sec, #min, #hour {
+    position: absolute;
+    width: 30px;
+    height: 600px;
+    top: 0px;
+    left: 285px;
+}
+#sec {
+    background: url(img/sechand.png);
+    z-index: 300;
+}
+#min {
+    background: url(img/minhand.png);
+    z-index: 200;
+}
+#hour {
+    background: url(img/hourhand.png);
+    z-index: 100;
+}

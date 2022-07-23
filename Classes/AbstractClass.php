@@ -433,28 +433,9 @@ class AbstractClass
         $scriptPath = $iniArr['scriptPath'];
 
         if (isset($requestArray['weather_tip']) && $requestArray['weather_tip'] !=='') {
-            if ($requestArray['weather_tip'] == '1') {
-                $string = '?weather_tip=1';
-            }
-            if ($requestArray['weather_tip'] == '2') {
-                $string = '?weather_tip=2';
-            }
-            if ($requestArray['weather_tip'] == '3') {
-                $string = '?weather_tip=3';
-            }
-            if ($requestArray['weather_tip'] == '4') {
-                $string = '?weather_tip=4';
-            }
-            if ($requestArray['weather_tip'] == '5') {
-                $string = '?weather_tip=5';
-            }
-            if ($requestArray['weather_tip'] == 'weather_6') {
-                $string = '?weather_tip=weather_6';
-            }
-            if ($requestArray['weather_tip'] == 'weather_7') {
-                $string = '?weather_tip=weather_7';
-            }
+            $string = '?weather_tip='.$requestArray['weather_tip'];
         }
+
         if (isset($requestArray['weather_tip_img']) && $requestArray['weather_tip_img'] !=='') {
             $string.= '&weather_tip_img='.$requestArray['weather_tip_img'];
         } else {
@@ -566,13 +547,17 @@ class AbstractClass
         }
 
         // Template weather_6
-        if ($_REQUEST['weather_tip'] == 'weather_6') {
-            echo $template->renderTemplate('weather_6', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        if ($_REQUEST['weather_tip'] == '6') {
+            if ($_REQUEST['weather_tip_img'] == 'classic') {
+                echo $template->renderTemplate('classic/weather_6', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
         }
 
         // Template weather_7
-        if ($_REQUEST['weather_tip'] == 'weather_7') {
-            echo $template->renderTemplate('weather_7', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        if ($_REQUEST['weather_tip'] == '7') {
+            if ($_REQUEST['weather_tip_img'] == 'classic') {
+                echo $template->renderTemplate('classic/weather_7', ['object' => $objects['0'], 'objects' => $objects, 'mainObject' => $mainObject['0'], 'abstractData' => $abstractData]);
+            }
         }
     }
 }

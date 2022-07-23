@@ -38,7 +38,7 @@ if (!empty($_REQUEST['weather_tip'])) {
         $xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
         $mainObject = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
 
-    } elseif ($_REQUEST['weather_tip'] == '4') {
+    } elseif ($_REQUEST['weather_tip'] == '4' || $_REQUEST['weather_tip'] == '5'  || $_REQUEST['weather_tip'] == '7') {
 
         $additionalParamsSingeObject = 'la=ru&weather=1&aqi=0';
         $additionalParams = 'la=ru&weather=1&aqi=0&hour=0&number=5&step=2';
@@ -46,13 +46,8 @@ if (!empty($_REQUEST['weather_tip'])) {
         $mainObject = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
 
 
-    } elseif ($_REQUEST['weather_tip'] == '5') {
-
-        $additionalParamsSingeObject = 'la=ru&weather=1&aqi=0';
-        $additionalParams = 'la=ru&weather=1&aqi=0&hour=0&number=5&step=2';
-        $xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
-        $mainObject = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
-
+    } elseif ($_REQUEST['weather_tip'] == '500') {
+        // Some codes
     }
     else {
         $mainObject = [];

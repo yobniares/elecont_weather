@@ -63,7 +63,13 @@ foreach ($objects['0'] as $forecast) {
                             <p class="view-5-classic-daytime-next">
                                 <?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?>
                             </p>
-                            <div class="view-5-classic-morning"></div>
+                            <div class="view-5-classic-<?php echo $className ?>">
+                                <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
+                                    echo $_REQUEST['weather_tip_img'] . '/icons';
+                                } else {
+                                    echo 'classic';
+                                } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+                            </div>
                             <p class="view-5-classic-next-temp">
                                 <?php echo $forecatsArr[$i]['tempC']; ?>°
                             </p>
