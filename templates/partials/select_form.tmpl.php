@@ -123,6 +123,10 @@
                 <label for="radio-8"> Информер № 8</label>
                 <p><br /></p>
 
+                <input type="radio" class="radio" id="radio-9" name="weather_tip" value="9">
+                <label for="radio-9"> Информер № 9</label>
+                <p><br /></p>
+
                 <input type='submit' name="submit" value='Сформировать код информера' class="knop">
 
             </td>

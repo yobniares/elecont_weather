@@ -1,0 +1,184 @@
+@import url("fonts/geometria/stylesheet.css");
+
+body {
+    font-family: 'Geometria';
+    margin: 0;
+    padding: 0;
+    
+}
+
+.view-9-classic {
+    width: 350px;
+    height: 400px;
+    background: #2A88CD;
+}
+
+.view-9-classic-content {
+    position: absolute;
+    width: 328px;
+    height: 376px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    margin: 11px;
+}
+
+.view-9-classic-light {
+    background-image: url("img/view-9-light.png");
+    /* background-repeat: no-repeat; */
+    background-position: cover;
+}
+
+.view-9-classic-dark {
+    background-image: url("img/view-9-dark.png");
+    /* background-repeat: no-repeat; */
+    background-position: cover;
+}
+
+.view-9-classic-day-city {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: -15px;
+}
+
+.view-9-classic-city {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFFFFF;
+
+}
+
+.view-9-classic-day {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.view-9-classic-weekday-weather {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: -40px;
+}
+
+.view-9-classic-weather, .view-9-classic-weekday {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+}
+
+.view-9-classic-icon {
+    /*background-image: url("icons/night-cloud-2.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 195px;
+    height: 152.03px;
+    margin-top: -30px;
+    margin-left: 8px;
+}
+
+.view-9-classic-icon img {
+    width: 195px;
+    height: 152.03px;
+}
+
+.view-9-classic-cels {
+
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+
+    text-align: right;
+    text-transform: uppercase;
+    margin-top: -130px;
+    color: #FFFFFF;
+    margin-right: 5px;
+
+}
+
+
+.view-9-classic-far {
+
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+
+    text-align: right;
+    text-transform: uppercase;
+    margin-right: 5px;
+    color: #FFFFFF;
+
+}
+
+.view-9-classic-weather-info {
+    list-style-type: none;
+    width: 310px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 7px;
+    margin-left: -33px;
+}
+
+
+
+.view-9-classic-weather-info li {
+    width: 100.47px;
+    height: 175px;
+    background-color: #7FB8E1;
+    border-radius: 30px 30px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.view-9-classic-weather-info-custom li {
+    width: 100.47px;
+    height: 175px;
+    background-color: rgba(245, 245, 245, 0.4);
+    border-radius: 30px 30px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.view-9-classic-time {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.view-9-classic-temp {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+img.view-9-classic-weather-info-img {
+    width: 62px;
+    height: 54px;
+}
