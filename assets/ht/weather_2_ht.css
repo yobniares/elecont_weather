@@ -7,23 +7,47 @@ body {
     
 }
 
-.view-2-classic {
+.view-2-ht-1 {
     width: 925px;
     height: 630px;
-    background: #2A88CD;
+    background-image: url("img/2-1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 
-.view-2-classic-content {
+.view-2-ht-2 {
+    width: 925px;
+    height: 630px;
+    background-image: url("img/2-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.view-2-ht-3 {
+    width: 925px;
+    height: 630px;
+    background-image: url("img/2-3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.view-2-ht-content {
     box-sizing: border-box;
     width: 900px;
     height: 600px;
-    border: 5px solid #8FBFE1;
     margin: 15px;
 }
 
-.view-2-classic-sunrise-sunset-time {
+.view-2-ht-sunrise-sunset-time {
     margin-top: 9px;
     box-sizing: border-box;
     margin-left: 32px;
@@ -32,29 +56,29 @@ body {
     justify-content: space-between;
 }
 
-.view-2-classic-sunrisetime {
+.view-2-ht-sunrisetime {
     padding-left: 42.15px;
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    color: #FFFFFF;
-    background-image: url("icons/sunrise.svg");
+    color: #000000;
+    background-image: url("icons/sunrise-black.svg");
     background-position: left center;
     background-size: 31.03px 42.15px;
     background-repeat: no-repeat;
 
     }
 
-.view-2-classic-sunsettime {
+.view-2-ht-sunsettime {
     
     padding-left: 42.15px;
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    color: #FFFFFF;
-    background-image: url("icons/sunset.svg");
+    color: #000000;
+    background-image: url("icons/sunset-black.svg");
     background-position: left center;
     background-size: 31.03px 42.15px;
     background-repeat: no-repeat;
@@ -65,23 +89,23 @@ body {
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
-    color: #FFFFFF;
+    color: #000000;
     
 }
 
-.view-2-classic-content-dayofweek {
+.view-2-ht-content-dayofweek {
     margin-top: -37px;
     margin-left: 647px;
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
-    color: #FFFFFF;
+    color: #000000;
     
 
 }
 
-.view-2-classic-daysweek-1 {
+.view-2-ht-daysweek-1 {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -92,7 +116,7 @@ body {
     margin-top: 12px;
 }
 
-.view-2-classic-monday-1 {
+.view-2-ht-monday-1 {
     width: 470px;
     height: 80px;
     background-image: url("img/monday.svg");
@@ -100,34 +124,34 @@ body {
     
 }
 
-.view-2-classic-tuesday-1 {
+.view-2-ht-tuesday-1 {
     background-image: url("img/Tuesday.svg");
     width: 360px;
     height: 80px;
 }
 
 
-.view-2-classic-wednesday-1 {
+.view-2-ht-wednesday-1 {
     background-image: url("img/Wednesday.svg");
     width: 315px;
     height: 80px;
 }
 
-.view-2-classic-thursday-1 {
+.view-2-ht-thursday-1 {
     background-image: url("img/Thursday.svg");
     width: 315px;
     height: 80px;
 
 }
 
-.view-2-classic-friday-1 {
+.view-2-ht-friday-1 {
     background-image: url("img/Friday.svg");
     width: 360px;
     height: 80px;
 
 }
 
-.view-2-classic-saturday-1 {
+.view-2-ht-saturday-1 {
     background-image: url("img/Saturday.svg");
     width: 470px;
     height: 80px;
@@ -137,7 +161,6 @@ body {
 .main-information-1 {
     width: 505px;
     height: 505px;
-    background-image: url("img/main-information-1.svg");
     margin-left: 325px;
     margin-top: -515px;
     z-index: 1;
@@ -146,7 +169,7 @@ body {
 }
 
 
-.view-2-classic-weekday {
+.view-2-ht-weekday {
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 500;
@@ -154,85 +177,84 @@ body {
     text-transform: uppercase;
     margin-left: 20px;
     margin-top: 16px;
-    color: #FFFFFF;
+    color: #000000;
 
 }
 
-.view-2-classic-daynumber {
+.view-2-ht-daynumber {
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     margin-left: 20px;
-    color: #FFFFFF;
+    color: #000000;
 
 }
 
-.view-2-classic-dayimage {
+.view-2-ht-dayimage {
     margin-left: 115px;
     margin-top: -55px;
 }
 
-.view-2-classic-temp {
+.view-2-ht-dayimage img {
+    width: 59px;
+    height: 57px;
+}
+
+.view-2-ht-temp {
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 700;
     font-size: 55px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #000000;
 }
 
-.view-2-classic-temp-mon,
-.view-2-classic-temp-monday {
+.view-2-ht-temp-mon {
     margin-top: -65px;
     margin-left: 250px;
 }
 
-.view-2-classic-temp-tue,
-.view-2-classic-temp-tuesday {
+.view-2-ht-temp-tue {
     margin-top: -55px;
     margin-left: 210px;
 }
 
-.view-2-classic-temp-wed,
-.view-2-classic-temp-wednesday {
+.view-2-ht-temp-wed {
     margin-top: -65px;
     margin-left: 195px;
 }
 
-.view-2-classic-temp-thu,
-.view-2-classic-temp-thursday {
+.view-2-ht-temp-thu {
     margin-top: -50px;
     margin-left: 190px;
 }
 
-.view-2-classic-temp-fri,
-.view-2-classic-temp-friday {
+.view-2-ht-temp-fri {
     margin-top: -65px;
     margin-left: 210px;
 }
 
-.view-2-classic-temp-sat,
-.view-2-classic-temp-saturday {
+.view-2-ht-temp-sat {
     margin-top: -75px;
     margin-left: 240px;
 }
 
-.view-2-classic-timegmt {
+.view-2-ht-timegmt {
    
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #000000;
     margin-left: 275px;
     margin-top: 8px;
     margin-bottom: 1px;
 
 }
 
-.view-2-classic-gmt {
+.view-2-ht-gmt {
   
     margin-left: 375px;
     margin-top: -39px;
@@ -240,7 +262,7 @@ body {
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
-    color: #FFFFFF;
+    color: #000000;
     text-transform: uppercase;
     margin-bottom: 0;
 }
@@ -249,12 +271,11 @@ body {
     position: absolute;
     width: 460px;
     height: 420px;
-    background-image: url("img/main-information-1-inside.svg");
     margin-left: 45px;
     z-index: 2;
 }
 
-.view-2-classic-population {
+.view-2-ht-population {
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 400;
@@ -262,51 +283,47 @@ body {
     margin-top: 428px;
     margin-right: 30px;
     text-align: right;
-    color: #FFFFFF;
+    color: #000000;
 }
 
-.view-2-classic-monday-2 {
+.view-2-ht-monday-2 {
     width: 470px;
     height: 80px;
-    background-image: url("img/Monday-2.png");
-    background-repeat: no-repeat;
-
-    
 }
 
-.view-2-classic-tuesday-2 {
-    background-image: url("img/Tuesday-2.png");
+.view-2-ht-tuesday-2 {
+
     width: 360px;
     height: 80px;
-    background-repeat: no-repeat;
+
 }
 
 
-.view-2-classic-wednesday-2 {
-    background-image: url("img/Wednesday-2.png");
+.view-2-ht-wednesday-2 {
+
     width: 315px;
     height: 80px;
-    background-repeat: no-repeat;
+  
 }
 
-.view-2-classic-thursday-2 {
-    background-image: url("img/Thursday-2.png");
+.view-2-ht-thursday-2 {
+
     width: 315px;
     height: 80px;
-    background-repeat: no-repeat;
+  
 
 }
 
-.view-2-classic-friday-2 {
-    background-image: url("img/Friday-2.png");
+.view-2-ht-friday-2 {
+ 
     width: 360px;
     height: 80px;
-    background-repeat: no-repeat;
+
 
 }
 
-.view-2-classic-saturday-2 {
-    background-image: url("img/Saturday-2.png");
+.view-2-ht-saturday-2 {
+  
     width: 470px;
     height: 80px;
     background-repeat: no-repeat;
@@ -317,22 +334,21 @@ body {
     position: absolute;
     width: 460px;
     height: 420px;
-    background-image: url("img/inside-2.png");
+  
     margin-left: 45px;
-    /* margin-top: 45px; */
-    background-repeat: no-repeat;
+
     z-index: 2;
 }
 
-.view-2-classic-selectedcity {
+.view-2-ht-selectedcity {
     position: absolute;
     right: 0;
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
-    color: #FFFFFF;
-    background-image: url("icons/place.svg");
+    color: #000000;
+    background-image: url("icons/place-2-black.svg");
     background-position: left center;
     background-size: 36px 26px;
     background-repeat: no-repeat;
@@ -344,7 +360,7 @@ body {
 
 }
 
-.view-2-classic-selectedcountry {
+.view-2-ht-selectedcountry {
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 500;
@@ -353,29 +369,28 @@ body {
     margin-top: 65px;
     
 
-    color: #FFFFFF;
+    color: #000000;
 }
 
-.view-2-classic-selectedweather {
+.view-2-ht-selectedweather {
     width: 290px;
     height: 210px;
-    /*background-image: url("img/main-info-icon.svg");*/
+    /*background-image: url("icons/sun-cloud-black-big.svg");*/
     /* background-size: 209.46px 289.84px; */
     background-repeat: no-repeat;
     background-position: center;
     margin-left: 130px;
     margin-top: -10px;
-
 }
 
-.view-2-classic-selectedweather img {
+.view-2-ht-selectedweather img {
     margin-top: -65px;
     margin-left: 35px;
     width: 270px;
     height: 200px;
 }
 
-.view-2-classic-selectedweather p {
+.view-2-ht-selectedweather p {
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 700;
@@ -385,66 +400,95 @@ body {
 
     text-transform: uppercase;
 
-    color: #FFFFFF;
+   
 
 }
 
-.view-2-classic-params {
+.view-2-ht-params {
     display: flex;
     margin-top: 20px;
     margin-left: 40px;
     
 }
 
-.view-2-classic-params ul {
+.view-2-ht-params ul {
     list-style-type: none;
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    color: #FFFFFF;
+    color: #000000;
 
 }
 
-.view-2-classic-typeofwind {
-    background-image: url("icons/wind-route.svg");
+.view-2-ht-typeofwind {
+    background-image: url("icons/wind-route-b-2.svg");
     background-position: left center;
     background-repeat: no-repeat;
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
-.view-2-classic-windspeed {
-    background-image: url("icons/speed.svg");
+.view-2-ht-windspeed {
+    background-image: url("icons/wind-speed-b.svg");
     background-position: left center;
     background-repeat: no-repeat;
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
-.view-2-classic-degrees {
+.view-2-ht-degrees {
     
-    background-image: url("icons/grade.svg");
+    background-image: url("icons/dpf-b-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+.view-2-ht-wet {
+    background-image: url("icons/wet-b-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-2-ht-pressure {
+    background-image: url("icons/pressure-b-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-2-ht-dpf {
+    background-image: url("icons/dpf-black.svg");
     background-position: left center;
     background-repeat: no-repeat;
     padding-left: 30px;
 }
 
-.view-2-classic-wet {
-    background-image: url("icons/wet.svg");
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 20px;
+.white-font {
+    color: #FFFFFF;
 }
 
-.view-2-classic-pressure {
-    background-image: url("icons/pressure.svg");
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 20px;
+.white-icons .view-2-ht-selectedcity {
+    background-image: url("icons/place-w.svg");
 }
-
-.view-2-classic-dpf {
-    background-image: url("icons/dpf.svg");
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 20px;
+.white-icons .view-2-ht-selectedweather {
+    background-image: url("icons/sun-cloud-white-big.svg");
+}
+.white-icons .view-2-ht-typeofwind {
+    background-image: url("icons/wind-route-w-2.svg");
+}
+.white-icons .view-2-ht-windspeed {
+    background-image: url("icons/wind-speed-w.svg");
+}
+.white-icons .view-2-ht-degrees {
+    background-image: url("icons/dpf-w-2.svg");
+}
+.white-icons .view-2-ht-wet {
+    background-image: url("icons/wet-w-2.svg");
+}
+.white-icons .view-2-ht-pressure {
+    background-image: url("icons/pressure-w-2.svg");
+}
+.white-icons .view-2-ht-dpf {
+    background-image: url("icons/dpf-white.svg");
 }

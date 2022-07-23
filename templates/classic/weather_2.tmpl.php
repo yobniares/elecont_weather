@@ -66,7 +66,14 @@ foreach ($objects['0'] as $forecast) {
                             <?php echo $object['country'] ?>
                         </div>
                         <div class="view-2-classic-selectedweather">
-                            <p><?php echo $object['tempC'] ?>°</p>
+                            <p>
+                                <?php echo $object['tempC'] ?>°
+                                <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
+                                    echo $_REQUEST['weather_tip_img'] . '/icons';
+                                } else {
+                                    echo 'classic';
+                                } ?>/icon_<?php echo $object['icon'] ?>.svg'/>
+                            </p>
                         </div>
                         <div class="view-2-classic-params">
                             <ul>

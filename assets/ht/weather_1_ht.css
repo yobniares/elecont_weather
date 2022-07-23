@@ -123,6 +123,11 @@ body {
     text-align: center;
 }
 
+.view-1-ht-weather-icon img {
+    width: 127.24px;
+    height: 98px;
+}
+
 .view-1-ht-dergees-cels {
    
     font-style: normal;

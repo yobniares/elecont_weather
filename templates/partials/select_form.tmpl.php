@@ -54,15 +54,15 @@
                 <h1>Выберите цвет фона и текста для вашего информера</h1></td></tr>
         <tr>
             <td> <div class="form-item">
-                    <label for="color_fon">Цвет фона:</label> <input type="text" id="color_fon" name="color_fon" value="#2A88CD" style="width:60px;" />
+                    <label for="color_fon">Цвет фона:</label> <input type="text" id="color_fon" name="color_fon" value="#" style="width:60px;" />
                 </div>
                 <div id="picker_fon" style="padding-top:20px;"></div></td>
             <td><div class="form-item">
-                    <label for="font_text">Цвет текста:</label> <input type="text" id="font_text" name="font_text" value="#ffffff" style="width:60px;"/>
+                    <label for="font_text">Цвет текста:</label> <input type="text" id="font_text" name="font_text" value="#" style="width:60px;"/>
                 </div>
                 <div id="picker_font_text" style="padding-top:20px;"></div></td>
             <td><div class="form-item">
-                    <label for="font_tempo">Цвет температуры:</label> <input type="text" id="font_tempo" name="font_tempo" value="#ffffff" style="width:60px;"/>
+                    <label for="font_tempo">Цвет температуры:</label> <input type="text" id="font_tempo" name="font_tempo" value="#" style="width:60px;"/>
                 </div>
                 <div id="picker_font_tempo" style="padding-top:20px;"></div></td>
         </tr>

@@ -1,0 +1,323 @@
+body {
+    font-family: 'Aldrich';
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.view-3-ht-1 {
+    width: 850px;
+    height: 1000px;
+    background-image: url("img/view-3-1.svg");
+    box-sizing: border-box;
+    padding-top: 2px;
+
+}
+
+.view-3-ht-2 {
+    width: 850px;
+    height: 1000px;
+    background-image: url("img/view-3-2.svg");
+    box-sizing: border-box;
+    padding-top: 2px;
+
+}
+
+.view-3-ht-3 {
+    width: 850px;
+    height: 1000px;
+    background-image: url("img/view-3-3.svg");
+    box-sizing: border-box;
+    padding-top: 2px;
+
+}
+
+
+.view-3-ht-city {
+   
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 57px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    color: #000000;
+}
+
+.view-3-ht-selected-timeofday {
+   
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-left: 500px;
+    margin-top: -100px
+
+
+}
+
+.view-3-ht-daynumber {
+   
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    color: #000000;
+    margin-left: 30px;
+
+}
+
+.view-3-ht-weekday {
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #000000;
+    margin-left: 350px;
+    margin-top: -95px
+}
+
+.view-3-ht-iconday {
+    /*background-image: url("icons/cloud-night-big-3-w.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 310px;
+    height: 233.88px;
+    margin-left: 490px;
+    margin-top: -160px
+}
+
+.view-3-ht-iconday img {
+    margin-top: 40px;
+    width: 300px;
+    height: 200px;
+}
+
+.view-3-ht-temp {
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    text-transform: uppercase;
+    margin-left: 30px;
+    margin-top: -80px;
+    color: #000000;
+
+}
+
+.view-3-ht-line {
+    width: 700px;
+    height: 0px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.view-3-ht-params {
+    margin:  0 auto;
+    display: flex;
+    width: 710px;
+    justify-content: space-between;
+    /* margin-top: -20px; */
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+}
+
+.view-3-ht-typeofwind {
+    background-image: url("icons/wind-route-w-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+
+.view-3-ht-windspeed {
+    background-image: url("icons/wind-speed-w.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 37px;
+}
+
+.view-3-ht-degree {
+    background-image: url("icons/grade-w.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 27px;
+}
+
+.view-3-ht-wet {
+    background-image: url("icons/wet-w-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+}
+
+.view-3-ht-pressure {
+    background-image: url("icons/pressure-w-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-3-ht-bottom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 578px;
+    justify-content: space-around;
+    margin-top: 6px;
+}
+
+.view-3-ht-day1 {
+    width: 792px;
+    height: 185px;
+    background: #DCDCDC;
+    border-radius: 15px 15px 0px 0px;   
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+.view-3-ht-day2 {
+    width: 792px;
+    height: 185px;
+    background: #DCDCDC;
+    margin: 0 auto;
+}
+
+.view-3-ht-day3 {
+    width: 792px;
+    height: 185px;
+    background: #DCDCDC;
+    border-radius: 0px 0px 15px 15px;
+    margin: 0 auto;
+}
+
+
+.custom-bottom-1  {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.custom-bottom-2  {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.view-3-ht-day1 {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.view-3-ht-day2 {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.view-3-ht-day3 {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.view-3-ht-weekday-next {
+  
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.view-3-ht-daynumber-next {
+   
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    color: #000000;
+
+}
+.view-3-ht-temp-next {
+   
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 53px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+    }
+
+.view-3-ht-icon-thu {
+    /*background-image: url("icons/one-cloud-white-3.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 192px;
+    height: 124.89px;
+
+}
+
+.view-3-ht-icon-fri {
+    /*background-image: url("icons/sun-white-3.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 149.52px;
+    height: 146.91px;
+
+}
+
+.view-3-ht-icon-sat {
+    /*background-image: url("icons/two-clouds-white-3.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 197px;
+    height: 168px;
+}
+
+.view-3-ht-icon-thu img,
+.view-3-ht-icon-fri img,
+.view-3-ht-icon-sat img {
+    width: 149.52px;
+    height: 146.91px;
+}
+
+.white-font {
+    color: #ffffff;
+}
+
+/*.black-icons .view-3-ht-icon-sat {
+    background-image: url("icons/two-clouds-black-3.svg");
+}
+.black-icons .view-3-ht-icon-fri {
+    background-image: url("icons/sun-black-3.svg");
+}
+.black-icons .view-3-ht-icon-thu {
+    background-image: url("icons/one-cloud-black-3.svg");
+}*/
+
+.black-icons .view-3-ht-iconday {
+/*    background-image: url("icons/cloud-night-big-3-b.svg");*/
+}
+.black-icons .view-3-ht-typeofwind {
+    background-image: url("icons/wind-route-b-2.svg");
+}
+.black-icons .view-3-ht-windspeed {
+    background-image: url("icons/wind-speed-b.svg");
+}
+.black-icons .black-icons.view-3-ht-degree {
+    background-image: url("icons/grade-b.svg");
+}
+.black-icons .view-3-ht-wet {
+    background-image: url("icons/wet-b-2.svg");
+}
+.black-icons .view-3-ht-pressure {
+    background-image: url("icons/pressure-b-2.svg");
+}
