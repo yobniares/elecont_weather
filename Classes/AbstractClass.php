@@ -351,7 +351,8 @@ class AbstractClass
             "Западный", // W
             "Западо-северо-западный", // WNW
             "Северо-западный", // NW
-            "Северо-северо-запад" // NNW
+            "Северо-западный", // NNW
+            //"Северо-северо-запад" // NNW
         ];
         $cardinal = $cardinal_array[ ($direction % 16) ];
 
@@ -390,11 +391,15 @@ class AbstractClass
     /**
      * @return string|void
      */
-    public function getTimesOfDay()
+    public function getTimesOfDay($time)
     {
+        // ToDo: optimize method
         date_default_timezone_set('Europe/Moscow');
-        $time = date('H:i', time());
+        //$time = date('H:i', time());
 
+        if ($time >= 0 && $time <= 5) {
+            return 'Ночь';
+        }
         if ($time >= 5 && $time <= 10) {
             return 'Утро';
         }
@@ -403,9 +408,6 @@ class AbstractClass
         }
         if ($time >= 18 && $time <= 23) {
             return 'Вечер';
-        }
-        if ($time >= 23 && $time <= 5) {
-            return 'Ночь';
         }
     }
 
@@ -440,11 +442,11 @@ class AbstractClass
             if ($requestArray['weather_tip'] == '3') {
                 $string = '?weather_tip=3';
             }
-            if ($requestArray['weather_tip'] == 'weather_4') {
-                $string = '?weather_tip=weather_4';
+            if ($requestArray['weather_tip'] == '4') {
+                $string = '?weather_tip=4';
             }
-            if ($requestArray['weather_tip'] == 'weather_5') {
-                $string = '?weather_tip=weather_5';
+            if ($requestArray['weather_tip'] == '5') {
+                $string = '?weather_tip=5';
             }
             if ($requestArray['weather_tip'] == 'weather_6') {
                 $string = '?weather_tip=weather_6';
@@ -550,13 +552,17 @@ class AbstractClass
         }
 
         // Template weather_4
-        if ($_REQUEST['weather_tip'] == 'weather_4') {
-            echo $template->renderTemplate('weather_4', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        if ($_REQUEST['weather_tip'] == '4') {
+            if ($_REQUEST['weather_tip_img'] == 'classic') {
+                echo $template->renderTemplate('classic/weather_4', ['object' => $objects['0'], 'mainObject' => $mainObject['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
         }
 
         // Template weather_5
-        if ($_REQUEST['weather_tip'] == 'weather_5') {
-            echo $template->renderTemplate('weather_5', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+        if ($_REQUEST['weather_tip'] == '5') {
+            if ($_REQUEST['weather_tip_img'] == 'classic') {
+                echo $template->renderTemplate('classic/weather_5', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+            }
         }
 
         // Template weather_6

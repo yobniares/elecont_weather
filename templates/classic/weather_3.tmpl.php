@@ -14,7 +14,7 @@ foreach ($objects['0'] as $forecast) {
                     <?php echo $object['name'] ?>
                 </p>
                 <p class="view-3-classic-selected-timeofday">
-                    <?php echo $abstractData->getTimesOfDay() ?>
+                    <?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?>
                 </p>
                 <p class="view-3-classic-daynumber">
                     <?php echo $abstractData->getDate('d.m.Y') ?>

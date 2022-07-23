@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="view-1-neon-weather-time">
-                <?php echo $abstractData->getTimesOfDay() ?>
+                <?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?>
             </div>
             <div class="view-1-neon-weather">
                 <?php echo $abstractData->getWeatherDescription($object['icon']) ?>

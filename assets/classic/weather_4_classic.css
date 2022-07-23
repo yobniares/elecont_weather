@@ -1,0 +1,428 @@
+@import url("fonts/geometria/stylesheet.css");
+
+body {
+    font-family: 'Geometria';
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+
+.view-4-classic {
+    width: 600px;
+    height: 400px;
+
+    background: #2A88CD;
+    box-sizing: border-box;
+    padding-top: 2px;
+}
+
+.view-4-classic-content {
+    width: 577px;
+    height: 376px;
+    box-sizing: border-box;
+    margin: 11px;
+    border: 2px solid #FFFFFF;
+}
+
+.view-4-classic-day-city {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: -15px;
+}
+
+.view-4-classic-city {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFFFFF;
+
+}
+
+.view-4-classic-day {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.view-4-classic-weekday-weather {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: -45px;
+}
+
+.view-4-classic-weather, .view-4-classic-weekday {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+}
+
+.view-4-classic-wind-pressure {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: -25px;
+}
+
+.view-4-classic-wind {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-image: url("icons/wind-route-3.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-4-classic-pressure {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-image: url("icons/pressure-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-4-classic-wet-degree-dpf {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: -15px;
+}
+
+.view-4-classic-wet {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-image: url("icons/wet-3.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-4-classic-degree {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-image: url("icons/grade.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-4-classic-dpf {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-image: url("icons/dpf-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-4-classic-plates {
+    display: flex;
+    height: 249px;
+    flex-direction: column;
+
+    margin-left: -30px; 
+    margin-top: -15px;
+}
+
+.view-4-classic-time {
+    list-style-type: none ;
+    display: flex;
+    width: 556px;
+    align-items: center;
+    justify-content: space-around;
+
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.view-4-classic-time1 {
+    border-radius: 60px 0px 0px 0px;
+    background-color: #7FB8E1;
+    height: 56px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.view-4-classic-time2 {
+    background-color: #7FB8E1;
+    height: 56px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.view-4-classic-time3 {
+    background-color: #7FB8E1;
+    height: 56px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.view-4-classic-time4 {
+    border-radius: 0px 60px 0px 0px;
+    background-color: #7FB8E1;
+    height: 56px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.view-4-classic-icons {
+    list-style-type: none ;
+    display: flex;
+    width: 556px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -20px;
+}
+
+.view-4-classic-icon1 {
+    background-color: #7FB8E1;
+    /*background-image: url("icons/cloudy-night.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 77px 103px, 100%;
+    width: 103.39px;
+    height: 78px;
+    width: 135px;
+
+    
+}
+
+.view-4-classic-icon2 {
+    background-color: #7FB8E1;
+    /*background-image: url("icons/one-cloud.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 77px 103px, 100%;
+    width: 103.39px;
+    height: 78px;
+    width: 135px;
+}
+
+.view-4-classic-icon3 {
+    background-color: #7FB8E1;
+    height: 56px;
+    width: 135px;
+    /*background-image: url("icons/sun.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 77px 103px, 100%;
+    height: 78px;
+    
+}
+
+.view-4-classic-icon4 {
+   
+    background-color: #7FB8E1;
+    width: 135px;
+    /*background-image: url("icons/two-clouds.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 77px 103px, 100%;
+    height: 78px;
+    
+}
+
+.view-4-classic-icon1 img,
+.view-4-classic-icon2 img,
+.view-4-classic-icon3 img,
+.view-4-classic-icon4 img {
+    width: 135px;
+    height: 78px;
+}
+
+.view-4-classic-temps {
+    list-style-type: none ;
+    display: flex;
+    width: 556px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -12px;
+
+}
+
+.view-4-classic-cels {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: -5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+
+.view-4-classic-far {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -40px;
+    color: #FFFFFF;
+}
+
+.view-4-classic-temp1 {
+    
+    background-color: #7FB8E1;
+    height: 65px;
+    width: 135px;
+    
+}
+
+.view-4-classic-temp2 {
+    background-color: #7FB8E1;
+    height: 65px;
+    width: 135px;
+    
+}
+
+.view-4-classic-temp3 {
+    background-color: #7FB8E1;
+    height: 65px;
+    width: 135px;
+    
+}
+
+.view-4-classic-temp4 {
+   
+    background-color: #7FB8E1;
+    height: 65px;
+    width: 135px;
+}
+
+.custom-time-1 {
+    background-image: url("img/moon-vertical-1.png");
+}
+.custom-icon-1 {
+    background-color: #7FB8E1;
+    background-image: url("icons/cloudy-night.svg"), url("img/moon-4-2.png");
+    background-repeat: no-repeat;
+    background-position: center, cover;
+    
+   
+}
+
+.custom-temp-1 {
+    background-color: #7FB8E1;
+    background-image: url("img/moon-4-3.png");
+    background-repeat: no-repeat;
+
+    
+   
+}
+
+.custom-time-2 {
+    background-image: url("img/night-cloud-vertical.png");
+}
+.custom-icon-2 {
+    background-color: #7FB8E1;
+    background-image: url("icons/one-cloud.svg"), url("img/night-cloud-4-2.png");
+    background-repeat: no-repeat;
+    background-position: center, cover;
+    
+   
+}
+
+.custom-temp-2 {
+    background-color: #7FB8E1;
+    background-image: url("img/night-cloud-4-3.png");
+    background-repeat: no-repeat;
+
+}
+
+
+
+.custom-time-3 {
+    background-image: url("img/sunny-vertical.png");
+}
+.custom-icon-3 {
+    background-color: #7FB8E1;
+    background-image: url("icons/sun.svg"), url("img/sunny-3-2.png");
+    background-repeat: no-repeat;
+    background-position: center, cover;
+    
+   
+}
+
+.custom-temp-3 {
+    background-color: #7FB8E1;
+    background-image: url("img/sunny-3-3.png");
+    background-repeat: no-repeat;
+
+}
+
+
+.custom-time-4 {
+    background-image: url("img/day-cloud-vertical.png");
+}
+.custom-icon-4 {
+    background-color: #7FB8E1;
+    background-image: url("icons/two-clouds.svg"), url("img/day-cloud-4-2.png");
+    background-repeat: no-repeat;
+    background-position: center, cover;
+    
+   
+}
+
+.custom-temp-4 {
+    background-color: #7FB8E1;
+    background-image: url("img/day-cloud-4-3.png");
+    background-repeat: no-repeat;
+
+}

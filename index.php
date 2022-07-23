@@ -32,11 +32,29 @@ $additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=4';
 
 if (!empty($_REQUEST['weather_tip'])) {
     if ($_REQUEST['weather_tip'] == '2') {
+
         $additionalParamsSingeObject = 'la=ru&weather=1&aqi=0';
         $additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=7';
         $xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
         $mainObject = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
-    } else {
+
+    } elseif ($_REQUEST['weather_tip'] == '4') {
+
+        $additionalParamsSingeObject = 'la=ru&weather=1&aqi=0';
+        $additionalParams = 'la=ru&weather=1&aqi=0&hour=0&number=5&step=2';
+        $xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
+        $mainObject = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
+
+
+    } elseif ($_REQUEST['weather_tip'] == '5') {
+
+        $additionalParamsSingeObject = 'la=ru&weather=1&aqi=0';
+        $additionalParams = 'la=ru&weather=1&aqi=0&hour=0&number=5&step=2';
+        $xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
+        $mainObject = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
+
+    }
+    else {
         $mainObject = [];
     }
 }
@@ -67,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo $template->renderTemplate('partials/select_form');
     } else {
         // Get dynamic template
-        $abstractData->getTemplate($template, $objects, $abstractData);
+        $abstractData->getTemplate($template, $objects, $mainObject, $abstractData);
     }
 }
 
