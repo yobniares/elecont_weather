@@ -7,9 +7,6 @@ body {
     
 }
 
-
-
-
 .view-8-classic {
     width: 1280px;
     height: 272px;
@@ -181,9 +178,14 @@ body {
 }
 
 .view-8-classic-daytime-icon {
-    background-image: url("icons/night-cloud.svg");
+    /*background-image: url("icons/night-cloud.svg");*/
     background-repeat: no-repeat;
     background-position: center;
+    width: 127.24px;
+    height: 96px;
+}
+
+.view-8-classic-daytime-icon img {
     width: 127.24px;
     height: 96px;
 }
@@ -347,7 +349,7 @@ font-family: 'Aldrich';
 }
 
 .view-8-classic-morning {
-    background-image: url("icons/one-cloud-3.svg");
+    /*background-image: url("icons/one-cloud-3.svg");*/
     background-repeat: no-repeat;
     background-position: center;
     width: 86.74px;
@@ -356,7 +358,7 @@ font-family: 'Aldrich';
 }
 
 .view-8-classic-day {
-    background-image: url("icons/sun.svg");
+    /*background-image: url("icons/sun.svg");*/
     background-repeat: no-repeat;
     background-position: center;
     width: 86.74px;
@@ -365,13 +367,21 @@ font-family: 'Aldrich';
 }
 
 .view-8-classic-evening {
-    background-image: url("icons/two-clouds.svg");
+    /*background-image: url("icons/two-clouds.svg");*/
     background-repeat: no-repeat;
     background-position: center;
     width: 73px;
     height: 62px;
     margin-left: 67px;
 }
+
+.view-8-classic-morning img,
+.view-8-classic-day img,
+.view-8-classic-evening img {
+    width: 73px;
+    height: 62px;
+}
+
 
 .view-8-classic-info-top, .view-8-classic-info-bottom, .view-8-classic-info-middle {
     align-items: center;

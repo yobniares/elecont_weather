@@ -349,7 +349,8 @@ class AbstractClass
             "Юго-западный", // SW
             "Западо-юго-западный", //  WSW
             "Западный", // W
-            "Западо-северо-западный", // WNW
+            "Северо-западный", // WNW
+            //"Западо-северо-западный", // WNW
             "Северо-западный", // NW
             "Северо-западный", // NNW
             //"Северо-северо-запад" // NNW
@@ -494,69 +495,36 @@ class AbstractClass
      */
     public function getTemplate($template, $objects, $mainObject, $abstractData)
     {
+        if (isset($_REQUEST['weather_tip']) && $_REQUEST['weather_tip'] !== '') {
 
-        // Template weather_wide weather_1
-        if ($_REQUEST['weather_tip'] == '1') {
             if ($_REQUEST['weather_tip_img'] == 'classic') {
-                echo $template->renderTemplate('classic/weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+                echo $template->renderTemplate('classic/weather_'.$_REQUEST['weather_tip'],
+                    [
+                        'object' => $objects['0'],
+                        'objects' => $objects,
+                        'mainObject' => $mainObject,
+                        'abstractData' => $abstractData
+                    ]);
             }
+
             if ($_REQUEST['weather_tip_img'] == 'ht') {
-                echo $template->renderTemplate('high-tech/weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
+                echo $template->renderTemplate('high-tech/weather_'.$_REQUEST['weather_tip'],
+                    [
+                        'object' => $objects['0'],
+                        'objects' => $objects,
+                        'mainObject' => $mainObject,
+                        'abstractData' => $abstractData
+                    ]);
             }
+
             if ($_REQUEST['weather_tip_img'] == 'neon') {
-                echo $template->renderTemplate('neon/weather_1', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-            }
-        }
-        // Template weather_2
-        if ($_REQUEST['weather_tip'] == '2') {
-            if ($_REQUEST['weather_tip_img'] == 'classic') {
-                echo $template->renderTemplate('classic/weather_2', [
-                    'object' => $objects['0'],
-                    'mainObject' => $mainObject['0'],
-                    'objects' => $objects,
-                    'abstractData' => $abstractData
-                ]);
-            }
-            if ($_REQUEST['weather_tip_img'] == 'ht') {
-                echo $template->renderTemplate('high-tech/weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-            }
-            if ($_REQUEST['weather_tip_img'] == 'neon') {
-                echo $template->renderTemplate('neon/weather_2', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-            }
-        }
-
-        // Template weather_3
-        if ($_REQUEST['weather_tip'] == '3') {
-            if ($_REQUEST['weather_tip_img'] == 'classic') {
-                echo $template->renderTemplate('classic/weather_3', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-            }
-        }
-
-        // Template weather_4
-        if ($_REQUEST['weather_tip'] == '4') {
-            if ($_REQUEST['weather_tip_img'] == 'classic') {
-                echo $template->renderTemplate('classic/weather_4', ['object' => $objects['0'], 'mainObject' => $mainObject['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-            }
-        }
-
-        // Template weather_5
-        if ($_REQUEST['weather_tip'] == '5') {
-            if ($_REQUEST['weather_tip_img'] == 'classic') {
-                echo $template->renderTemplate('classic/weather_5', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-            }
-        }
-
-        // Template weather_6
-        if ($_REQUEST['weather_tip'] == '6') {
-            if ($_REQUEST['weather_tip_img'] == 'classic') {
-                echo $template->renderTemplate('classic/weather_6', ['object' => $objects['0'], 'objects' => $objects, 'abstractData' => $abstractData]);
-            }
-        }
-
-        // Template weather_7
-        if ($_REQUEST['weather_tip'] == '7') {
-            if ($_REQUEST['weather_tip_img'] == 'classic') {
-                echo $template->renderTemplate('classic/weather_7', ['object' => $objects['0'], 'objects' => $objects, 'mainObject' => $mainObject['0'], 'abstractData' => $abstractData]);
+                echo $template->renderTemplate('neon/weather_'.$_REQUEST['weather_tip'],
+                    [
+                        'object' => $objects['0'],
+                        'objects' => $objects,
+                        'mainObject' => $mainObject,
+                        'abstractData' => $abstractData
+                    ]);
             }
         }
     }
