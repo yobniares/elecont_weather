@@ -2,7 +2,7 @@
     foreach ($objects['0'] as $forecast) {
         $forecatsArr[] = $forecast;
     }
-    $time = date('d.m', time());
+    $time = date('d.m.Y', time());
 ?>
 
 <body>

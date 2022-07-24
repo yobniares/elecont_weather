@@ -1,0 +1,386 @@
+body {
+    font-family: 'Aldrich';
+    margin: 0;
+    padding: 0;
+    
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.view-5-neon-1 {
+
+    width: 880px;
+    height: 500px;
+    background-image: url("img/view-5-1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-left: 60px;
+}
+
+.view-5-neon-2 {
+
+    width: 880px;
+    height: 500px;
+    background-image: url("img/view-5-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-left: 60px;
+}
+
+.view-5-neon-3 {
+
+    width: 880px;
+    height: 500px;
+    background-image: url("img/view-5-3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-left: 60px;
+}
+
+
+.view-5-neon-plates {
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+  
+
+}
+
+
+.view-5-neon-main-info {
+    display: flex;
+    width: 710px;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-left: -20px;
+    align-items: center;
+    
+    
+}
+
+.view-5-neon-day-info {
+    width: 231px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.view-5-neon-daynumber {
+   
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #00FF19;
+    margin-top: 15px;
+
+
+}
+
+.view-5-neon-time {
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+}
+
+.view-5-neon-daytime {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #00FF19;
+
+}
+
+.view-5-neon-weekday {
+ 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #00FF19;
+}
+
+.view-5-neon-weather-info {
+    width: 231px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.view-5-neon-weather-icon {
+ /*   background-image: url("icons/cloud-night-shine.png");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    margin-top: -30px;
+    width: 238.58px;
+    height: 180px;
+}
+
+.view-5-neon-weather-icon img {
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 180px;
+    height: 100px;
+}
+
+.view-5-neon-weather-type {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #00FF19;
+    margin-top: -30px;
+    width: 196px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+
+.view-5-neon-place-info {
+    width: 231px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.view-5-neon-city {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #00FF19;
+
+}
+
+.view-5-neon-temp {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+
+}
+
+.view-5-neon-wind-wet {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+   
+    text-align: center;
+
+    color: #00FF19;
+
+}
+
+.view-5-neon-pressure {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+   
+    text-align: center;
+
+    color: #00FF19;
+
+}
+
+
+.view-5-neon-daytimes {
+    display: flex;
+    width: 710px;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    margin-left: -20px;
+    /* margin-top: -10px; */
+
+}
+
+.view-5-neon-next-morning {
+    width: 231px;
+    height: 170px;
+    border-radius: 60px 0px 0px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.view-5-neon-daytime-next {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    color: #00FF19;
+
+}
+
+.view-5-neon-morning {
+/*    background-image: url("icons/one-cloud-shine.png");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 86.74px;
+    height: 56.42px;
+    background-size: 100%;
+    width: 103.39px;
+    height: 78px;
+    width: 135px;
+}
+
+.view-5-neon-morning img {
+    width: 103.39px;
+    height: 78px;
+    width: 135px;
+}
+
+.view-5-neon-next-temp {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    /* margin-top: 10px; */
+
+    color: #00FF19;
+}
+
+.view-5-neon-next-day {
+    width: 231px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.view-5-neon-day {
+/*    background-image: url("icons/sun-shine.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 86.74px;
+    height: 56.42px;
+    margin-bottom: 20px;
+}
+
+.view-5-neon-day img {
+    width: 86.74px;
+    height: 56.42px;
+}
+
+.view-5-neon-next-evening {
+    width: 231px;
+    height: 170px;
+    border-radius: 0px 60px 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.view-5-neon-evening {
+/*    background-image: url("icons/two-clouds-shine.png");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 103.39px;
+    height: 78px;
+    width: 135px;
+}
+
+.view-5-neon-evening img {
+    width: 103.39px;
+    height: 78px;
+    width: 135px;
+}
+
+.view-5-neon-params {
+    margin:  0 auto;
+    display: flex;
+    width: 710px;
+    justify-content: space-between;
+    /* margin-top: -20px; */
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color:  #00FF19;
+    /* margin-top: 70px; */
+    margin-left: 20px;
+}
+
+.view-5-neon-typeofwind {
+    background-image: url("icons/wind-route-1.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+
+.view-5-neon-windspeed {
+    background-image: url("icons/windspeed-s-1.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 37px;
+}
+
+.view-5-neon-degree {
+    background-image: url("icons/dpf-1.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 27px;
+}
+
+.view-5-neon-wet {
+    background-image: url("icons/wet-1.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+}
+
+.view-5-neon-pressures {
+    background-image: url("icons/pressure-1.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.shine-font {
+    -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: rgb(255, 255, 255);
+    text-shadow: #33E9C6 20px 0 20px;
+}

@@ -1,0 +1,183 @@
+body {
+    font-family: 'Aldrich';
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.view-6-neon-1 {
+    position: relative;
+    width: 1100px;
+    height: 1100px;
+    border-radius: 200px;
+    background-image: url("img/6-1.svg");
+}
+
+.view-6-neon-2 {
+    position: relative;
+    width: 1100px;
+    height: 1100px;
+    border-radius: 200px;
+    background-image: url("img/6-2.svg");
+}
+
+
+
+.view-6-neon-time {
+    position: absolute;
+    left: 8%;
+    top: 42%;
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 210px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #00FF19;
+
+}
+
+
+.view-6-neon-date{
+    position: absolute;
+    left: 23%;
+    top: 68%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 90px;
+    /* or 112% */
+
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+}
+
+.view-6-neon-temp {
+    position: absolute;
+    left: 53%;
+    top: 62%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 90px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+}
+
+.view-6-neon-city {
+    position: absolute;
+    left: 18%;
+    top: 20%;
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+   
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+}
+
+.view-6-neon-gmt {
+    position: absolute;
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 25px;
+    left: 15%;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+}
+
+.view-6-neon-time-next {
+    
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+}
+
+.view-6-neon-time-now {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -40px;
+    color: #00FF19;
+}
+
+.view-6-neon-temp-now {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-transform: uppercase;
+    position: absolute;
+    color: #00FF19;
+    top: 30%;
+    left: 57%
+}
+
+.view-6-neon-icons {
+    height: 700px;
+    position: absolute;
+ /*   left: 55%;*/
+    right: 7%;
+    top: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.view-6-neon-icons img {
+    margin-top: -10px;
+}
+
+
+
+
+.shine-font {
+    -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: rgb(255, 255, 255);
+    text-shadow: #33E9C6 1px 0 10px;
+}
+
+.view-6-neon-icons-img {
+    width: 255px;
+    height: 192px;
+}
