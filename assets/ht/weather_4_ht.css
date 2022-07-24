@@ -1,0 +1,410 @@
+body {
+    font-family: 'Aldrich';
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+.view-4-ht-1 {
+    width: 600px;
+    height: 400px;
+    background-image: url('icons/4-1-2.svg');
+    border-radius: 35px;
+}
+
+.view-4-ht-2 {
+    width: 600px;
+    height: 400px;
+    background-image: url('icons/4-3.svg');
+    border-radius: 35px;
+}
+
+.view-4-ht-3 {
+    width: 600px;
+    height: 400px;
+    background-image: url('icons/4-4.svg');
+    border-radius: 35px;
+}
+
+
+.view-4-ht-day-city {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 25px;
+    margin-left: 25px;
+   
+}
+
+.view-4-ht-city {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #000000;
+
+}
+
+.view-4-ht-day {
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.view-4-ht-weekday-weather {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 25px;
+    margin-left: 27px;
+    margin-top: -50px;
+}
+
+.view-4-ht-weather, .view-4-ht-weekday {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+
+}
+
+.view-4-ht-wind-pressure {
+    display: flex;
+    width: 350px;
+    justify-content: flex-start;
+    margin-left: 25px;
+    margin-top: -25px;
+}
+
+.view-4-ht-wind {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    background-image: url("icons/wind-route-b.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.view-4-ht-pressure {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    background-image: url("icons/pressure-b.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    
+}
+
+.view-4-ht-wet-degree-dpf {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 25px;
+    margin-top: -15px;
+}
+
+.view-4-ht-wet {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    background-image: url("icons/wet-b.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-4-ht-degree {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    background-image: url("icons/grade-b.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-4-ht-dpf {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    background-image: url("icons/dpf-b.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+
+.view-4-ht-plates {
+    display: flex;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("icons/4-vectors.svg");
+    background-position: center;
+    width: 555px;
+    height: 229px;
+    background-repeat: no-repeat;
+    margin-left: 25px;
+    /* margin-top: -15px; */
+}
+
+.view-4-ht-plates-custom-2 {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url("icons/vectors-white-4.svg");
+}
+
+.view-4-ht-plates-custom-3 {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.view-4-ht-plates-custom-4 {
+    background-image: url("icons/vectors-white-4.svg"), url('icons/view-4-4.png');
+    background-position: cover, center;
+}
+
+.view-4-ht-time {
+    list-style-type: none ;
+    display: flex;
+    width: 556px;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 40px;
+    margin-top: -3px;
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.view-4-ht-time1 {
+    
+   
+    height: 56px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.view-4-ht-time2 {
+    
+    height: 56px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.view-4-ht-time3 {
+   
+    height: 56px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.view-4-ht-time4 {
+   
+ 
+    height: 56px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.view-4-ht-icons {
+    list-style-type: none ;
+    display: flex;
+    width: 556px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -20px;
+    margin-right: 30px;
+}
+
+.view-4-ht-icon1 {
+    /*background-image: url("icons/cloud-night-middleB.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 77px 103px, 100%;
+    width: 103.39px;
+    height: 78px;
+    width: 135px;
+}
+
+.view-4-ht-icon1 img {
+    height: 78px;
+    width: 135px;
+}
+
+.view-4-ht-icon2 {
+    /*background-image: url("icons/one-cloud-black-9.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 77px 103px, 100%;
+    width: 103.39px;
+    height: 78px;
+    width: 135px;
+}
+
+.view-4-ht-icon2 img {
+    height: 78px;
+    width: 135px;
+}
+
+.view-4-ht-icon3 {
+    height: 56px;
+    width: 135px;
+    /*background-image: url("icons/sun-black-9.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 77px 103px, 100%;
+    height: 78px;
+    
+}
+
+.view-4-ht-icon3 img {
+    height: 78px;
+    width: 135px;
+}
+
+.view-4-ht-icon4 {
+    width: 135px;
+    /*background-image: url("icons/two-clouds-black-9.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 77px 103px, 100%;
+    height: 78px;
+}
+
+.view-4-ht-icon4 img {
+    width: 135px;
+    height: 78px;
+}
+
+.view-4-ht-temps {
+    list-style-type: none ;
+    display: flex;
+    width: 556px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-right: 30px;
+}
+
+.view-4-ht-cels {
+   
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    margin-top: -5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+
+.view-4-ht-far {
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -40px;
+    color: #000000;
+}
+
+.view-4-ht-temp1 {
+    
+   
+    height: 65px;
+    width: 135px;
+    
+}
+
+.view-4-ht-temp2 {
+  
+    height: 65px;
+    width: 135px;
+    
+}
+
+.view-4-ht-temp3 {
+    
+    height: 65px;
+    width: 135px;
+    
+}
+
+.view-4-ht-temp4 {
+   
+    
+    height: 65px;
+    width: 135px;
+}
+
+
+
+.white-font {
+    color: #FFFFFF
+}
+
+.white-icons .view-4-ht-icon1{
+/*    background-image: url("icons/cloud-night-middleW.svg");*/
+}
+.white-icons .view-4-ht-icon2{
+/*    background-image: url("icons/one-cloud-white-9.svg");*/
+}
+.white-icons .view-4-ht-icon3{
+/*    background-image: url("icons/sun-white-9.svg");*/
+}
+.white-icons .view-4-ht-icon4{
+/*    background-image: url("icons/two-clouds-white-9.svg");*/
+}
+.white-icons .view-4-ht-wind {
+    background-image: url("icons/wind-route-w.svg");
+}
+.white-icons .view-4-ht-pressure {
+    background-image: url("icons/pressure-w.svg");
+}
+.white-icons .view-4-ht-wet {
+    background-image: url("icons/wet-w.svg");
+}
+.white-icons .view-4-ht-degree {
+    background-image: url("icons/grade-w.svg");
+}
+.white-icons .view-4-ht-dpf {
+    background-image: url("icons/dpf-w.svg");
+}

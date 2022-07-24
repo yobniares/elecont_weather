@@ -1,0 +1,130 @@
+body {
+    font-family: 'Aldrich';
+    margin: 0;
+    padding: 0;
+   
+    
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.view-6-ht-1 {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 200px;
+    background-image: url("img/hours-1.svg");
+}
+
+.view-6-ht-2 {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 200px;
+    background-image: url("img/hours-2.svg");
+}
+
+.view-6-ht-3 {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 200px;
+    background-image: url("img/hours-3.svg");
+}
+
+.view-6-ht-icon {
+    position: absolute;
+    /*background-image: url("icons/cloud-night-big-9W.svg");*/
+    width: 169.66px;
+    height: 128px;
+    left: 42%;
+    top: 20%;
+}
+
+.view-6-ht-icon img {
+    width: 169.66px;
+    height: 128px;
+}
+
+.view-6-ht-time {
+    position: absolute;
+    left: 15%;
+    top: 32%;
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 250px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+
+
+.view-6-ht-date{
+    position: absolute;
+    left: 23%;
+    top: 58%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 90px;
+    /* or 112% */
+
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.view-6-ht-temp {
+    position: absolute;
+    left: 53%;
+    top: 62%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 90px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.view-6-ht-city {
+    position: absolute;
+    left: 26%;
+    top: 82%;
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 25px;
+    /* or 50% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.black-font {
+    color: #000000;
+}
+
+.black-icons .view-6-ht-icon {
+/*    background-image: url("icons/cloud-night-big-9.svg");*/
+} 
+
