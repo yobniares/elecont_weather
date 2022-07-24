@@ -266,13 +266,13 @@ class AbstractClass
     public function getNameOfTheDate($date) {
 
         $weekArr = [
-            'СБ',
             'ВС',
             'ПН',
             'ВТ',
             'СР',
             'ЧТ',
-            'ПТ'
+            'ПТ',
+            'СБ',
         ];
 
         $nameOfTheDay = date('w', strtotime($date));
