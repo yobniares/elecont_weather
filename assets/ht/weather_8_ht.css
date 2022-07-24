@@ -1,0 +1,338 @@
+body {
+    font-family: 'Aldrich';
+    margin: 0;
+    padding: 0;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 0;
+}
+
+
+
+.view-8-ht {
+    width: 1280px;
+    height: 270px;
+    background-image: url("img/8-main.svg");
+    border-radius: 35px;
+    display: flex;
+    
+}
+
+.view-8-ht-blue {
+    background-image: url("img/8-main-blue.svg");
+}
+
+.view-8-ht-main {
+    width: 832px;
+    height: 221px;
+    border-radius: 25px 60px 60px 25px;
+    background-image: url("img/v-8-1.svg");
+    margin-top: 23px;
+    margin-left: 23px;
+}
+
+
+.view-8-ht-main-light {
+    background-image: url("img/v-8-2.svg");
+}
+
+.view-8-ht-main-dark {
+    background-image: url("img/v-8-3.svg");
+}
+
+.view-8-ht-main {
+    display: flex;
+}
+
+.view-8-ht-city-day {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   
+    margin-left: -10px;
+}
+
+.view-8-ht-city-right {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+
+}
+
+.view-8-ht-city-time {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 79px;
+  
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.view-8-ht-weekday {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 25px;
+    color: #000000;
+
+}
+
+.view-8-ht-time-temp {
+    list-style-type: none;
+    margin-left: 5px;
+}
+
+
+.view-8-ht-temp-cels {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    margin-top: 20px;
+    color: #000000;
+
+}
+
+.view-8-ht-temp-far {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+
+}
+
+.view-8-ht-daytime-info {
+    margin-left: -20px;
+}
+
+.view-8-ht-daytime-name{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    margin-top: 10px;
+    margin-right: 20px;
+
+    
+}
+
+.view-8-ht-daytime-icon {
+/*    background-image: url("icons/cloud-night-big-8W.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 127.24px;
+    height: 96px;
+    margin-left: -15px;
+    margin-top: 15px;
+}
+
+.view-8-ht-daytime-icon img {
+    width: 127.24px;
+    height: 96px;
+}
+
+.view-8-ht-type {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #000000;
+    margin-top: 20px;
+    margin-right: 20px;
+    
+
+}
+.view-8-ht-city-params {
+    display: flex;
+    flex-direction: column;
+ 
+    justify-content: center;
+}
+
+.view-8-ht-wind {
+   
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    margin-top: -15px;
+    color: #000000;
+    background-image: url("icons/wind-route-w.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+
+}
+.view-8-ht-degrees {
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+    background-image: url("icons/grade-w.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    }
+
+.view-8-ht-wet {
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+    background-image: url("icons/wet-w.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+ }
+
+.view-8-ht-pressure {
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+    background-image: url("icons/pressure-w.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    }
+
+
+.view-8-ht-dpf {
+ 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+    background-image: url("icons/dpf-w.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.view-8-ht-infobox {
+    margin-left: 20px;
+    background-image: url("img/vectors.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.view-8-ht-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-8-ht-daytime-next {
+
+  
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: -50px;
+    color: #000000;
+
+}
+
+.view-8-ht-next-temp {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 29px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.view-8-ht-morning {
+/*    background-image: url("icons/one-cloud-black-9.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 86.74px;
+    height: 56.42px;
+    margin-left: 67px;
+}
+
+.view-8-ht-morning img {
+    width: 86.74px;
+    height: 56.42px;
+}
+
+.view-8-ht-day {
+/*    background-image: url("icons/sun-black-9.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 86.74px;
+    height: 56.42px;
+    margin-left: 67px;
+}
+
+.view-8-ht-day img {
+    width: 86.74px;
+    height: 56.42px;
+}
+
+.view-8-ht-evening {
+/*    background-image: url("icons/two-clouds-black-9.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 73px;
+    height: 62px;
+    margin-left: 67px;
+}
+
+.view-8-ht-evening img {
+    width: 73px;
+    height: 62px;
+}
+
+.white-font {
+    color:white;
+} 
+
+.black-icons .view-8-ht-wind  {
+    background-image: url("icons/wind-route-b.svg");
+}
+.black-icons .view-8-ht-degrees  {
+    background-image: url("icons/grade-b.svg");
+}
+.black-icons .view-8-ht-pressure  {
+    background-image: url("icons/pressure-b.svg");
+}
+.black-icons .view-8-ht-wet  {
+    background-image: url("icons/wet-b.svg");
+}
+.black-icons .view-8-ht-dpf  {
+    background-image: url("icons/dpf-b.svg");
+}
+.black-icons .view-8-ht-daytime-icon  {
+/*    background-image: url("icons/cloud-night-big-8.svg");*/
+}

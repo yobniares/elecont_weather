@@ -20,11 +20,7 @@ foreach ($objects['0'] as $forecast) {
                 </div>
 
                 <div class="view-9-classic-icon">
-                    <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                        echo $_REQUEST['weather_tip_img'] . '/icons';
-                    } else {
-                        echo 'classic';
-                    } ?>/icon_<?php echo $mainObject['icon'] ?>.svg'/>
+                    <?php echo $abstractData->getWeatherIcon($mainObject) ?>
                 </div>
 
                 <div class="view-9-classic-cels">
@@ -39,11 +35,7 @@ foreach ($objects['0'] as $forecast) {
                     <?php for ($i=0; $i < 3; $i++) {
                         ?>
                         <li>
-                            <img class="view-9-classic-weather-info-img" src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                                echo $_REQUEST['weather_tip_img'] . '/icons';
-                            } else {
-                                echo 'classic';
-                            } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'view-9-classic-weather-info-img') ?>
                             <div class="view-9-classic-time">
                                 <?php echo $abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i'); ?>
                             </div>

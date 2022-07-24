@@ -335,7 +335,7 @@ class AbstractClass
     public function getWwindDirection($degree)
     {
         $direction = $degree / 22.5 + .5;
-        $cardinal_array = [
+        $cardinalArray = [
             "Северный", // N
             "Северо-северо-восточный", // NNE
             "Северо-восточный", // NE
@@ -349,13 +349,32 @@ class AbstractClass
             "Юго-западный", // SW
             "Западо-юго-западный", //  WSW
             "Западный", // W
+            "Западо-северо-западный", // WNW
+            "Северо-западный", // NW
+            "Северо-северо-запад" // NNW
+        ];
+
+
+        $cardinalArrayShort = [
+            "Северный", // N
+            "Северо-восточный", // NNE
+            "Северо-восточный", // NE
+            "Северо-восточный", // ENE
+            "Восточный", // E
+            "Юго-восточный", // ESE
+            "Юго-восточный", // SE
+            "Юго-восточный", // SSE
+            "Южный", // S
+            "Юго-западный", // SSW
+            "Юго-западный", // SW
+            "Юго-западный", //  WSW
+            "Западный", // W
             "Северо-западный", // WNW
-            //"Западо-северо-западный", // WNW
             "Северо-западный", // NW
             "Северо-западный", // NNW
-            //"Северо-северо-запад" // NNW
         ];
-        $cardinal = $cardinal_array[ ($direction % 16) ];
+
+        $cardinal = $cardinalArrayShort[ ($direction % 16) ];
 
         return $cardinal . ' ветер';
     }
@@ -422,6 +441,20 @@ class AbstractClass
         $gmt = $gmtMin/60;
         $time = date('H:i', strtotime($timeString. ' + ' . $gmt . 'hours'));
         return $time;
+    }
+
+    /**
+     * @param $object
+     * @return string
+     */
+    public function getWeatherIcon($object, $className = '') {
+        if (!empty($_REQUEST['weather_tip_img'])) {
+            $img = '<img class="'.$className. '" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $object['icon'] . '.svg" />';
+        } else {
+            $img = '';
+        }
+
+        return $img;
     }
 
     /**
