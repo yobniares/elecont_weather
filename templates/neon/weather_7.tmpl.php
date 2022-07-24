@@ -2,64 +2,65 @@
     foreach ($objects['0'] as $forecast) {
         $forecatsArr[] = $forecast;
     }
-    $time = date('d.m.Y', time());
+    $time = date('H:i', time());
 ?>
 
 <body>
-<section class="view-7-ht-container">
-    <div class="view-7-ht-1">
-        <div class="view-7-ht-main-1">
-            <ul class="view-7-ht-time-temp">
-                <li class="view-7-ht-gmt">
+<section class="view-7-neon-container">
+    <div class="view-7-neon-1">
+        <div class="view-7-neon-main-1">
+            <ul class="view-7-neon-time-temp">
+                <li class="view-7-neon-gmt">
                     GMT<?php echo '+' .$object['gmtMin']/60 ?>
                 </li>
-                <li class="view-7-ht-time">
+                <li class="view-7-neon-time shine-font">
                     <?php echo $abstractData->getDate('H:i') ?>
                 </li>
-                <li class="view-7-ht-temp-cels">
+                <li class="view-7-neon-temp-cels shine-font">
                     <?php echo $object['tempC'] ?>°
                 </li>
-                <li class="view-7-ht-temp-far">
+                <li class="view-7-neon-temp-far shine-font">
                     <?php echo $object['tempF'] ?>°F
                 </li>
             </ul>
-            <ul class="view-7-ht-daytime-info black-icons">
-                <li class="view-7-ht-daytime-name">
-                    <?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?>
+
+            <ul class="view-7-neon-daytime-info">
+                <li class="view-7-neon-daytime-name">
+                    <?php echo $abstractData->getTimesOfDay($time) ?>
                 </li>
-                <li class="view-7-ht-daytime-icon">
+                <li class="view-7-neon-daytime-icon">
                     <?php echo $abstractData->getWeatherIcon($object) ?>
                 </li>
             </ul>
 
-            <ul class="view-7-ht-city-params black-icons">
-                <li class="view-7-ht-city-type">
-                    <p class="view-7-ht-city">
+            <ul class="view-7-neon-city-params">
+                <li class="view-7-neon-city-type">
+                    <p class="view-7-neon-city">
                         <?php echo $object['name'] ?>
                     </p>
-                    <p class="view-7-ht-type">
+                    <p class="view-7-neon-type">
                         <?php echo $abstractData->getWeatherDescription($object['icon']) ?>
                     </p>
                 </li>
-                <li class="view-7-ht-wind">
+                <li class="view-7-neon-wind">
                     <?php echo $abstractData->getWwindDirection($object['wd']) ?>: <?php echo $abstractData->getMetersPerSecond($object['ws']) ?> м/с
                 </li>
-                <li class="view-7-ht-degrees">
+                <li class="view-7-neon-degrees">
                     <?php echo $object['gmtMin'] ?>°
                 </li>
-                <li class="view-7-ht-wet">
+                <li class="view-7-neon-wet">
                     Влажность: <?php echo $object['rh'] ?>%
                 </li>
-                <li class="view-7-ht-pressure">
+                <li class="view-7-neon-pressure">
                     Давление: <?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм рт.ст.
                 </li>
-                <li class="view-7-ht-dpf">
+                <li class="view-7-neon-dpf">
                     dpF <?php echo $mainObject['dpF'] ?>°
                 </li>
             </ul>
         </div>
 
-        <div class="view-7-ht-infobox">
+        <div class="view-7-neon-infobox">
             <?php for ($i=0; $i < 3; $i++) {
                 if ($i == 0) {$className = 'morning';}
                 if ($i == 1) {$className = 'day';}
@@ -70,25 +71,21 @@
                 if ($i == 2) {$position = 'bottom-1';}
                 ?>
 
-                <div class="view-7-ht-info-1 <?php echo $position ?>">
-                    <p class="view-7-ht-daytime-next">
+                <div class="view-7-neon-info-1 <?php echo $position?>">
+                    <p class="view-7-neon-daytime-next">
                         <?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?>
                     </p>
-                    <div class="view-7-ht-<?php echo $className ?>">
-                        <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                            echo $_REQUEST['weather_tip_img'] . '/icons';
-                        } else {
-                            echo 'classic';
-                        } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+                    <div class="view-7-neon-<?php echo $className ?>">
+                        <?php echo $abstractData->getWeatherIcon($forecatsArr[$i]) ?>
                     </div>
-                    <p class="view-7-ht-next-temp">
+                    <p class="view-7-neon-next-temp">
                         <?php echo $forecatsArr[$i]['tempC']; ?>
                     </p>
                 </div>
                 <?php
             }?>
-
         </div>
     </div>
+
 </section>
 </body>

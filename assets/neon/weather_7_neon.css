@@ -1,0 +1,423 @@
+body {
+    font-family: 'Aldrich';
+}
+
+
+.view-7-neon-1 {
+    width: 1380px;
+    height: 375px;
+    background-image: url("img/7-1.svg");
+    border-radius: 35px;
+    position: relative;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+
+.view-7-neon-2 {
+    width: 1380px;
+    height: 375px;
+    background-image: url("img/7-2.svg");
+    border-radius: 35px;
+    position: relative;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+
+
+
+.view-7-neon-main-1 {
+    width: 549px;
+    height: 222px;
+    background: #000000;
+    border: 1px solid #00FF19;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: -4px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 23px;
+    margin-left: 23px;
+    z-index: 100;
+}
+
+
+
+.view-7-neon-time-temp {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+.view-7-neon-gmt {
+ 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+}
+
+.view-7-neon-time {
+   
+    font-style: normal;
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 25px;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    color: #00FF19;
+    margin-top: 10px;
+}
+
+.view-7-neon-temp-cels {
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    margin-top: 20px;
+    color: #00FF19;
+
+}
+
+.view-7-neon-temp-far {
+   
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+
+}
+
+.view-7-neon-daytime-info {
+    list-style-type: none;
+    margin-left: -20px;
+   
+}
+
+.view-7-neon-daytime-name{
+  
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00FF19;
+
+    margin-top: 20px;
+
+    
+}
+
+.view-7-neon-daytime-icon {
+/*    background-image: url("icons/cloud-night-shine.png");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 147.24px;
+    height: 106px;
+    margin-top: 15px;
+}
+
+.view-7-neon-daytime-icon img {
+    width: 147.24px;
+    height: 106px;
+}
+
+.view-7-neon-city-params {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+
+.view-7-neon-city-type {
+    background-image: url("img/neon-place.svg");
+    background-position: left center;
+    background-size: 36px 26px;
+    background-repeat: no-repeat;
+    margin-left: -10px;
+    
+}
+
+
+.view-7-neon-city {
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #00FF19;
+    margin-left: 30px;
+   
+}
+
+.view-7-neon-type {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #00FF19;
+    margin-top: -25px;
+    margin-left: 30px;
+
+}
+
+.view-7-neon-wind {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    margin-top: -15px;
+    color: #00FF19;
+    background-image: url("icons/wind-route-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+
+}
+.view-7-neon-degrees {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #00FF19;
+    background-image: url("icons/degree-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    }
+
+.view-7-neon-wet {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #00FF19;
+    background-image: url("icons/wet-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+ }
+
+.view-7-neon-pressure {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #00FF19;
+    background-image: url("icons/pressure-2.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    }
+
+
+.view-7-neon-dpf {
+    font-family: 'Aldrich';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        color: #00FF19;
+        background-image: url("icons/dpf-2.svg");
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left: 20px;
+}
+
+
+
+.view-7-neon-infobox {
+    margin-left: 20px;
+   
+}
+
+.view-7-neon-info-1 {
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    position: absolute;
+    width: 696px;
+    height: 76px;
+    background-image: url("img/border.svg");
+    background-repeat: repeat;
+    left: 43%;
+    z-index: 3;
+    
+   
+}
+
+.view-7-neon-info-2 {
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    position: absolute;
+    width: 696px;
+    height: 85px;
+    background-image: url("img/border-2.svg");
+    background-repeat: no-repeat;
+    left: 98%;
+    z-index: 3;
+    
+}
+
+.view-7-neon-info-3 {
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    position: absolute;
+    width: 696px;
+    height: 85px;
+    background-repeat: no-repeat;
+    left: 98%;
+    z-index: 3;
+    
+}
+
+.top-1 {
+    top:15%;
+    border-radius: 0px 15px 0px 0px;
+    background-image: url("img/7-top.svg");
+}
+.middle-1 {
+    top: 34%;
+    background-image: url("img/7-middle.svg");
+}
+
+.bottom-1 {
+    top: 53%;
+    border-radius: 0px 0px 15px 0px;
+    background-image: url("img/7-bottom.svg");
+    
+}
+
+
+.view-7-neon-daytime-next {
+
+  
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: -50px;
+    margin-left: 200px;
+    color: #00FF19;
+
+}
+
+.view-7-neon-next-temp {
+    font-weight: 400;
+    color: #00FF19;
+    font-size: 30px;
+    line-height: 29px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.view-7-neon-morning {
+/*    background-image: url("icons/one-cloud-shine.png");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 146.74px;
+    height: 86.42px;
+    margin-left: 67px;
+}
+
+.view-7-neon-morning img {
+    /*width: 146.74px;
+    height: 86.42px;*/
+
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 86.74px;
+    height: 56.42px;
+}
+.view-7-neon-day img {
+    width: 86.74px;
+    height: 56.42px;
+}
+.view-7-neon-evening img {
+    width: 146.74px;
+    height: 56.42px;
+}
+
+.view-7-neon-day {
+/*    background-image: url("icons/sun-shine.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 86.74px;
+    height: 56.42px;
+    margin-left: 97px;
+    padding-right: 40px;
+}
+
+.view-7-neon-evening {
+/*    background-image: url("icons/two-clouds-3.png");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 146.74px;
+    height: 56.42px;
+    margin-left: 67px;
+}
+
+
+
+.view-7-neon-citytime {
+    width: 474px;
+    height: 29px;
+
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 20px;
+    color: #00FF19;
+}
+
+
+.view-7-neon-type-2 {
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+  
+
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: #00FF19;
+}
+
+.daytime-info-2 {
+    margin-top: -10px;
+}
+
+.params-2 {
+    padding-top: 50px;
+}
+
+
+
+.next-4 {
+    margin-left: -20px;
+    margin-top: 30px;
+}
+
+
+
+.shine-font {
+    -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: rgb(255, 255, 255);
+    text-shadow: #33E9C6 20px 0 20px;
+}
