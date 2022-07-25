@@ -11,8 +11,6 @@ date_default_timezone_set('Europe/Moscow');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="<?php echo($farbasticJs); ?>"></script>
-    <script src="<?php echo($mainJs); ?>"></script>
-
     <link rel="stylesheet" href="<?php echo($farbasticCss); ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo($css); ?>" type="text/css">
 

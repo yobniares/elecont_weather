@@ -2,7 +2,6 @@
 
 // Include css and js
 $farbasticCss = 'assets/farbtastic/farbtastic.css';
-$mainJs = 'assets/main.js';
 $farbasticJs = 'assets/farbtastic/farbtastic.js';
 
 if (!empty($_REQUEST['weather_tip_img'])) {
@@ -23,8 +22,23 @@ require_once('Classes/AbstractClass.php');
 require_once('Classes/XmlDataClass.php');
 require_once('Classes/RenderClass.php');
 
+if (!empty($_REQUEST['weather_tip_img'])) {
+    $city = $_REQUEST['city'];
+} else {
+    $city = 'Москва';
+}
+$content = file_get_contents('http://api.geonames.org/searchJSON?q='.urlencode($city).'&username=evgenii&style=full');
+$find = json_decode($content);
+$lat = $find->geonames[0]->lat;
+$lng = $find->geonames[0]->lng;
+$coordTop = $lat + 0.5;
+$coordLeft = $lng - 0.5;
+$coordBottom = $lat - 0.5;
+$coordRight = $lng + 0.5;
+
 // Get xml data and variables
-$mainUrl = 'http://airquality.elecont.com/ElecontAirQuality/?top=55.9&left=36.8&bottom=55.1&right=38.2&numberX=8&numberY=8&type=999&srcT=2';
+//$mainUrl = 'http://airquality.elecont.com/ElecontAirQuality/?top=55.9&left=36.8&bottom=55.1&right=38.2&numberX=8&numberY=8&type=999&srcT=2';
+$mainUrl = 'http://airquality.elecont.com/ElecontAirQuality/?top='.$coordTop.'&left='.$coordLeft.'&bottom='.$coordBottom.'&right='.$coordRight.'&numberX=8&numberY=8&type=999&srcT=2';
 $iniArr = parse_ini_file('app.ini');
 $key = $iniArr['key'];
 
