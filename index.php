@@ -45,11 +45,13 @@ if (!empty($_REQUEST['weather_tip'])) {
         $xmlDataSingeObject = new XmlDataClass($key, $additionalParamsSingeObject);
         $mainObjects = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
         $mainObject = $mainObjects['0'];
-    } elseif ($_REQUEST['weather_tip'] == '500') {
-        // Some possibility code
     } else {
         $mainObject = [];
     }
+}
+
+if (isset($_REQUEST['city']) && $_REQUEST['city'] == '') {
+    $_REQUEST['city'] = 'Москва';
 }
 
 $xmlData = new XmlDataClass($key, $additionalParams);
@@ -64,9 +66,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     // Render informer without params
     if (empty($_REQUEST['weather_tip'])) {
-
-        echo $template->renderTemplate('partials/iframes/classic/iframe');
-
+        // Informers ifrmaes
+        echo $template->renderTemplate('partials/iframes/iframe');
         // Select params form
         echo $template->renderTemplate('partials/select_form');
     } else {
