@@ -47,10 +47,10 @@ foreach ($objects['0'] as $forecast) {
             </div>
             <div class="view-6-classic-icon">
                 <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                    echo $_REQUEST['weather_tip_img'] . '/icons';
-                } else {
-                    echo 'classic';
-                } ?>/icon_<?php echo $object['icon'] ?>.svg'/>
+    echo $_REQUEST['weather_tip_img'] . '/icons';
+} else {
+    echo 'classic';
+} ?>/icon_<?php echo $object['icon'] ?>.svg'/>
             </div>
             <div class="view-6-classic-arrow-small">
             </div>

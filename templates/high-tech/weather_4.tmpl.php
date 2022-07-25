@@ -32,47 +32,68 @@
         <div class="view-4-ht-plates">
             <ul class="view-4-ht-time">
                 <?php for ($i=0; $i < 4; $i++) {
-                    if ($i == 0) {$number = '1';}
-                    if ($i == 1) {$number = '2';}
-                    if ($i == 2) {$number = '3';}
-                    if ($i == 3) {$number = '4';}
-                    ?>
+    if ($i == 0) {
+        $number = '1';
+    }
+    if ($i == 1) {
+        $number = '2';
+    }
+    if ($i == 2) {
+        $number = '3';
+    }
+    if ($i == 3) {
+        $number = '4';
+    } ?>
                     <li class="view-4-ht-time<?php echo $number ?>"><?php echo $abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i'); ?></li>
                     <?php
-                }?>
+}?>
             </ul>
 
             <ul class="view-4-ht-icons">
                 <?php for ($i=0; $i < 4; $i++) {
-                    if ($i == 0) {$number = '1';}
-                    if ($i == 1) {$number = '2';}
-                    if ($i == 2) {$number = '3';}
-                    if ($i == 3) {$number = '4';}
-                    ?>
+        if ($i == 0) {
+            $number = '1';
+        }
+        if ($i == 1) {
+            $number = '2';
+        }
+        if ($i == 2) {
+            $number = '3';
+        }
+        if ($i == 3) {
+            $number = '4';
+        } ?>
                     <li class="view-4-ht-icon<?php echo $number ?>">
                         <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                            echo $_REQUEST['weather_tip_img'] . '/icons';
-                        } else {
-                            echo 'classic';
-                        } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+            echo $_REQUEST['weather_tip_img'] . '/icons';
+        } else {
+            echo 'classic';
+        } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                     </li>
                     <?php
-                }?>
+    }?>
             </ul>
 
             <ul class="view-4-ht-temps">
                 <?php for ($i=0; $i < 4; $i++) {
-                    if ($i == 0) {$number = '1';}
-                    if ($i == 1) {$number = '2';}
-                    if ($i == 2) {$number = '3';}
-                    if ($i == 3) {$number = '4';}
-                    ?>
+        if ($i == 0) {
+            $number = '1';
+        }
+        if ($i == 1) {
+            $number = '2';
+        }
+        if ($i == 2) {
+            $number = '3';
+        }
+        if ($i == 3) {
+            $number = '4';
+        } ?>
                     <li class="view-4-ht-temp<?php echo $number ?>">
                         <p class="view-4-ht-cels"><?php echo $forecatsArr[$i]['tempC']; ?>°C</p>
                         <p class="view-4-ht-far"><?php echo $forecatsArr[$i]['tempF']; ?>°F</p>
                     </li>
                     <?php
-                }?>
+    }?>
             </ul>
         </div>
 </section>

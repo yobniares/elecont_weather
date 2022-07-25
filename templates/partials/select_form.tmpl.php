@@ -33,23 +33,6 @@
             });
         </script>
 
-<!--        <script>
-            $('#tttags').autocomplete({
-                source: function (request, response) {
-                    $.getJSON("https://yandexinformers.ddev.site/data/dealers.json?term=" + request.term, function (data) {
-                        response( $.map( data, function( item ) {
-                            return {
-                                label: item.name,
-                                value: item.name
-                            }
-                        }));
-                    });
-                },
-                minLength: 5,
-                delay: 100
-            });
-        </script>
--->
         <tr>
             <td colspan="3" align="center">
                 <p><label for="color_fon">Прозрачный фон:</label> <input type='checkbox' name='transpar' value='1' /></p>

@@ -49,27 +49,32 @@
 
             <ul class="view-5-ht-daytimes">
                 <?php for ($i=0; $i < 3; $i++) {
-                    if ($i == 0) {$className = 'morning';}
-                    if ($i == 1) {$className = 'day';}
-                    if ($i == 2) {$className = 'evening';}
-                    ?>
+    if ($i == 0) {
+        $className = 'morning';
+    }
+    if ($i == 1) {
+        $className = 'day';
+    }
+    if ($i == 2) {
+        $className = 'evening';
+    } ?>
                     <li class="view-5-ht-next-<?php echo $className ?>">
                         <p class="view-5-ht-daytime-next">
                             <?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?>
                         </p>
                         <div class="view-5-ht-<?php echo $className ?>">
                             <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                                echo $_REQUEST['weather_tip_img'] . '/icons';
-                            } else {
-                                echo 'ht';
-                            } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+        echo $_REQUEST['weather_tip_img'] . '/icons';
+    } else {
+        echo 'ht';
+    } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                         </div>
                         <p class="view-5-ht-next-temp">
                             <?php echo $forecatsArr[$i]['tempC']; ?>°
                         </p>
                     </li>
                     <?php
-                }?>
+}?>
             </ul>
         </div>
     </div>

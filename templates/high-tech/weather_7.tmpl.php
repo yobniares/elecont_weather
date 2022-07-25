@@ -61,14 +61,25 @@
 
         <div class="view-7-ht-infobox">
             <?php for ($i=0; $i < 3; $i++) {
-                if ($i == 0) {$className = 'morning';}
-                if ($i == 1) {$className = 'day';}
-                if ($i == 2) {$className = 'evening';}
+    if ($i == 0) {
+        $className = 'morning';
+    }
+    if ($i == 1) {
+        $className = 'day';
+    }
+    if ($i == 2) {
+        $className = 'evening';
+    }
 
-                if ($i == 0) {$position = 'top-1';}
-                if ($i == 1) {$position = 'middle-1';}
-                if ($i == 2) {$position = 'bottom-1';}
-                ?>
+    if ($i == 0) {
+        $position = 'top-1';
+    }
+    if ($i == 1) {
+        $position = 'middle-1';
+    }
+    if ($i == 2) {
+        $position = 'bottom-1';
+    } ?>
 
                 <div class="view-7-ht-info-1 <?php echo $position ?>">
                     <p class="view-7-ht-daytime-next">
@@ -76,17 +87,17 @@
                     </p>
                     <div class="view-7-ht-<?php echo $className ?>">
                         <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                            echo $_REQUEST['weather_tip_img'] . '/icons';
-                        } else {
-                            echo 'classic';
-                        } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+        echo $_REQUEST['weather_tip_img'] . '/icons';
+    } else {
+        echo 'classic';
+    } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                     </div>
                     <p class="view-7-ht-next-temp">
                         <?php echo $forecatsArr[$i]['tempC']; ?>
                     </p>
                 </div>
                 <?php
-            }?>
+}?>
 
         </div>
     </div>

@@ -22,63 +22,38 @@ require_once('Classes/AbstractClass.php');
 require_once('Classes/XmlDataClass.php');
 require_once('Classes/RenderClass.php');
 
-if (!empty($_REQUEST['weather_tip_img'])) {
-    $city = $_REQUEST['city'];
-} else {
-    $city = 'Москва';
-}
-$content = file_get_contents('http://api.geonames.org/searchJSON?q='.urlencode($city).'&username=evgenii&style=full');
-$find = json_decode($content);
-$lat = $find->geonames[0]->lat;
-$lng = $find->geonames[0]->lng;
-$coordTop = $lat + 0.5;
-$coordLeft = $lng - 0.5;
-$coordBottom = $lat - 0.5;
-$coordRight = $lng + 0.5;
-
-// Get xml data and variables
-//$mainUrl = 'http://airquality.elecont.com/ElecontAirQuality/?top=55.9&left=36.8&bottom=55.1&right=38.2&numberX=8&numberY=8&type=999&srcT=2';
-$mainUrl = 'http://airquality.elecont.com/ElecontAirQuality/?top='.$coordTop.'&left='.$coordLeft.'&bottom='.$coordBottom.'&right='.$coordRight.'&numberX=8&numberY=8&type=999&srcT=2';
 $iniArr = parse_ini_file('app.ini');
 $key = $iniArr['key'];
-
+$abstractData = new AbstractClass();
 $additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=4';
+$xmlData = new XmlDataClass($key, $additionalParams);
+$objects = $xmlData->getObjects();
+$template = new RenderClass();
 
 if (!empty($_REQUEST['weather_tip'])) {
     if ($_REQUEST['weather_tip'] == '2') {
-
         $additionalParamsSingeObject = 'la=ru&weather=1&aqi=0';
         $additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=7';
-        $xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
+        $xmlDataSingeObject = new XmlDataClass($key, $additionalParamsSingeObject);
         $mainObjects = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
         $mainObject = $mainObjects['0'];
-
     } elseif (
         $_REQUEST['weather_tip'] == '4' ||
         $_REQUEST['weather_tip'] == '5' ||
         $_REQUEST['weather_tip'] == '7' ||
         $_REQUEST['weather_tip'] == '8' ||
-        $_REQUEST['weather_tip'] == '9')
-    {
+        $_REQUEST['weather_tip'] == '9') {
         $additionalParamsSingeObject = 'la=ru&weather=1&aqi=0';
         $additionalParams = 'la=ru&weather=1&aqi=0&hour=0&number=5&step=3';
-        $xmlDataSingeObject = new XmlDataClass($mainUrl, $key, $additionalParamsSingeObject);
+        $xmlDataSingeObject = new XmlDataClass($key, $additionalParamsSingeObject);
         $mainObjects = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
         $mainObject = $mainObjects['0'];
-
     } elseif ($_REQUEST['weather_tip'] == '500') {
         // Some possibility code
-    }
-    else {
+    } else {
         $mainObject = [];
     }
 }
-
-$xmlData = new XmlDataClass($mainUrl, $key, $additionalParams);
-// Data for template
-$objects = $xmlData->getObjects();
-$abstractData = new AbstractClass();
-$template = new RenderClass();
 
 //if (isset($_POST['submit'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

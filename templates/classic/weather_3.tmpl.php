@@ -25,10 +25,10 @@ foreach ($objects['0'] as $forecast) {
 
                 <div class="view-3-classic-iconday">
                     <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                        echo $_REQUEST['weather_tip_img'] . '/icons';
-                    } else {
-                        echo 'classic';
-                    } ?>/icon_<?php echo $object['icon'] ?>.svg'/>
+    echo $_REQUEST['weather_tip_img'] . '/icons';
+} else {
+    echo 'classic';
+} ?>/icon_<?php echo $object['icon'] ?>.svg'/>
                 </div>
 
                 <div class="view-3-classic-temp">
@@ -59,10 +59,15 @@ foreach ($objects['0'] as $forecast) {
             <div class="view-3-classic-bottom">
                 <?php
                 for ($i=0; $i < 3; $i++) {
-                    if ($i == 0) {$className = '1';}
-                    if ($i == 1) {$className = '2';}
-                    if ($i == 2) {$className = '2';}
-                    ?>
+                    if ($i == 0) {
+                        $className = '1';
+                    }
+                    if ($i == 1) {
+                        $className = '2';
+                    }
+                    if ($i == 2) {
+                        $className = '2';
+                    } ?>
                 <div class="view-3-classic-day<?php echo $className?>">
                     <div class="v3c-container">
                         <div class="view-3-classic-weekday-next">
@@ -77,13 +82,14 @@ foreach ($objects['0'] as $forecast) {
                     </div>
                     <div class="view-3-classic-icon-<?php echo $className?>">
                         <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                            echo $_REQUEST['weather_tip_img'] . '/icons';
-                        } else {
-                            echo 'classic';
-                        } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+                        echo $_REQUEST['weather_tip_img'] . '/icons';
+                    } else {
+                        echo 'classic';
+                    } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                     </div>
                 </div>
-                <?php }?>
+                <?php
+                }?>
             </div>
         </div>
     </div>

@@ -33,7 +33,7 @@ foreach ($objects['0'] as $forecast) {
 
                 <ul class="view-9-classic-weather-info">
                     <?php for ($i=0; $i < 3; $i++) {
-                        ?>
+    ?>
                         <li>
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'view-9-classic-weather-info-img') ?>
                             <div class="view-9-classic-time">
@@ -44,7 +44,7 @@ foreach ($objects['0'] as $forecast) {
                             </div>
                         </li>
                         <?php
-                    }?>
+}?>
                 </ul>
             </div>
         </div>

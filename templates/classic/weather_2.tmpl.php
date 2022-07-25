@@ -23,13 +23,24 @@ foreach ($objects['0'] as $forecast) {
 
             <ul class="view-2-classic-daysweek-1">
                 <?php for ($i=0; $i < 6; $i++) {
-                    if ($i == 0) {$className = 'monday';}
-                    if ($i == 1) {$className = 'tuesday';}
-                    if ($i == 2) {$className = 'wednesday';}
-                    if ($i == 3) {$className = 'thursday';}
-                    if ($i == 4) {$className = 'friday';}
-                    if ($i == 5) {$className = 'saturday';}
-                    ?>
+    if ($i == 0) {
+        $className = 'monday';
+    }
+    if ($i == 1) {
+        $className = 'tuesday';
+    }
+    if ($i == 2) {
+        $className = 'wednesday';
+    }
+    if ($i == 3) {
+        $className = 'thursday';
+    }
+    if ($i == 4) {
+        $className = 'friday';
+    }
+    if ($i == 5) {
+        $className = 'saturday';
+    } ?>
 
                     <li class="view-2-classic-<?php echo $className ?>-1">
                         <div class="view-2-classic-weekday">
@@ -41,17 +52,17 @@ foreach ($objects['0'] as $forecast) {
                         </div>
                         <div class="view-2-classic-dayimage">
                             <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                                echo $_REQUEST['weather_tip_img'] . '/icons';
-                            } else {
-                                echo 'classic';
-                            } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+        echo $_REQUEST['weather_tip_img'] . '/icons';
+    } else {
+        echo 'classic';
+    } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                         </div>
                         <div class="view-2-classic-temp view-2-classic-temp-<?php echo $className ?>">
                             <?php echo $forecatsArr[$i]['tempC']; ?>°
                         </div>
                     </li>
                     <?php
-                }?>
+}?>
 
                 <div class="main-information-1">
                     <div class="view-2-classic-timegmt">

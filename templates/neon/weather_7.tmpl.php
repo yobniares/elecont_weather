@@ -62,14 +62,25 @@
 
         <div class="view-7-neon-infobox">
             <?php for ($i=0; $i < 3; $i++) {
-                if ($i == 0) {$className = 'morning';}
-                if ($i == 1) {$className = 'day';}
-                if ($i == 2) {$className = 'evening';}
+    if ($i == 0) {
+        $className = 'morning';
+    }
+    if ($i == 1) {
+        $className = 'day';
+    }
+    if ($i == 2) {
+        $className = 'evening';
+    }
 
-                if ($i == 0) {$position = 'top-1';}
-                if ($i == 1) {$position = 'middle-1';}
-                if ($i == 2) {$position = 'bottom-1';}
-                ?>
+    if ($i == 0) {
+        $position = 'top-1';
+    }
+    if ($i == 1) {
+        $position = 'middle-1';
+    }
+    if ($i == 2) {
+        $position = 'bottom-1';
+    } ?>
 
                 <div class="view-7-neon-info-1 <?php echo $position?>">
                     <p class="view-7-neon-daytime-next">
@@ -83,7 +94,7 @@
                     </p>
                 </div>
                 <?php
-            }?>
+}?>
         </div>
     </div>
 

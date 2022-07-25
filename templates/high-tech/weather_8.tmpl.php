@@ -63,14 +63,25 @@
 
         <div class="view-8-ht-infobox">
             <?php for ($i=0; $i < 3; $i++) {
-                if ($i == 0) {$className = 'morning';}
-                if ($i == 1) {$className = 'day';}
-                if ($i == 2) {$className = 'evening';}
+    if ($i == 0) {
+        $className = 'morning';
+    }
+    if ($i == 1) {
+        $className = 'day';
+    }
+    if ($i == 2) {
+        $className = 'evening';
+    }
 
-                if ($i == 0) {$blockName = 'top';}
-                if ($i == 1) {$blockName = 'middle';}
-                if ($i == 2) {$blockName = 'bottom';}
-                ?>
+    if ($i == 0) {
+        $blockName = 'top';
+    }
+    if ($i == 1) {
+        $blockName = 'middle';
+    }
+    if ($i == 2) {
+        $blockName = 'bottom';
+    } ?>
 
                 <div class="view-8-ht-info black-icons">
                     <p class="view-8-ht-daytime-next">
@@ -85,7 +96,7 @@
                 </div>
 
                 <?php
-            }?>
+}?>
         </div>
     </div>
 </section>

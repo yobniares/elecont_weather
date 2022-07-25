@@ -54,14 +54,25 @@
         <div class="view-3-neon-bottom">
             <?php
             for ($i=0; $i < 3; $i++) {
-                if ($i == 0) {$number = '1';}
-                if ($i == 1) {$number = '2';}
-                if ($i == 2) {$number = '3';}
+                if ($i == 0) {
+                    $number = '1';
+                }
+                if ($i == 1) {
+                    $number = '2';
+                }
+                if ($i == 2) {
+                    $number = '3';
+                }
 
-                if ($i == 0) {$className = 'thu';}
-                if ($i == 0) {$className = 'fri';}
-                if ($i == 0) {$className = 'sat';}
-                ?>
+                if ($i == 0) {
+                    $className = 'thu';
+                }
+                if ($i == 0) {
+                    $className = 'fri';
+                }
+                if ($i == 0) {
+                    $className = 'sat';
+                } ?>
 
                 <div class="view-3-neon-day<?php echo $number ?>">
                     <div class="v3c-container">
@@ -79,7 +90,8 @@
                         <?php echo $abstractData->getWeatherIcon($forecatsArr[$i]) ?>
                     </div>
                 </div>
-            <?php }?>
+            <?php
+            }?>
         </div>
     </div>
 

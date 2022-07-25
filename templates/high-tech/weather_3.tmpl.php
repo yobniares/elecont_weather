@@ -23,10 +23,10 @@
 
                 <div class="view-3-ht-iconday">
                     <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                        echo $_REQUEST['weather_tip_img'] . '/icons';
-                    } else {
-                        echo 'classic';
-                    } ?>/icon_<?php echo $object['icon'] ?>.svg'/>
+    echo $_REQUEST['weather_tip_img'] . '/icons';
+} else {
+    echo 'classic';
+} ?>/icon_<?php echo $object['icon'] ?>.svg'/>
                 </div>
                 <div class="view-3-ht-temp">
                     <?php echo $object['tempC']; ?>°
@@ -55,14 +55,25 @@
             <div class="view-3-ht-bottom">
                 <?php
                 for ($i=0; $i < 3; $i++) {
-                    if ($i == 0) {$iterator = '1';}
-                    if ($i == 1) {$iterator = '2';}
-                    if ($i == 2) {$iterator = '3';}
+                    if ($i == 0) {
+                        $iterator = '1';
+                    }
+                    if ($i == 1) {
+                        $iterator = '2';
+                    }
+                    if ($i == 2) {
+                        $iterator = '3';
+                    }
 
-                    if ($i == 0) {$className = 'thu';}
-                    if ($i == 1) {$className = 'fri';}
-                    if ($i == 2) {$className = 'sat';}
-                    ?>
+                    if ($i == 0) {
+                        $className = 'thu';
+                    }
+                    if ($i == 1) {
+                        $className = 'fri';
+                    }
+                    if ($i == 2) {
+                        $className = 'sat';
+                    } ?>
                     <div class="view-3-ht-day<?php echo $iterator?> black-icons">
                         <div class="v3c-container">
                             <div class="view-3-ht-weekday-next">
@@ -77,13 +88,14 @@
                         </div>
                         <div class="view-3-ht-icon-<?php echo $className ?>">
                             <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                                echo $_REQUEST['weather_tip_img'] . '/icons';
-                            } else {
-                                echo 'classic';
-                            } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+                        echo $_REQUEST['weather_tip_img'] . '/icons';
+                    } else {
+                        echo 'classic';
+                    } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                         </div>
                     </div>
-                <?php }?>
+                <?php
+                }?>
             </div>
         </div>
     </section>

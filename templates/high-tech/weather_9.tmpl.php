@@ -27,11 +27,15 @@
 
         <ul class="view-9-ht-weather-info">
             <?php for ($i=0; $i < 3; $i++) {
-                if ($i == 0) {$className = 'left';}
-                if ($i == 1) {$className = 'middle';}
-                if ($i == 2) {$className = 'right';}
-
-                ?>
+    if ($i == 0) {
+        $className = 'left';
+    }
+    if ($i == 1) {
+        $className = 'middle';
+    }
+    if ($i == 2) {
+        $className = 'right';
+    } ?>
                 <li class="<?php echo $className; ?>">
                     <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], '') ?>
                     <div class="view-9-ht-time">
@@ -42,7 +46,7 @@
                     </div>
                 </li>
                 <?php
-            }?>
+}?>
         </ul>
     </div>
 </section>

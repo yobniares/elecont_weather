@@ -6,6 +6,7 @@
  */
 class AbstractClass
 {
+
     /**
      * @param $code
      * @return string
@@ -263,8 +264,8 @@ class AbstractClass
      * @param $date
      * @return string
      */
-    public function getNameOfTheDate($date) {
-
+    public function getNameOfTheDate($date)
+    {
         $weekArr = [
             'ВС',
             'ПН',
@@ -279,12 +280,22 @@ class AbstractClass
         return $weekArr[$nameOfTheDay];
     }
 
-    public function getDateFromString($dateString, $format) {
+    /**
+     * @param $dateString
+     * @param $format
+     * @return false|string
+     */
+    public function getDateFromString($dateString, $format)
+    {
         return date($format, strtotime($dateString));
     }
 
-    public function getMonthFromString($dateString) {
-
+    /**
+     * @param $dateString
+     * @return string
+     */
+    public function getMonthFromString($dateString)
+    {
         $arr = [
             'Январь',
             'Февраль',
@@ -447,7 +458,8 @@ class AbstractClass
      * @param $object
      * @return string
      */
-    public function getWeatherIcon($object, $className = '') {
+    public function getWeatherIcon($object, $className = '')
+    {
         if (!empty($_REQUEST['weather_tip_img'])) {
             $img = '<img class="'.$className. '" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $object['icon'] . '.svg" />';
         } else {
@@ -529,35 +541,40 @@ class AbstractClass
     public function getTemplate($template, $objects, $mainObject, $abstractData)
     {
         if (isset($_REQUEST['weather_tip']) && $_REQUEST['weather_tip'] !== '') {
-
             if ($_REQUEST['weather_tip_img'] == 'classic') {
-                echo $template->renderTemplate('classic/weather_'.$_REQUEST['weather_tip'],
+                echo $template->renderTemplate(
+                    'classic/weather_'.$_REQUEST['weather_tip'],
                     [
                         'object' => $objects['0'],
                         'objects' => $objects,
                         'mainObject' => $mainObject,
                         'abstractData' => $abstractData
-                    ]);
+                    ]
+                );
             }
 
             if ($_REQUEST['weather_tip_img'] == 'ht') {
-                echo $template->renderTemplate('high-tech/weather_'.$_REQUEST['weather_tip'],
+                echo $template->renderTemplate(
+                    'high-tech/weather_'.$_REQUEST['weather_tip'],
                     [
                         'object' => $objects['0'],
                         'objects' => $objects,
                         'mainObject' => $mainObject,
                         'abstractData' => $abstractData
-                    ]);
+                    ]
+                );
             }
 
             if ($_REQUEST['weather_tip_img'] == 'neon') {
-                echo $template->renderTemplate('neon/weather_'.$_REQUEST['weather_tip'],
+                echo $template->renderTemplate(
+                    'neon/weather_'.$_REQUEST['weather_tip'],
                     [
                         'object' => $objects['0'],
                         'objects' => $objects,
                         'mainObject' => $mainObject,
                         'abstractData' => $abstractData
-                    ]);
+                    ]
+                );
             }
         }
     }

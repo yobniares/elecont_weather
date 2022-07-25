@@ -36,43 +36,64 @@ foreach ($objects['0'] as $forecast) {
             <div class="view-4-classic-plates">
                 <ul class="view-4-classic-time">
                     <?php for ($i=0; $i < 4; $i++) {
-                        if ($i == 0) {$number = '1';}
-                        if ($i == 1) {$number = '2';}
-                        if ($i == 2) {$number = '3';}
-                        if ($i == 3) {$number = '4';}
-                        ?>
+    if ($i == 0) {
+        $number = '1';
+    }
+    if ($i == 1) {
+        $number = '2';
+    }
+    if ($i == 2) {
+        $number = '3';
+    }
+    if ($i == 3) {
+        $number = '4';
+    } ?>
                         <li class="view-4-classic-time<?php echo $number ?>"><?php echo $abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i'); ?></li>
                         <?php
-                    }?>
+}?>
                 </ul>
 
                 <ul class="view-4-classic-icons">
                     <?php for ($i=0; $i < 4; $i++) {
-                        if ($i == 0) {$number = '1';}
-                        if ($i == 1) {$number = '2';}
-                        if ($i == 2) {$number = '3';}
-                        if ($i == 3) {$number = '4';}
-                        ?>
+        if ($i == 0) {
+            $number = '1';
+        }
+        if ($i == 1) {
+            $number = '2';
+        }
+        if ($i == 2) {
+            $number = '3';
+        }
+        if ($i == 3) {
+            $number = '4';
+        } ?>
                         <li class="view-4-classic-icon<?php echo $number ?>">
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[$i]) ?>
                         </li>
                         <?php
-                    }?>
+    }?>
                 </ul>
 
                 <ul class="view-4-classic-temps">
                     <?php for ($i=0; $i < 4; $i++) {
-                        if ($i == 0) {$number = '1';}
-                        if ($i == 1) {$number = '2';}
-                        if ($i == 2) {$number = '3';}
-                        if ($i == 3) {$number = '4';}
-                        ?>
+        if ($i == 0) {
+            $number = '1';
+        }
+        if ($i == 1) {
+            $number = '2';
+        }
+        if ($i == 2) {
+            $number = '3';
+        }
+        if ($i == 3) {
+            $number = '4';
+        } ?>
                         <li class="view-4-classic-temp<?php echo $number ?>">
                             <p class="view-4-classic-cels"><?php echo $forecatsArr[$i]['tempC']; ?>°C</p>
                             <p class="view-4-classic-far"><?php echo $forecatsArr[$i]['tempF']; ?>°F</p>
                         </li>
                         <?php
-                    }?>
+    }?>
                 </ul>
             </div>
         </div>

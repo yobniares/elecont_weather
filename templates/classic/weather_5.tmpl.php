@@ -55,10 +55,15 @@ foreach ($objects['0'] as $forecast) {
 
                 <ul class="view-5-classic-daytimes">
                     <?php for ($i=0; $i < 3; $i++) {
-                        if ($i == 0) {$className = 'morning';}
-                        if ($i == 1) {$className = 'day';}
-                        if ($i == 2) {$className = 'evening';}
-                        ?>
+    if ($i == 0) {
+        $className = 'morning';
+    }
+    if ($i == 1) {
+        $className = 'day';
+    }
+    if ($i == 2) {
+        $className = 'evening';
+    } ?>
                         <li class="view-5-classic-next-<?php echo $className ?>">
                             <p class="view-5-classic-daytime-next">
                                 <?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?>
@@ -71,7 +76,7 @@ foreach ($objects['0'] as $forecast) {
                             </p>
                         </li>
                         <?php
-                    }?>
+}?>
                 </ul>
 
             </div>

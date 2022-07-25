@@ -22,13 +22,24 @@
             <ul class="view-2-neon-daysweek-1">
 
                 <?php for ($i=0; $i < 6; $i++) {
-                    if ($i == 0) {$className = 'monday';}
-                    if ($i == 1) {$className = 'tuesday';}
-                    if ($i == 2) {$className = 'wednesday';}
-                    if ($i == 3) {$className = 'thursday';}
-                    if ($i == 4) {$className = 'friday';}
-                    if ($i == 5) {$className = 'saturday';}
-                    ?>
+    if ($i == 0) {
+        $className = 'monday';
+    }
+    if ($i == 1) {
+        $className = 'tuesday';
+    }
+    if ($i == 2) {
+        $className = 'wednesday';
+    }
+    if ($i == 3) {
+        $className = 'thursday';
+    }
+    if ($i == 4) {
+        $className = 'friday';
+    }
+    if ($i == 5) {
+        $className = 'saturday';
+    } ?>
 
                     <li class="view-2-neon-<?php echo $className; ?>-1">
                         <div class="view-2-neon-weekday">
@@ -46,7 +57,7 @@
                         </div>
                     </li>
                     <?php
-                }?>
+}?>
 
                 <div class="view-2-neon-temp view-2-neon-temp-sat">
                     <?php echo $object['tempC']; ?>°

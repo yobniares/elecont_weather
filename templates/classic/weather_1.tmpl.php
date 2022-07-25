@@ -43,31 +43,32 @@
                 </div>
             </div>
             <?php for ($i=0; $i < 3; $i++) {
-                if ($i == 0) {
-                    $className = 'morning';
-                }
-                if ($i == 1) {
-                    $className = 'day';
-                }
-                if ($i == 2) {
-                    $className = 'evening';
-                } ?>
+    if ($i == 0) {
+        $className = 'morning';
+    }
+    if ($i == 1) {
+        $className = 'day';
+    }
+    if ($i == 2) {
+        $className = 'evening';
+    } ?>
                 <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-<?php echo $className ?>" >
                     <p class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-timeofday" >
                         <?php echo $forecatsArr[$i]['dt']; ?>
                     </p>
                     <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-timeofday-icon">
                         <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-    echo $_REQUEST['weather_tip_img'] . '/icons';
-} else {
-    echo 'classic';
-} ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+        echo $_REQUEST['weather_tip_img'] . '/icons';
+    } else {
+        echo 'classic';
+    } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                     </div>
                     <p class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-temp">
                         <?php echo $forecatsArr[$i]['tempC']; ?>°
                     </p>
                 </div>
-            <?php }?>
+            <?php
+}?>
         </div>
     </div>
 

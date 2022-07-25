@@ -32,10 +32,10 @@ foreach ($objects['0'] as $forecast) {
 
                         <li class="view-7-classic-daytime-icon">
                             <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                                echo $_REQUEST['weather_tip_img'] . '/icons';
-                            } else {
-                                echo 'classic';
-                            } ?>/icon_<?php echo $object['icon'] ?>.svg'/>
+    echo $_REQUEST['weather_tip_img'] . '/icons';
+} else {
+    echo 'classic';
+} ?>/icon_<?php echo $object['icon'] ?>.svg'/>
                         </li>
                     </ul>
 
@@ -73,10 +73,15 @@ foreach ($objects['0'] as $forecast) {
 
                 <div class="view-7-classic-infobox">
                     <?php for ($i=0; $i < 3; $i++) {
-                        if ($i == 0) {$className = 'morning';}
-                        if ($i == 1) {$className = 'day';}
-                        if ($i == 2) {$className = 'evening';}
-                        ?>
+    if ($i == 0) {
+        $className = 'morning';
+    }
+    if ($i == 1) {
+        $className = 'day';
+    }
+    if ($i == 2) {
+        $className = 'evening';
+    } ?>
 
                         <div class="view-7-classic-info">
                             <p class="view-7-classic-daytime-next">
@@ -85,10 +90,10 @@ foreach ($objects['0'] as $forecast) {
 
                             <div class="view-7-classic-<?php echo $className ?>">
                                 <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                                    echo $_REQUEST['weather_tip_img'] . '/icons';
-                                } else {
-                                    echo 'classic';
-                                } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+        echo $_REQUEST['weather_tip_img'] . '/icons';
+    } else {
+        echo 'classic';
+    } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                             </div>
 
                             <p class="view-7-classic-next-temp">
@@ -96,7 +101,7 @@ foreach ($objects['0'] as $forecast) {
                             </p>
                         </div>
                         <?php
-                    }?>
+}?>
 
                 </div>
             </div>
