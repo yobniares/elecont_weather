@@ -1,5 +1,12 @@
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<?php
+require_once('Classes/AbstractClass.php');
+$abstractData = new AbstractClass();
+$iniArr = parse_ini_file('app.ini');
+$scriptPath = $iniArr['scriptPath'];
+$cities = $abstractData->getDomain() . $scriptPath . 'cities.php';
+?>
 
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <p class="otst" style="font-size: 1.5em; text-align: center;">Для формирования кода информера выберите нужные параметры:</p>
     <table border="0" cellspacing="0" cellpadding="15" align="center" style="text-align:center;border: solid 2px #cccccc;border-radius: 8px;width: 100%;">
         <tr>
@@ -7,12 +14,11 @@
                 <input id="tags" class="ajax" name="city" type="text" style="margin-left: 25px;font-size: 1.0em;width: 300px;" placeholder="Введите название города"/></p>
             </td>
         </tr>
-
         <script type="text/javascript">
             $( "#tags" ).autocomplete({
                 source: function( request, response ) {
                     $.ajax({
-                        url: "https://yandexinformers.ddev.site/cities.php",
+                        url: "<?php echo $cities?>",
                         dataType: "json",
                         type: "POST",
                         data: {
@@ -32,7 +38,6 @@
                 minlength: 2
             });
         </script>
-
         <tr>
             <td colspan="3" align="center">
                 <p><label for="color_fon">Прозрачный фон:</label> <input type='checkbox' name='transpar' value='1' /></p>
