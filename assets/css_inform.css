@@ -153,3 +153,10 @@ a.btn-default:hover {
     font-family: Arial !important;
     font-size: 16px !important;
 }
+
+.wrapper {
+    text-align: center;
+}
+.wrapper iframe {
+    display: inline-block;
+}

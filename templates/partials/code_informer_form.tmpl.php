@@ -7,4 +7,3 @@
     <p class="otst"><br /></p>
     <p align="center"> <a href='javascript: history.go(-1);' class="btn-default">Вернуться к выбору параметров</a></p>
 </div>
-

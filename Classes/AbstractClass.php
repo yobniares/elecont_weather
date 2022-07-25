@@ -488,7 +488,7 @@ class AbstractClass
             $string.= '&weather_tip_img=img_7_svg';
         }
         if (isset($requestArray['city']) && $requestArray['city'] !=='') {
-            $string = '&city='.$requestArray['city'];
+            $string.= '&city='.$requestArray['city'];
         }
         if (isset($requestArray['font_family']) && $requestArray['font_family'] !=='') {
             $string.= '&font_family='.$requestArray['font_family'];

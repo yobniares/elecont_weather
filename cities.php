@@ -1,9 +1,6 @@
 <?php
-
 require_once('Classes/AbstractClass.php');
 $abstractData = new AbstractClass();
-$iniArr = parse_ini_file('app.ini');
-$scriptPath = $iniArr['scriptPath'];
 
 if (isset($_POST['name'])) {
     $searchword = $_POST['name'];
@@ -14,7 +11,7 @@ if (isset($_POST['name'])) {
     echo json_encode('Город не найден');
 }
 
-$jsonFile = $abstractData->getDomain() . $scriptPath . 'data/cities.json';
+$jsonFile = $abstractData->getDomain() . 'data/cities.json';
 $content = file_get_contents($jsonFile);
 
 if ($content == '') {

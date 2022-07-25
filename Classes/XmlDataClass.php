@@ -30,7 +30,7 @@ class XmlDataClass
      */
     public function getMailUrl()
     {
-        if (!empty($_REQUEST['weather_tip_img'])) {
+        if (!empty($_REQUEST['weather_tip_img']) && isset($_REQUEST['city'])) {
             $city = $_REQUEST['city'];
         } else {
             $city = 'Москва';
