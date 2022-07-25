@@ -1,5 +1,4 @@
 <?php
-
 require_once('Classes/AbstractClass.php');
 $abstractData = new AbstractClass();
 

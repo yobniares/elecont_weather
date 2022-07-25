@@ -26,9 +26,6 @@ $iniArr = parse_ini_file('app.ini');
 $key = $iniArr['key'];
 $abstractData = new AbstractClass();
 $additionalParams = 'la=ru&weather=1&aqi=0&day=0&number=4';
-$xmlData = new XmlDataClass($key, $additionalParams);
-$objects = $xmlData->getObjects();
-$template = new RenderClass();
 
 if (!empty($_REQUEST['weather_tip'])) {
     if ($_REQUEST['weather_tip'] == '2') {
@@ -48,12 +45,18 @@ if (!empty($_REQUEST['weather_tip'])) {
         $xmlDataSingeObject = new XmlDataClass($key, $additionalParamsSingeObject);
         $mainObjects = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
         $mainObject = $mainObjects['0'];
-    } elseif ($_REQUEST['weather_tip'] == '500') {
-        // Some possibility code
     } else {
         $mainObject = [];
     }
 }
+
+if (isset($_REQUEST['city']) && $_REQUEST['city'] == '') {
+    $_REQUEST['city'] = 'Москва';
+}
+
+$xmlData = new XmlDataClass($key, $additionalParams);
+$objects = $xmlData->getObjects();
+$template = new RenderClass();
 
 //if (isset($_POST['submit'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -63,14 +66,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     // Render informer without params
     if (empty($_REQUEST['weather_tip'])) {
-
-        /*echo '<h4>Информер № 1 (узкий, в столбик)</h4>';
-        echo '<p><br /></p>';
-        echo '<div style="width:100%;">';
-        echo '<iframe src="' . $abstractData->getDomain() .'?weather_tip=weather_1&weather_tip_img=classic&font_family=Aldrich&color_fon=%232A88CD&font_text=%23fff&font_tempo=%23fff" frameborder="0" height="700"></iframe>';
-        echo '</div>';
-        echo '<p class="otst"><br /></p>';*/
-
+        // Informers ifrmaes
+        echo $template->renderTemplate('partials/iframes/iframe');
         // Select params form
         echo $template->renderTemplate('partials/select_form');
     } else {
