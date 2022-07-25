@@ -1,9 +1,7 @@
 <?php
 require_once('Classes/AbstractClass.php');
 $abstractData = new AbstractClass();
-$iniArr = parse_ini_file('app.ini');
-$scriptPath = $iniArr['scriptPath'];
-$cities = $abstractData->getDomain() . $scriptPath . 'cities.php';
+$cities = $abstractData->getDomain() . 'cities.php';
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
