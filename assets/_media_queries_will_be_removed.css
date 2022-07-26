@@ -1,0 +1,94 @@
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/* Custom */
+@media only screen and (max-width: 460px) {
+    .view-2-classic-container,
+    .view-2-ht-container,
+    .view-2-neon-container,
+    .view-3-classic-container {
+        transform:scale(0.45);
+        -ms-transform: scale(0.45); /* IE 9 */
+        -webkit-transform: scale(0.45); /* Chrome, Safari, Opera */
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 460px) {
+    .view-2-classic-container,
+    .view-2-ht-container,
+    .view-2-neon-container,
+    .view-3-classic-container {
+        transform:scale(0.5);
+        -ms-transform: scale(0.5); /* IE 9 */
+        -webkit-transform: scale(0.5); /* Chrome, Safari, Opera */
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .view-2-classic-container,
+    .view-2-ht-container,
+    .view-2-neon-container,
+    .view-3-classic-container {
+        transform:scale(0.6);
+        -ms-transform: scale(0.6); /* IE 9 */
+        -webkit-transform: scale(0.6); /* Chrome, Safari, Opera */
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .view-2-classic-container,
+    .view-2-ht-container,
+    .view-2-neon-container,
+    .view-3-classic-container {
+        transform:scale(0.7);
+        -ms-transform: scale(0.7); /* IE 9 */
+        -webkit-transform: scale(0.7); /* Chrome, Safari, Opera */
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .view-2-classic-container,
+    .view-2-ht-container,
+    .view-2-neon-container,
+    .view-3-classic-container {
+        transform:scale(1);
+        -ms-transform: scale(1); /* IE 9 */
+        -webkit-transform: scale(1); /* Chrome, Safari, Opera */
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .view-2-classic-container,
+    .view-2-ht-container,
+    .view-2-neon-container,
+    .view-3-classic-container {
+        transform: initial;
+        transform-origin: initial;
+    }
+}
+
