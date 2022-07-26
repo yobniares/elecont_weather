@@ -13,16 +13,13 @@ p {
     padding: 0;
 }
 
-
-
-
 .view-6-classic-type-1 {
     position: relative;
     width: 1000px;
     height: 1000px;
     background: #2A88CD;
-    background-image: url("icons/hours.svg");
-    background-position: center;
+    background-image: url("icons/hours.svg") !important;
+    background-position: center !important;
     border: 12px solid #FFFFFF;
     border-radius: 500px;
     box-sizing: border-box;
