@@ -3,6 +3,7 @@
 // Include css and js
 $farbasticCss = 'assets/farbtastic/farbtastic.css';
 $farbasticJs = 'assets/farbtastic/farbtastic.js';
+$mediaQueries = 'assets/media_queries.css';
 
 if (!empty($_REQUEST['weather_tip_img'])) {
     $geometria = 'assets/' .$_REQUEST['weather_tip_img'] .'/fonts/geometria/stylesheet.css';
@@ -13,8 +14,10 @@ if (!empty($_REQUEST['weather_tip_img'])) {
 
 if (empty($_REQUEST['weather_tip'])) {
     include_once 'templates/partials/headers/header.php';
+    include_once 'templates/partials/headers/media_queries.php';
 } else {
     include_once 'templates/partials/headers/header_weather.php';
+    include_once 'templates/partials/headers/media_queries.php';
 }
 
 // Include classes
