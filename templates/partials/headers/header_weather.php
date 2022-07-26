@@ -21,20 +21,9 @@ date_default_timezone_set('Europe/Moscow');
 
     <?php if (!empty($_REQUEST['weather_tip'])) {?>
         <style>
-            body,
-            ._view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city-day-info,
-            ._view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-weather,
-            ._view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-dergees-cels,
-            ._view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-dergees-far,
-            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-timeofday,
-            ._view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-temp,
-            ._view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-typeofwind,
-            ._view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-windspeed,
-            ._view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-degrees,
-            ._view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-wet {
+            body {
                 font-family:<?php echo $_REQUEST['font_family'] ?>;
             }
-
             /* Background */
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-1,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>,
@@ -62,11 +51,12 @@ date_default_timezone_set('Europe/Moscow');
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-info-middle,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-info-bottom,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-right,
-            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-4 {
+            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-4,
+            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-weather-info li {
                 background:<?php echo $_REQUEST['color_fon'] ?>;
             }
 
-            /* Text color */
+            /* Text color and font */
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city-day-info,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-day,
@@ -108,9 +98,10 @@ date_default_timezone_set('Europe/Moscow');
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city-time,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city-right {
                 color: <?php echo  $_REQUEST['font_text'] ?> !important;
+                font-family:<?php echo $_REQUEST['font_family'] ?>;
             }
 
-            /* Temperature color */
+            /* Temperature color and font */
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-dergees-cels,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-dergees-far,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-temp,
@@ -123,6 +114,7 @@ date_default_timezone_set('Europe/Moscow');
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-next-temp,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-wind-wet {
                 color: <?php echo  $_REQUEST['font_tempo'] ?>;
+                font-family:<?php echo $_REQUEST['font_family'] ?>;
             }
         </style>
     <?php }?>

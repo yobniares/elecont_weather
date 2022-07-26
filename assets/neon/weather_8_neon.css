@@ -2,7 +2,7 @@ body {
     font-family: 'Aldrich';
 }
 
-.view-7-neon-4 {
+.view-8-neon-4 {
     width: 1380px;
     height: 375px;
     background-image: url("icons/view-8-1.svg");
@@ -14,7 +14,7 @@ body {
     padding-left: 50px;
 }
 
-.view-7-neon-5 {
+.view-8-neon-5 {
 
     width: 1380px;
     height: 375px;
@@ -27,7 +27,7 @@ body {
     padding-left: 50px;
 }
 
-.view-7-neon-6 {
+.view-8-neon-6 {
     width: 1380px;
     height: 375px;
     background-image: url("icons/view-8-3.svg");
@@ -40,7 +40,7 @@ body {
 }
 
 
-.view-7-neon-main-3 {
+.view-8-neon-main-3 {
     position: relative;
     width: 576px;
     height: 199px;
@@ -52,12 +52,12 @@ body {
     justify-content: space-around;
 }
 
-.view-7-neon-time-temp {
+.view-8-neon-time-temp {
     list-style-type: none;
     margin-left: -20px;
 }
 
-.view-7-neon-gmt {
+.view-8-neon-gmt {
  
     font-style: normal;
     font-weight: 500;
@@ -68,7 +68,7 @@ body {
     color: #00FF19;
 }
 
-.view-7-neon-time {
+.view-8-neon-time {
    
     font-style: normal;
     font-weight: 700;
@@ -81,7 +81,7 @@ body {
     margin-top: 10px;
 }
 
-.view-7-neon-temp-cels {
+.view-8-neon-temp-cels {
     
     font-style: normal;
     font-weight: 700;
@@ -94,7 +94,7 @@ body {
 
 }
 
-.view-7-neon-temp-far {
+.view-8-neon-temp-far {
    
     font-style: normal;
     font-weight: 700;
@@ -106,13 +106,13 @@ body {
 
 }
 
-.view-7-neon-daytime-info {
+.view-8-neon-daytime-info {
     list-style-type: none;
     margin-left: -20px;
    
 }
 
-.view-7-neon-daytime-name{
+.view-8-neon-daytime-name{
   
     font-style: normal;
     font-weight: 700;
@@ -128,7 +128,7 @@ body {
     
 }
 
-.view-7-neon-daytime-icon {
+.view-8-neon-daytime-icon {
 /*    background-image: url("icons/cloud-night-shine.png");*/
     background-repeat: no-repeat;
     background-position: center;
@@ -137,7 +137,7 @@ body {
     margin-top: -35px;
 }
 
-.view-7-neon-daytime-icon img {
+.view-8-neon-daytime-icon img {
 /*    width: 177.24px;
     height: 120px;*/
 
@@ -147,13 +147,13 @@ body {
     margin-left: 25px;
 }
 
-.view-7-neon-city-params {
+.view-8-neon-city-params {
     list-style-type: none;
     margin-left: -20px;
 }
 
 
-.view-7-neon-city {
+.view-8-neon-city {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -161,7 +161,7 @@ body {
     margin-left: 30px;
 }
 
-.view-7-neon-type {
+.view-8-neon-type {
     font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
@@ -173,7 +173,7 @@ body {
 
 }
 
-.view-7-neon-wind {
+.view-8-neon-wind {
     font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
@@ -186,7 +186,7 @@ body {
     padding-left: 20px;
 
 }
-.view-7-neon-degrees {
+.view-8-neon-degrees {
     font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
@@ -198,7 +198,7 @@ body {
     padding-left: 20px;
     }
 
-.view-7-neon-wet {
+.view-8-neon-wet {
     font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
@@ -210,7 +210,7 @@ body {
     padding-left: 20px;
  }
 
-.view-7-neon-pressure {
+.view-8-neon-pressure {
     font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
@@ -222,7 +222,7 @@ body {
     padding-left: 20px;
 }
 
-.view-7-neon-dpf {
+.view-8-neon-dpf {
     font-family: 'Aldrich';
         font-style: normal;
         font-weight: 400;
@@ -234,12 +234,12 @@ body {
         padding-left: 20px;
 }
 
-.view-7-neon-infobox {
+.view-8-neon-infobox {
     margin-left: 20px;
    
 }
 
-.view-7-neon-daytime-next {
+.view-8-neon-daytime-next {
     font-weight: 500;
     font-size: 20px;
     text-align: center;
@@ -250,7 +250,7 @@ body {
 
 }
 
-.view-7-neon-next-temp {
+.view-8-neon-next-temp {
     font-weight: 400;
     font-size: 30px;
     line-height: 29px;
@@ -259,7 +259,7 @@ body {
     color: #00FF19;
 }
 
-.view-7-neon-morning {
+.view-8-neon-morning {
 /*    background-image: url("icons/one-cloud-shine.png");*/
     background-repeat: no-repeat;
     background-position: center;
@@ -268,12 +268,12 @@ body {
     margin-left: 67px;
 }
 
-.view-7-neon-morning img {
+.view-8-neon-morning img {
     width: 106.74px;
     height: 76.42px;
 }
 
-.view-7-neon-day {
+.view-8-neon-day {
   /*  background-image: url("icons/sun-shine.svg");*/
     background-repeat: no-repeat;
     background-position: center;
@@ -282,12 +282,12 @@ body {
     margin-left: 67px;
 }
 
-.view-7-neon-day img {
+.view-8-neon-day img {
     width: 106.74px;
     height: 76.42px;
 }
 
-.view-7-neon-evening {
+.view-8-neon-evening {
 /*    background-image: url("icons/two-clouds-3.png");*/
     background-repeat: no-repeat;
     background-position: center;
@@ -296,13 +296,13 @@ body {
     margin-left: 67px;
 }
 
-.view-7-neon-evening img {
+.view-8-neon-evening img {
     width: 93px;
     height: 82px;
 }
 
 
-.view-7-neon-citytime {
+.view-8-neon-citytime {
 /*    width: 474px;
     height: 29px;*/
 
@@ -320,7 +320,7 @@ body {
 }
 
 
-.view-7-neon-type-2 {
+.view-8-neon-type-2 {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -340,7 +340,7 @@ body {
 }
 
 
-.view-7-neon-infobox-4 {
+.view-8-neon-infobox-4 {
     display: flex;
     width: 663px;
     align-items: center;
@@ -348,7 +348,7 @@ body {
     margin-top: -220px;
 }
 
-.view-7-neon-infobox-4 div {
+.view-8-neon-infobox-4 div {
     margin-left: 50px;
     text-align: center;
     display: flex;
