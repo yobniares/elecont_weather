@@ -59,9 +59,6 @@
                     <?php
 }?>
 
-                <div class="view-2-neon-temp view-2-neon-temp-sat">
-                    <?php echo $object['tempC']; ?>°
-                </div>
                 <div class="main-information-1">
                     <div class="view-2-neon-timegmt">
                         <?php echo $abstractData->getDate('H:i') ?>

@@ -30,7 +30,7 @@ p {
 .view-6-neon-time {
     position: absolute;
     left: 8%;
-    top: 42%;
+    top: 45%;
     font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
@@ -180,4 +180,5 @@ p {
 .view-6-neon-icons-img {
     width: 255px;
     height: 192px;
+    margin-bottom: 30px;
 }

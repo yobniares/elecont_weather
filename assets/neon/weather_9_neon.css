@@ -112,18 +112,20 @@ body {
 }
 
 .view-9-neon-far {
-
     font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
     font-size: 50px;
-
     text-align: right;
     text-transform: uppercase;
     margin-right: 15px;
-    color: #00FF19;
     margin-top: -60px;
     margin-top: -100px;
+}
+
+.view-9-neon-cels,
+.view-9-neon-far {
+    color: #00FF19;
 }
 
 .view-9-neon-weather-info {
@@ -131,8 +133,8 @@ body {
     width: 310px;
     display: flex;
     justify-content: space-around;
-    margin-top: -35px;
-    margin-left: 5px;
+    margin-top: -15px;
+    margin-left: 10px;
 }
 
 
@@ -175,10 +177,8 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-
     text-align: center;
     text-transform: uppercase;
-
     color: #00FF19;
 }
 
@@ -186,12 +186,11 @@ body {
     font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
-    font-size: 39px;
+    font-size: 34px;
     text-align: center;
     text-transform: uppercase;
     color: #00FF19;
 }
-
 
 .view-9-neon-cels {
     height: 210px;
@@ -199,15 +198,19 @@ body {
 
 .view-9-neon-far {
     position: relative;
-    top: -60px;
+    top: -50px;
     left: -30px;
 }
 .view-9-neon-cels {
     position: relative;
-    top:  0px;
-    left: -50px;
+    top:  10px;
+    left: -55px;
 }
 .view-9-neon-icon img {
-    width: 195px;
-    height: 120px;
+   /* width: 195px;
+    height: 120px;*/
+
+    width: 150px;
+    height: 100px;
+    margin-top: 25px;
 }

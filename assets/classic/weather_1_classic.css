@@ -46,8 +46,8 @@ body {
     font-family: 'Geometria';
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 41px;
+    font-size: 24px;
+    line-height: 36px;
     text-align: center;
     color: #FFFFFF;
     margin: 0;
@@ -55,6 +55,7 @@ body {
 
 .view-1-classic-city-day-info-container {
     padding: 20px;
+    margin-top: -10px;
 }
 
 .view-1-classic-custom {
@@ -240,8 +241,8 @@ body {
 }
 
 .view-1-classic-timeofday-icon img {
-    min-width: 80px;
-    max-width: 80px;
+    width: 86.74px;
+    height: 56.42px;
 }
 
 .view-1-classic-morning .view-1-classic-timeofday,

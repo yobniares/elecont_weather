@@ -124,11 +124,11 @@ class AbstractClass
                 break;
             case 27:
                 //$result = 'Mostly Cloudy Night';
-                $result = 'Преимущественно облачная ночь';
+                $result = 'Облачная ночь';
                 break;
             case 28:
                 //$result = 'Mostly Cloudy Day';
-                $result = 'Преимущественно облачный день';
+                $result = 'Облачно';
                 break;
             case 29:
                 //$result = 'Partly Cloudy Night';
@@ -148,11 +148,11 @@ class AbstractClass
                 break;
             case 33:
                 //$result = 'Fair / Mostly Clear Night';
-                $result = 'Преимущественно ясная ночь';
+                $result = 'Ясная ночь';
                 break;
             case 34:
                 //$result = 'Fair / Mostly Sunny Day';
-                $result = 'Преимущественно солнечный день';
+                $result = 'Солнцечно';
                 break;
             case 35:
                 //$result = 'Mixed Rain and Hail';

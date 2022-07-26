@@ -48,7 +48,7 @@ body {
     font-weight: 500;
     font-size: 20px;
     color: #FFFFFF;
-
+    white-space: nowrap;
 }
 
 .view-9-classic-day {
@@ -66,6 +66,7 @@ body {
     margin-right: 10px;
     margin-left: 10px;
     margin-top: -40px;
+    white-space: nowrap;
 }
 
 .view-9-classic-weather, .view-9-classic-weekday {
@@ -89,8 +90,12 @@ body {
 }
 
 .view-9-classic-icon img {
-    width: 195px;
-    height: 152.03px;
+/*    width: 195px;
+    height: 152.03px;*/
+
+    width: 150px;
+    height: 110px;
+    margin-top: 25px;
 }
 
 .view-9-classic-cels {

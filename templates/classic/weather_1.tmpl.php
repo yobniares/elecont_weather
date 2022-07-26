@@ -54,14 +54,10 @@
     } ?>
                 <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-<?php echo $className ?>" >
                     <p class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-timeofday" >
-                        <?php echo $forecatsArr[$i]['dt']; ?>
+                        <?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?>
                     </p>
                     <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-timeofday-icon">
-                        <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-        echo $_REQUEST['weather_tip_img'] . '/icons';
-    } else {
-        echo 'classic';
-    } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+                        <?php echo $abstractData->getWeatherIcon($forecatsArr[$i]) ?>
                     </div>
                     <p class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-temp">
                         <?php echo $forecatsArr[$i]['tempC']; ?>°

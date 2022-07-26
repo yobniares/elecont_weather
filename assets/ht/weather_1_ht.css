@@ -80,10 +80,9 @@ body {
 }
 
 .view-1-ht-evening {
-
-    width: 225px;
+/*    width: 225px;*/
+    width: auto;
     height: 250px;
-
 }
 
 .view-1-ht-weather {

@@ -38,6 +38,7 @@ if (!empty($_REQUEST['weather_tip'])) {
         $mainObjects = $xmlDataSingeObject->getObjects(); // Sometimes we need to send different requests for get diff responces
         $mainObject = $mainObjects['0'];
     } elseif (
+        $_REQUEST['weather_tip'] == '1' ||
         $_REQUEST['weather_tip'] == '4' ||
         $_REQUEST['weather_tip'] == '5' ||
         $_REQUEST['weather_tip'] == '7' ||
