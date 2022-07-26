@@ -5,25 +5,18 @@ body {
     margin: 0;
     padding: 0;
     background-color: gainsboro;
-    
 }
 
 /**
 Этот стиль можно убрать, он сделан для удобства просмотра 
 **/
 
-
-
-
 .view-9-ht-1 {
     width: 350px;
     height: 400px;
     background-image: url('img/view-9-t-1.svg');
     border-radius: 35px;
-   
-
 }
-
 
 .view-9-ht-2 {
     width: 350px;
@@ -97,8 +90,11 @@ body {
 }
 
 .view-9-ht-icon img {
-    width: 195px;
-    height: 152.03px;
+/*    width: 195px;
+    height: 152.03px;*/
+    width: 150px;
+    height: 100px;
+    margin-top: 15px;
 }
 
 .view-9-ht-cels {
@@ -196,7 +192,7 @@ body {
     font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
-    font-size: 39px;
+    font-size: 34px;
     text-align: center;
     text-transform: uppercase;
     color: #000000;

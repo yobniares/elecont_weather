@@ -62,7 +62,6 @@ body {
 }
 
 .view-7-neon-time {
-   
     font-style: normal;
     font-weight: 700;
     font-size: 47px;
@@ -71,7 +70,7 @@ body {
     align-items: flex-end;
     text-transform: uppercase;
     color: #00FF19;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .view-7-neon-temp-cels {
