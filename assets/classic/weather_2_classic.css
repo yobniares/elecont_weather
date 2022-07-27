@@ -53,7 +53,7 @@ body {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-/*    color: #FFFFFF;*/
+    color: #FFFFFF;
     background-image: url("icons/sunset.svg");
     background-position: left center;
     background-size: 31.03px 42.15px;
@@ -184,7 +184,7 @@ body {
 
 .view-2-classic-temp-mon,
 .view-2-classic-temp-monday {
-    margin-top: -65px;
+    margin-top: -50px;
     margin-left: 250px;
 }
 
@@ -196,7 +196,7 @@ body {
 
 .view-2-classic-temp-wed,
 .view-2-classic-temp-wednesday {
-    margin-top: -65px;
+    margin-top: -60px;
     margin-left: 195px;
 }
 
@@ -208,13 +208,13 @@ body {
 
 .view-2-classic-temp-fri,
 .view-2-classic-temp-friday {
-    margin-top: -65px;
+    margin-top: -45px;
     margin-left: 210px;
 }
 
 .view-2-classic-temp-sat,
 .view-2-classic-temp-saturday {
-    margin-top: -75px;
+    margin-top: -45px;
     margin-left: 240px;
 }
 

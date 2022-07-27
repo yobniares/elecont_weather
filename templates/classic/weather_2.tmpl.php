@@ -42,7 +42,7 @@ foreach ($objects['0'] as $forecast) {
         $className = 'saturday';
     } ?>
 
-                    <li class="view-2-classic-<?php echo $className ?>-1">
+                    <li class="view-2-classic-<?php echo $className ?>-1 <?php if($_REQUEST['transpar'] == 1) {echo 'view-2-classic-' .$className.'-2';} ?>">
                         <div class="view-2-classic-weekday">
                             <?php echo $abstractData->getNameOfTheDate($forecatsArr[$i]['dt']); ?>
                         </div>

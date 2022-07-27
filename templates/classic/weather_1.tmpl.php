@@ -2,14 +2,25 @@
     foreach ($objects['0'] as $forecast) {
         $forecatsArr[] = $forecast;
     }
-?>
+if($_REQUEST['transpar'] == 1) {?>
+    <style>
+        .view-1-classic-longcustom {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'longcustom' ) ?>");
+            background-size:100% 100%;
+        }
+        .view-1-classic-custom {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'custom') ?>");
+            background-size:100% 100%;
+        }
+    </style>
+<?php }?>
 
 <body>
 <section class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-container">
 <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>" >
 
     <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-content">
-            <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-city-day">
+            <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-city-day <?php if($_REQUEST['transpar'] == 1) {echo 'view-1-classic-custom';} ?>">
                 <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-city-day-info-container">
                     <p class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-city-day-info"><?php echo $object['name'] ?></p>
                     <p class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-city-day-info"><?php echo $abstractData->getWeek() ?>,</p>
@@ -17,7 +28,8 @@
                 </div>
             </div>
 
-            <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-maincontent">
+            <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-maincontent
+                <?php if($_REQUEST['transpar'] == 1) {echo 'view-1-classic-longcustom';} ?>">
                 <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-weather"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></div>
                 <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-weather-icon"></div>
                 <div class="view-1-<?php echo $_REQUEST['weather_tip_img']?>-dergees-cels">

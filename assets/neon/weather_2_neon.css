@@ -196,7 +196,12 @@ body {
 
 .view-2-neon-dayimage {
     margin-left: 115px;
-    margin-top: -55px;
+    margin-top: -45px;
+}
+
+.view-9-classic-weather-info-img {
+    width: 75px;
+    height: 65px;
 }
 
 .view-2-neon-temp {
@@ -209,7 +214,7 @@ body {
 }
 
 .view-2-neon-temp-mon {
-    margin-top: -65px;
+    margin-top: -55px;
     margin-left: 250px;
 }
 
