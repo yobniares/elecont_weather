@@ -5,7 +5,7 @@
 ?>
 <body>
 <section class="view-2-neon-container">
-    <div class="view-2-neon-1">
+    <div class="view-2-neon-1 <?php if($_REQUEST['transpar'] == 1) {echo 'view-2-neon-2';} ?>">
         <div class="view-2-neon-content">
             <div class="view-2-neon-sunrise-sunset-time">
                 <div class="view-2-neon-sunrisetime">

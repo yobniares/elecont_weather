@@ -58,6 +58,10 @@ if (isset($_REQUEST['city']) && $_REQUEST['city'] == '') {
     $_REQUEST['city'] = 'Москва';
 }
 
+if(!isset($_REQUEST['transpar'])) {
+    $_REQUEST['transpar'] = '0';
+}
+
 $xmlData = new XmlDataClass($key, $additionalParams);
 $objects = $xmlData->getObjects();
 $template = new RenderClass();

@@ -458,15 +458,40 @@ class AbstractClass
      * @param $object
      * @return string
      */
-    public function getWeatherIcon($object, $className = '')
+    public function getWeatherIcon($object, $className = '', $color = '')
     {
         if (!empty($_REQUEST['weather_tip_img'])) {
-            $img = '<img class="'.$className. '" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $object['icon'] . '.svg" />';
+            if($color !=='') {
+                $img = '<img class="'.$className. '" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $color .'_'.$object['icon'] . '.svg" />';
+            } else {
+                $img = '<img class="'.$className. '" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $object['icon'] . '.svg" />';
+            }
+
         } else {
             $img = '';
         }
 
         return $img;
+    }
+
+    /**
+     * @param $object
+     * @return string
+     */
+    public function getBgWeatherIconSrc($object, $extension = '', $name = '')
+    {
+        if (!empty($_REQUEST['weather_tip_img'])) {
+            if($name !=='') {
+                $src = 'assets/'. $_REQUEST['weather_tip_img'] . '/bg/icon_' . $object['icon'] .'_'. $name .'.'.$extension;
+            } else {
+                $src = 'assets/'. $_REQUEST['weather_tip_img'] . '/bg/icon_' . $object['icon'] .'.'.$extension;
+            }
+
+        } else {
+            $src = '';
+        }
+
+        return $src;
     }
 
     /**
@@ -502,7 +527,11 @@ class AbstractClass
         if (isset($requestArray['font_tempo']) && $requestArray['font_tempo'] !=='') {
             $string.= '&font_tempo='.urlencode($requestArray['font_tempo']);
         }
-
+        if (isset($requestArray['transpar']) && $requestArray['transpar'] =='1') {
+            $string.= '&transpar=1';
+        } else {
+            $string.= '&transpar=0';
+        }
         if (isset($_SERVER['HTTPS']) &&
             ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
             isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&

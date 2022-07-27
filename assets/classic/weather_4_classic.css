@@ -306,7 +306,7 @@ body {
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
-    margin-top: -40px;
+    margin-top: -30px;
     color: #FFFFFF;
 }
 
@@ -344,20 +344,15 @@ body {
 }
 .custom-icon-1 {
     background-color: #7FB8E1;
-    background-image: url("icons/cloudy-night.svg"), url("img/moon-4-2.png");
+/*    background-image: url("icons/cloudy-night.svg"), url("img/moon-4-2.png");*/
     background-repeat: no-repeat;
     background-position: center, cover;
-    
-   
 }
 
 .custom-temp-1 {
     background-color: #7FB8E1;
     background-image: url("img/moon-4-3.png");
     background-repeat: no-repeat;
-
-    
-   
 }
 
 .custom-time-2 {
@@ -365,21 +360,16 @@ body {
 }
 .custom-icon-2 {
     background-color: #7FB8E1;
-    background-image: url("icons/one-cloud.svg"), url("img/night-cloud-4-2.png");
+/*    background-image: url("icons/one-cloud.svg"), url("img/night-cloud-4-2.png");*/
     background-repeat: no-repeat;
     background-position: center, cover;
-    
-   
 }
 
 .custom-temp-2 {
     background-color: #7FB8E1;
     background-image: url("img/night-cloud-4-3.png");
     background-repeat: no-repeat;
-
 }
-
-
 
 .custom-time-3 {
     background-image: url("img/sunny-vertical.png");
@@ -406,7 +396,7 @@ body {
 }
 .custom-icon-4 {
     background-color: #7FB8E1;
-    background-image: url("icons/two-clouds.svg"), url("img/day-cloud-4-2.png");
+/*    background-image: url("icons/two-clouds.svg"), url("img/day-cloud-4-2.png");*/
     background-repeat: no-repeat;
     background-position: center, cover;
     
