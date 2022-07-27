@@ -482,9 +482,9 @@ class AbstractClass
     {
         if (!empty($_REQUEST['weather_tip_img'])) {
             if($name !=='') {
-                $src = 'assets/'. $_REQUEST['weather_tip_img'] . '/bg/icon_' . $object['icon'] .'_'. $name .'.'.$extension;
+                $src = 'assets/'. $_REQUEST['weather_tip_img'] . '/bg/' .'informer-'.$_REQUEST['weather_tip'] .'/'. $name .'_'. $object['icon'] .'.'.$extension;
             } else {
-                $src = 'assets/'. $_REQUEST['weather_tip_img'] . '/bg/icon_' . $object['icon'] .'.'.$extension;
+                $src = 'assets/'. $_REQUEST['weather_tip_img'] . '/bg/' .'informer-'.$_REQUEST['weather_tip'] .'/'. $object['icon'] .'.'.$extension;
             }
 
         } else {

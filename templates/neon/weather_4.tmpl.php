@@ -28,7 +28,7 @@
             <p class="view-4-neon-dpf">dpF <?php echo $mainObject['dpF'] ?>°</p>
         </div>
 
-        <div class="view-4-neon-plates">
+        <div class="view-4-neon-plates <?php if($_REQUEST['transpar'] == 1) {echo 'view-4-neon-plates-custom-3';} ?>">
             <ul class="view-4-neon-time">
                 <?php for ($i=0; $i < 4; $i++) {
     if ($i == 0) {

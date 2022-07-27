@@ -12,7 +12,7 @@ date_default_timezone_set('Europe/Moscow');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <?php if (!empty($_REQUEST['font_family'])) {?>
-        <link href='https://fonts.googleapis.com/css?family=<?php echo $_REQUEST['font_family'] ?>' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=<?php echo $_REQUEST['font_family'] ?>&display=swap' rel='stylesheet' type='text/css'>
     <?php } else {?>
         <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
     <?php }?>
@@ -118,6 +118,4 @@ date_default_timezone_set('Europe/Moscow');
             }
         </style>
     <?php }?>
-
 </head>
-<body>

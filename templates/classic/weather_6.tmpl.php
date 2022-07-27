@@ -3,7 +3,13 @@ foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
 
-?>
+if($_REQUEST['transpar'] == '1') {?>
+    <style>
+        .view-6-classic-type-2 {
+            background-image: url("assets/classic/bg/informer-6/hours.svg"), url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '' ) ?>");
+        }
+    </style>
+<?php }?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -39,18 +45,24 @@ foreach ($objects['0'] as $forecast) {
 
 <body>
     <section class="view-6-classic-container">
-        <div class="view-6-classic-type-1">
+        <div class="<?php if($_REQUEST['transpar'] == 1) {
+            echo 'view-6-classic-type-2';
+        } else {
+            echo 'view-6-classic-type-1';
+        } ?>">
             <div class="view-6-classic-circle" id="clock">
                 <li id="sec"></li>
                 <li id="hour"></li>
                 <li id="min"></li>
             </div>
             <div class="view-6-classic-icon">
+
                 <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
     echo $_REQUEST['weather_tip_img'] . '/icons';
 } else {
     echo 'classic';
 } ?>/icon_<?php echo $object['icon'] ?>.svg'/>
+
             </div>
             <div class="view-6-classic-arrow-small">
             </div>
