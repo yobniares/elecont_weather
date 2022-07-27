@@ -10,7 +10,7 @@ foreach ($objects['0'] as $forecast) {
         <div class="view-5-classic-content">
             <div class="view-5-classic-plates">
                 <ul class="view-5-classic-main-info">
-                    <li class="view-5-classic-day-info">
+                    <li class="view-5-classic-day-info <?php if($_REQUEST['transpar'] == 1) {echo 'view-5-classic-custom-1-1';} ?>">
                         <p class="view-5-classic-daynumber">
                             <?php echo $abstractData->getFullDate(); ?>
                         </p>
@@ -25,7 +25,7 @@ foreach ($objects['0'] as $forecast) {
                         </p>
                     </li>
 
-                    <li class="view-5-classic-weather-info">
+                    <li class="view-5-classic-weather-info <?php if($_REQUEST['transpar'] == 1) {echo 'view-5-classic-custom-1-2';} ?>"">
                         <div class="view-5-classic-weather-icon">
                         </div>
 
@@ -34,7 +34,7 @@ foreach ($objects['0'] as $forecast) {
                         </p>
                     </li>
 
-                    <li class="view-5-classic-place-info">
+                    <li class="view-5-classic-place-info <?php if($_REQUEST['transpar'] == 1) {echo 'view-5-classic-custom-1-3';} ?>"">
                         <p class="view-5-classic-city">
                             <?php echo $object['name'] ?>, <?php echo $object['country'] ?>
                         </p>

@@ -2,10 +2,19 @@
     foreach ($objects['0'] as $forecast) {
         $forecatsArr[] = $forecast;
     }
-?>
+
+    if($_REQUEST['transpar'] == '1') {?>
+    <style>
+        .view-5-neon-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '' ) ?>");
+            background-size:100% 100%;
+        }
+    </style>
+<?php }?>
+
 <body>
 <section class="view-5-neon-container">
-    <div class="view-5-neon-1">
+    <div class="view-5-neon-1 <?php if($_REQUEST['transpar'] == 1) {echo 'view-5-neon-2';} ?>">
         <div class="view-5-neon-plates">
             <ul class="view-5-neon-main-info">
                 <li class="view-5-neon-day-info">
@@ -67,17 +76,16 @@
             </div>
 
             <ul class="view-5-neon-daytimes">
-
                 <?php for ($i=0; $i < 3; $i++) {
-    if ($i == 0) {
-        $className = 'morning';
-    }
-    if ($i == 1) {
-        $className = 'day';
-    }
-    if ($i == 2) {
-        $className = 'evening';
-    } ?>
+                    if ($i == 0) {
+                        $className = 'morning';
+                    }
+                    if ($i == 1) {
+                        $className = 'day';
+                    }
+                    if ($i == 2) {
+                        $className = 'evening';
+                    } ?>
                     <li class="view-5-neon-next-morning">
                         <p class="view-5-neon-daytime-next">
                             <?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?>
@@ -89,8 +97,7 @@
                             <?php echo $forecatsArr[$i]['tempC']; ?>°
                         </p>
                     </li>
-                    <?php
-}?>
+                    <?php }?>
 
             </ul>
         </div>

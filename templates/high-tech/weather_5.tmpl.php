@@ -2,11 +2,19 @@
     foreach ($objects['0'] as $forecast) {
         $forecatsArr[] = $forecast;
     }
-?>
+
+if($_REQUEST['transpar'] == '1') {?>
+    <style>
+        .view-5-ht-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', 'cover' ) ?>");
+            background-size:100% 100%;
+        }
+    </style>
+<?php }?>
 
 <body>
 <section class="view-5-ht-container">
-    <div class="view-5-ht-1">
+    <div class="view-5-ht-1 <?php if($_REQUEST['transpar'] == 1) {echo 'view-5-ht-2';} ?>">
         <div class="view-5-ht-plates">
             <ul class="view-5-ht-main-info">
                 <li class="view-5-ht-day-info">

@@ -29,7 +29,7 @@ p {
     position: relative;
     width: 1000px;
     height: 1000px;
-    background-image: url("icons/hours.svg"), url("img/moon-round.png");
+/*    background-image: url("icons/hours.svg"), url("img/moon-round.png");*/
     background-repeat: no-repeat;
     background-position: center, center;
     border-radius: 500px;

@@ -6,7 +6,7 @@
  if($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-3-neon-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', 'custom' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '' ) ?>");
             background-size:100% 100%;
         }
     </style>
