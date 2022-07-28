@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Render informer without params
     if (empty($_REQUEST['weather_tip'])) {
         // Informers ifrmaes
-        echo $template->renderTemplate('partials/iframes/iframe');
+        //echo $template->renderTemplate('partials/iframes/iframe');
         // Select params form
         echo $template->renderTemplate('partials/select_form');
     } else {

@@ -31,11 +31,11 @@ if($_REQUEST['transpar'] == '1') {?>
                 <?php echo $abstractData->getWeatherDescription($object['icon']) ?>
             </div>
             <div class="view-1-neon-weather-icon">
-                <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-    echo $_REQUEST['weather_tip_img'] . '/icons';
-} else {
-    echo 'ht';
-} ?>/icon_<?php echo $object['icon'] ?>.svg'/>
+                <?php if($_REQUEST['transpar'] == 1) {
+                    echo $abstractData->getWeatherIcon($object, '', 'white');
+                } else {
+                    echo $abstractData->getWeatherIcon($object, '');
+                }?>
             </div>
             <div class="view-1-neon-dergees-cels">
                 <?php echo $object['tempC'] ?>°
@@ -72,7 +72,7 @@ if($_REQUEST['transpar'] == '1') {?>
     } ?>
             <div class="view-1-neon-<?php echo $className ?>">
                 <p class="view-1-neon-timeofday">
-                    <?php echo $forecatsArr[$i]['dt']; ?>
+                    <?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?>
                 </p>
                 <div class="view-1-neon-timeofday-icon">
                     <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {

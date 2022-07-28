@@ -5,7 +5,7 @@ foreach ($objects['0'] as $forecast) {
 if($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-9-classic-content-bg {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'right' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '' ) ?>");
             background-repeat: no-repeat;
         }
     </style>
