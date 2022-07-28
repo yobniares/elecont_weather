@@ -3,11 +3,18 @@
         $forecatsArr[] = $forecast;
     }
     $time = date('H:i', time());
-?>
+
+    if($_REQUEST['transpar'] == '1') {?>
+    <style>
+        .view-9-neon-1 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '' ) ?>");
+        }
+    </style>
+<?php }?>
 
 <body>
 <section class="view-9-neon-container">
-    <div class="view-9-neon-1">
+    <div class="view-9-neon-1 <?php if($_REQUEST['transpar'] == 1) {echo 'view-9-neon-1';} ?>">
         <div class="view-9-neon-day-city">
             <p class="view-9-neon-city"><?php echo $mainObject['name']; ?></p>
             <p class="view-9-neon-day"><?php echo $abstractData->getDate('d.m.Y') ?></p>

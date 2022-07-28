@@ -7,6 +7,7 @@ if($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-6-classic-type-2 {
             background-image: url("assets/classic/bg/informer-6/hours.svg"), url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '' ) ?>");
+            background-size:100% 100%;
         }
     </style>
 <?php }?>

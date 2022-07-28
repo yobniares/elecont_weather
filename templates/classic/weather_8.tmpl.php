@@ -2,7 +2,18 @@
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
-?>
+if($_REQUEST['transpar'] == '1') {?>
+    <style>
+        .view-8-classic-right-bg {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'right' ) ?>");
+            background-repeat: no-repeat;
+        }
+        .view-8-classic-main-bg {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'main' ) ?>");
+            background-repeat: no-repeat;
+        }
+    </style>
+<?php }?>
 
 <body>
     <section class="view-8-classic-container">
@@ -10,7 +21,7 @@ foreach ($objects['0'] as $forecast) {
         <div class="view-8-classic">
             <div class="view-8-classic-content">
 
-                <div class="view-8-classic-right">
+                <div class="view-8-classic-right <?php if($_REQUEST['transpar'] == 1) {echo 'view-8-classic-right-bg';} ?>">
                     <ul class="view-8-classic-city-day">
                         <li class="view-8-classic-city-icon">
                             <img src="<?php echo $abstractData->getDomain(). 'assets/classic/icons/place.svg' ?>">
@@ -27,7 +38,7 @@ foreach ($objects['0'] as $forecast) {
                     </ul>
                 </div>
 
-                <div class="view-8-classic-main">
+                <div class="view-8-classic-main <?php if($_REQUEST['transpar'] == 1) {echo 'view-8-classic-main-bg';} ?>">
                     <ul class="view-8-classic-time-temp">
                         <li class="view-8-classic-temp-cels">
                             &nbsp;<?php echo $mainObject['tempC']; ?>°

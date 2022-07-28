@@ -2,15 +2,21 @@
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
-?>
+if($_REQUEST['transpar'] == '1') {?>
+    <style>
+        .view-7-classic-main-bg {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '' ) ?>");
+            background-repeat: no-repeat;
+        }
+    </style>
+<?php }?>
 
 <body>
     <section class="view-7-classic-container">
-
         <div class="view-7-classic">
             <div class="view-7-classic-content">
 
-                <div class="view-7-classic-main">
+                <div class="view-7-classic-main <?php if($_REQUEST['transpar'] == 1) {echo 'view-7-classic-main-bg';} ?>">
                     <ul class="view-7-classic-time-temp">
                         <li class="view-7-classic-gmt">
                             GMT<?php echo '+' .$object['gmtMin']/60 ?>
