@@ -2,13 +2,20 @@
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
-?>
+if($_REQUEST['transpar'] == '1') {?>
+    <style>
+        .view-9-classic-content-bg {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'right' ) ?>");
+            background-repeat: no-repeat;
+        }
+    </style>
+<?php }?>
 
 <body>
     <section class="view-9-classic-container">
 
         <div class="view-9-classic">
-            <div class="view-9-classic-content">
+            <div class="view-9-classic-content <?php if($_REQUEST['transpar'] == 1) {echo 'view-9-classic-content-bg';} ?>">
                 <div class="view-9-classic-day-city">
                     <p class="view-9-classic-city"><?php echo $mainObject['name']; ?></p>
                     <p class="view-9-classic-day"><?php echo $abstractData->getDate('d.m.Y') ?></p>
