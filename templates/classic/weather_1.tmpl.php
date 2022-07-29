@@ -10,7 +10,8 @@ if($_REQUEST['transpar'] == 1) {?>
         }
         .view-1-classic-custom {
             background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'custom') ?>");
-            background-size:100% 100%;
+            background-size: cover;
+            background-position: center;
         }
     </style>
 <?php }?>

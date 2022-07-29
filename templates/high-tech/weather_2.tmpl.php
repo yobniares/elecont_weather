@@ -2,7 +2,28 @@
     foreach ($objects['0'] as $forecast) {
         $forecatsArr[] = $forecast;
     }
-?>
+if($_REQUEST['transpar'] == 1) {?>
+    <style>
+        .view-2-classic-monday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'monday' ) ?>");
+        }
+        .view-2-classic-tuesday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'tuesday' ) ?>");
+        }
+        .view-2-classic-wednesday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'wednesday' ) ?>");
+        }
+        .view-2-classic-thursday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'thursday' ) ?>");
+        }
+        .view-2-classic-friday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'friday' ) ?>");
+        }
+        .view-2-classic-saturday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'saturday' ) ?>");
+        }
+    </style>
+<?php }?>
 
 <body>
     <section class="view-2-ht-container">
