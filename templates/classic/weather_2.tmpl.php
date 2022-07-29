@@ -3,7 +3,28 @@ foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
 
-?>
+/*if($_REQUEST['transpar'] == 1) {*/?><!--
+    <style>
+        .view-2-ht-monday-1 {
+            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'monday' ) */?>");
+        }
+        .view-2-ht-tuesday-1 {
+            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'tuesday' ) */?>");
+        }
+        .view-2-ht-wednesday-1 {
+            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'wednesday' ) */?>");
+        }
+        .view-2-ht-thursday-1 {
+            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'friday' ) */?>");
+        }
+        .view-2-ht-friday-1 {
+            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'saturday' ) */?>");
+        }
+        .view-2-ht-saturday-1 {
+            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'saturday' ) */?>");
+        }
+    </style>
+--><?php /*}*/?>
 
 <body>
 <section class="view-2-classic-container">
@@ -51,11 +72,7 @@ foreach ($objects['0'] as $forecast) {
                             <?php echo $abstractData->getDateFromString($forecatsArr[$i]['dt'], 'd'); ?>
                         </div>
                         <div class="view-2-classic-dayimage">
-                            <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-        echo $_REQUEST['weather_tip_img'] . '/icons';
-    } else {
-        echo 'classic';
-    } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[$i]) ?>
                         </div>
                         <div class="view-2-classic-temp view-2-classic-temp-<?php echo $className ?>">
                             <?php echo $forecatsArr[$i]['tempC']; ?>°
