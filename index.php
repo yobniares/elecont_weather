@@ -58,7 +58,7 @@ if (isset($_REQUEST['city']) && $_REQUEST['city'] == '') {
     $_REQUEST['city'] = 'Москва';
 }
 
-if(!isset($_REQUEST['transpar'])) {
+if (!isset($_REQUEST['transpar'])) {
     $_REQUEST['transpar'] = '0';
 }
 

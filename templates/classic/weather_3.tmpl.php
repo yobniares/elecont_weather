@@ -3,10 +3,10 @@ foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
 
-if($_REQUEST['transpar'] == 1) {?>
+if ($_REQUEST['transpar'] == 1) {?>
     <style>
         .view-3-classic-custom-light {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '') ?>");
             background-size:100% 100%;
         }
     </style>
@@ -15,7 +15,9 @@ if($_REQUEST['transpar'] == 1) {?>
 <body>
 <section class="view-3-classic-container">
 
-    <div class="view-3-classic <?php if($_REQUEST['transpar'] == 1) {echo 'view-3-classic-custom-light';} ?>">
+    <div class="view-3-classic <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'view-3-classic-custom-light';
+} ?>">
         <div class="view-3-classic-content">
             <div class="view-3-classic-top">
                 <p class="view-3-classic-city">

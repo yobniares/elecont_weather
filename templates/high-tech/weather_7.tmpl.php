@@ -4,19 +4,21 @@
     }
     $time = date('d.m.Y', time());
 
-if($_REQUEST['transpar'] == '1') {?>
+if ($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-7-ht-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
         }
     </style>
 <?php }?>
 
 <body>
 <?php
-    if($_REQUEST['transpar'] == '0') {?>
+    if ($_REQUEST['transpar'] == '0') {?>
         <section class="view-7-ht-container">
-            <div class="view-7-ht-1 <?php if($_REQUEST['transpar'] == 1) echo 'view-7-ht-2'; ?>">
+            <div class="view-7-ht-1 <?php if ($_REQUEST['transpar'] == 1) {
+        echo 'view-7-ht-2';
+    } ?>">
                 <div class="view-7-ht-main-1">
                     <ul class="view-7-ht-time-temp">
                         <li class="view-7-ht-gmt">
@@ -70,25 +72,25 @@ if($_REQUEST['transpar'] == '1') {?>
 
                 <div class="view-7-ht-infobox">
                     <?php for ($i=0; $i < 3; $i++) {
-                        if ($i == 0) {
-                            $className = 'morning';
-                        }
-                        if ($i == 1) {
-                            $className = 'day';
-                        }
-                        if ($i == 2) {
-                            $className = 'evening';
-                        }
+        if ($i == 0) {
+            $className = 'morning';
+        }
+        if ($i == 1) {
+            $className = 'day';
+        }
+        if ($i == 2) {
+            $className = 'evening';
+        }
 
-                        if ($i == 0) {
-                            $position = 'top-1';
-                        }
-                        if ($i == 1) {
-                            $position = 'middle-1';
-                        }
-                        if ($i == 2) {
-                            $position = 'bottom-1';
-                        } ?>
+        if ($i == 0) {
+            $position = 'top-1';
+        }
+        if ($i == 1) {
+            $position = 'middle-1';
+        }
+        if ($i == 2) {
+            $position = 'bottom-1';
+        } ?>
 
                         <div class="view-7-ht-info-1 <?php echo $position ?>">
                             <p class="view-7-ht-daytime-next">
@@ -96,17 +98,17 @@ if($_REQUEST['transpar'] == '1') {?>
                             </p>
                             <div class="view-7-ht-<?php echo $className ?>">
                                 <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                                    echo $_REQUEST['weather_tip_img'] . '/icons';
-                                } else {
-                                    echo 'classic';
-                                } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+            echo $_REQUEST['weather_tip_img'] . '/icons';
+        } else {
+            echo 'classic';
+        } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                             </div>
                             <p class="view-7-ht-next-temp">
                                 <?php echo $forecatsArr[$i]['tempC']; ?>
                             </p>
                         </div>
                         <?php
-                    }?>
+    }?>
 
                 </div>
             </div>
@@ -114,7 +116,7 @@ if($_REQUEST['transpar'] == '1') {?>
     <?php }?>
 
 <?php
-if($_REQUEST['transpar'] == '1') {?>
+if ($_REQUEST['transpar'] == '1') {?>
 <section class="view-7-ht-container">
     <div class="view-7-ht-2">
         <div class="view-7-ht-main-2">
@@ -170,25 +172,25 @@ if($_REQUEST['transpar'] == '1') {?>
 
             <div class="view-7-ht-infobox">
                 <?php for ($i=0; $i < 3; $i++) {
-                    if ($i == 0) {
-                        $className = 'morning';
-                    }
-                    if ($i == 1) {
-                        $className = 'day';
-                    }
-                    if ($i == 2) {
-                        $className = 'evening';
-                    }
+        if ($i == 0) {
+            $className = 'morning';
+        }
+        if ($i == 1) {
+            $className = 'day';
+        }
+        if ($i == 2) {
+            $className = 'evening';
+        }
 
-                    if ($i == 0) {
-                        $position = 'top-2';
-                    }
-                    if ($i == 1) {
-                        $position = 'middle-2';
-                    }
-                    if ($i == 2) {
-                        $position = 'bottom-2';
-                    } ?>
+        if ($i == 0) {
+            $position = 'top-2';
+        }
+        if ($i == 1) {
+            $position = 'middle-2';
+        }
+        if ($i == 2) {
+            $position = 'bottom-2';
+        } ?>
 
                     <div class="view-7-ht-info-2 <?php echo $position ?>">
                         <p class="view-7-ht-daytime-next">
@@ -196,17 +198,17 @@ if($_REQUEST['transpar'] == '1') {?>
                         </p>
                         <div class="view-7-ht-<?php echo $className ?>">
                             <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-                                echo $_REQUEST['weather_tip_img'] . '/icons';
-                            } else {
-                                echo 'classic';
-                            } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
+            echo $_REQUEST['weather_tip_img'] . '/icons';
+        } else {
+            echo 'classic';
+        } ?>/icon_<?php echo $forecatsArr[$i]['icon'] ?>.svg'/>
                         </div>
                         <p class="view-7-ht-next-temp">
                             <?php echo $forecatsArr[$i]['tempC']; ?>
                         </p>
                     </div>
                     <?php
-                }?>
+    }?>
             </div>
         </div>
     </div>

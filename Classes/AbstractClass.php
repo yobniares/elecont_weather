@@ -461,12 +461,11 @@ class AbstractClass
     public function getWeatherIcon($object, $className = '', $color = '')
     {
         if (!empty($_REQUEST['weather_tip_img'])) {
-            if($color !=='') {
+            if ($color !=='') {
                 $img = '<img class="'.$className. '" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $color .'_'.$object['icon'] . '.svg" />';
             } else {
                 $img = '<img class="'.$className. '" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $object['icon'] . '.svg" />';
             }
-
         } else {
             $img = '';
         }
@@ -481,12 +480,11 @@ class AbstractClass
     public function getBgWeatherIconSrc($object, $extension = '', $name = '')
     {
         if (!empty($_REQUEST['weather_tip_img'])) {
-            if($name !=='') {
+            if ($name !=='') {
                 $src = 'assets/'. $_REQUEST['weather_tip_img'] . '/bg/' .'informer-'.$_REQUEST['weather_tip'] .'/'. $name .'_'. $object['icon'] .'.'.$extension;
             } else {
                 $src = 'assets/'. $_REQUEST['weather_tip_img'] . '/bg/' .'informer-'.$_REQUEST['weather_tip'] .'/'. $object['icon'] .'.'.$extension;
             }
-
         } else {
             $src = '';
         }

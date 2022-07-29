@@ -3,10 +3,10 @@
         $forecatsArr[] = $forecast;
     }
 
-if($_REQUEST['transpar'] == 1) {?>
+if ($_REQUEST['transpar'] == 1) {?>
     <style>
         .view-1-ht-custom-1 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '') ?>");
             background-size:100% 100%;
         }
     </style>
@@ -15,46 +15,74 @@ if($_REQUEST['transpar'] == 1) {?>
 <body>
 <section>
     <div class="view-1-ht-1">
-        <div class="view-1-ht-maincontent <?php if($_REQUEST['transpar'] == 1) {echo 'view-1-ht-custom-1 white-icons';} ?>">
+        <div class="view-1-ht-maincontent <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'view-1-ht-custom-1 white-icons';
+} ?>">
             <div class="view-1-ht-city-day">
                 <div class="view-1-ht-city-day-info-container">
-                    <p class="view-1-ht-city-day-info <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>"><?php echo $object['name'] ?></p>
-                    <p class="view-1-ht-city-day-info <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>"><?php echo $abstractData->getWeek() ?>,</p>
-                    <p class="view-1-ht-city-day-info <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>"><?php echo $abstractData->getDate('d.m.Y') ?></p>
+                    <p class="view-1-ht-city-day-info <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>"><?php echo $object['name'] ?></p>
+                    <p class="view-1-ht-city-day-info <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>"><?php echo $abstractData->getWeek() ?>,</p>
+                    <p class="view-1-ht-city-day-info <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>"><?php echo $abstractData->getDate('d.m.Y') ?></p>
                 </div>
             </div>
-            <div class="view-1-ht-weather-time <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <div class="view-1-ht-weather-time <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                 <?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?>
             </div>
-            <div class="view-1-ht-weather <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <div class="view-1-ht-weather <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                 <?php echo $abstractData->getWeatherDescription($object['icon']) ?>
             </div>
-            <div class="view-1-ht-weather-icon <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
-                <?php if($_REQUEST['transpar'] == 1) {
-                    echo $abstractData->getWeatherIcon($object, '', 'white');
-                } else {
-                    echo $abstractData->getWeatherIcon($object, '');
-                }?>
+            <div class="view-1-ht-weather-icon <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
+                <?php if ($_REQUEST['transpar'] == 1) {
+    echo $abstractData->getWeatherIcon($object, '', 'white');
+} else {
+    echo $abstractData->getWeatherIcon($object, '');
+}?>
             </div>
-            <div class="view-1-ht-dergees-cels <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <div class="view-1-ht-dergees-cels <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                 <?php echo $object['tempC'] ?>°
             </div>
-            <div class="view-1-ht-dergees-far <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <div class="view-1-ht-dergees-far <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                 <?php echo $object['tempF'] ?>F
             </div>
-            <div class="view-1-ht-typeofwind <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <div class="view-1-ht-typeofwind <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                 <?php echo $abstractData->getWwindDirection($object['wd']) ?>
             </div>
-            <div class="view-1-ht-windspeed <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <div class="view-1-ht-windspeed <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                 <?php echo $abstractData->getMetersPerSecond($object['ws']) ?> м/с
             </div>
-            <div class="view-1-ht-degrees <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <div class="view-1-ht-degrees <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                 <?php echo $object['gmtMin'] ?>°
             </div>
-            <div class="view-1-ht-wet <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <div class="view-1-ht-wet <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                 Влажность: <?php echo $object['rh'] ?>%
             </div>
-            <div class="view-1-ht-pressure <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <div class="view-1-ht-pressure <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                 Давление: <?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм. рт. ст.
             </div>
         </div>

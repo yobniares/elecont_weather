@@ -4,17 +4,19 @@
     }
     $time = date('H:i', time());
 
-    if($_REQUEST['transpar'] == '1') {?>
+    if ($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-9-neon-1 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
         }
     </style>
 <?php }?>
 
 <body>
 <section class="view-9-neon-container">
-    <div class="view-9-neon-1 <?php if($_REQUEST['transpar'] == 1) {echo 'view-9-neon-1';} ?>">
+    <div class="view-9-neon-1 <?php if ($_REQUEST['transpar'] == 1) {
+        echo 'view-9-neon-1';
+    } ?>">
         <div class="view-9-neon-day-city">
             <p class="view-9-neon-city"><?php echo $mainObject['name']; ?></p>
             <p class="view-9-neon-day"><?php echo $abstractData->getDate('d.m.Y') ?></p>
@@ -43,15 +45,15 @@
         <ul class="view-9-neon-weather-info">
 
             <?php for ($i=0; $i < 3; $i++) {
-    if ($i == 0) {
-        $className = 'left';
-    }
-    if ($i == 1) {
-        $className = 'middle';
-    }
-    if ($i == 2) {
-        $className = 'right';
-    } ?>
+        if ($i == 0) {
+            $className = 'left';
+        }
+        if ($i == 1) {
+            $className = 'middle';
+        }
+        if ($i == 2) {
+            $className = 'right';
+        } ?>
                 <li class="left">
                     <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], '') ?>
                     <div class="view-9-neon-time">
@@ -62,7 +64,7 @@
                     </div>
                 </li>
                 <?php
-}?>
+    }?>
 
             <!--<li class="left">
                 <img src="icons/one-cloud-neon.svg">

@@ -3,10 +3,10 @@ foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
 
-if($_REQUEST['transpar'] == '1') {?>
+if ($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-6-classic-type-2 {
-            background-image: url("assets/classic/bg/informer-6/hours.svg"), url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '' ) ?>");
+            background-image: url("assets/classic/bg/informer-6/hours.svg"), url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '') ?>");
             background-size:100% 100%;
         }
     </style>
@@ -46,11 +46,11 @@ if($_REQUEST['transpar'] == '1') {?>
 
 <body>
     <section class="view-6-classic-container">
-        <div class="<?php if($_REQUEST['transpar'] == 1) {
-            echo 'view-6-classic-type-2';
-        } else {
-            echo 'view-6-classic-type-1';
-        } ?>">
+        <div class="<?php if ($_REQUEST['transpar'] == 1) {
+    echo 'view-6-classic-type-2';
+} else {
+    echo 'view-6-classic-type-1';
+} ?>">
             <div class="view-6-classic-circle" id="clock">
                 <li id="sec"></li>
                 <li id="hour"></li>

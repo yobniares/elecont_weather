@@ -4,10 +4,10 @@
     }
     $time = date('H:i', time());
 
-if($_REQUEST['transpar'] == '1') {?>
+if ($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-8-ht-main-bg {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
         }
     </style>
 <?php }?>
@@ -15,62 +15,94 @@ if($_REQUEST['transpar'] == '1') {?>
 <body>
 <section class="view-8-ht-container">
     <div class="view-8-ht">
-        <div class="view-8-ht-main <?php if($_REQUEST['transpar'] == 1) {echo 'view-8-ht-main-bg';} ?>">
+        <div class="view-8-ht-main <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'view-8-ht-main-bg';
+} ?>">
             <ul class="view-8-ht-city-day">
                 <li class="view-8-ht-city-icon">
-                    <?php if($_REQUEST['transpar'] == 1) {?>
+                    <?php if ($_REQUEST['transpar'] == 1) {?>
                         <img src="<?php echo $abstractData->getDomain(). 'assets/ht/icons/place-w.svg' ?>">
-                   <?php }else { ?>
+                   <?php } else { ?>
                         <img src="<?php echo $abstractData->getDomain(). 'assets/ht/icons/place-b.svg' ?>">
                     <?php } ?>
                 </li>
-                <li class="view-8-ht-city-right <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-city-right <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     <?php echo $mainObject['name'] ?>
                 </li>
-                <li class="view-8-ht-city-time <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-city-time <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     <?php echo $abstractData->getDate('H:i') ?>
                 </li>
-                <li class="view-8-ht-weekday <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-weekday <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     <?php echo $abstractData->getWeek() ?>
                 </li>
             </ul>
             <ul class="view-8-ht-time-temp">
-                <li class="view-8-ht-temp-cels <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-temp-cels <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     <?php echo $mainObject['tempC']; ?>°
                 </li>
-                <li class="view-8-ht-temp-far <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-temp-far <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     <?php echo $mainObject['tempF']; ?>°F
                 </li>
             </ul>
-            <ul class="view-8-ht-daytime-info <?php if($_REQUEST['transpar'] == 0) {echo 'black-icons';} ?>">
-                <li class="view-8-ht-daytime-name <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <ul class="view-8-ht-daytime-info <?php if ($_REQUEST['transpar'] == 0) {
+    echo 'black-icons';
+} ?>">
+                <li class="view-8-ht-daytime-name <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     <?php echo $abstractData->getTimesOfDay($time) ?>
                 </li>
-                <li class="view-8-ht-daytime-icon <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
-                    <?php if($_REQUEST['transpar'] == 1) {
-                        echo $abstractData->getWeatherIcon($mainObject, '', 'white');
-                    } else {
-                        echo $abstractData->getWeatherIcon($mainObject, '');
-                    }?>
+                <li class="view-8-ht-daytime-icon <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
+                    <?php if ($_REQUEST['transpar'] == 1) {
+    echo $abstractData->getWeatherIcon($mainObject, '', 'white');
+} else {
+    echo $abstractData->getWeatherIcon($mainObject, '');
+}?>
                 </li>
-                <li class="view-8-ht-type <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-type <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     <?php echo $abstractData->getWeatherDescription($mainObject['icon']) ?>
                 </li>
             </ul>
-            <ul class="view-8-ht-city-params <?php if($_REQUEST['transpar'] == 0) {echo 'black-icons';} ?>">
-                <li class="view-8-ht-wind <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+            <ul class="view-8-ht-city-params <?php if ($_REQUEST['transpar'] == 0) {
+    echo 'black-icons';
+} ?>">
+                <li class="view-8-ht-wind <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     <?php echo $abstractData->getWwindDirection($mainObject['wd']) ?>: <?php echo $abstractData->getMetersPerSecond($mainObject['ws']) ?> м/с
                 </li>
-                <li class="view-8-ht-degrees <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-degrees <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     <?php echo $mainObject['gmtMin'] ?>°
                 </li>
-                <li class="view-8-ht-wet <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-wet <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     Влажность: <?php echo $mainObject['rh'] ?>%
                 </li>
-                <li class="view-8-ht-pressure <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-pressure <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     Давление: <?php echo $abstractData->getMillimetersOfMercury($mainObject['psl']) ?> мм рт.ст.
                 </li>
-                <li class="view-8-ht-dpf <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                <li class="view-8-ht-dpf <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'white-font';
+} ?>">
                     dpF <?php echo $mainObject['dpF'] ?>°
                 </li>
             </ul>
