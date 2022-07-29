@@ -155,7 +155,7 @@ a.btn-default:hover {
 }
 
 .wrapper {
-    max-width: 100%;
+    max-width: 70%;
     margin: 0 auto;
 }
 .wrapper h5 {
@@ -182,7 +182,19 @@ a.btn-default:hover {
     border: 1px solid rgba(39,41,43,0.1);
 }
 
-.wrap {
+.wrap img {
+    height: auto;
+    display:block;
+    margin:auto;
+}
+
+.wrap2 img {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+}
+
+/*.wrap {
     width: 480px;
     height: 360px;
     padding: 0;
@@ -205,5 +217,5 @@ a.btn-default:hover {
     -o-transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
-}
+}*/
 
