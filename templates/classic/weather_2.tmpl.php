@@ -3,28 +3,31 @@ foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
 
-/*if($_REQUEST['transpar'] == 1) {*/?><!--
+if ($_REQUEST['transpar'] == 1) {?>
     <style>
-        .view-2-ht-monday-1 {
-            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'monday' ) */?>");
+        .view-2-classic-monday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'monday') ?>");
         }
-        .view-2-ht-tuesday-1 {
-            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'tuesday' ) */?>");
+        .view-2-classic-tuesday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'tuesday') ?>");
         }
-        .view-2-ht-wednesday-1 {
-            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'wednesday' ) */?>");
+        .view-2-classic-wednesday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'wednesday') ?>");
         }
-        .view-2-ht-thursday-1 {
-            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'friday' ) */?>");
+        .view-2-classic-thursday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'thursday') ?>");
         }
-        .view-2-ht-friday-1 {
-            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'saturday' ) */?>");
+        .view-2-classic-friday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'friday') ?>");
         }
-        .view-2-ht-saturday-1 {
-            background-image: url("<?php /*echo $abstractData->getBgWeatherIconSrc($object, 'png', 'saturday' ) */?>");
+        .view-2-classic-saturday-2 {
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'saturday') ?>");
         }
     </style>
---><?php /*}*/?>
+<?php }
+
+?>
+
 
 <body>
 <section class="view-2-classic-container">
@@ -63,7 +66,9 @@ foreach ($objects['0'] as $forecast) {
         $className = 'saturday';
     } ?>
 
-                    <li class="view-2-classic-<?php echo $className ?>-1 <?php if($_REQUEST['transpar'] == 1) {echo 'view-2-classic-' .$className.'-2';} ?>">
+                    <li class="view-2-classic-<?php echo $className ?>-1 <?php if ($_REQUEST['transpar'] == 1) {
+        echo 'view-2-classic-' .$className.'-2';
+    } ?>">
                         <div class="view-2-classic-weekday">
                             <?php echo $abstractData->getNameOfTheDate($forecatsArr[$i]['dt']); ?>
                         </div>

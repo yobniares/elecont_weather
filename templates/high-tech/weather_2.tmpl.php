@@ -2,33 +2,14 @@
     foreach ($objects['0'] as $forecast) {
         $forecatsArr[] = $forecast;
     }
-if($_REQUEST['transpar'] == 1) {?>
-    <style>
-        .view-2-classic-monday-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'monday' ) ?>");
-        }
-        .view-2-classic-tuesday-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'tuesday' ) ?>");
-        }
-        .view-2-classic-wednesday-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'wednesday' ) ?>");
-        }
-        .view-2-classic-thursday-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'thursday' ) ?>");
-        }
-        .view-2-classic-friday-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'friday' ) ?>");
-        }
-        .view-2-classic-saturday-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'saturday' ) ?>");
-        }
-    </style>
-<?php }?>
+?>
 
 <body>
     <section class="view-2-ht-container">
 
-        <div class="view-2-ht-1 <?php if($_REQUEST['transpar'] == 1) {echo 'view-2-ht-2';} ?>">
+        <div class="view-2-ht-1 <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'view-2-ht-2';
+} ?>">
             <div class="view-2-ht-content">
                 <div class="view-2-ht-sunrise-sunset-time">
                     <div class="view-2-ht-sunrisetime">
@@ -64,21 +45,29 @@ if($_REQUEST['transpar'] == 1) {?>
     } ?>
 
                         <li class="view-2-ht-<?php echo $className ?>-1">
-                            <div class="view-2-ht-weekday <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                            <div class="view-2-ht-weekday <?php if ($_REQUEST['transpar'] == 1) {
+        echo 'white-font';
+    } ?>">
                                 <?php echo $abstractData->getNameOfTheDate($forecatsArr[$i]['dt']); ?>
                             </div>
-                            <div class="view-2-ht-daynumber <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                            <div class="view-2-ht-daynumber <?php if ($_REQUEST['transpar'] == 1) {
+        echo 'white-font';
+    } ?>">
                                 <?php echo $abstractData->getMonthFromString($forecatsArr[$i]['dt']); ?>
                                 <?php echo $abstractData->getDateFromString($forecatsArr[$i]['dt'], 'd'); ?>
                             </div>
-                            <div class="view-2-ht-dayimage <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
-                                <?php if($_REQUEST['transpar'] == 1) {
-                                    echo $abstractData->getWeatherIcon($forecatsArr[$i], '', 'white');
-                                } else {
-                                    echo $abstractData->getWeatherIcon($forecatsArr[$i], '');
-                                }?>
+                            <div class="view-2-ht-dayimage <?php if ($_REQUEST['transpar'] == 1) {
+        echo 'white-font';
+    } ?>">
+                                <?php if ($_REQUEST['transpar'] == 1) {
+        echo $abstractData->getWeatherIcon($forecatsArr[$i], '', 'white');
+    } else {
+        echo $abstractData->getWeatherIcon($forecatsArr[$i], '');
+    } ?>
                             </div>
-                            <div class="view-2-ht-temp view-2-ht-temp-mon <?php if($_REQUEST['transpar'] == 1) {echo 'white-font';} ?>">
+                            <div class="view-2-ht-temp view-2-ht-temp-mon <?php if ($_REQUEST['transpar'] == 1) {
+        echo 'white-font';
+    } ?>">
                                 <?php echo $forecatsArr[$i]['tempC']; ?>°
                             </div>
                         </li>

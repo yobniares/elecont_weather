@@ -4,12 +4,12 @@
     }
     $time = date('H:i', time());
 
-if($_REQUEST['transpar'] == '1') {?>
+if ($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-8-neon-4-bg {
             width: 1380px;
             height: 375px;
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
             border-radius: 35px;
             background-repeat: no-repeat;
             background-position: center;
@@ -21,7 +21,9 @@ if($_REQUEST['transpar'] == '1') {?>
 <?php }?>
 
 <body>
-<div class="view-8-neon-4 <?php if($_REQUEST['transpar'] == 1) {echo 'view-8-neon-4-bg';} ?>">
+<div class="view-8-neon-4 <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'view-8-neon-4-bg';
+} ?>">
     <div class="view-8-neon-citytime">
         <?php echo $mainObject['name'] ?> - <?php echo $abstractData->getWeek() ?>, <?php echo $abstractData->getFullDate() ?>
     </div>

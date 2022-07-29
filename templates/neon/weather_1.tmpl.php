@@ -3,10 +3,10 @@
         $forecatsArr[] = $forecast;
     }
 
-if($_REQUEST['transpar'] == '1') {?>
+if ($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-1-neon-custom-1 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
             background-size:100% 100%;
         }
     </style>
@@ -16,7 +16,9 @@ if($_REQUEST['transpar'] == '1') {?>
 
 <section class="view-1-neon-container">
     <div class="view-1-neon-1">
-        <div class="view-1-neon-maincontent <?php if($_REQUEST['transpar'] == 1) {echo 'view-1-neon-custom-1';} ?>">
+        <div class="view-1-neon-maincontent <?php if ($_REQUEST['transpar'] == 1) {
+    echo 'view-1-neon-custom-1';
+} ?>">
             <div class="view-1-neon-city-day">
                 <div class="view-1-neon-city-day-info-container">
                     <p class="view-1-neon-city-day-info"><?php echo $object['name'] ?></p>
@@ -31,11 +33,11 @@ if($_REQUEST['transpar'] == '1') {?>
                 <?php echo $abstractData->getWeatherDescription($object['icon']) ?>
             </div>
             <div class="view-1-neon-weather-icon">
-                <?php if($_REQUEST['transpar'] == 1) {
-                    echo $abstractData->getWeatherIcon($object, '', 'white');
-                } else {
-                    echo $abstractData->getWeatherIcon($object, '');
-                }?>
+                <?php if ($_REQUEST['transpar'] == 1) {
+    echo $abstractData->getWeatherIcon($object, '', 'white');
+} else {
+    echo $abstractData->getWeatherIcon($object, '');
+}?>
             </div>
             <div class="view-1-neon-dergees-cels">
                 <?php echo $object['tempC'] ?>°

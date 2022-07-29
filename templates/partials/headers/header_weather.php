@@ -27,7 +27,7 @@ date_default_timezone_set('Europe/Moscow');
             /* Background */
 
             <?php
-                if(isset($_REQUEST['transpar']) && $_REQUEST['transpar'] == 1) { ?>
+                if (isset($_REQUEST['transpar']) && $_REQUEST['transpar'] == 1) { ?>
 
                 /* Some bg styles maybe here */
 

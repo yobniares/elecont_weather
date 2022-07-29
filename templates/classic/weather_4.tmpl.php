@@ -3,7 +3,7 @@ foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
 
-if($_REQUEST['transpar'] == '1') {?>
+if ($_REQUEST['transpar'] == '1') {?>
     <style>
         .custom-icon-1  {
             background-image: url("assets/classic/img/moon-4-2.png");
@@ -68,7 +68,9 @@ if($_REQUEST['transpar'] == '1') {?>
     if ($i == 3) {
         $number = '4';
     } ?>
-                        <li class="view-4-classic-time<?php echo $number ?> <?php if($_REQUEST['transpar'] == 1) {echo 'custom-time-'.$number;} ?>">
+                        <li class="view-4-classic-time<?php echo $number ?> <?php if ($_REQUEST['transpar'] == 1) {
+        echo 'custom-time-'.$number;
+    } ?>">
                             <?php echo $abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i'); ?>
                         </li>
                         <?php
@@ -89,7 +91,9 @@ if($_REQUEST['transpar'] == '1') {?>
         if ($i == 3) {
             $number = '4';
         } ?>
-                        <li class="view-4-classic-icon<?php echo $number ?> <?php if($_REQUEST['transpar'] == 1) {echo 'custom-icon-'.$number;} ?>">
+                        <li class="view-4-classic-icon<?php echo $number ?> <?php if ($_REQUEST['transpar'] == 1) {
+            echo 'custom-icon-'.$number;
+        } ?>">
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[$i]) ?>
                         </li>
                         <?php
@@ -110,7 +114,9 @@ if($_REQUEST['transpar'] == '1') {?>
         if ($i == 3) {
             $number = '4';
         } ?>
-                        <li class="view-4-classic-temp<?php echo $number ?> <?php if($_REQUEST['transpar'] == 1) {echo 'custom-temp-'.$number;} ?>">
+                        <li class="view-4-classic-temp<?php echo $number ?> <?php if ($_REQUEST['transpar'] == 1) {
+            echo 'custom-temp-'.$number;
+        } ?>">
                             <p class="view-4-classic-cels"><?php echo $forecatsArr[$i]['tempC']; ?>°C</p>
                             <p class="view-4-classic-far"><?php echo $forecatsArr[$i]['tempF']; ?>°F</p>
                         </li>

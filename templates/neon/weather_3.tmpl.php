@@ -3,10 +3,10 @@
         $forecatsArr[] = $forecast;
     }
 
- if($_REQUEST['transpar'] == '1') {?>
+ if ($_REQUEST['transpar'] == '1') {?>
     <style>
         .view-3-neon-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '' ) ?>");
+            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
             background-size:100% 100%;
         }
     </style>
@@ -15,7 +15,9 @@
 <body>
 
 <section class="view-3-neon-container">
-    <div class="view-3-neon-1 <?php if($_REQUEST['transpar'] == 1) {echo 'view-3-neon-2';} ?>">
+    <div class="view-3-neon-1 <?php if ($_REQUEST['transpar'] == 1) {
+     echo 'view-3-neon-2';
+ } ?>">
         <div class="view-3-neon-top">
             <p class="view-3-neon-city">
                 <?php echo $object['name'] ?>

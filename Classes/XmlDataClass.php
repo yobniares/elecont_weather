@@ -47,7 +47,7 @@ class XmlDataClass
             $coordBottom = $lat - 0.5;
             $coordRight = $lng + 0.5;
             $mainUrl = 'http://airquality.elecont.com/ElecontAirQuality/?top='.$coordTop.'&left='.$coordLeft.'&bottom='.$coordBottom.'&right='.$coordRight.'&numberX=8&numberY=8&type=999&srcT=2';
-            //$backUrl = 'http://airquality.eweatherhd.com/ElecontAirQuality/?top='.$coordTop.'&left='.$coordLeft.'&bottom='.$coordBottom.'&right='.$coordRight.'&numberX=8&numberY=8&type=999&srcT=2';
+        //$backUrl = 'http://airquality.eweatherhd.com/ElecontAirQuality/?top='.$coordTop.'&left='.$coordLeft.'&bottom='.$coordBottom.'&right='.$coordRight.'&numberX=8&numberY=8&type=999&srcT=2';
         } else {
             //$mainUrl = 'http://airquality.elecont.com/ElecontAirQuality/?top=55.9&left=36.8&bottom=55.1&right=38.2&numberX=8&numberY=8&type=999&srcT=2';
             $mainUrl = 'http://airquality.eweatherhd.com/ElecontAirQuality/?top=55.9&left=36.8&bottom=55.1&right=38.2&numberX=8&numberY=8&type=999&srcT=2';
