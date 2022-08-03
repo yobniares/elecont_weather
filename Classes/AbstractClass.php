@@ -458,13 +458,13 @@ class AbstractClass
      * @param $object
      * @return string
      */
-    public function getWeatherIcon($object, $className = '', $color = '')
+    public function getWeatherIcon($object, $className = '', $color = '', $style = '')
     {
         if (!empty($_REQUEST['weather_tip_img'])) {
             if ($color !=='') {
-                $img = '<img class="'.$className. '" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $color .'_'.$object['icon'] . '.svg" />';
+                $img = '<img class="'.$className. '" style="'.$style.'" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $color .'_'.$object['icon'] . '.svg" />';
             } else {
-                $img = '<img class="'.$className. '" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $object['icon'] . '.svg" />';
+                $img = '<img class="'.$className. '" style="'.$style.'" src="assets/'. $_REQUEST['weather_tip_img'] . '/icons/icon_' . $object['icon'] . '.svg" />';
             }
         } else {
             $img = '';
