@@ -14,10 +14,10 @@ if (!empty($_REQUEST['weather_tip_img'])) {
 
 if (empty($_REQUEST['weather_tip'])) {
     include_once 'templates/partials/headers/header.php';
-    include_once 'templates/partials/headers/media_queries.php';
+    //include_once 'templates/partials/headers/media_queries.php';
 } else {
     include_once 'templates/partials/headers/header_weather.php';
-    include_once 'templates/partials/headers/media_queries.php';
+    //include_once 'templates/partials/headers/media_queries.php';
 }
 
 // Include classes
