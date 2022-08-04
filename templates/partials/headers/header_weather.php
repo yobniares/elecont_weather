@@ -30,7 +30,7 @@ date_default_timezone_set('Europe/Moscow');
                 if (isset($_REQUEST['transpar']) && $_REQUEST['transpar'] == 1) { ?>
 
                 /* Some bg styles maybe here */
-
+                /* Background color */
                <?php } else { ?>
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-1,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>,
@@ -72,11 +72,18 @@ date_default_timezone_set('Europe/Moscow');
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-temp2,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-temp3,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-temp4,
-            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-weather-info li {
+            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-weather-info li,
+            .td-blue,
+            tr:nth-child(2) .td-blue,
+            tr:first-child .td-blue {
                 background:<?php echo $_REQUEST['color_fon'] ?>;
             }
                 <?php }
             ?>
+
+            /*.informers1 {
+                border: <?php echo $_REQUEST['color_fon'] ?>;
+            }*/
 
             /* Text color and font */
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city-day-info,
@@ -118,7 +125,9 @@ date_default_timezone_set('Europe/Moscow');
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-type,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-pressure,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city-time,
-            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city-right {
+            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city-right,
+            .fon_table,
+            .td-text {
                 color: <?php echo  $_REQUEST['font_text'] ?> !important;
                 font-family:<?php echo $_REQUEST['font_family'] ?>;
             }
@@ -134,7 +143,8 @@ date_default_timezone_set('Europe/Moscow');
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-temp-cels,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-temp-far,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-next-temp,
-            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-wind-wet {
+            .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-wind-wet,
+            .temperature {
                 color: <?php echo  $_REQUEST['font_tempo'] ?>;
                 font-family:<?php echo $_REQUEST['font_family'] ?>;
             }

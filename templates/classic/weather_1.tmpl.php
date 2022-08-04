@@ -23,23 +23,23 @@ if ($_REQUEST['transpar'] == 1) {?>
 <table class="informers1" id="fon_table">
     <tbody>
     <tr>
-        <td class="td-blue ">
+        <td class="td-blue td-text">
             <h3><?php echo $object['name'] ?> <?php echo $abstractData->getWeek() ?>, <?php echo $abstractData->getDate('d.m.Y') ?></h3>
         </td>
     </tr>
     <tr>
-        <td class="td-blue">
+        <td class="td-blue td-text">
 
         </td>
     </tr>
     <tr>
-        <td class="td-blue">
+        <td class="td-blue td-text">
             <?php echo $abstractData->getTimesOfDay($time) ?>
         </td>
     </tr>
 
     <tr>
-        <td class="td-blue" >
+        <td class="td-blue td-text" >
             <p><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
         </td>
     </tr>
@@ -55,7 +55,7 @@ if ($_REQUEST['transpar'] == 1) {?>
         </td>
     </tr>
     <tr>
-        <td class="td-blue">
+        <td class="td-blue temperature">
             <?php echo $object['tempF'] ?>F
         </td>
     </tr>
@@ -126,17 +126,17 @@ if ($_REQUEST['transpar'] == 1) {?>
         }
         ?>
         <tr>
-            <td class="td-blue">
+            <td class="td-blue td-text">
                 <?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?>
             </td>
         </tr>
         <tr>
-            <td class="td-blue" >
+            <td class="td-blue td-text" >
                 <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], '', '', 'max-width: 45%;') ?>
             </td>
         </tr>
         <tr>
-            <td class="td-blue">
+            <td class="td-blue temperature">
                 <p class="tempo"> <?php echo $forecatsArr[$i]['tempC']; ?>°</p>
             </td>
         </tr>
