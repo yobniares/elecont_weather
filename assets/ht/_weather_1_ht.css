@@ -1,0 +1,327 @@
+body {
+    font-family: 'Aldrich';
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    
+}
+.view-1-ht-1 {
+    height: 1520px;
+    width: 270px;
+    background-image: url("img/1-1.svg");
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.view-1-ht-2 {
+    height: 1520px;
+    width: 270px;
+    background-image: url("img/1-2.svg");
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.view-1-ht-city-day {
+   
+    width: 225px;
+    height: 172px;
+   
+}
+
+.view-1-ht-city-day-info {
+  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+.view-1-ht-city-day-info-container {
+    padding: 20px;
+}
+
+.view-1-ht-maincontent {
+  
+    width: 225px;
+    height: 814px;
+    margin-top: 20px;
+    margin-left: 22px;
+    border-radius: 18px;
+    background: #F3F3F3;
+}
+
+.view-1-ht-custom-1 {
+    background-image: url("img/view-1-light.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.view-1-ht-custom-2 {
+    background-image: url("img/view-1-dark.png");
+    background-repeat: no-repeat;
+    
+}
+
+.view-1-ht-morning {
+
+    width: 225px;
+    height: 247px;
+
+}
+
+.view-1-ht-day {
+
+    width: 225px;
+    height: 205px;
+
+}
+
+.view-1-ht-evening {
+/*    width: 225px;*/
+    width: auto;
+    height: 250px;
+}
+
+.view-1-ht-weather {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    margin-top: 24px;
+
+    text-align: center;
+
+    color: #000000;
+
+}
+
+.view-1-ht-weather-time {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+   
+
+    text-align: center;
+
+    color: #000000;
+}
+
+.view-1-ht-weather-icon {
+    /*background-image: url("icons/cloud-night-big-3-b.svg");*/
+    background-size: 96px 127px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 127.24px;
+    margin: 0 auto;
+    height: 98px;
+    text-align: center;
+}
+
+.view-1-ht-weather-icon img {
+    width: 127.24px;
+    height: 98px;
+}
+
+.view-1-ht-dergees-cels {
+   
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+
+}
+
+.view-1-ht-dergees-far {
+   
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: #000000;
+
+}
+
+.view-1-ht-typeofwind {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #000000;
+    background-image: url("icons/wind-route-b-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 50px;
+}
+
+.view-1-ht-windspeed {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #000000;
+    background-image: url("icons/wind-speed-b.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 45px;
+}
+
+.view-1-ht-degrees {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #000000;
+    background-image: url("icons/grade-b.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 45px;
+}
+
+.view-1-ht-wet {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #000000;
+    background-image: url("icons/wet-b-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 45px;
+}
+
+.view-1-ht-pressure {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #000000;
+    background-image: url("icons/pressure-b-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 45px;
+}
+
+.view-1-ht-timeofday {
+    font-style: normal;
+    font-weight: 700;
+    /*font-size: 25px;*/
+    font-size: 21px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.view-1-ht-morning .view-1-ht-timeofday {
+    margin-left: 30px;
+}
+
+.view-1-ht-day .view-1-ht-timeofday {
+    margin-top: -30px;
+    margin-left: 30px;
+}
+
+.view-1-ht-morning .view-1-ht-timeofday {
+    margin-left: 30px;
+}
+
+.view-1-ht-evening .view-1-ht-timeofday {
+    margin-top:  5px;
+    margin-left: 30px;
+}
+
+
+.view-1-ht-timeofday-icon img {
+    min-width: 80px;
+    max-width: 80px;
+}
+
+.view-1-ht-morning  .view-1-ht-timeofday-icon {
+    /*background-image: url("icons/one-cloud-black-9.svg");*/
+    width: 86.74px;
+    height: 56.42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+    margin-left: 80px;
+}
+
+.view-1-ht-day .view-1-ht-timeofday-icon {
+    /*background-image: url("icons/sun-black-9.svg");*/
+    width: 86.74px;
+    height: 56.42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 85px;
+}
+
+.view-1-ht-evening .view-1-ht-timeofday-icon {
+    /*background-image: url("icons/two-clouds-black-9.svg");*/
+    width: 86.74px;
+    height: 56.42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: -10px;
+    margin-left: 85px;
+}
+
+.view-1-ht-temp {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 30px;
+    text-transform: uppercase;
+
+    color: #000000;
+
+}
+
+.view-1-ht-morning .view-1-ht-temp {
+    margin-top: -1px;
+}
+
+
+
+.white-icons .view-1-ht-typeofwind {
+    background-image: url("icons/wind-route-w-2.svg");
+}
+.white-icons .view-1-ht-windspeed {
+    background-image: url("icons/wind-speed-w.svg");
+}
+.white-icons .view-1-ht-degrees {
+    background-image: url("icons/dpf-w-2.svg");
+}
+.white-icons .view-1-ht-wet {
+    background-image: url("icons/wet-w-2.svg");
+}
+.white-icons .view-1-ht-pressure {
+    background-image: url("icons/pressure-w-2.svg");
+}
+.white-icons .view-1-ht-weather-icon {
+/*    background-image: url("icons/cloud-night-big-3-w.svg");*/
+}
+
+.white-font {
+    color: #FFFFFF;
+}
