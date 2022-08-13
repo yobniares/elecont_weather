@@ -13,19 +13,19 @@ $cities = $abstractData->getDomain() . 'cities.php';
         <div class="col">
             <h5>Classic</h5>
             <div class="wrap" style="height: 800px;">
-                <iframe class="frame" style="height: 2000px;" src="<?php echo $abstractData->getDomain() ?>?weather_tip=1&weather_tip_img=classic&font_family=Aldrich&color_fon=%23&font_text=%23&font_tempo=%23"></iframe>
+                <iframe class="frame" style="height: 2000px;" src="<?php echo $abstractData->getDomain() ?>?weather_tip=1&weather_tip_img=classic&font_family=Aldrich&color_fon=%23&font_text=%23&font_tempo=%23" width="100%" height="100%"></iframe>
             </div>
         </div>
         <div class="col">
             <h5>High-Tech</h5>
             <div class="wrap" style="height: 800px;">
-                <iframe class="frame" style="height: 2000px;" src="<?php echo $abstractData->getDomain() ?>?weather_tip=1&weather_tip_img=ht&font_family=Aldrich&color_fon=%23&font_text=%23&font_tempo=%23"></iframe>
+                <iframe class="frame" style="height: 2000px;" src="<?php echo $abstractData->getDomain() ?>?weather_tip=1&weather_tip_img=ht&font_family=Aldrich&color_fon=%23&font_text=%23&font_tempo=%23" width="100%" height="100%"></iframe>
             </div>
         </div>
         <div class="col">
             <h5>Neon</h5>
             <div class="wrap" style="height: 800px;">
-                <iframe class="frame" style="height: 2000px;" src="<?php echo $abstractData->getDomain() ?>?weather_tip=1&weather_tip_img=neon&font_family=Aldrich&color_fon=%23&font_text=%23&font_tempo=%23"></iframe>
+                <iframe class="frame" style="height: 2000px;" src="<?php echo $abstractData->getDomain() ?>?weather_tip=1&weather_tip_img=neon&font_family=Aldrich&color_fon=%23&font_text=%23&font_tempo=%23" width="100%" height="100%"></iframe>
             </div>
         </div>
     </div>
