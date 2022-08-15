@@ -60,7 +60,7 @@
                             <span class="informer2__text-font">восход:</span>
                         </p>
                         <p class="informer2-grey__text-middle">
-                            <span class="informer2__number-font">15:24</span>
+                            <span class="informer2__number-font"><?php echo $abstractData->getGmtTime($object['gmtMin'], $mainObject['sr']); ?></span>
                         </p>
                 </td>
                 <td class="informer2-grey__td" colspan="2">
@@ -74,11 +74,11 @@
                             <span class="informer2__text-font">закат:</span>
                         </p>
                         <p class="informer2-grey__text-middle">
-                            <span class="informer2__number-font">04:28</span></p>
+                            <span class="informer2__number-font"><?php echo $abstractData->getGmtTime($object['gmtMin'], $mainObject['ss']); ?></span></p>
                 </td>
                 <td class="informer2-grey__td" colspan="2">
                     <p class="informer2-grey__text-middle">
-                        <span class="informer2__text-font">Пятница</span>
+                        <span class="informer2__text-font"><?php echo $abstractData->getWeek() ?></span>
                     </p>
                 </td>
             </tr>
@@ -88,29 +88,29 @@
                         <div class="informer2-grey__td-flexbox-text">
 
                             <p class="informer2-grey__text-big">
-                                <span class="informer2__text-font">Сб</span></p>
+                                <span class="informer2__text-font"><?php echo $abstractData->getNameOfTheDate($forecatsArr[0]['dt']); ?></span></p>
                             <p class="informer2-grey__text-middle">
-                                <span class="informer2__text-font">июль</span>
-                                <span class="informer2__number-font informer2__number-font-bold">30</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getMonthFromString($forecatsArr[0]['dt']); ?></span>
+                                <span class="informer2__number-font informer2__number-font-bold"><?php echo $abstractData->getDateFromString($forecatsArr[0]['dt'], 'd'); ?></span>
                             </p>
                         </div>
                         <div class="informer2-grey__box-middle-icons">
-                            <img width="100%" height="100%" class="informer2-grey__box-middle-icons-img" src="./icons/cloud-night-middleB.svg">
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[0], 'informer2-grey__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-grey__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold">24°</span>
+                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[0]['tempC']; ?>°</span>
                         </p>
                     </div>
                 </td>
                 <td class="informer2-grey__td" colspan="3">
                     <p class="informer2-grey__text-middle">
-                        <span class="informer2__number-font">15:48 GMT+3</span>
+                        <span class="informer2__number-font"><?php echo $abstractData->getDate('H:i') ?> GMT<?php echo '+' .$object['gmtMin']/60 ?></span>
                     </p>
                     <p class="informer2-grey__text-big">
-                        <span class="informer2__text-font">Москва</span>
+                        <span class="informer2__text-font"><?php echo $object['name'] ?></span>
                     </p>
                     <p class="informer2-grey__text-small">
-                        <span class="informer2__text-font">Россия</span>
+                        <span class="informer2__text-font"><?php echo $object['country'] ?></span>
                     </p>
                 </td>
             </tr>
@@ -119,29 +119,29 @@
                     <div class="informer2-grey__td-flexbox-middle">
                         <div class="informer2-grey__td-flexbox-text">
                             <p class="informer2-grey__text-big">
-                                <span class="informer2__text-font">Сб</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getNameOfTheDate($forecatsArr[1]['dt']); ?></span>
                             </p>
                             <p class="informer2-grey__text-middle">
-                                <span class="informer2__text-font">июль</span>
-                                <span class="informer2__number-font informer2__number-font-bold">30</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getMonthFromString($forecatsArr[1]['dt']); ?></span>
+                                <span class="informer2__number-font informer2__number-font-bold"><?php echo $abstractData->getDateFromString($forecatsArr[1]['dt'], 'd'); ?></span>
                             </p>
                         </div>
                         <div class="informer2-grey__box-middle-icons">
-                            <img width="100%" height="100%" class="informer2-grey__box-middle-icons-img" src="./icons/cloud-night-middleB.svg">
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[1], 'informer2-grey__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-grey__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold">25°</span></p>
+                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[1]['tempC']; ?>°</span></p>
                     </div>
                 </td>
                 <td class="informer2-grey__td" rowspan="2">
                     <p class="informer2-grey__text-big">
-                        <span class="informer2__number-font informer2__number-font-bold">24°</span>
+                        <span class="informer2__number-font informer2__number-font-bold"><?php echo $object['tempC']; ?>°</span>
                     </p>
                 </td>
                 <td class="informer2-grey__td" colspan="2" rowspan="2">
                     <div class="informer2-grey__td-flexbox-big">
                         <div class="informer2-grey__box-big-icons">
-                            <img width="100%" height="100%" class="informer2-grey__box-big-icons-img" src="./icons/cloud-night-middleB.svg">
+                            <?php echo $abstractData->getWeatherIcon($object, 'informer2-grey__box-big-icons-img', '', '', '100%', '100%') ?>
                         </div>
                     </div>
                 </td>
@@ -151,19 +151,18 @@
                     <div class="informer2-grey__td-flexbox-middle">
                         <div class="informer2-grey__td-flexbox-text">
                             <p class="informer2-grey__text-big">
-                                <span class="informer2__text-font">Сб</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getNameOfTheDate($forecatsArr[2]['dt']); ?></span>
                             </p>
                             <p class="informer2-grey__text-middle">
-                                <span class="informer2__text-font">июль</span>
-                                <span class="informer2__number-font informer2__number-font-bold">30</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getMonthFromString($forecatsArr[2]['dt']); ?></span>
+                                <span class="informer2__number-font informer2__number-font-bold"><?php echo $abstractData->getDateFromString($forecatsArr[2]['dt'], 'd'); ?></span>
                             </p>
                         </div>
-
                         <div class="informer2-grey__box-middle-icons">
-                            <img width="100%" height="100%" class="informer2-grey__box-middle-icons-img" src="./icons/cloud-night-middleB.svg">
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[2], 'informer2-grey__box-big-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-grey__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold">26°</span></p>
+                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[2]['tempC']; ?>°</span></p>
                     </div>
                 </td>
             </tr>
@@ -172,18 +171,18 @@
                     <div class="informer2-grey__td-flexbox-middle">
                         <div class="informer2-grey__td-flexbox-text">
                             <p class="informer2-grey__text-big">
-                                <span class="informer2__text-font">Сб</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getNameOfTheDate($forecatsArr[3]['dt']); ?></span>
                             </p>
                             <p class="informer2-grey__text-middle">
-                                <span class="informer2__text-font">июль</span>
-                                <span class="informer2__number-font informer2__number-font-bold">30</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getMonthFromString($forecatsArr[3]['dt']); ?></span>
+                                <span class="informer2__number-font informer2__number-font-bold"><?php echo $abstractData->getDateFromString($forecatsArr[3]['dt'], 'd'); ?></span>
                             </p>
                         </div>
                         <div class="informer2-grey__box-middle-icons">
-                            <img width="100%" height="100%" class="informer2-grey__box-middle-icons-img" src="./icons/cloud-night-middleB.svg">
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[3], 'informer2-grey__box-big-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-grey__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold">27°</span>
+                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[3]['tempC']; ?>°</span>
                         </p>
                     </div>
                 </td>
@@ -195,8 +194,8 @@
                             </svg>
                         </div>
                         <p class="informer2-grey__text-small">
-                            <span class="informer2__text-font">Северо-западные ветер:</span>
-                            <span class="informer2__number-font">4.47</span>
+                            <span class="informer2__text-font"><?php echo $abstractData->getWwindDirection($object['wd']) ?>:</span>
+                            <span class="informer2__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?></span>
                             <span class="informer2__text-font">м/с</span>
                         </p>
                     </div>
@@ -209,7 +208,7 @@
                         </div>
                         <p class="informer2-grey__text-small">
                             <span class="informer2__text-font">Давление</span>
-                            <span class="informer2__number-font">763</span>
+                            <span class="informer2__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?></span>
                             <span class="informer2__text-font">мм рт. ст.</span>
                         </p>
                     </div>
@@ -222,7 +221,7 @@
                         </div>
                         <p class="informer2-grey__text-small">
                             <span class="informer2__text-font">Влажность</span>
-                            <span class="informer2__number-font">48%</span>
+                            <span class="informer2__number-font"><?php echo $object['rh'] ?>%</span>
                         </p>
                     </div>
                 </td>
@@ -235,7 +234,7 @@
                         </div>
                         <p class="informer2-grey__text-small">
                             <span class="informer2__text-font">dpF</span>
-                            <span class="informer2__number-font">58°</span>
+                            <span class="informer2__number-font"><?php echo $mainObject['dpF'] ?>°</span>
                         </p>
                     </div>
                     <div class="informer2-grey__td-flexbox-small">
@@ -245,7 +244,7 @@
                             </svg>
                         </div>
                         <p class="informer2-grey__text-small">
-                            <span class="informer2__number-font">180°</span>
+                            <span class="informer2__number-font"><?php echo $object['gmtMin'] ?>°</span>
                         </p>
                     </div>
                     <div class="informer2-grey__td-flexbox-small">
@@ -255,7 +254,7 @@
                             </svg>
                         </div>
                         <p class="informer2-grey__text-small">
-                            <span class="informer2__number-font">5.36</span>
+                            <span class="informer2__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?></span>
                             <span class="informer2__number-font">м/с</span>
                         </p>
                     </div>
@@ -267,15 +266,15 @@
                         <div class="informer2-grey__td-flexbox-text">
 
                             <p class="informer2-grey__text-big">
-                                <span class="informer2__text-font">Сб</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getNameOfTheDate($forecatsArr[4]['dt']); ?></span>
                             </p>
                             <p class="informer2-grey__text-middle">
-                                <span class="informer2__text-font">июль</span>
-                                <span class="informer2__number-font informer2__number-font-bold">30</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getMonthFromString($forecatsArr[4]['dt']); ?></span>
+                                <span class="informer2__number-font informer2__number-font-bold"><?php echo $abstractData->getDateFromString($forecatsArr[4]['dt'], 'd'); ?></span>
                             </p>
                         </div>
                         <div class="informer2-grey__box-middle-icons">
-                            <img width="100%" height="100%" class="informer2-grey__box-middle-icons-img" src="./icons/cloud-night-middleB.svg">
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[4], 'informer2-grey__box-big-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-grey__text-big">
                             <span class="informer2__number-font informer2__number-font-bold">28°</span>
@@ -289,24 +288,24 @@
                         <div class="informer2-grey__td-flexbox-text">
 
                             <p class="informer2-grey__text-big">
-                                <span class="informer2__text-font">Сб</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getNameOfTheDate($forecatsArr[5]['dt']); ?></span>
                             </p>
                             <p class="informer2-grey__text-middle">
-                                <span class="informer2__text-font">июль</span>
-                                <span class="informer2__number-font informer2__number-font-bold">30</span>
+                                <span class="informer2__text-font"><?php echo $abstractData->getMonthFromString($forecatsArr[5]['dt']); ?></span>
+                                <span class="informer2__number-font informer2__number-font-bold"><?php echo $abstractData->getDateFromString($forecatsArr[5]['dt'], 'd'); ?></span>
                             </p>
                         </div>
                         <div class="informer2-grey__box-middle-icons">
-                            <img width="100%" height="100%" class="informer2-grey__box-middle-icons-img" src="./icons/cloud-night-middleB.svg">
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[5], 'informer2-grey__box-big-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-grey__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold">29°</span>
+                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[5]['tempC']; ?>°</span>
                         </p>
                     </div>
                 </td>
                 <td class="informer2-grey__td" colspan="3">
                     <p class="informer2-grey__text-small">
-                        <span class="informer2__number-font informer2__number-font-bold">10 381 222 жителей</span>
+                        <span class="informer2__number-font informer2__number-font-bold"><?php echo $abstractData->getPopulate((string)$object['pop']) ?> жителей</span>
                     </p>
                 </td>
             </tr>
