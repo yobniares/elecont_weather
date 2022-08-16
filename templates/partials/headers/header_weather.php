@@ -76,7 +76,7 @@ date_default_timezone_set('Europe/Moscow');
             .td-blue,
             tr:nth-child(2) .td-blue,
             tr:first-child .td-blue {
-                background:<?php echo $_REQUEST['color_fon'] ?>;
+       /*         background:<?php echo $_REQUEST['color_fon'] ?>;*/
             }
                 <?php }
             ?>
@@ -128,8 +128,8 @@ date_default_timezone_set('Europe/Moscow');
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-city-right,
             .fon_table,
             .td-text {
-                color: <?php echo  $_REQUEST['font_text'] ?> !important;
-                font-family:<?php echo $_REQUEST['font_family'] ?>;
+                /*color: <?php echo  $_REQUEST['font_text'] ?> !important;
+                font-family:<?php echo $_REQUEST['font_family'] ?>;*/
             }
 
             /* Temperature color and font */
@@ -145,9 +145,10 @@ date_default_timezone_set('Europe/Moscow');
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-next-temp,
             .view-<?php echo $_REQUEST['weather_tip']?>-<?php echo $_REQUEST['weather_tip_img']?>-wind-wet,
             .temperature {
-                color: <?php echo  $_REQUEST['font_tempo'] ?>;
-                font-family:<?php echo $_REQUEST['font_family'] ?>;
+         /*       color: <?php echo  $_REQUEST['font_tempo'] ?>;
+                font-family:<?php echo $_REQUEST['font_family'] ?>;*/
             }
         </style>
     <?php }?>
 </head>
+<body>

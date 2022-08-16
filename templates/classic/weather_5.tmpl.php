@@ -4,90 +4,43 @@ foreach ($objects['0'] as $forecast) {
 }
 ?>
 
-<body>
-<section class="view-5-classic-container">
-    <div class="view-5-classic">
-        <div class="view-5-classic-content">
-            <div class="view-5-classic-plates">
-                <ul class="view-5-classic-main-info">
-                    <li class="view-5-classic-day-info <?php if ($_REQUEST['transpar'] == 1) {
-    echo 'view-5-classic-custom-1-1';
-} ?>">
-                        <p class="view-5-classic-daynumber">
-                            <?php echo $abstractData->getFullDate(); ?>
-                        </p>
-                        <p class="view-5-classic-time">
-                            <?php echo $abstractData->getDate('H:i') ?>
-                        </p>
-                        <p class="view-5-classic-daytime">
-                            <?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?>
-                        </p>
-                        <p class="view-5-classic-weekday">
-                            <?php echo $abstractData->getWeek() ?>
-                        </p>
-                    </li>
-
-                    <li class="view-5-classic-weather-info <?php if ($_REQUEST['transpar'] == 1) {
-    echo 'view-5-classic-custom-1-2';
-} ?>"">
-                        <div class="view-5-classic-weather-icon">
+<div class="informer5-table-box">
+    <div class="informer5-blue__background">
+        <table class="informer5-blue">
+            <tbody>
+            <tr class="informer5-blue__tr">
+                <td  class="informer5-blue__td">
+                    <p class="informer5__number-font"><?php echo $abstractData->getFullDate(); ?></p>
+                    <p class="informer5-blue__text-big informer5__number-font-time"><?php echo $abstractData->getDate('H:i') ?></p>
+                    <p class="informer5-blue__day"><?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?></p>
+                    <p class="informer5-blue__day-week"><?php echo $abstractData->getWeek() ?></p>
+                </td>
+                <td class="informer5-blue__td">
+                    <div class="informer5-blue__box-big-icons">
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                        <p class="informer5-blue__text-small"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
+                    </div>
+                </td>
+                <td class="informer5-blue__td">
+                    <p class="informer5-blue__city"><?php echo $object['name'] ?>, <?php echo $object['country'] ?></p>
+                    <p class="informer5-blue__text-big informer5__number-font"><?php echo $object['tempC'] ?>°</p>
+                    <p class="informer5-blue__text-small informer5__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?> м/с, <?php echo $object['rh'] ?>%</p>
+                    <p class="informer5-blue__text-small informer5__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм рт. ст.</p>
+                </td>
+            </tr>
+            <tr class="informer5-blue__tr">
+                <?php for ($i=0; $i < 3; $i++) {?>
+                    <td class="informer5-blue__td">
+                        <p class="informer5-blue__text-big"><?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?></p>
+                        <div class="informer5-blue__box-middle-icons">
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
-
-                        <p class="view-5-classic-weather-type">
-                            <?php echo $abstractData->getWeatherDescription($object['icon']) ?>
-                        </p>
-                    </li>
-
-                    <li class="view-5-classic-place-info <?php if ($_REQUEST['transpar'] == 1) {
-    echo 'view-5-classic-custom-1-3';
-} ?>"">
-                        <p class="view-5-classic-city">
-                            <?php echo $object['name'] ?>, <?php echo $object['country'] ?>
-                        </p>
-
-                        <p class="view-5-classic-temp">
-                            <?php echo $object['tempC'] ?>°
-                        </p>
-
-                        <p class="view-5-classic-wind-wet">
-                            <?php echo $abstractData->getMetersPerSecond($object['ws']) ?> м/с, <?php echo $object['rh'] ?>%
-                        </p>
-
-                        <p class="view-5-classic-pressure">
-                            <?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм рт. ст.
-                        </p>
-                    </li>
-                </ul>
-
-                <ul class="view-5-classic-daytimes">
-                    <?php for ($i=0; $i < 3; $i++) {
-    if ($i == 0) {
-        $className = 'morning';
-    }
-    if ($i == 1) {
-        $className = 'day';
-    }
-    if ($i == 2) {
-        $className = 'evening';
-    } ?>
-                        <li class="view-5-classic-next-<?php echo $className ?>">
-                            <p class="view-5-classic-daytime-next">
-                                <?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?>
-                            </p>
-                            <div class="view-5-classic-<?php echo $className ?>">
-                                <?php echo $abstractData->getWeatherIcon($forecatsArr[$i]) ?>
-                            </div>
-                            <p class="view-5-classic-next-temp">
-                                <?php echo $forecatsArr[$i]['tempC']; ?>°
-                            </p>
-                        </li>
-                        <?php
-}?>
-                </ul>
-
-            </div>
-        </div>
+                        <p class="informer5-blue__temperature informer5__number-font"><?php echo $forecatsArr[$i]['tempC']; ?>°</p>
+                    </td>
+                    <?php
+                }?>
+            </tr>
+            </tbody>
+        </table>
     </div>
-</section>
-
-</body>
+</div>
