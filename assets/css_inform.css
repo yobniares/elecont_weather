@@ -149,6 +149,16 @@ a.btn-default:hover {
     border-color: #c40007;}
 
 
+.code_informer {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 50px;
+}
+
 .code_informer p {
     font-family: Arial !important;
     font-size: 16px !important;

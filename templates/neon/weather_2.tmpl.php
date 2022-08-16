@@ -2,17 +2,43 @@
     foreach ($objects['0'] as $forecast) {
         $forecatsArr[] = $forecast;
     }
+?>
 
-if ($_REQUEST['transpar'] == '1') {?>
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-2-neon-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
-            background-size:100% 100%;
+        /* Font family */
+        .informer2__text-font,
+        .informer2__number-font {
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+
+        /* Background */
+        .informer2-neon__background-1 {
+            background:<?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 30px;
+        }
+        :root {
+            --light-grey: <?php echo $_REQUEST['color_fon'] ?>;
+            --dark-grey: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer2-neon__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+
+        /* Text color */
+        .informer2-neon {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+
+        /* Temperature color and font */
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
         }
     </style>
 <?php }?>
 
-<body>
 <svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 26" id="pressure-1">
         <path d="M5.02176 19.1161V1.57584C5.02176 0.705559 4.34093 0 3.5 0C2.65907 0 1.97824 0.705022 1.97824 1.57584V19.1161C0.808291 19.702 0 20.9388 0 22.3756C0 24.3764 1.56684 26 3.5 26C5.43316 26 7 24.3769 7 22.3756C7 20.9393 6.19171 19.702 5.02176 19.1161Z" fill="#00FF19"></path>
@@ -107,7 +133,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[0], 'informer2-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-neon__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[0]['tempC']; ?>°</span>
+                            <span class="informer2__number-font informer2__number-font-bold temp"><?php echo $forecatsArr[0]['tempC']; ?>°</span>
                         </p>
                     </div>
                 </td>
@@ -139,12 +165,12 @@ if ($_REQUEST['transpar'] == '1') {?>
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[1], 'informer2-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-neon__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[1]['tempC']; ?>°</span></p>
+                            <span class="informer2__number-font informer2__number-font-bold temp"><?php echo $forecatsArr[1]['tempC']; ?>°</span></p>
                     </div>
                 </td>
                 <td class="informer2-neon__td" rowspan="2">
                     <p class="informer2-neon__text-big">
-                        <span class="informer2__number-font informer2__number-font-bold shine-neon"><?php echo $object['tempC']; ?>°</span>
+                        <span class="informer2__number-font informer2__number-font-bold shine-neon temp"><?php echo $object['tempC']; ?>°</span>
                     </p>
                 </td>
                 <td class="informer2-neon__td" colspan="2" rowspan="2">
@@ -172,7 +198,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[2], 'informer2-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-neon__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[2]['tempC']; ?>°</span></p>
+                            <span class="informer2__number-font informer2__number-font-bold temp"><?php echo $forecatsArr[2]['tempC']; ?>°</span></p>
                     </div>
                 </td>
             </tr>
@@ -192,7 +218,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[3], 'informer2-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-neon__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[3]['tempC']; ?>°</span>
+                            <span class="informer2__number-font informer2__number-font-bold temp"><?php echo $forecatsArr[3]['tempC']; ?>°</span>
                         </p>
                     </div>
                 </td>
@@ -286,7 +312,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[4], 'informer2-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-neon__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[0]['tempC']; ?>°</span>
+                            <span class="informer2__number-font informer2__number-font-bold temp"><?php echo $forecatsArr[0]['tempC']; ?>°</span>
                         </p>
                     </div>
                 </td>
@@ -308,7 +334,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[5], 'informer2-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
                         <p class="informer2-neon__text-big">
-                            <span class="informer2__number-font informer2__number-font-bold"><?php echo $forecatsArr[5]['tempC']; ?>°</span>
+                            <span class="informer2__number-font informer2__number-font-bold temp"><?php echo $forecatsArr[5]['tempC']; ?>°</span>
                         </p>
                     </div>
                 </td>
@@ -324,4 +350,3 @@ if ($_REQUEST['transpar'] == '1') {?>
         </table>
     </div>
 </div>
-</body>

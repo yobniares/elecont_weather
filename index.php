@@ -6,8 +6,9 @@ $farbasticJs = 'assets/farbtastic/farbtastic.js';
 $mediaQueries = 'assets/media_queries.css';
 
 if (!empty($_REQUEST['weather_tip_img'])) {
-    //$geometria = 'assets/' .$_REQUEST['weather_tip_img'] .'/fonts/geometria/stylesheet.css';
-    $geometria = '';
+    $geometria = 'assets/' .$_REQUEST['weather_tip_img'] .'/fonts/geometria/stylesheet.css';
+    //$geometria = '';
+    $css_informer = 'assets/css_inform.css';
     $css = 'assets/' . $_REQUEST['weather_tip_img'] . '/weather_' . $_REQUEST['weather_tip'] . '_'. $_REQUEST['weather_tip_img'] . '.css';
 } else {
     $css = 'assets/css_inform.css';

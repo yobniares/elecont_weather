@@ -2,24 +2,39 @@
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
+?>
 
-if ($_REQUEST['transpar'] == '1') {?>
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .custom-icon-1  {
-            background-image: url("assets/classic/img/moon-4-2.png");
-            background-size:100% 100%;
+        /* Font family */
+        .informer4__text-font,
+        .informer4__text-font span,
+        .informer4__number-font {
+            font-family:<?php echo $_REQUEST['font_family'] ?> !important;
         }
-        .custom-icon-2  {
-            background-image: url("assets/classic/img/night-cloud-4-2.png");
-            background-size:100% 100%;
+
+        /* Background */
+        .informer4-blue__background-1 {
+            background:<?php echo $_REQUEST['color_fon'] ?>
         }
-        .custom-icon-3  {
-            background-image: url("assets/classic/img/sunny-3-2.png");
-            background-size:100% 100%;
+        :root {
+            --dark-blue: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-blue: <?php echo $_REQUEST['color_fon'] ?>;
         }
-        .custom-icon-4  {
-            background-image: url("assets/classic/img/day-cloud-4-2.png");
-            background-size:100% 100%;
+        .informer4-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+
+        /* Text color */
+        .informer4-blue {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+
+        /* Temperature color and font */
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
         }
     </style>
 <?php }?>
@@ -161,7 +176,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                 <?php for ($i=0; $i < 4; $i++) {?>
                     <td class="informer4-blue__td" >
                         <p class="informer4-blue__text-big">
-                            <span class="informer4__number-font informer4__number-font-bold"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
+                            <span class="informer4__number-font informer4__number-font-bold temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                         </p>
                         <p class="informer4-blue__text-middle">
                             <span class="informer4__number-font"><?php echo $forecatsArr[$i]['tempF']; ?>F</span>

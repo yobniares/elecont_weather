@@ -36,11 +36,11 @@ $cities = $abstractData->getDomain() . 'cities.php';
                 minlength: 2
             });
         </script>
-        <tr>
+        <!--<tr>
             <td colspan="3" align="center">
                 <p><label for="color_fon">Прозрачный фон:</label> <input type='checkbox' name='transpar' value='1' /></p>
             </td>
-        </tr>
+        </tr>-->
         <tr>
             <td colspan="3" align="center">
                 <p><label for="color_fon">Выберите шрифт:</label>

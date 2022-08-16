@@ -3,11 +3,43 @@
         $forecatsArr[] = $forecast;
     }
 
- if ($_REQUEST['transpar'] == '1') {?>
+    ?>
+
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-3-neon-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
-            background-size:100% 100%;
+        /* Font family */
+        .informer3__text-font,
+        .informer3__number-font {
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+
+        /* Background */
+        .informer3-neon__background-1 {
+            background:<?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 30px;
+        }
+        :root {
+            --neon: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer3-neon__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+
+        /* Text color */
+        .informer3-neon {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+
+        /* Temperature color and font */
+        .informer3-neon__temperature {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+
+        .code_informer {
+            position: relative;
+            margin-top: 250px;
         }
     </style>
 <?php }?>

@@ -2,12 +2,40 @@
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
+?>
 
-if ($_REQUEST['transpar'] == 1) {?>
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-3-classic-custom-light {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '') ?>");
-            background-size:100% 100%;
+        /* Font family */
+        .informer3__text-font,
+        .informer3__number-font {
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+
+        /* Background */
+        .informer3-blue__background-1 {
+            background:<?php echo $_REQUEST['color_fon'] ?>
+        }
+        :root {
+            --dark-blue: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-blue: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer3-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+
+        /* Text color */
+        .informer3-blue {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+
+        /* Temperature color and font */
+        .informer3__temperature-big,
+        .informer3__temperature-middle,
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
         }
     </style>
 <?php }?>
@@ -45,7 +73,7 @@ if ($_REQUEST['transpar'] == 1) {?>
                         <span class="informer3__number-font informer2__number-font-bold"><?php echo $abstractData->getDate('d.m.Y') ?></span>
                     </p>
                     <p class="informer3-blue__text-big">
-                        <span class="informer3__number-font informer2__number-font-bold informer3-blue__temperature"> <?php echo $object['tempC']; ?>°</span>
+                        <span class="informer3__number-font informer2__number-font-bold informer3-blue__temperature temp"> <?php echo $object['tempC']; ?>°</span>
                     </p>
                 </td>
                 <td class="informer3-blue__td">
@@ -132,7 +160,7 @@ if ($_REQUEST['transpar'] == 1) {?>
                     </td>
                     <td class="informer3-blue__td">
                         <p class="informer3-blue__text-middle">
-                            <span class="informer3__number-font informer3-blue__temperature"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
+                            <span class="informer3__number-font informer3-blue__temperature temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                         </p>
                     </td>
                     <td colspan="2" class="informer3-blue__td">
