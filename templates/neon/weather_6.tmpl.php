@@ -12,41 +12,49 @@
     </style>
 <?php }?>
 
-<body>
-<section class="view-6-neon-container">
-    <div class="view-6-neon-1 <?php if ($_REQUEST['transpar'] == 1) {
-        echo 'view-6-neon-2';
-    } ?>">
-        <div class="view-6-neon-city">
-            <?php echo $object['name'] ?>
-        </div>
-        <div class="view-6-neon-gmt">
-            GMT <?php echo '+' .$object['gmtMin']/60 ?>
-        </div>
-        <div class="view-6-neon-time shine-font">
-            <?php echo $abstractData->getDate('H:i') ?>
-        </div>
-        <div class="view-6-neon-date">
-            <?php echo $abstractData->getNameOfTheDate($time); ?>,
-            <?php echo $abstractData->getDate('d') ?><br />
-            <?php echo $abstractData->getMonthFromString($time); ?>
-        </div>
+<div class="informer6-table-box">
 
-        <div class="view-6-neon-icons">
-            <!--<img src="icons/cloud-night-shine.png">
-            <img src="icons/one-cloud-shine-b.png">
-            <img src="icons/two-clouds-sun-b.png">
-            <img src="icons/sun-shine-b.svg">
-            <img src="icons/two-clouds-shine-b.png">-->
-            <?php
-            // ToDo: set 5 icons
-            for ($i=0; $i < 3; $i++) {
-                echo $abstractData->getWeatherIcon($forecatsArr[$i], 'view-6-neon-icons-img');
-            }
-            ?>
-        </div>
+    <div class="informer6-neon__background">
+        <table class="informer6-neon">
+            <tbody>
+
+            <tr class="informer6-neon__tr">
+                <td class="informer6-neon__td">
+                    <p class="informer6-neon__text-small"> <?php echo $object['name'] ?></p>
+                </td>
+                <td rowspan="3" class="informer6-neon__td">
+                    <div class="informer6-neon__box-middle-icons">
+                        <?php
+                        for ($i=0; $i < 3; $i++) {
+                            echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer6-neon__box-middle-icons-img', '', '', '100%', '100%');
+                        }
+                        ?>
+                    </div>
+                </td>
+            </tr>
+            <tr class="informer6-neon__tr">
+                <td class="informer6-neon__td">
+                    <p class="informer6-neon__text-middle">GMT <?php echo '+' .$object['gmtMin']/60 ?></p>
+                    <p class="informer6-neon__text-big shine-neon"><?php echo $abstractData->getDate('H:i') ?></p>
+                </td>
+            </tr>
+            <tr class="informer6-neon__tr">
+                <td class="informer6-neon__td">
+                    <div class="informer6-neon__flexbox-cell">
+                        <p class="informer6-neon__number-middle">
+                            <!-- Неразравный пробел в span &nbsp;-->
+                            <span class="informer6-neon__text-font"> <?php echo $abstractData->getNameOfTheDate($time); ?>, &nbsp;</span>
+                            <span class="informer6-neon__number-font"><?php echo $abstractData->getDate('d') ?></span>
+                        </p>
+                        <p class="informer6-neon__number-middle-1">
+                            <span class="informer6-neon__text-font"><?php echo $abstractData->getMonthFromString($time); ?></span>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr class="informer6-neon__background-1"></tr>
+
+            </tbody>
+        </table>
     </div>
-
-
-</section>
-</body>
+</div>
