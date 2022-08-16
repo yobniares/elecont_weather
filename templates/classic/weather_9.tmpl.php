@@ -11,52 +11,91 @@ if ($_REQUEST['transpar'] == '1') {?>
     </style>
 <?php }?>
 
-<body>
-    <section class="view-9-classic-container">
+<div class="informer9-table-box">
+    <div class="informer9-blue__background">
+        <table class="informer9-blue">
+            <tbody>
+            <tr class="informer9-blue__tr">
+                <td class="informer9-blue__td" colspan="2" rowspan="2">
+                    <p class="informer9-blue__text-middle">
+                        <span class="informer9__text-font informer9__number-font-light"><?php echo $mainObject['name'] ?></span>
+                        <span class="informer9__text-font informer9__number-font-light"><?php echo $abstractData->getWeatherDescription($mainObject['icon']) ?></span>
+                    </p>
+                    <div class="informer9-blue__box-big-icons">
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                    </div>
+                </td>
+                <td class="informer9-blue__td" colspan="2" rowspan="2">
+                    <p class="informer9-blue__text-middle"><?php echo $abstractData->getDate('d.m.Y') ?></p>
+                    <p class="informer9-blue__text-middle">
+                        <span class="informer9__text-font informer9__number-font-light"><?php echo $abstractData->getWeek() ?></span>
+                    </p>
+                    <p class="informer9-blue__text-big">
+                        <span class="informer9__number-font informer9__number-font-big"><?php echo $mainObject['tempC'] ?>°C</span>
+                    </p>
+                    <p class="informer9-blue__text-big">
+                        <span class="informer9__number-font informer9__number-font-big-1"><?php echo $mainObject['tempF'] ?>°F</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr class="informer9-blue__tr">
+                <td class="informer9-blue__td">
+                    <div class="informer9-blue__box-middle-icons">
+                        <?php echo $abstractData->getWeatherIcon($forecatsArr[0], 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                    </div>
+                </td>
+                <td class="informer9-blue__td" colspan="2">
+                    <div class="informer9-blue__box-middle-icons">
+                        <?php echo $abstractData->getWeatherIcon($forecatsArr[1], 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                    </div>
+                </td>
+                <td class="informer9-blue__td">
+                    <div class="informer9-blue__box-middle-icons">
+                        <?php echo $abstractData->getWeatherIcon($forecatsArr[2], 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                    </div>
+                </td>
+            </tr>
 
-        <div class="view-9-classic">
-            <div class="view-9-classic-content <?php if ($_REQUEST['transpar'] == 1) {
-    echo 'view-9-classic-content-bg';
-} ?>">
-                <div class="view-9-classic-day-city">
-                    <p class="view-9-classic-city"><?php echo $mainObject['name']; ?></p>
-                    <p class="view-9-classic-day"><?php echo $abstractData->getDate('d.m.Y') ?></p>
-                </div>
+            <tr class="informer9-blue__tr">
+                <td class="informer9-blue__td">
+                    <p class="informer9-blue__text-middle">
+                        <span class="informer9__number-font"><?php echo $abstractData->getDateFromString($forecatsArr[0]['dt'], 'H:i'); ?></span>
+                    </p>
+                </td>
+                <td class="informer9-blue__td" colspan="2">
+                    <p class="informer9-blue__text-middle">
+                        <span class="informer9__number-font"><?php echo $abstractData->getDateFromString($forecatsArr[1]['dt'], 'H:i'); ?></span>
 
-                <div class="view-9-classic-weekday-weather">
-                    <p class="view-9-classic-weather"><?php echo $abstractData->getWeatherDescription($mainObject['icon']) ?></p>
-                    <p class="view-9-classic-weekday"><?php echo $abstractData->getWeek() ?></p>
-                </div>
+                    </p>
+                </td>
+                <td class="informer9-blue__td">
+                    <p class="informer9-blue__text-middle">
+                        <span class="informer9__number-font"><?php echo $abstractData->getDateFromString($forecatsArr[2]['dt'], 'H:i'); ?></span>
+                    </p>
+                </td>
+            </tr>
 
-                <div class="view-9-classic-icon">
-                    <?php echo $abstractData->getWeatherIcon($mainObject) ?>
-                </div>
+            <tr class="informer9-blue__tr">
+                <td class="informer9-blue__td">
+                    <p class="informer9-blue__text-big">
+                        <span class="informer9__number-font"><?php echo $forecatsArr[0]['tempC']; ?>°C</span>
+                    </p>
+                </td>
+                <td class="informer9-blue__td" colspan="2">
+                    <p class="informer9-blue__text-big">
+                        <span class="informer9__number-font"><?php echo $forecatsArr[1]['tempC']; ?>°C</span>
+                    </p>
+                </td>
+                <td class="informer9-blue__td">
+                    <p class="informer9-blue__text-big">
+                        <span class="informer9__number-font"><?php echo $forecatsArr[2]['tempC']; ?>°C</span>
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
-                <div class="view-9-classic-cels">
-                    <?php echo $mainObject['tempC'] ?>°C
-                </div>
-
-                <div class="view-9-classic-far">
-                    <?php echo $mainObject['tempF'] ?>°F
-                </div>
-
-                <ul class="view-9-classic-weather-info">
-                    <?php for ($i=0; $i < 3; $i++) {
-    ?>
-                        <li>
-                            <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'view-9-classic-weather-info-img') ?>
-                            <div class="view-9-classic-time">
-                                <?php echo $abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i'); ?>
-                            </div>
-                            <div class="view-9-classic-temp">
-                                <?php echo $forecatsArr[$i]['tempC']; ?>°C
-                            </div>
-                        </li>
-                        <?php
-}?>
-                </ul>
-            </div>
-        </div>
-
-    </section>
-</body>
+    </div>
+</div>

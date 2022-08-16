@@ -152,7 +152,7 @@ class AbstractClass
                 break;
             case 34:
                 //$result = 'Fair / Mostly Sunny Day';
-                $result = 'Солнцечно';
+                $result = 'Солнечно';
                 break;
             case 35:
                 //$result = 'Mixed Rain and Hail';
