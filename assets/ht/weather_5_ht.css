@@ -1,303 +1,178 @@
-body {
-    font-family: 'Aldrich';
-    margin: 0;
-    padding: 0;
-    
+:root {
+  --grey: #dcdcdc;
+  --white: #ffffff;
+  --black: #111111;
+  --white: #ffffff
+}
+
+@font-face {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Play"),
+    url("./fonts/Play/Play-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Play-Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Play-Bold"),
+    url("./fonts/Play/Play-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Geometria-Light";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Geometria-Light"),
+    url("./fonts/geometria/Geometria-Light.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Geometria-Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Geometria-Medium"),
+    url("./fonts/geometria/Geometria-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Geometria-bold";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Geometria-bold"),
+    url("./fonts/geometria/Geometria-Bold.woff") format("woff");
+}
+
+
+h3 {
+  margin: 0;
+  padding: 0;
 }
 
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
-
-.view-5-ht-1 {
-
-    width: 780px;
-    height: 400px;
-    background-image: url("img/5-1.svg");
+.informer5-table-box {
+  position: relative;
+  width: 38vw;
+  margin: 0 auto;
 }
 
-.view-5-ht-2 {
-
-    width: 780px;
-    height: 400px;
-    background-image: url("img/5-2.svg");
+.informer5-grey__background {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 38vw;
+  background-color: transparent;
+  padding: 2%;
+  margin: 0 auto;
+  z-index: 2;
 }
 
-.view-5-ht-3 {
-
-    width: 780px;
-    height: 400px;
-    background-image: url("img/5-3.svg");
+.informer5-grey {
+  display: inline-table;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 38vw;
+  font-family: "Geometria-Medium", Arial, Helvetica;
+  text-align: center;
+  color: var(--black);
+  word-wrap: break-word;
+  border-spacing: 0px;
+  background-color: transparent;
+  padding: 2%;
+  margin: 0 auto;
+  z-index: 3;
 }
 
-
-.view-5-ht-plates {
-    height: 360px;
-    display: flex;
-    flex-direction: column;
-  
-
-}
-
-
-.view-5-ht-main-info {
-    display: flex;
-    width: 710px;
-    justify-content: space-between;
-    list-style-type: none;
-    margin-left: -20px;
-    align-items: center;
-    
-    
-}
-
-.view-5-ht-day-info {
-    width: 231px;
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.view-5-ht-daynumber {
-   
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-    color: #000000;
-    margin-top: 15px;
-
-
-}
-
-.view-5-ht-time {
-  
-    font-style: normal;
-    font-weight: 500;
-    font-size: 50px;
-    text-align: center;
-    text-transform: uppercase;
-
-    color: #000000
-}
-
-.view-5-ht-daytime {
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: center;
-    color: #000000
-
-}
-
-.view-5-ht-weekday {
- 
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: center;
-    color: #000000
-}
-
-.view-5-ht-weather-info {
-    width: 231px;
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.informer5-grey__background-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 102%;
+  height: 103%;
+  background-image: url(./img/5-1.svg);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  padding-bottom: 0;
+  z-index: -1;
 }
 
 
-.view-5-ht-weather-icon {
-    background-image: url("icons/cloud-night-middleB.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 120px;
-    height: 93px;
-    margin-top: 5px;
-   
+.informer5-grey__td {
+  width: 20%;
+  font-size: 1vw;
 }
 
-.view-5-ht-weather-type {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    text-align: center;
-    color: #000000;
-    margin-top: 20px;
-    width: 196px;
-    height: 32px;
-    margin-left: 20px;
-}
-
-
-.view-5-ht-place-info {
-    width: 231px;
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.view-5-ht-city {
-    margin-top: 10px;
-    margin-right: 20px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: center;
-    color: #000000
+.informer5-grey__tr .informer5-grey__td {
+  background-color: var(--light-grey-2);
+  padding: 5%;
+  border: 3px solid var(--dark-grey);
 
 }
 
-.view-5-ht-temp {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 50px;
-
-    text-align: center;
-    text-transform: uppercase;
-
-    color: #000000
-
-}
-
-.view-5-ht-wind-wet {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-   
-    text-align: center;
-
-    color: #000000
-
-}
-
-.view-5-ht-pressure {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-   
-    text-align: center;
-
-    color: #000000
-
+.informer5-grey__tr:nth-child(1) .informer5-grey__td:first-child,
+.informer5-grey__tr:nth-child(2) .informer5-grey__td:first-child {
+  border-top-left-radius: 20%;
 }
 
 
-.view-5-ht-daytimes {
-    display: flex;
-    width: 710px;
-    justify-content: space-between;
-    list-style-type: none;
-    align-items: center;
-    margin-left: -20px;
-    margin-top: -10px;
-
+.informer5-grey__tr:nth-child(1) .informer5-grey__td:last-child,
+.informer5-grey__tr:nth-child(2) .informer5-grey__td:last-child {
+  border-top-right-radius: 20%;
 }
 
-.view-5-ht-next-morning {
-    width: 231px;
-    height: 170px;
-    border-radius: 60px 0px 0px 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.informer5-grey__tr:nth-child(1) .informer5-grey__td:first-child,
+.informer5-grey__tr:nth-child(2) .informer5-grey__td:first-child {
+  border-bottom-left-radius: 20%;
 }
 
-.view-5-ht-daytime-next {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    color: #000000;
-
+.informer5-grey__tr:nth-child(1) .informer5-grey__td:last-child,
+.informer5-grey__tr:nth-child(2) .informer5-grey__td:last-child {
+  border-bottom-right-radius: 20%;
 }
 
-.view-5-ht-morning {
-/*    background-image: url("icons/one-cloud-black-9.svg");*/
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 86.74px;
-    height: 56.42px;
+.informer5-grey__box-middle-icons {
+  width: 40%;
+  margin: 0 auto;
 }
 
-.view-5-ht-morning img {
-    width: 86.74px;
-    height: 56.42px;
+.informer5-grey__box-big-icons {
+  width: 75%;
+  margin: 0 auto;
 }
 
-.view-5-ht-next-temp {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 38px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 10px;
-
-    color: #000000
+.informer5-grey__text-middle {
+  font-size: 220%;
+  word-break: nowrap;
 }
 
-.view-5-ht-next-day {
-    width: 231px;
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.informer5-grey__text-big {
+  font-size: 130%;
+  text-transform: uppercase;
 }
 
-.view-5-ht-day {
-/*    background-image: url("icons/sun-black-9.svg");*/
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 86.74px;
-    height: 56.42px;
+.informer5-grey__tr:nth-child(1) .informer5-grey__td:nth-child(1) .informer5__number-font-time {
+  font-size: 200%;
+  font-family: "Play", Arial, Helvetica;
 }
 
-.view-5-ht-day img {
-    width: 86.74px;
-    height: 56.42px;
+.informer5-grey__text-small {
+  font-family: "Geometria-Light", Arial, Helvetica;
+  font-size: 100%;
 }
 
-.view-5-ht-next-evening {
-    width: 231px;
-    height: 170px;
-    border-radius: 0px 60px 60px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.informer5__number-font {
+  font-family: "Play", Arial, Helvetica;
 }
-
-.view-5-ht-evening {
-/*    background-image: url("icons/two-clouds-black-9.svg");*/
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 73px;
-    height: 56.42px;
-}
-
-.view-5-ht-evening img {
-    width: 73px;
-    height: 56.42px;
-}
-
-.white-font {
-    color: #FFFFFF;
-}
-
-.white-icons .view-5-ht-weather-icon {
-    background-image: url("icons/cloud-night-middleW.svg");
-}
+.informer5-grey__text-big.informer5__number-font

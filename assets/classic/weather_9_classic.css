@@ -1,189 +1,280 @@
-@import url("fonts/geometria/stylesheet.css");
-
-body {
-    font-family: 'Geometria';
-    margin: 0;
-    padding: 0;
-    
-}
-
-.view-9-classic {
-    width: 350px;
-    height: 400px;
-    background: #2A88CD;
-}
-
-.view-9-classic-content {
-    position: absolute;
-    width: 328px;
-    height: 376px;
-    border: 2px solid #FFFFFF;
-    box-sizing: border-box;
-    margin: 11px;
-}
-
-.view-9-classic-light {
-    background-image: url("img/view-9-light.png");
-    /* background-repeat: no-repeat; */
-    background-position: cover;
-}
-
-.view-9-classic-dark {
-    background-image: url("img/view-9-dark.png");
-    /* background-repeat: no-repeat; */
-    background-position: cover;
-}
-
-.view-9-classic-day-city {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: -15px;
-}
-
-.view-9-classic-city {
-    font-family: 'Geometria';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    color: #FFFFFF;
-    white-space: nowrap;
-}
-
-.view-9-classic-day {
-    font-family: 'Geometria';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
-.view-9-classic-weekday-weather {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: -40px;
-    white-space: nowrap;
-}
-
-.view-9-classic-weather, .view-9-classic-weekday {
-    font-family: 'Aldrich';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 24px;
-    color: #FFFFFF;
-
-}
-
-.view-9-classic-icon {
-    /*background-image: url("icons/night-cloud-2.svg");*/
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 195px;
-    height: 152.03px;
-    margin-top: -30px;
-    margin-left: 8px;
-}
-
-.view-9-classic-icon img {
-/*    width: 195px;
-    height: 152.03px;*/
-
-    width: 145px;
-    height: 100px;
-    margin-top: 20px;
-}
-
-.view-9-classic-cels {
-
-    font-family: 'Geometria';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-
-    text-align: right;
-    text-transform: uppercase;
-    margin-top: -130px;
-    color: #FFFFFF;
-    margin-right: 5px;
-
+:root {
+  --dark-blue: #2A88CD;
+  --light-blue: #7eb9e1;
+  --light-blue-2: #ABCDE5;
+  --white: #ffffff;
 }
 
 
-.view-9-classic-far {
+@font-face {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Play"),
+    url("./fonts/Play/Play-Regular.woff") format("woff");
+}
 
-    font-family: 'Geometria';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
+@font-face {
+  font-family: "Play-Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Play-Bold"),
+    url("./fonts/Play/Play-Bold.woff") format("woff");
+}
 
-    text-align: right;
-    text-transform: uppercase;
-    margin-right: 5px;
-    color: #FFFFFF;
+@font-face {
+  font-family: "Geometria-Light";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Geometria-Light"),
+    url("./fonts/Geometria/Geometria-Light.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Geometria-Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Geometria-Medium"),
+    url("./fonts/Geometria/Geometria-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Geometria-bold";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Geometria-bold"),
+    url("./fonts/Geometria/Geometria-Bold.woff") format("woff");
+}
+
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.informer9-blue__tr:nth-child(3) .informer9-blue__td:nth-child(1),
+.informer9-blue__tr:nth-child(3) .informer9-blue__td:nth-child(2),
+.informer9-blue__tr:nth-child(3) .informer9-blue__td:nth-child(3),
+.informer9-blue__tr:nth-child(4) .informer9-blue__td:nth-child(1),
+.informer9-blue__tr:nth-child(4) .informer9-blue__td:nth-child(2),
+.informer9-blue__tr:nth-child(4) .informer9-blue__td:nth-child(3),
+.informer9-blue__tr:nth-child(5) .informer9-blue__td:nth-child(1),
+.informer9-blue__tr:nth-child(5) .informer9-blue__td:nth-child(2),
+.informer9-blue__tr:nth-child(5) .informer9-blue__td:nth-child(3) {
+  width: 30%;
+}
+table>tbody>tr>td:nth-child(1) {
+  width: 50%;
+}
+
+table>tbody>tr>td:nth-child(2) {
+  width: 50%;
+}
+
+.informer9-table-box {
+  position: relative;
+  width: 30vw;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.informer9-blue__background {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  background-color: var(--dark-blue);
+  padding: 2%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.informer9-blue {
+  display: inline-table;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  font-family: "Geometria-Medium", Arial, Helvetica;
+  text-align: center;
+  color: var(--white);
+  border-spacing: 0px;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  padding: 0;
+  padding: 2%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.informer9-blue__td {
+  font-size: 1vw;
+  padding: 2%;
+}
+
+.informer9-blue__tr .informer9-blue__td {
+  background-color: transparent;
+}
+
+.informer9-blue__tr:nth-child(3) .informer9-blue__td:nth-child(1),
+.informer9-blue__tr:nth-child(3) .informer9-blue__td:nth-child(2),
+.informer9-blue__tr:nth-child(3) .informer9-blue__td:nth-child(3),
+.informer9-blue__tr:nth-child(4) .informer9-blue__td:nth-child(1),
+.informer9-blue__tr:nth-child(4) .informer9-blue__td:nth-child(2),
+.informer9-blue__tr:nth-child(4) .informer9-blue__td:nth-child(3),
+.informer9-blue__tr:nth-child(5) .informer9-blue__td:nth-child(1),
+.informer9-blue__tr:nth-child(5) .informer9-blue__td:nth-child(2),
+.informer9-blue__tr:nth-child(5) .informer9-blue__td:nth-child(3) {
+  background-color: var(--light-blue-2);
+}
+
+.informer9-blue__tr:nth-child(3) .informer9-blue__td:nth-child(1) {
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  border-right: 2px solid var(--dark-blue);
+  border-left: 2px solid var(--dark-blue);
+  border: 2px solid var(--dark-blue);
+  border-bottom: none;
+  border-top: none;
 
 }
 
-.view-9-classic-weather-info {
-    list-style-type: none;
-    width: 310px;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 7px;
-    margin-left: -33px;
+.informer9-blue__tr:nth-child(3) .informer9-blue__td:nth-child(2) {
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  border: 2px solid var(--dark-blue);
+  border-bottom: none;
+  border-top: none;
+
+}
+
+.informer9-blue__tr:nth-child(3) .informer9-blue__td:nth-child(3) {
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  border: 2px solid var(--dark-blue);
+  border-bottom: none;
+  border-top: none;
+}
+
+.informer9-blue__tr:nth-child(4) .informer9-blue__td:nth-child(1),
+.informer9-blue__tr:nth-child(4) .informer9-blue__td:nth-child(2),
+.informer9-blue__tr:nth-child(4) .informer9-blue__td:nth-child(3),
+.informer9-blue__tr:nth-child(5) .informer9-blue__td:nth-child(1),
+.informer9-blue__tr:nth-child(5) .informer9-blue__td:nth-child(2),
+.informer9-blue__tr:nth-child(5) .informer9-blue__td:nth-child(3) {
+  border: 2px solid var(--dark-blue);
+  border-bottom: none;
+  border-top: none;
+}
+
+.informer9-blue__tr:nth-child(1) .informer9-blue__td:nth-child(1) {
+  text-align: left;
+}
+
+.informer9-blue__tr:nth-child(1) .informer9-blue__td:nth-child(2) {
+  text-align: right;
 }
 
 
 
-.view-9-classic-weather-info li {
-    width: 100.47px;
-    height: 175px;
-    background-color: #7FB8E1;
-    border-radius: 30px 30px 0px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+
+.informer9-blue__td-flexbox-small {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.view-9-classic-weather-info-custom li {
-    width: 100.47px;
-    height: 175px;
-    background-color: rgba(245, 245, 245, 0.4);
-    border-radius: 30px 30px 0px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.informer9-blue__td-flexbox-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
 }
 
-.view-9-classic-time {
-    font-family: 'Geometria';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-
-    text-align: center;
-    text-transform: uppercase;
-
-    color: #FFFFFF;
+.informer9-blue__td-flexbox-big {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.view-9-classic-temp {
-    font-family: 'Geometria';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
+
+.informer9-blue__temperature {
+  font-size: 220px;
 }
 
-img.view-9-classic-weather-info-img {
-    width: 62px;
-    height: 54px;
+.informer9-blue__text-small {
+  font-size: 90%;
+  word-break: nowrap;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.informer9-blue__text-middle {
+  font-size: 170%;
+  word-break: nowrap;
+  padding-left: 8%;
+
+}
+
+.informer9-blue__text-big {
+  font-size: 220%;
+  word-break: nowrap;
+}
+
+.informer9__number-font {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  font-family: "Play", Arial, Helvetica;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.informer9__text-font {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  font-family: "Geometria-Medium", Arial, Helvetica;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.informer9__number-font-big {
+  font-size: 200%;
+}
+
+.informer9__number-font-big-1 {
+  font-size: 170%;
+}
+
+.informer9__text-font.informer9__number-font-light {
+  font-family: "Geometria-Light", Arial, Helvetica;
+}
+
+.informer9-blue__box-small-icons {
+  width: 10%;
+}
+
+.informer9-blue__box-middle-icons {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.informer9-blue__box-big-icons {
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 20%;
 }

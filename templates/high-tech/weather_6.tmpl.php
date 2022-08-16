@@ -13,47 +13,57 @@ if ($_REQUEST['transpar'] == '1') {?>
     </style>
 <?php }?>
 
-<body>
-<section class="view-6-ht-container">
-    <div class="view-6-ht-1 <?php if ($_REQUEST['transpar'] == 0) {
-    echo 'black-icons';
-} ?>
-    <?php if ($_REQUEST['transpar'] == 1) {
-    echo 'view-6-ht-2';
-} else {
-    echo 'view-6-ht-1 black-icons';
-} ?>">
+<div class="informer6-table-box">
+    <div class="informer6-grey__background">
+        <table class="informer6-grey">
+            <tbody>
 
-        <div class="view-6-ht-icon">
-            <?php if ($_REQUEST['transpar'] == 1) {
-    echo $abstractData->getWeatherIcon($object, '', 'white');
-} else {
-    echo $abstractData->getWeatherIcon($object, '');
-}?>
+            <tr class="informer6-grey__tr">
+                <td colspan="2" class="informer6-grey__td">
+                    <div class="informer6-grey__box-middle-icons">
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer6-grey__box-middle-icons-img', '', '', '80%', '100%') ?>
+                    </div>
+                </td>
+            </tr>
 
-        </div>
-        <div class="view-6-ht-time <?php if ($_REQUEST['transpar'] == 0) {
-    echo 'black-font';
-} ?>">
-            <?php echo $abstractData->getDate('H:i') ?>
-        </div>
-        <div class="view-6-ht-date <?php if ($_REQUEST['transpar'] == 0) {
-    echo 'black-font';
-} ?>">
-            <?php echo $abstractData->getNameOfTheDate($time); ?>,
-            <?php echo $abstractData->getDate('d') ?><br />
-            <?php echo $abstractData->getMonthFromString($time); ?>
-        </div>
-        <div class="view-6-ht-temp <?php if ($_REQUEST['transpar'] == 0) {
-    echo 'black-font';
-} ?>">
-            <?php echo $object['tempC']; ?>°
-        </div>
-        <div class="view-6-ht-city <?php if ($_REQUEST['transpar'] == 0) {
-    echo 'black-font';
-} ?>">
-            <?php echo $object['name']; ?>
-        </div>
+            <tr class="informer6-grey__tr">
+                <td colspan="2" class="informer6-grey__td">
+                    <p class="informer6-grey__number-big">
+                        <span class="informer6-grey__number-font"><?php echo $abstractData->getDate('H:i') ?></span>
+                    </p>
+                </td>
+            </tr>
+
+            <tr class="informer6-grey__tr">
+                <td class="informer6-grey__td">
+                    <div class="informer6-grey__flexbox-cell">
+                        <p class="informer6-grey__number-middle">
+                            <!-- Неразравный пробел в span &nbsp;-->
+                            <span class="informer6-grey__text-font informer6-grey__text-font-light"> <?php echo $abstractData->getNameOfTheDate($time); ?>, &nbsp;</span>
+                            <span class="informer6-grey__number-font"><?php echo $abstractData->getDate('d') ?></span>
+                        </p>
+                        <p class="informer6-grey__number-middle-1">
+                            <span class="informer6-grey__text-font informer6-grey__text-font-light"><?php echo $abstractData->getMonthFromString($time); ?></span>
+                        </p>
+                    </div>
+                </td>
+                <td class="informer6-grey__td">
+                    <p class="informer6-grey__number-big-1">
+                        <span class="informer6-grey__number-font"><?php echo $object['tempC']; ?>°</span>
+                    </p>
+                </td>
+            </tr>
+
+            <tr class="informer6-grey__tr">
+                <td colspan="2" class="informer6-grey__td">
+                    <p class="informer6-grey__number-small">
+                        <span class="informer6-grey__text-font informer6-grey__text-font-light"><?php echo $object['name']; ?></span>
+                    </p>
+                </td>
+            </tr>
+
+            <tr class="informer6-grey__background-1"></tr>
+            </tbody>
+        </table>
     </div>
-</section>
-</body>
+</div>

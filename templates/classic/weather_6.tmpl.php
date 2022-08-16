@@ -44,38 +44,54 @@ if ($_REQUEST['transpar'] == '1') {?>
     });
 </script>
 
-<body>
-    <section class="view-6-classic-container">
-        <div class="<?php if ($_REQUEST['transpar'] == 1) {
-    echo 'view-6-classic-type-2';
-} else {
-    echo 'view-6-classic-type-1';
-} ?>">
-            <div class="view-6-classic-circle" id="clock">
-                <li id="sec"></li>
-                <li id="hour"></li>
-                <li id="min"></li>
-            </div>
-            <div class="view-6-classic-icon">
 
-                <img src='assets/<?php if (!empty($_REQUEST['weather_tip_img'])) {
-    echo $_REQUEST['weather_tip_img'] . '/icons';
-} else {
-    echo 'classic';
-} ?>/icon_<?php echo $object['icon'] ?>.svg'/>
+<div class="view-6-classic-circle" id="clock">
+    <li id="sec"></li>
+    <li id="hour"></li>
+    <li id="min"></li>
+</div>
 
-            </div>
-            <div class="view-6-classic-arrow-small">
-            </div>
-            <div class="view-6-classic-arrow-big">
-            </div>
-            <div class="view-6-classic-temp">
-                <?php echo $object['tempC']; ?>°С
-            </div>
-            <div class="view-6-classic-date">
-                <?php echo $abstractData->getNameOfTheDate($time = date('d.m', time())); ?>, <br />
-                <?php echo $abstractData->getDate('d.m.Y') ?>
-            </div>
-        </div>
-    </section>
-</body>
+<div class="informer6-table-box">
+    <div class="informer6-blue__background">
+        <div class="informer6-blue__background-1"></div>
+        <table class="informer6-blue">
+            <tbody>
+            <tr class="informer6-blue__tr">
+                <td class="informer6-blue__td">
+                    <div class="informer6-blue__box-middle-icons">
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer6-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                        <div class="view-6-classic-arrow-small">
+                        </div>
+                        <div class="view-6-classic-arrow-big">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="informer6-blue__tr">
+                <td class="informer6-blue__td">
+                    <div class="informer6-blue__box-middle-icons">
+                        <!--<img width="100%" height="100%" class="informer6-blue__box-middle-icons-img" src="" alt="Нет иконки стрелок">-->
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="informer6-blue__tr">
+                <td class="informer6-blue__td">
+                    <span class="informer6-blue__text-temp informer6__number-font"><?php echo $object['tempC']; ?>°C</span>
+                </td>
+            </tr>
+            <tr class="informer6-blue__tr">
+                <td class="informer6-blue__td">
+                    <p class="informer6-blue__text-day-week">
+                        <span class="informer6__text-font informer6__text-font-light"><?php echo $abstractData->getNameOfTheDate($time = date('d.m', time())); ?>,</span>
+                    </p>
+                    <p class="informer6-blue__text-day">
+                        <span class="informer6__number-font"><?php echo $abstractData->getDate('d.m.Y') ?></span>
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
