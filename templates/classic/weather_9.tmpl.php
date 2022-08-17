@@ -2,12 +2,53 @@
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
-if ($_REQUEST['transpar'] == '1') {?>
+?>
+
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-9-classic-content-bg {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '') ?>");
-            background-repeat: no-repeat;
+        /* Font family */
+        <?php
+            if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
+        .informer9__text-font,
+        .informer9__text-font span,
+        .informer9__number-font {
+            font-family:<?php echo $_REQUEST['font_family'] ?> !important;
         }
+        <?php } ?>
+
+        /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        .informer9-blue__tr .informer9-blue__td {
+            background:<?php echo $_REQUEST['color_fon'] ?>
+        }
+        :root {
+            --dark-blue: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-blue: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-blue-2: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer9-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        <?php } ?>
+
+        /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        .informer9-blue {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+
+        <?php } ?>
+        /* Temperature color and font */
+        <?php
+         if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
     </style>
 <?php }?>
 
@@ -31,10 +72,10 @@ if ($_REQUEST['transpar'] == '1') {?>
                         <span class="informer9__text-font informer9__number-font-light"><?php echo $abstractData->getWeek() ?></span>
                     </p>
                     <p class="informer9-blue__text-big">
-                        <span class="informer9__number-font informer9__number-font-big"><?php echo $mainObject['tempC'] ?>°C</span>
+                        <span class="informer9__number-font informer9__number-font-big temp"><?php echo $mainObject['tempC'] ?>°C</span>
                     </p>
                     <p class="informer9-blue__text-big">
-                        <span class="informer9__number-font informer9__number-font-big-1"><?php echo $mainObject['tempF'] ?>°F</span>
+                        <span class="informer9__number-font informer9__number-font-big-1 temp"><?php echo $mainObject['tempF'] ?>°F</span>
                     </p>
                 </td>
             </tr>
@@ -80,17 +121,17 @@ if ($_REQUEST['transpar'] == '1') {?>
             <tr class="informer9-blue__tr">
                 <td class="informer9-blue__td">
                     <p class="informer9-blue__text-big">
-                        <span class="informer9__number-font"><?php echo $forecatsArr[0]['tempC']; ?>°C</span>
+                        <span class="informer9__number-font temp"><?php echo $forecatsArr[0]['tempC']; ?>°C</span>
                     </p>
                 </td>
                 <td class="informer9-blue__td" colspan="2">
                     <p class="informer9-blue__text-big">
-                        <span class="informer9__number-font"><?php echo $forecatsArr[1]['tempC']; ?>°C</span>
+                        <span class="informer9__number-font temp"><?php echo $forecatsArr[1]['tempC']; ?>°C</span>
                     </p>
                 </td>
                 <td class="informer9-blue__td">
                     <p class="informer9-blue__text-big">
-                        <span class="informer9__number-font"><?php echo $forecatsArr[2]['tempC']; ?>°C</span>
+                        <span class="informer9__number-font temp"><?php echo $forecatsArr[2]['tempC']; ?>°C</span>
                     </p>
                 </td>
             </tr>

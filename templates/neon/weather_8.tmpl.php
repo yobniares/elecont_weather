@@ -4,19 +4,55 @@
     }
     $time = date('H:i', time());
 
-if ($_REQUEST['transpar'] == '1') {?>
+?>
+
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-8-neon-4-bg {
-            width: 1380px;
-            height: 375px;
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
-            border-radius: 35px;
-            background-repeat: no-repeat;
-            background-position: center;
-            box-sizing: border-box;
-            padding-top: 50px;
-            padding-left: 50px;
+        /* Font family */
+        <?php
+         if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
+        .informer8__text-font span,
+        .informer8-neon__text-middle,
+        .informer8-neon__text-font,
+        .informer8-neon__number-font{
+            font-family:<?php echo $_REQUEST['font_family'] ?> !important;
         }
+        <?php } ?>
+
+        /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        .informer8-neon__background-1,
+        .informer8-neon__tr .informer8-neon__td {
+            background:<?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 30px;
+        }
+        :root {
+            --dark-neon: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-neon: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer8-neon__tr:nth-child(1) .informer1-neon__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        <?php } ?>
+
+        /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        .informer8-neon {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
+
+        /* Temperature color and font */
+        <?php
+         if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
     </style>
 <?php }?>
 
@@ -68,8 +104,8 @@ if ($_REQUEST['transpar'] == '1') {?>
             <tr class="informer8-neon__tr">
                 <td  class="informer8-neon__td">
                     <div class="informer8-neon__td-flexbox-big">
-                        <p class="informer8-neon__number-big-1 shine-neon"><?php echo $mainObject['tempC']; ?>°</p>
-                        <p class="informer8-neon__number-big-2 shine-neon"><?php echo $mainObject['tempF']; ?>°F</p>
+                        <p class="informer8-neon__number-big-1 shine-neon temp"><?php echo $mainObject['tempC']; ?>°</p>
+                        <p class="informer8-neon__number-big-2 shine-neon temp"><?php echo $mainObject['tempF']; ?>°F</p>
                     </div>
                 </td>
                 <td  class="informer8-neon__td">
@@ -147,7 +183,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                                 <?php echo $abstractData->getWeatherIcon($object, 'informer8-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
                             </div>
                             <p class="informer8-neon__number-middle">
-                                <span class="informer8-neon__number-font"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
+                                <span class="informer8-neon__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                             </p>
                         </div>
                     </td>

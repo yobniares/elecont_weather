@@ -3,14 +3,66 @@
         $forecatsArr[] = $forecast;
     }
     $time = date('d.m.Y', time());
+?>
 
-if ($_REQUEST['transpar'] == '1') {?>
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-7-ht-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
+        /* Font family */
+        <?php
+         if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
+        .informer7-grey__number-big,
+        .informer7__text-font span,
+        .informer7-grey__text-middle,
+        .informer7-grey__text-font,
+        .informer7-grey__number-font{
+            font-family:<?php echo $_REQUEST['font_family'] ?> !important;
         }
+        <?php } ?>
+
+        /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        .informer7-grey__background-1,
+        .informer7-grey__tr .informer7-grey__td {
+            background:<?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 30px;
+        }
+        :root {
+            --white: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer7-grey__tr:nth-child(1) .informer1-grey__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer7-grey__background-2,
+        .informer7-grey__background-3,
+        .informer7-grey__background-4 {
+            background-image: none;
+        }
+        .informer7-grey__td {
+            border: none !important;
+        }
+        <?php } ?>
+
+        /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        .informer7-grey {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
+
+        /* Temperature color and font */
+        <?php
+         if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
     </style>
 <?php }?>
+
 
 <svg width="0" height="0" class="hidden">
     <symbol viewBox="0 0 26 36" id="place" xmlns="http://www.w3.org/2000/svg">
@@ -47,8 +99,8 @@ if ($_REQUEST['transpar'] == '1') {?>
                     <div class="informer7-grey__td-flexbox-big">
                         <p class="informer7-grey__text-middle">GMT<?php echo '+' .$object['gmtMin']/60 ?></p>
                         <p class="informer7-grey__number-big"><?php echo $abstractData->getDate('H:i') ?></p>
-                        <p class="informer7-grey__number-big-1"><?php echo $object['tempC'] ?>°</p>
-                        <p class="informer7-grey__number-big-2"><?php echo $object['tempF'] ?>°F</p>
+                        <p class="informer7-grey__number-big-1 temp"><?php echo $object['tempC'] ?>°</p>
+                        <p class="informer7-grey__number-big-2 temp"><?php echo $object['tempF'] ?>°F</p>
                     </div>
                 </td>
                 <td rowspan="3" class="informer7-grey__td">
@@ -141,7 +193,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                 </td>
                 <td class="informer7-grey__td">
                     <p class="informer7-grey__number-middle">
-                        <span class="informer7-grey__number-font"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
+                        <span class="informer7-grey__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                     </p>
                 </td>
             </tr>
@@ -161,7 +213,7 @@ if ($_REQUEST['transpar'] == '1') {?>
 
                                 <td class="informer7-grey__td">
                                     <p class="informer7-grey__number-middle">
-                                        <span class="informer7-grey__number-font"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
+                                        <span class="informer7-grey__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                                     </p>
                                 </td>
                             </tr>

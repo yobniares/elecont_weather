@@ -5,6 +5,64 @@
     $time = date('H:i', time());
 ?>
 
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
+    <style>
+        /* Font family */
+        <?php
+         if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
+        .informer7-neon__number-big,
+        .informer7__text-font span,
+        .informer7-neon__text-middle,
+        .informer7-neon__text-font,
+        .informer7-neon__number-font{
+            font-family:<?php echo $_REQUEST['font_family'] ?> !important;
+        }
+        <?php } ?>
+
+        /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        .informer7-neon__background-1,
+        .informer7-neon__tr .informer7-neon__td {
+            background:<?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 30px;
+        }
+        :root {
+            --black: <?php echo $_REQUEST['color_fon'] ?>;
+            --neon: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer7-neon__tr:nth-child(1) .informer1-neon__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 40px;
+        }
+        .informer7-neon__background-2,
+        .informer7-neon__background-3,
+        .informer7-neon__background-4 {
+            background-image: none;
+        }
+        <?php } ?>
+
+        /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        .informer7-neon {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
+
+        /* Temperature color and font */
+        <?php
+         if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
+    </style>
+<?php }?>
+
+
 <svg width="0" height="0" class="hidden">
     <symbol viewBox="0 0 26 36" id="place" xmlns="http://www.w3.org/2000/svg">
         <path d="M13 0.000189578C9.57287 -0.0185244 6.27862 1.34894 3.84103 3.80212C1.40345 6.2553 0.0219198 9.59353 0 13.0834C0 23.8594 13 36 13 36C13 36 26 23.789 26 13.0834C25.9781 9.59353 24.5965 6.2553 22.159 3.80212C19.7214 1.34894 16.4271 -0.0185244 13 0.000189578ZM13 20.7504C11.4999 20.7504 10.0336 20.2974 8.78629 19.4488C7.53903 18.6001 6.56691 17.3939 5.99285 15.9827C5.4188 14.5714 5.26859 13.0185 5.56124 11.5203C5.85389 10.0222 6.57625 8.64602 7.63696 7.5659C8.69767 6.48578 10.0491 5.75021 11.5203 5.45221C12.9916 5.1542 14.5166 5.30714 15.9024 5.8917C17.2883 6.47626 18.4729 7.46617 19.3063 8.73626C20.1396 10.0063 20.5845 11.4996 20.5845 13.0271C20.5772 15.0705 19.7749 17.0278 18.3533 18.4701C16.9317 19.9124 15.0068 20.7223 13 20.7222V20.7504Z"/>

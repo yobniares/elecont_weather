@@ -2,18 +2,59 @@
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
-if ($_REQUEST['transpar'] == '1') {?>
+?>
+
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-8-classic-right-bg {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'right') ?>");
-            background-repeat: no-repeat;
+        /* Font family */
+        <?php
+         if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
+        .informer8-blue__number-big,
+        .informer8__text-font span,
+        .informer8-blue__text-middle,
+        .informer8-blue__text-font,
+        .informer8-blue__number-font{
+            font-family:<?php echo $_REQUEST['font_family'] ?> !important;
         }
-        .view-8-classic-main-bg {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', 'main') ?>");
-            background-repeat: no-repeat;
+        <?php } ?>
+
+        /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        .informer8-blue__background-1,
+        .informer8-blue__tr .informer8-blue__td {
+            background:<?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 30px;
         }
+        :root {
+            --dark-blue: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-blue: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer8-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        <?php } ?>
+
+        /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        .informer8-blue {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
+
+        /* Temperature color and font */
+        <?php
+         if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
     </style>
 <?php }?>
+
 
 <svg width="0" height="0" class="hidden">
     <symbol viewBox="0 0 26 36" id="place" xmlns="http://www.w3.org/2000/svg">
@@ -65,8 +106,8 @@ if ($_REQUEST['transpar'] == '1') {?>
 
                 <td rowspan="3" class="informer8-blue__td">
                     <div class="informer8-blue__td-flexbox-big">
-                        <p class="informer8-blue__number-big-1"><?php echo $mainObject['tempC']; ?>°</p>
-                        <p class="informer8-blue__number-big-2"><?php echo $mainObject['tempF']; ?>°F</p>
+                        <p class="informer8-blue__number-big-1 temp"><?php echo $mainObject['tempC']; ?>°</p>
+                        <p class="informer8-blue__number-big-2 temp"><?php echo $mainObject['tempF']; ?>°F</p>
                     </div>
                 </td>
                 <td rowspan="3" class="informer8-blue__td">
@@ -159,7 +200,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                 </td>
                 <td class="informer8-blue__td">
                     <p class="informer8-blue__number-middle">
-                        <span class="informer8-blue__number-font"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
+                        <span class="informer8-blue__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                     </p>
                 </td>
             </tr>
@@ -180,7 +221,7 @@ if ($_REQUEST['transpar'] == '1') {?>
 
                     <td class="informer8-blue__td">
                         <p class="informer8-blue__number-middle">
-                            <span class="informer8-blue__number-font"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
+                            <span class="informer8-blue__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                         </p>
                     </td>
                 </tr>
