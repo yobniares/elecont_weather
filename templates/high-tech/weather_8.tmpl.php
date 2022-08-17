@@ -3,12 +3,61 @@
         $forecatsArr[] = $forecast;
     }
     $time = date('H:i', time());
+?>
 
-if ($_REQUEST['transpar'] == '1') {?>
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-8-ht-main-bg {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', '') ?>");
+        /* Font family */
+        <?php
+         if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
+        .informer8-grey__number-big,
+        .informer8__text-font span,
+        .informer8-grey__text-middle,
+        .informer8-grey__text-font,
+        .informer8-grey__number-font{
+            font-family:<?php echo $_REQUEST['font_family'] ?> !important;
         }
+        <?php } ?>
+
+        /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        .informer8-grey__background-1,
+        .informer8-grey__tr .informer8-grey__td {
+            /*background:<?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 30px;*/
+        }
+        :root {
+         /*   --dark-grey: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-grey: <?php echo $_REQUEST['color_fon'] ?>;*/
+        }
+        .informer8-grey__tr:nth-child(1) .informer1-grey__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer8-grey__background-1,
+        .informer8-grey__background-2,
+         .informer8-grey__background-3 {
+            /*background-image: none;*/
+         }
+        <?php } ?>
+
+        /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        .informer8-grey {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
+
+        /* Temperature color and font */
+        <?php
+         if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
     </style>
 <?php }?>
 
@@ -62,8 +111,8 @@ if ($_REQUEST['transpar'] == '1') {?>
 
                 <td rowspan="3" class="informer8-grey__td">
                     <div class="informer8-grey__td-flexbox-big">
-                        <p class="informer8-grey__number-big-1"><?php echo $mainObject['tempC']; ?>°</p>
-                        <p class="informer8-grey__number-big-2"><?php echo $mainObject['tempF']; ?>°F</p>
+                        <p class="informer8-grey__number-big-1 temp"><?php echo $mainObject['tempC']; ?>°</p>
+                        <p class="informer8-grey__number-big-2 temp"><?php echo $mainObject['tempF']; ?>°F</p>
                     </div>
                 </td>
                 <td rowspan="3" class="informer8-grey__td">
@@ -145,7 +194,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                 </td>
                 <td class="informer8-grey__td">
                     <p class="informer8-grey__number-middle">
-                        <span class="informer8-grey__number-font"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
+                        <span class="informer8-grey__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                     </p>
                 </td>
             </tr>
@@ -165,7 +214,7 @@ if ($_REQUEST['transpar'] == '1') {?>
 
                     <td class="informer8-grey__td">
                         <p class="informer8-grey__number-middle">
-                            <span class="informer8-grey__number-font"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
+                            <span class="informer8-grey__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                         </p>
                     </td>
                 </tr>

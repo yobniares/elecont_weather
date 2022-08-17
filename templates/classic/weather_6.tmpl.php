@@ -2,13 +2,54 @@
 foreach ($objects['0'] as $forecast) {
     $forecatsArr[] = $forecast;
 }
+?>
 
-if ($_REQUEST['transpar'] == '1') {?>
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-6-classic-type-2 {
-            background-image: url("assets/classic/bg/informer-6/hours.svg"), url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'png', '') ?>");
-            background-size:100% 100%;
+        /* Font family */
+        <?php
+         if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
+        .informer6__text-font,
+        .informer6__text-font span,
+        .informer6__number-font {
+            font-family:<?php echo $_REQUEST['font_family'] ?> !important;
         }
+        <?php } ?>
+
+        /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        .informer6-blue__background-1,
+        .informer6-blue__tr .informer6-blue__td {
+            /*background:<?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 30%;*/
+        }
+        :root {
+            --dark-blue: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-blue: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer6-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        <?php } ?>
+
+        /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        .informer6-blue {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
+
+        /* Temperature color and font */
+        <?php
+         if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
     </style>
 <?php }?>
 

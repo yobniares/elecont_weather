@@ -1,0 +1,110 @@
+a.btn-default {color: #c40007;
+    border-color: #c40007;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 8px 20px;
+    color: #c40007;
+    background-color: transparent;
+    text-decoration: none;
+    box-sizing: border-box;
+    line-height: 20px;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: uppercase;}
+a.btn-default:hover {
+    color: #ffffff;
+    background-color: #c40007;
+    border-color: #c40007;}
+
+
+/*.code_informer {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 50px;
+}*/
+
+.code_informer {
+    position: relative;
+    margin-top: 250px;
+}
+
+.code_informer p {
+    font-family: Arial !important;
+    font-size: 16px !important;
+}
+
+.wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+}
+.wrapper h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #01c42f;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1 0 0%;
+}
+
+.row .col {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgba(39,41,43,0.03);
+    border: 1px solid rgba(39,41,43,0.1);
+}
+
+.wrap img {
+    height: auto;
+    display:block;
+    margin:auto;
+}
+
+.wrap2 img {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+}
+
+/*.wrap {
+    width: 480px;
+    height: 360px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.frame {
+    width: 1280px;
+    height: 786px;
+    border: 0;
+
+    -ms-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}*/
+
