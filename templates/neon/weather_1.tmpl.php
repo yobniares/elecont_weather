@@ -6,15 +6,30 @@
 
 <?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
+
         /* Font family and text color */
+        <?php
+        if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
+        .informer1-neon,
+        .informer1__text-font,
+        .informer1__number-font {
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
+
+        /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
         .informer1-neon,
         .informer1__text-font,
         .informer1__number-font {
             color: <?php echo  $_REQUEST['font_text'] ?>;
-            font-family:<?php echo $_REQUEST['font_family'] ?>;
         }
+        <?php } ?>
 
         /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
         .informer1-neon__background-1 {
             background:<?php echo $_REQUEST['color_fon'] ?>;
             border-radius: 30px;
@@ -26,14 +41,20 @@
         .informer1-neon__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
             background-color: <?php echo $_REQUEST['color_fon'] ?>;
         }
+        <?php } ?>
 
         /* Temperature color and font */
+        <?php
+        if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
         .informer1__temperature-big,
         .informer1__temperature-middle,
         .temp span {
             color: <?php echo  $_REQUEST['font_tempo'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
         }
+        <?php } ?>
+
+
     </style>
 <?php }?>
 

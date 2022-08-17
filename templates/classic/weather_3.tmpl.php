@@ -6,13 +6,19 @@ foreach ($objects['0'] as $forecast) {
 
 <?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
+
         /* Font family */
+        <?php
+        if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
         .informer3__text-font,
         .informer3__number-font {
             font-family:<?php echo $_REQUEST['font_family'] ?>;
         }
+        <?php } ?>
 
         /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
         .informer3-blue__background-1 {
             background:<?php echo $_REQUEST['color_fon'] ?>
         }
@@ -23,20 +29,27 @@ foreach ($objects['0'] as $forecast) {
         .informer3-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
             background-color: <?php echo $_REQUEST['color_fon'] ?>;
         }
+        <?php } ?>
 
         /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
         .informer3-blue {
             color: <?php echo  $_REQUEST['font_text'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
         }
+        <?php } ?>
 
         /* Temperature color and font */
+        <?php
+        if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
         .informer3__temperature-big,
         .informer3__temperature-middle,
         .temp {
             color: <?php echo  $_REQUEST['font_tempo'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
         }
+        <?php } ?>
     </style>
 <?php }?>
 

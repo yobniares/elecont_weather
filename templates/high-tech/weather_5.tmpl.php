@@ -2,13 +2,54 @@
     foreach ($objects['0'] as $forecast) {
         $forecatsArr[] = $forecast;
     }
+?>
 
-if ($_REQUEST['transpar'] == '1') {?>
+<?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
-        .view-5-ht-2 {
-            background-image: url("<?php echo $abstractData->getBgWeatherIconSrc($object, 'svg', 'cover') ?>");
-            background-size:100% 100%;
+        /* Font family */
+        <?php
+         if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
+        .informer5__text-font,
+        .informer5__text-font span,
+        .informer5__number-font {
+            font-family:<?php echo $_REQUEST['font_family'] ?> !important;
         }
+        <?php } ?>
+
+        /* Background */
+        <?php
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        .informer5-grey__background-1,
+        .informer5-grey__tr .informer5-grey__td {
+            background:<?php echo $_REQUEST['color_fon'] ?>;
+            border-radius: 30px;
+        }
+        :root {
+            --dark-grey: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-grey: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        .informer5-grey__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        }
+        <?php } ?>
+
+        /* Text color */
+        <?php
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        .informer5-grey {
+            color: <?php echo  $_REQUEST['font_text'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
+
+        /* Temperature color and font */
+        <?php
+         if(isset($_REQUEST['font_tempo']) && $_REQUEST['font_tempo'] !=='#') {?>
+        .temp {
+            color: <?php echo  $_REQUEST['font_tempo'] ?>;
+            font-family:<?php echo $_REQUEST['font_family'] ?>;
+        }
+        <?php } ?>
     </style>
 <?php }?>
 
@@ -33,7 +74,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                 </td>
                 <td class="informer5-grey__td">
                     <p class="informer5-grey__city"><?php echo $object['name'] ?>, <?php echo $object['country'] ?></p>
-                    <p class="informer5-grey__text-big informer5__number-font"><?php echo $object['tempC'] ?>°</p>
+                    <p class="informer5-grey__text-big informer5__number-font temp"><?php echo $object['tempC'] ?>°</p>
                     <p class="informer5-grey__text-small informer5__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?> м/с, <?php echo $object['rh'] ?>%</p>
                     <p class="informer5-grey__text-small informer5__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм рт. ст.</p>
                 </td>
@@ -46,7 +87,7 @@ if ($_REQUEST['transpar'] == '1') {?>
                         <div class="informer5-grey__box-middle-icons">
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer5-grey__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
-                        <p class="informer5-grey__temperature informer5__number-font"><?php echo $forecatsArr[$i]['tempC']; ?>°</p>
+                        <p class="informer5-grey__temperature informer5__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</p>
                     </td>
                     <?php
                 }?>

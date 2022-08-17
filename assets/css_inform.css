@@ -149,7 +149,7 @@ a.btn-default:hover {
     border-color: #c40007;}
 
 
-.code_informer {
+/*.code_informer {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -157,6 +157,11 @@ a.btn-default:hover {
     right: 0;
     text-align: center;
     bottom: 50px;
+}*/
+
+.code_informer {
+    position: relative;
+    margin-top: 250px;
 }
 
 .code_informer p {
