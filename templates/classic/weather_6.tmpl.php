@@ -119,7 +119,7 @@ foreach ($objects['0'] as $forecast) {
 
             <tr class="informer6-blue__tr">
                 <td class="informer6-blue__td">
-                    <span class="informer6-blue__text-temp informer6__number-font"><?php echo $object['tempC']; ?>°C</span>
+                    <span class="informer6-blue__text-temp informer6__number-font temp"><?php echo $object['tempC']; ?>°C</span>
                 </td>
             </tr>
             <tr class="informer6-blue__tr">
