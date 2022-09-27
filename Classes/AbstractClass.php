@@ -479,6 +479,31 @@ class AbstractClass
      * @param $object
      * @return string
      */
+    public function getWeatherBackground($object, $time){
+        date_default_timezone_set('Europe/Moscow');
+        // check if day or night
+        if ($time>5 && $time<19){
+            $path = 'bg/day/';
+            
+        }else{
+            $path = 'bg/night/';
+        }
+        $img_path=$path.$object['icon'].'.svg';
+        // check if file exists
+        if(file_exists(''.$img_path)){
+            return $img_path;
+        }else{
+            return $path.'26.svg';
+        }
+    }
+        
+
+
+
+    /**
+     * @param $object
+     * @return string
+     */
     public function getBgWeatherIconSrc($object, $extension = '', $name = '')
     {
         if (!empty($_REQUEST['weather_tip_img'])) {
