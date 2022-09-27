@@ -73,94 +73,109 @@ foreach ($objects['0'] as $forecast) {
     </symbol>
 </svg>
 <div class="informer3-table-box">
-
     <div class="informer3-blue__background">
-        <table class="informer3-blue">
-            <tbody>
-            <tr class="informer3-blue__tr">
-                <td colspan="2" class="informer3-blue__td">
-                    <p class="informer3-blue__text-middle">
-                        <span class="informer3__text-font"><?php echo $object['name'] ?></span>
-                    </p>
-                    <p class="informer3-blue__text-big">
-                        <span class="informer3__number-font informer2__number-font-bold"><?php echo $abstractData->getDate('d.m.Y') ?></span>
-                    </p>
-                    <p class="informer3-blue__text-big">
-                        <span class="informer3__number-font informer2__number-font-bold informer3-blue__temperature temp"> <?php echo $object['tempC']; ?>°</span>
-                    </p>
-                </td>
-                <td class="informer3-blue__td">
-                    <p class="informer3-blue__text-middle">
-                        <span class="informer3__text-font"><?php echo $abstractData->getWeek() ?></span>
-                    </p>
-                </td>
-                <td colspan="2" class="informer3-blue__td">
-                    <p class="informer3-blue__text-big">
-                        <span class="informer3__text-font"><?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?></span>
-                    </p>
-                    <div class="informer3-blue__box-big-icons">
-                        <?php echo $abstractData->getWeatherIcon($object, 'informer3-blue__box-big-icons-img', '', '', '100%', '100%') ?>
-                    </div>
-                </td>
-            </tr>
-            <tr class="informer3-blue__tr">
-                <td colspan="5" class="informer3-blue__td">
-                    <div class="informer3-blue__td-flexbox-cell">
-                        <div class="informer3-blue__td-flexbox-small">
-                            <div class="informer3-blue__box-small-icons" style="min-width: 15%;">
-                                <svg width="80%" height="80%"  viewBox="0 0 17 17">
-                                    <use xlink:href="#wind-route"/>
-                                </svg>
-                            </div>
-                            <p class="informer3-blue__text-small">
-                                <span class="informer3__text-font"><?php echo $abstractData->getWwindDirection($object['wd']) ?></span>
-                            </p>
-                        </div>
-                        <div class="informer3-blue__td-flexbox-small">
-                            <div class="informer3-blue__box-small-icons">
-                                <svg width="100%" height="100%" viewBox="0 0 22 14">
-                                    <use xlink:href="#speed"/>
-                                </svg>
-                            </div>
-                            <p class="informer3-blue__text-small">
-                                <span class="informer3__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?></span>
-                                <span class="informer3__text-font">м/с</span>
-                            </p>
-                        </div>
-                        <div class="informer3-blue__td-flexbox-small">
-                            <div class="informer3-blue__box-small-icons">
-                                <svg width="75%" height="75%" viewBox="0 0 15 14">
-                                    <use xlink:href="#grade"/>
-                                </svg>
-                            </div>
-                            <p class="informer3-blue__text-small">
-                                <span class="informer3__number-font"><?php echo $object['gmtMin'] ?>°</span></p>
-                        </div>
-                        <div class="informer3-blue__td-flexbox-small">
-                            <div class="informer3-blue__box-small-icons">
-                                <svg width="35%" height="35%" viewBox="0 0 8 13">
-                                    <use xlink:href="#wet"/>
-                                </svg>
-                            </div>
-                            <p class="informer3-blue__text-small">
-                                <span class="informer3__text-font">Влажность: <?php echo $object['rh'] ?>%</span>
-                            </p>
-                        </div>
-                        <div class="informer3-blue__td-flexbox-small">
-                            <div class="informer3-blue__box-small-icons">
-                                <svg width="20%" height="20%" viewBox="0 0 5 17">
-                                    <use xlink:href="#pressure"/>
-                                </svg>
-                            </div>
-                            <p class="informer3-blue__text-small">
-                                <span class="informer3__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?></span>
-                                <span class="informer3__text-font">мм рт. ст.</span>
-                            </p>
-                        </div>
-                </td>
-            </tr>
+    <div class="informer3-blue__background-1"></div> <!-- менять фон display: block/none; -->
 
-            <?php
+        <table class="informer3-blue">
+        <tr class="informer3-blue__tr">
+			<td class="informer3-blue__td" colspan="3">
+                <p class="informer3-blue__text-middle">
+                <span class="informer3__text-font"><?php echo $object['name'] ?></span>
+                </p>
+            </td>
+			<td class="informer3-blue__td"  colspan="3">
+                <p class="informer3-blue__text-big">
+                <span class="informer3__text-font"><?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?></span>
+                </p>
+            </td>
+		</tr>
+		<tr class="informer3-blue__tr">
+			<td class="informer3-blue__td" colspan="2">
+                <p class="informer3-blue__text-big">
+                <span class="informer3__number-font informer2__number-font-bold"><?php echo $abstractData->getDate('d.m.Y') ?></span>
+                </p>
+
+                <p class="informer3-blue__text-big">
+                <span class="informer3__number-font informer2__number-font-bold informer3-blue__temperature temp"> <?php echo $object['tempC']; ?>°</span>
+                </p>
+            </td>
+			<td class="informer3-blue__td" colspan="2">
+                <p class="informer3-blue__text-middle">
+                <span class="informer3__text-font"><?php echo $abstractData->getWeek() ?></span>
+                </p>
+            </td>
+			<td class="informer3-blue__td" colspan="2">
+                <div class="informer3-blue__box-big-icons">
+                <?php echo $abstractData->getWeatherIcon($object, 'informer3-blue__box-big-icons-img', '', '', '100%', '100%') ?>
+                </div>
+            </td>
+		</tr>
+		<tr class="informer3-blue__tr">
+			<td class="informer3-blue__td" colspan="2">
+                <div class="informer3-blue__td-flexbox-small">
+                <div class="informer3-blue__box-small-icons" style="min-width: 15%;">
+                <svg width="50%" height="50%">
+                <use xlink:href="#wind-route"/>
+                </svg>
+                </div>
+                <p class="informer3-blue__text-small">
+                <span class="informer3__text-font"><?php echo $abstractData->getWwindDirection($object['wd']) ?></span>
+                </p>
+                </div>
+            </td>
+			<td class="informer3-blue__td">
+                <div class="informer3-blue__td-flexbox-small">
+                <div class="informer3-blue__box-small-icons">
+                <svg width="90%" height="90%">
+                <use xlink:href="#speed"/>
+                </svg>
+                </div>
+                <p class="informer3-blue__text-small">
+                <span class="informer3__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?></span>
+                <span class="informer3__text-font">м/с</span>
+                </p>
+                </div>
+            </td>
+			<td class="informer3-blue__td">
+                <div class="informer3-blue__td-flexbox-small">
+                <div class="informer3-blue__box-small-icons">
+                <svg width="65%" height="65%">
+                <use xlink:href="#grade"/>
+                </svg>
+                </div>
+                <p class="informer3-blue__text-small">
+                <span class="informer3__number-font"><?php echo $object['gmtMin'] ?>°</span></p>
+                </div>
+            </td>
+			<td class="informer3-blue__td">
+                <div class="informer3-blue__td-flexbox-small">
+                <div class="informer3-blue__box-small-icons">
+                <svg width="45%" height="45%">
+                <use xlink:href="#wet"/>
+                </svg>
+                </div>
+                <p class="informer3-blue__text-small">
+                    <span class="informer3__text-font">Влажность:</span>
+                    <span class="informer3__number-font"><?php echo $object['rh'] ?><span>
+                    <span class="informer3__number-font">%</span> <!-- почему-то span вкладывается в span(в браузере в devtools видно) по этому % отображаются другого размера, можно ли сделать чтобы не вкладывался? Если нет то переделаю верстку -->
+                </p>
+                </div>
+            </td>
+			<td class="informer3-blue__td">
+                <div class="informer3-blue__td-flexbox-small">
+                <div class="informer3-blue__box-small-icons">
+                <svg width="15%" height="15%">
+                <use xlink:href="#pressure"/>
+                </svg>
+                </div>
+                <p class="informer3-blue__text-small">
+                <span class="informer3__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?></span>
+                <span class="informer3__text-font">мм.рт.ст.</span>
+                </p>
+                </div>
+            </td>
+		</tr>
+		<?php
             for ($i=0; $i < 3; $i++) {?>
                 <tr class="informer3-blue__tr">
                     <td colspan="2" class="informer3-blue__td" >
@@ -171,7 +186,7 @@ foreach ($objects['0'] as $forecast) {
                             <span class="informer3__number-font informer2__number-font-bold"><?php echo $abstractData->getDateFromString($forecatsArr[$i]['dt'], 'd.m'); ?></span>
                         </p>
                     </td>
-                    <td class="informer3-blue__td">
+                    <td colspan="2" class="informer3-blue__td">
                         <p class="informer3-blue__text-middle">
                             <span class="informer3__number-font informer3-blue__temperature temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                         </p>
@@ -184,10 +199,7 @@ foreach ($objects['0'] as $forecast) {
                 </tr>
                 <?php
             }?>
-
-    <tr class="informer3-blue__background-1"></tr>
-
-    </tbody>
-    </table>
+	</tbody>
+    </table> 
 </div>
 </div>

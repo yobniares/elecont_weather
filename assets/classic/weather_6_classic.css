@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --dark-blue: #2A88CD;
   --light-blue: #7bb3dc;
@@ -44,6 +51,15 @@
   src: local("Geometria-bold"),
     url("./fonts/geometria/Geometria-Bold.woff") format("woff");
 }
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: "Geometria-Medium", Arial, Helvetica;
+  margin: 0;
+  padding: 0;
+}
 
 h3 {
   margin: 0;
@@ -56,53 +72,85 @@ p {
 }
 
 .informer6-table-box {
-  position: relative;
-  width: 40vw;
-  height: auto;
+  width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
 .informer6-blue__background {
-  position: sticky;
+  
+  position: relative;
   top: 0;
   left: 0;
-  width: 40vw;
-  height: 40vw;
+  width: 100vw;
+  height: 100vw;
+  box-sizing: border-box;
   border-radius: 50%;
   background-color: var(--dark-blue);
+  border: 5px solid var(--white);
+  z-index: 1;
+}
+
+.informer6-blue__background-1 { /* менять фон display: block/none; */
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 100vw;
+  height: 100vw;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: transparent;
+  background: url(./icons/112.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 5px solid var(--white);
   z-index: 2;
 }
 
+
+.informer6-blue__background-2 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-color: transparent;
+  background-image: url(./icons/hours.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+
+}
+
+.informer6-blue__background-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vw;
+  z-index: 4;
+}
+
 .informer6-blue {
-  display: inline-table;
-  position: sticky;
+  table-layout: fixed;
+  position: relative;
   top: 0;
   left: 0;
-  width: 40vw;
+  width: 100vw;
   font-family: "Geometria-Medium", Arial, Helvetica;
   text-align: center;
   color: var(--white);
   border-spacing: 0px;
   background-color: transparent;
+  padding: 0;
   margin: 0 auto;
-  z-index: 3;
-}
-
-.informer6-blue__background-1 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50vw;
-  height: 40vw;
-  background-color: transparent;
-  border-radius: 50%;
-  background-image: url("./icons/hours.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
+  z-index: 5;
 }
 
 .informer6-blue__td {
@@ -113,30 +161,21 @@ p {
   font-size: 80%;
 }
 
-.informer6-blue__box-small-icons {
-  width: 10%;
-}
 
-.informer6-blue__tr:nth-child(1) .informer6-blue__td:nth-child(1) {
-  padding-top: 15%;
-  word-break: break-word;
+.informer6-blue__tr:nth-child(1) .informer6-blue__td:nth-child(1) .informer6-blue__box-small-icons {
+  width: 13%;
+  height: 13%;
+  margin: 0 auto;
+  padding-top: 14%;
 }
 
 .informer6-blue__tr:nth-child(2) .informer6-blue__td:nth-child(1) {
-  padding-top: 20%;
+  padding-top: 33%;
 }
 
-.informer6-blue__tr:nth-child(3) .informer6-blue__td:nth-child(1) {
-  padding-top: 0;
-}
-
-.informer6-blue__box-middle-icons {
-  width: 30%;
+.informer6-blue__box-small-icons {
+  width: 20%;
   margin: 0 auto;
-}
-
-.informer6-blue__text-temp {
-  font-size: 475%;
 }
 
 .informer6-blue__text-day-week {
@@ -149,36 +188,59 @@ p {
 
 .informer6__number-font {
   font-family: "Play", Arial, Helvetica;
+  font-size: 4vw;
+  padding-top: 1%;
 }
 
 .informer6__text-font-light {
   font-family: "Geometria-Light", Arial, Helvetica;
 }
+.informer6__text-font {
+  font-size: 5vw;
+}
 
+.informer6__number-font.temp {
+  font-size: 10vw;
+}
 
 /* Custom js clock */
 #clock {
-  position: absolute;
-  left: 35%;
-  top: 9%;
+  position: relative;
+  width: 80vw;
+  height: 75%;
+  left: 0%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   list-style: none;
+  margin: 0 auto;
 }
 #sec, #min, #hour {
   position: absolute;
-  width: 30px;
-  height: 600px;
-  top: 0px;
-  left: 285px;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
 }
 #sec {
   background: url(img/sechand.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   z-index: 300;
 }
 #min {
   background: url(img/minhand.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   z-index: 200;
 }
 #hour {
   background: url(img/hourhand.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   z-index: 100;
 }

@@ -57,6 +57,10 @@
 
 <div class="informer6-table-box">
     <div class="informer6-grey__background">
+    <div class="informer6-grey__background-1"></div>
+    <div class="informer6-grey__background-2"></div>
+
+
         <table class="informer6-grey">
             <tbody>
 
@@ -104,7 +108,6 @@
                 </td>
             </tr>
 
-            <tr class="informer6-grey__background-1"></tr>
             </tbody>
         </table>
     </div>

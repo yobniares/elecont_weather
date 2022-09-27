@@ -91,7 +91,15 @@
 </svg>
 <div class="informer8__table-box">
 
+
+
     <div class="informer8-grey__background">
+
+        <div class="informer8-grey__background-1"></div>
+        <div class="informer8-grey__background-2"></div>
+        <div class="informer8-grey__background-3"></div>
+        <div class="informer8-grey__background-4"></div>
+
         <table class="informer8-grey">
             <tbody>
 
@@ -222,10 +230,6 @@
             }
             }?>
 
-            <tr class="informer8-grey__background-1"></tr>
-            <tr class="informer8-grey__background-2"></tr>
-            <tr class="informer8-grey__background-3"></tr>
-            <!-- <tr class="informer8-grey__background-4"></tr> -->
 
             </tbody>
         </table>

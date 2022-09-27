@@ -55,7 +55,7 @@
 <?php }?>
 
 <svg width="0" height="0" class="hidden">
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" id="wind-route">
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" id="wind-route">
         <path d="M16.5973 4.00005L10.2222 2.4063C10.2147 2.40444 10.2067 2.40497 10.1993 2.40337C10.1757 2.39859 10.1518 2.39567 10.1276 2.39408C10.1143 2.39302 10.1013 2.39195 10.088 2.39195C10.0609 2.39248 10.0341 2.39567 10.0073 2.39992C9.99717 2.40152 9.98708 2.40205 9.97752 2.40444C9.94272 2.41214 9.90845 2.42303 9.87525 2.43817C9.87339 2.43923 9.87153 2.4395 9.86967 2.4403C9.83674 2.4557 9.80486 2.4743 9.77485 2.49687L7.43738 4.25V2.54362C7.90567 2.33803 8.23425 1.87133 8.23425 1.32812C8.23425 0.595797 7.63846 0 6.90614 0C6.17383 0 5.57804 0.595797 5.57804 1.32812C5.57804 1.87133 5.90661 2.3383 6.3749 2.54362V15.9375H0.531242C0.237996 15.9375 0 16.1755 0 16.4688C0 16.762 0.237996 17 0.531242 17H13.281C13.5743 17 13.8123 16.762 13.8123 16.4688C13.8123 16.1755 13.5743 15.9375 13.281 15.9375H7.43738V6.375L9.77485 8.12813C9.80353 8.14964 9.83567 8.16133 9.86675 8.1762C9.88641 8.1855 9.90394 8.19958 9.92466 8.20648C9.97964 8.22481 10.0365 8.23437 10.0933 8.23437C10.0933 8.23437 10.0933 8.23437 10.0936 8.23437C10.0952 8.23437 10.0968 8.23384 10.0986 8.23384C10.1387 8.23331 10.1786 8.22827 10.2176 8.21897C10.2192 8.2187 10.2208 8.2187 10.2224 8.21844L16.5976 6.62469C16.834 6.56545 17 6.35322 17 6.10937V4.51562C16.9997 4.27151 16.8337 4.05902 16.5973 4.00005ZM9.56235 6.64036L7.79146 5.31223L9.56235 3.98411V6.64036ZM6.90614 1.06223C7.0525 1.06223 7.17176 1.18123 7.17176 1.32786C7.17176 1.47448 7.0525 1.59348 6.90614 1.59348C6.75979 1.59348 6.64052 1.47448 6.64052 1.32786C6.64052 1.18123 6.75979 1.06223 6.90614 1.06223ZM10.6248 3.60187L12.7498 4.13312V6.49108L10.6248 7.02233V3.60187ZM15.9373 5.6942L13.8123 6.22545V4.39875L15.9373 4.93V5.6942Z" ></path>
     </symbol>
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14" id="speed">
@@ -77,100 +77,112 @@
 
 <div class="informer5-table-box">
     <div class="informer5-neon__background">
+    <div class="informer5-neon__background-1"></div>
+
         <table class="informer5-neon">
 
             <tbody>
             <tr class="informer5-neon__tr">
-                <td  class="informer5-neon__td">
-                    <p class="informer5__number-font"><?php echo $abstractData->getFullDate(); ?></p>
+                <td colspan="2" class="informer5-neon__td">
+                    <p class="informer5__number-font informer5-neon__text-middle"><?php echo $abstractData->getFullDate(); ?></p>
                     <p class="informer5-neon__text-big informer5__number-font-time shine-neon"><?php echo $abstractData->getDate('H:i') ?></p>
-                    <p class="informer5-neon__day"><?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?></p>
-                    <p class="informer5-neon__day-week"><?php echo $abstractData->getWeek() ?></p>
+                    <p class="informer5-neon__day informer5-neon__text-middle"><?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?></p>
+                    <p class="informer5-neon__day-week informer5-neon__text-middle"><?php echo $abstractData->getWeek() ?></p>
                 </td>
-                <td class="informer5-neon__td">
+                <td colspan="2" class="informer5-neon__td">
                     <div class="informer5-neon__box-big-icons">
                         <?php echo $abstractData->getWeatherIcon($object, 'informer5-neon__box-big-icons-img', '', '', '100%', '100%') ?>
-                        <p class="informer5-neon__text-small"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
                     </div>
+                    <p class="informer5-neon__text-middle"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
                 </td>
-                <td class="informer5-neon__td">
-                    <p class="informer5-neon__city"><?php echo $object['name'] ?>, <?php echo $object['country'] ?></p>
-                    <p class="informer5-neon__text-big informer5__number-font shine-neon informer5__number-font-time temp"><?php echo $object['tempC'] ?>°</p>
-                    <p class="informer5-neon__text-small informer5__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?> м/с, <?php echo $object['rh'] ?>%</p>
-                    <p class="informer5-neon__text-small informer5__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм рт. ст.</p>
+                <td colspan="2" class="informer5-neon__td">
+                    <p class="informer5-neon__city informer5-neon__text-middle">
+                        <span class="informer5__text-font"><?php echo $object['name'] ?>,</span><br>
+                        <span class="informer5__text-font"><?php echo $object['country'] ?></span><br>
+                    </p>
+                    <p class="informer5-neon__text-big-1 informer5__number-font shine-neon informer5__number-font-time temp"><?php echo $object['tempC'] ?>°</p><br>
+                    <p class="informer5-neon__text-middle informer5__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?> м/с, <?php echo $object['rh'] ?>%</p><br>
+                    <p class="informer5-neon__text-middle informer5__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм рт. ст.</p>
                 </td>
             </tr>
 
             <tr class="informer5-neon__tr">
-                <td colspan="3" class="informer5-neon__td">
-                    <div class="informer5-neon__td-flexbox-cell">
+                <td colspan="2" class="informer5-neon__td">
+                    <div class="informer5-neon__td-flexbox-small">
+                        <div class="informer5-neon__box-small-icons">
+                            <svg width="50%" height="50%">
+                                <use xlink:href="#wind-route"/>
+                            </svg>
+                        </div>
+                        <p class="informer5-neon__text-small">
+                            <span class="informer5__text-font"><?php echo $abstractData->getWwindDirection($object['wd']) ?></span>
+                        </p>
+                    </div>
+                </td>
+                <td class="informer5-neon__td">
+                    <div class="informer5-neon__td-flexbox-small">
+                        <div class="informer5-neon__box-small-icons">
+                            <svg width="100%" height="100%">
+                                <use xlink:href="#speed"/>
+                            </svg>
+                        </div>
+                        <p class="informer5-neon__text-small">
+                            <span class="informer5__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?></span>
+                            <span class="informer5__text-font">м/с</span>
+                        </p>
+                    <!-- </div> -->
+                <!-- </td>
+                <td class="informer5-neon__td"> -->
+                    <!-- <div class="informer5-neon__td-flexbox-small"> -->
+                        <div class="informer5-neon__box-small-icons">
+                            <svg width="80%" height="80%">
+                                <use xlink:href="#grade"/>
+                            </svg>
+                        </div>
+                        <p class="informer5-neon__text-small">
+                            <span class="informer5__number-font"><?php echo $object['rh'] ?>°</span></p>
+                    </div>
+                </td>
+                <td class="informer5-neon__td">
+                    <div class="informer5-neon__td-flexbox-small">
+                        <div class="informer5-neon__box-small-icons">
+                            <svg width="25%" height="25%">
+                                <use xlink:href="#pressure"/>
+                            </svg>
+                        </div>
+                        <p class="informer5-neon__text-small">
+                            <span class="informer5__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?></span>
+                            <span class="informer5__text-font">мм рт. ст.</span>
+                        </p>
+                    </div>
 
-                        <div class="informer5-neon__td-flexbox-small">
-                            <div class="informer5-neon__box-small-icons" style="min-width: 15%;">
-                                <svg width="80%" height="80%"  viewBox="0 0 17 17">
-                                    <use xlink:href="#wind-route"/>
-                                </svg>
-                            </div>
-                            <p class="informer5-neon__text-small">
-                                <span class="informer5__text-font"><?php echo $abstractData->getWwindDirection($object['wd']) ?></span>
-                            </p>
+                </td>
+                <td colspan="2" class="informer5-neon__td">
+                <div class="informer5-neon__td-flexbox-small">
+                        <div class="informer5-neon__box-small-icons">
+                            <svg width="50%" height="50%">
+                                <use xlink:href="#wet"/>
+                            </svg>
                         </div>
-                        <div class="informer5-neon__td-flexbox-small">
-                            <div class="informer5-neon__box-small-icons">
-                                <svg width="120%" height="120%" viewBox="0 0 22 14">
-                                    <use xlink:href="#speed"/>
-                                </svg>
-                            </div>
-                            <p class="informer5-neon__text-small">
-                                <span class="informer5__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?></span>
-                                <span class="informer5__text-font">м/с</span>
-                            </p>
-                        </div>
-                        <div class="informer5-neon__td-flexbox-small">
-                            <div class="informer5-neon__box-small-icons">
-                                <svg width="100%" height="100%" viewBox="0 0 15 14">
-                                    <use xlink:href="#grade"/>
-                                </svg>
-                            </div>
-                            <p class="informer5-neon__text-small">
-                                <span class="informer5__number-font"><?php echo $object['rh'] ?>°</span></p>
-                        </div>
-                        <div class="informer5-neon__td-flexbox-small">
-                            <div class="informer5-neon__box-small-icons">
-                                <svg width="80%" height="80%" viewBox="0 0 8 13">
-                                    <use xlink:href="#wet"/>
-                                </svg>
-                            </div>
-                            <p class="informer5-neon__text-small">
-                                <span class="informer5__text-font">Влажность: <?php echo $object['rh'] ?>%</span>
-                            </p>
-                        </div>
-                        <div class="informer5-neon__td-flexbox-small">
-                            <div class="informer5-neon__box-small-icons">
-                                <svg width="40%" height="40%" viewBox="0 0 5 17">
-                                    <use xlink:href="#pressure"/>
-                                </svg>
-                            </div>
-                            <p class="informer5-neon__text-small">
-                                <span class="informer5__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?></span>
-                                <span class="informer5__text-font">мм рт. ст.</span>
-                            </p>
-                        </div>
+                        <p class="informer5-neon__text-small">
+                            <span class="informer5__text-font">Влажность:</span>
+                            <span class="informer5__number-font"><?php echo $object['rh'] ?>%</span>
+                        </p>
+                    </div>
                 </td>
             </tr>
             <tr class="informer5-neon__tr">
                 <?php for ($i=0; $i < 3; $i++) {?>
-                    <td class="informer5-neon__td">
+                    <td colspan="2" class="informer5-neon__td">
                         <p class="informer5-neon__text-big"><?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?></p>
                         <div class="informer5-neon__box-middle-icons">
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer5-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
-                        <p class="informer5-neon__temperature informer5__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</p>
+                        <p class="informer5-neon__text-big informer5-neon__temperature informer5__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</p>
                     </td>
                     <?php
                 }?>
             </tr>
-            <tr class="informer5-neon__background-1"></tr>
             </tbody>
         </table>
     </div>

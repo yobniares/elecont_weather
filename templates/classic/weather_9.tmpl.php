@@ -54,10 +54,17 @@ foreach ($objects['0'] as $forecast) {
 
 <div class="informer9-table-box">
     <div class="informer9-blue__background">
+    <div class="informer9-blue__background-1"></div> <!-- менять фон display: block/none; -->
+
+    <div class="informer9-blue__background-2"></div>
+    <div class="informer9-blue__background-3"></div>
+    <div class="informer9-blue__background-4"></div>
+
+
         <table class="informer9-blue">
             <tbody>
             <tr class="informer9-blue__tr">
-                <td class="informer9-blue__td" colspan="2" rowspan="2">
+                <td class="informer9-blue__td" colspan="3" rowspan="2">
                     <p class="informer9-blue__text-middle">
                         <span class="informer9__text-font informer9__number-font-light"><?php echo $mainObject['name'] ?></span>
                         <span class="informer9__text-font informer9__number-font-light"><?php echo $abstractData->getWeatherDescription($mainObject['icon']) ?></span>
@@ -66,8 +73,10 @@ foreach ($objects['0'] as $forecast) {
                         <?php echo $abstractData->getWeatherIcon($object, 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
                     </div>
                 </td>
-                <td class="informer9-blue__td" colspan="2" rowspan="2">
-                    <p class="informer9-blue__text-middle"><?php echo $abstractData->getDate('d.m.Y') ?></p>
+                <td class="informer9-blue__td" colspan="3" rowspan="2">
+                    <p class="informer9-blue__text-middle">
+                    <span class="informer9__text-font"> <?php echo $abstractData->getDate('d.m.Y') ?></span>
+                </p>
                     <p class="informer9-blue__text-middle">
                         <span class="informer9__text-font informer9__number-font-light"><?php echo $abstractData->getWeek() ?></span>
                     </p>
@@ -82,7 +91,7 @@ foreach ($objects['0'] as $forecast) {
             <tr>
             </tr>
             <tr class="informer9-blue__tr">
-                <td class="informer9-blue__td">
+                <td class="informer9-blue__td" colspan="2">
                     <div class="informer9-blue__box-middle-icons">
                         <?php echo $abstractData->getWeatherIcon($forecatsArr[0], 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
                     </div>
@@ -92,7 +101,7 @@ foreach ($objects['0'] as $forecast) {
                         <?php echo $abstractData->getWeatherIcon($forecatsArr[1], 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
                     </div>
                 </td>
-                <td class="informer9-blue__td">
+                <td class="informer9-blue__td" colspan="2">
                     <div class="informer9-blue__box-middle-icons">
                         <?php echo $abstractData->getWeatherIcon($forecatsArr[2], 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
                     </div>
@@ -100,7 +109,7 @@ foreach ($objects['0'] as $forecast) {
             </tr>
 
             <tr class="informer9-blue__tr">
-                <td class="informer9-blue__td">
+                <td class="informer9-blue__td" colspan="2">
                     <p class="informer9-blue__text-middle">
                         <span class="informer9__number-font"><?php echo $abstractData->getDateFromString($forecatsArr[0]['dt'], 'H:i'); ?></span>
                     </p>
@@ -111,7 +120,7 @@ foreach ($objects['0'] as $forecast) {
 
                     </p>
                 </td>
-                <td class="informer9-blue__td">
+                <td class="informer9-blue__td" colspan="2">
                     <p class="informer9-blue__text-middle">
                         <span class="informer9__number-font"><?php echo $abstractData->getDateFromString($forecatsArr[2]['dt'], 'H:i'); ?></span>
                     </p>
@@ -119,7 +128,7 @@ foreach ($objects['0'] as $forecast) {
             </tr>
 
             <tr class="informer9-blue__tr">
-                <td class="informer9-blue__td">
+                <td class="informer9-blue__td" colspan="2">
                     <p class="informer9-blue__text-big">
                         <span class="informer9__number-font temp"><?php echo $forecatsArr[0]['tempC']; ?>°C</span>
                     </p>
@@ -129,7 +138,7 @@ foreach ($objects['0'] as $forecast) {
                         <span class="informer9__number-font temp"><?php echo $forecatsArr[1]['tempC']; ?>°C</span>
                     </p>
                 </td>
-                <td class="informer9-blue__td">
+                <td class="informer9-blue__td" colspan="2">
                     <p class="informer9-blue__text-big">
                         <span class="informer9__number-font temp"><?php echo $forecatsArr[2]['tempC']; ?>°C</span>
                     </p>

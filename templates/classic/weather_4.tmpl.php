@@ -72,6 +72,8 @@ foreach ($objects['0'] as $forecast) {
 </svg>
 <div class="informer4-table-box">
     <div class="informer4-blue__background">
+    <div class="informer4-blue__background-1"></div> <!-- менять фон display: block/none; -->
+
         <table class="informer4-blue">
             <tbody>
             <tr class="informer4-blue__tr">
@@ -99,30 +101,28 @@ foreach ($objects['0'] as $forecast) {
                     </p>
                 </td>
             </tr>
-
-            <tr class="informer4-blue__background-1"></tr>
             <tr class="informer4-blue__tr">
-                <td class="informer4-blue__td">
+                <td colspan="2" class="informer4-blue__td">
                     <div class="informer4-blue__td-flexbox-small">
                         <div class="informer4-blue__box-small-icons">
-                            <svg  width="120%" height="120%" viewBox="0 0 16 16">
+                            <svg  width="50%" height="50%" viewBox="0 0 16 16">
                                 <use xlink:href="#wind-route-2"/>
                             </svg>
                         </div>
-                        <p class="informer4-blue__text-small">
+                        <p class="informer4-blue__text-small informer4__text-font-light">
                             <span class="informer4__text-font"><?php echo $abstractData->getWwindDirection($object['wd']) ?></span>
                         </p>
                     </div>
                 </td>
 
-                <td colspan="3" class="informer4-blue__td">
+                <td colspan="2" class="informer4-blue__td">
                     <div class="informer4-blue__td-flexbox-small">
                         <div class="informer4-blue__box-small-icons">
-                            <svg width="70%" height="70%" viewBox="0 0 16 16">
+                            <svg width="50%" height="50%" viewBox="0 0 16 16">
                                 <use xlink:href="#pressure-2"/>
                             </svg>
                         </div>
-                        <p class="informer4-blue__text-small">
+                        <p class="informer4-blue__text-small informer4__text-font-light">
                             <span class="informer4__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?></span>
                             <span class="informer4__text-font">мм рт. ст.</span>
                         </p>
@@ -133,11 +133,11 @@ foreach ($objects['0'] as $forecast) {
                 <td class="informer4-blue__td">
                     <div class="informer4-blue__td-flexbox-small">
                         <div class="informer4-blue__box-small-icons">
-                            <svg width="120%" height="120%" viewBox="0 0 12 18">
+                            <svg width="50%" height="50%" viewBox="0 0 12 18">
                                 <use xlink:href="#wet-3"/>
                             </svg>
                         </div>
-                        <p class="informer4-blue__text-small">
+                        <p class="informer4-blue__text-small informer4__text-font-light">
                             <span class="informer4__text-font">Влажность: <?php echo $object['rh'] ?>%</span>
                         </p>
                     </div>
@@ -145,11 +145,11 @@ foreach ($objects['0'] as $forecast) {
                 <td class="informer4-blue__td">
                     <div class="informer4-blue__td-flexbox-small">
                         <div class="informer4-blue__box-small-icons">
-                            <svg width="120%" height="120%" viewBox="0 0 16 16">
+                            <svg width="50%" height="50%" viewBox="0 0 16 16">
                                 <use xlink:href="#degree-b"/>
                             </svg>
                         </div>
-                        <p class="informer4-blue__text-small">
+                        <p class="informer4-blue__text-small informer4__text-font-light">
                             <span class="informer4__number-font"><?php echo $object['gmtMin'] ?>°</span>
                         </p>
                     </div>
@@ -157,11 +157,11 @@ foreach ($objects['0'] as $forecast) {
                 <td colspan="2" class="informer4-blue__td">
                     <div class="informer4-blue__td-flexbox-small">
                         <div class="informer4-blue__box-small-icons">
-                            <svg width="95%" height="95%" viewBox="0 0 16 16">
+                            <svg width="55%" height="55%" viewBox="0 0 16 16">
                                 <use xlink:href="#dpf-2"/>
                             </svg>
                         </div>
-                        <p class="informer4-blue__text-small">
+                        <p class="informer4-blue__text-small informer4__text-font-light">
                             <span class="informer4__text-font">dpF <?php echo $mainObject['dpF'] ?>°</span>
                         </p>
                     </div>

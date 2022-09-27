@@ -70,6 +70,11 @@
 </svg>
 <div class="informer4-table-box">
     <div class="informer4-grey__background">
+    <div class="informer4-grey__background-1"></div>
+    <div class="informer4-grey__background-2"></div>
+    <div class="informer4-grey__background-3"></div>
+
+
         <table class="informer4-grey">
             <tbody>
             <tr class="informer4-grey__tr">
@@ -98,12 +103,11 @@
                 </td>
             </tr>
 
-            <tr class="informer4-grey__background-1"></tr>
             <tr class="informer4-grey__tr">
-                <td class="informer4-grey__td">
+                <td colspan="2" class="informer4-grey__td">
                     <div class="informer4-grey__td-flexbox-small">
                         <div class="informer4-grey__box-small-icons">
-                            <svg  width="120%" height="120%" viewBox="0 0 16 16">
+                            <svg width="70%" height="70%" viewBox="0 0 16 16">
                                 <use xlink:href="#wind-route-2"/>
                             </svg>
                         </div>
@@ -113,7 +117,7 @@
                     </div>
                 </td>
 
-                <td colspan="3" class="informer4-grey__td">
+                <td colspan="2" class="informer4-grey__td">
                     <div class="informer4-grey__td-flexbox-small">
                         <div class="informer4-grey__box-small-icons">
                             <svg width="70%" height="70%" viewBox="0 0 16 16">
@@ -133,7 +137,7 @@
                 <td class="informer4-grey__td">
                     <div class="informer4-grey__td-flexbox-small">
                         <div class="informer4-grey__box-small-icons">
-                            <svg width="120%" height="120%" viewBox="0 0 12 18">
+                            <svg width="75%" height="75%" viewBox="0 0 12 18">
                                 <use xlink:href="#wet-3"/>
                             </svg>
                         </div>
@@ -146,7 +150,7 @@
                 <td class="informer4-grey__td">
                     <div class="informer4-grey__td-flexbox-small">
                         <div class="informer4-grey__box-small-icons">
-                            <svg width="120%" height="120%" viewBox="0 0 16 16">
+                            <svg width="70%" height="70%" viewBox="0 0 16 16">
                                 <use xlink:href="#degree-b"/>
                             </svg>
                         </div>
@@ -159,7 +163,7 @@
                 <td colspan="2" class="informer4-grey__td">
                     <div class="informer4-grey__td-flexbox-small">
                         <div class="informer4-grey__box-small-icons">
-                            <svg width="65%" height="65%" viewBox="0 0 16 16">
+                            <svg width="70%" height="70%" viewBox="0 0 16 16">
                                 <use xlink:href="#dpf-2"/>
                             </svg>
                         </div>
@@ -203,7 +207,6 @@
                     </td>
                 <?php }?>
             </tr>
-            <tr class="informer4-grey__background-2"></tr>
             </tbody>
         </table>
     </div>

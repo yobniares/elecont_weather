@@ -86,10 +86,12 @@
 <div class="informer8__table-box">
 
     <div class="informer8-neon__background">
+        <div class="informer8-neon__background-1"></div>
+
         <table class="informer8-neon">
             <tbody>
             <tr class="informer8-neon__tr">
-                <td colspan="5" class="informer8-neon__td">
+                <th colspan="6" class="informer8-neon__td">
                     <p class="informer8-neon__text-big">
                         <span class="informer8-neon__text-font"><?php echo $mainObject['name'] ?></span>
                         <span class="informer8-neon__text-font"><?php echo $abstractData->getDate('H:i') ?></span>
@@ -99,7 +101,7 @@
                         <span class="informer8-neon__text-font"> <?php echo $abstractData->getMonthFromString($time); ?></span>
                         <span class="informer8-neon__number-font"><?php echo $abstractData->getDate('Y') ?></span>
                     </p>
-                </td>
+                </th>
             </tr>
             <tr class="informer8-neon__tr">
                 <td  class="informer8-neon__td">
@@ -190,7 +192,6 @@
                     <?php
                 }?>
             </tr>
-            <tr class="informer8-neon__background-1"></tr>
 
             </tbody>
         </table>

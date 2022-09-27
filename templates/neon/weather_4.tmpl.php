@@ -73,6 +73,10 @@
 </svg>
 <div class="informer4-table-box">
     <div class="informer4-neon__background">
+    <div class="informer4-neon__background-1"></div>
+
+    <div class="informer4-neon__background-2"></div>
+
         <table class="informer4-neon">
             <tbody>
             <tr class="informer4-neon__tr">
@@ -101,10 +105,8 @@
                 </td>
             </tr>
 
-            <tr class="informer4-neon__background-1"></tr>
-
             <tr class="informer4-neon__tr">
-                <td class="informer4-neon__td">
+                <td colspan="2" class="informer4-neon__td">
                     <div class="informer4-neon__td-flexbox-small">
                         <div class="informer4-neon__box-small-icons">
                             <svg  width="50%" height="50%" viewBox="0 0 16 16">
@@ -117,7 +119,7 @@
                     </div>
                 </td>
 
-                <td colspan="3" class="informer4-neon__td">
+                <td colspan="2" class="informer4-neon__td">
                     <div class="informer4-neon__td-flexbox-small">
                         <div class="informer4-neon__box-small-icons">
                             <svg width="45%" height="45%" viewBox="0 0 16 16">
@@ -206,9 +208,6 @@
                     </td>
                 <?php }?>
             </tr>
-
-            <tr class="informer4-neon__background-2"></tr>
-
             </tbody>
         </table>
     </div>

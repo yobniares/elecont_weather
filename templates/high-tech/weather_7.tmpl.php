@@ -92,6 +92,16 @@
 <div class="informer7-table-box">
 
     <div class="informer7-grey__background">
+
+        <div class="informer7-grey__background-1"></div>
+        <div class="informer7-grey__background-2"></div>
+        <div class="informer7-grey__background-3"></div>
+        <div class="informer7-grey__background-4"></div>
+        <div class="informer7-grey__background-5"></div>
+        <div class="informer7-grey__background-6"></div>
+
+
+
         <table class="informer7-grey">
             <tbody>
             <tr class="informer7-grey__tr">
@@ -114,18 +124,18 @@
                 <td rowspan="3" class="informer7-grey__td">
                     <div class="informer7-grey__td-flexbox-small">
                         <div class="informer7-grey__box-small-icons">
-                            <svg viewBox="0 0 26 36">
+                            <svg viewBox="0 0 26 36" width="45%" height="45%">
                                 <use xlink:href="#place"/>
                             </svg>
                         </div>
                         <p class="informer7-grey__text-small">
-              <span><?php echo $object['name'] ?><span>
-              <span class="informer7-grey__text-font"><?php echo $abstractData->getWeatherDescription($object['icon']) ?><span>
+                            <span class="informer7-grey__text-font"><?php echo $object['name'] ?><span>
+                            <span class="informer7-grey__text-font"><?php echo $abstractData->getWeatherDescription($object['icon']) ?><span>
                         </p>
                     </div>
                     <div class="informer7-grey__td-flexbox-small">
                         <div class="informer7-grey__box-small-icons">
-                            <svg  viewBox="0 0 16 16">
+                            <svg  viewBox="0 0 16 16" width="50%" height="50%">
                                 <use xlink:href="#wind-route-2"/>
                             </svg>
                         </div>
@@ -137,7 +147,7 @@
                     </div>
                     <div class="informer7-grey__td-flexbox-small">
                         <div class="informer7-grey__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg viewBox="0 0 16 16" width="51%" height="51%">
                                 <use xlink:href="#grade"/>
                             </svg>
                         </div>
@@ -147,7 +157,7 @@
                     </div>
                     <div class="informer7-grey__td-flexbox-small">
                         <div class="informer7-grey__box-small-icons">
-                            <svg viewBox="0 0 12 18">
+                            <svg viewBox="0 0 12 18" width="50%" height="50%">
                                 <use xlink:href="#wet-3"/>
                             </svg>
                         </div>
@@ -158,7 +168,7 @@
                     </div>
                     <div class="informer7-grey__td-flexbox-small">
                         <div class="informer7-grey__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg viewBox="0 0 16 16" width="50%" height="50%">
                                 <use xlink:href="#pressure-2"/>
                             </svg>
                         </div>
@@ -170,7 +180,7 @@
                     </div>
                     <div class="informer7-grey__td-flexbox-small">
                         <div class="informer7-grey__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg viewBox="0 0 16 16" width="50%" height="50%">
                                 <use xlink:href="#dpf-2"/>
                             </svg>
                         </div>
@@ -221,10 +231,6 @@
                     }
                 }?>
 
-            <tr class="informer7-grey__background-1"></tr>
-            <tr class="informer7-grey__background-2"></tr>
-            <tr class="informer7-grey__background-3"></tr>
-            <tr class="informer7-grey__background-4"></tr>
 
             </tbody>
         </table>

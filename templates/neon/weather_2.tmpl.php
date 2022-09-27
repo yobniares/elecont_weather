@@ -72,35 +72,43 @@
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" id="wind-route-1">
         <path d="M25.3841 6.11772L15.6339 3.68022C15.6225 3.67738 15.6103 3.67819 15.5989 3.67575C15.5628 3.66844 15.5262 3.66397 15.4893 3.66153C15.4689 3.65991 15.449 3.65828 15.4287 3.65828C15.3873 3.65909 15.3463 3.66397 15.3052 3.67047C15.2898 3.67291 15.2744 3.67372 15.2597 3.67738C15.2065 3.68916 15.1541 3.70581 15.1033 3.72897C15.1005 3.73059 15.0976 3.731 15.0948 3.73222C15.0444 3.75578 14.9957 3.78422 14.9498 3.81875L11.3748 6.5V3.89025C12.091 3.57581 12.5936 2.86203 12.5936 2.03125C12.5936 0.911219 11.6823 0 10.5623 0C9.44232 0 8.53112 0.911219 8.53112 2.03125C8.53112 2.86203 9.03364 3.57622 9.74985 3.89025V24.375H0.812487C0.363994 24.375 0 24.739 0 25.1875C0 25.636 0.363994 26 0.812487 26H20.3122C20.7607 26 21.1247 25.636 21.1247 25.1875C21.1247 24.739 20.7607 24.375 20.3122 24.375H11.3748V9.75L14.9498 12.4313C14.9936 12.4642 15.0428 12.482 15.0903 12.5048C15.1204 12.519 15.1472 12.5405 15.1789 12.5511C15.263 12.5791 15.3499 12.5937 15.4369 12.5937C15.4369 12.5937 15.4369 12.5937 15.4373 12.5937C15.4397 12.5937 15.4421 12.5929 15.445 12.5929C15.5063 12.5921 15.5673 12.5844 15.627 12.5702C15.6294 12.5698 15.6318 12.5698 15.6343 12.5694L25.3845 10.1319C25.7461 10.0413 26 9.71669 26 9.34375V6.90625C25.9996 6.53291 25.7457 6.20791 25.3841 6.11772ZM14.6248 10.1558L11.9163 8.12459L14.6248 6.09334V10.1558ZM10.5623 1.62459C10.7862 1.62459 10.9686 1.80659 10.9686 2.03084C10.9686 2.25509 10.7862 2.43709 10.5623 2.43709C10.3385 2.43709 10.1561 2.25509 10.1561 2.03084C10.1561 1.80659 10.3385 1.62459 10.5623 1.62459ZM16.2497 5.50875L19.4997 6.32125V9.92753L16.2497 10.74V5.50875ZM24.3746 8.70878L21.1247 9.52128V6.7275L24.3746 7.54V8.70878Z" fill="#00FF19"></path>
     </symbol>
-    <symbol width="43" height="32" viewBox="0 0 43 32" id="sunset" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M42.153 21.7545H0V23.7545H42.153V21.7545Z" fill="#00FF19"/>
-        <path d="M42.153 25.7545H0V27.7545H42.153V25.7545Z" fill="#00FF19"/>
-        <path d="M42.153 29.7545H0V31.7545H42.153V29.7545Z" fill="#00FF19"/>
-        <path d="M13.8678 5.6828C14.9598 4.5908 16.2398 3.8078 17.6028 3.3088C17.3388 6.7238 18.4848 10.2268 21.0538 12.8578L21.0498 12.8618C21.0648 12.8778 21.0798 12.8888 21.0948 12.9028C21.1148 12.9228 21.1298 12.9438 21.1498 12.9638L21.1558 12.9578C23.7858 15.5278 27.2908 16.6728 30.7048 16.4088C30.4108 17.2128 30.0058 17.9808 29.5088 18.7058H31.8478C32.3068 17.8498 32.6718 16.9548 32.9158 16.0318C33.1078 15.3048 33.2348 14.5668 33.2928 13.8208C32.6188 14.0678 31.9268 14.2398 31.2248 14.3418C28.1398 14.7848 24.8908 13.8418 22.5098 11.4898C20.1678 9.1108 19.2298 5.8698 19.6718 2.7898C19.7728 2.0868 19.9448 1.3948 20.1908 0.721802C19.4458 0.779802 18.7078 0.906801 17.9808 1.0978C15.9558 1.6348 14.0398 2.6828 12.4548 4.2678C8.55078 8.1708 7.83578 14.0608 10.2878 18.7048H12.6138C9.91877 14.7038 10.3318 9.2198 13.8678 5.6828Z" fill="#00FF19"/>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 31" id="sunrise-black">
+        <path d="M33.3743 22.09H31.3743C31.3743 16.412 26.7553 11.792 21.0773 11.792C15.3993 11.792 10.7793 16.412 10.7793 22.09H8.7793C8.7793 15.309 14.2963 9.79199 21.0773 9.79199C27.8573 9.79199 33.3743 15.308 33.3743 22.09Z" fill="#03ff17"></path>
+        <path d="M22.0771 0H20.0771V7.403H22.0771V0Z" fill="#03ff17"></path>
+        <path d="M12.1147 10.7005L6.88 5.46582L5.4658 6.88002L10.7005 12.1147L12.1147 10.7005Z" fill="#03ff17"></path>
+        <path d="M36.6869 6.87904L35.2727 5.46484L30.038 10.6995L31.4522 12.1137L36.6869 6.87904Z" fill="#03ff17"></path>
+        <path d="M42.153 20.0767H34.75V22.0767H42.153V20.0767Z" fill="#03ff17"></path>
+        <path d="M7.402 20.0767H0V22.0767H7.402V20.0767Z" fill="#03ff17"></path>
+        <path d="M33.3743 24.5908H8.7793V26.5908H33.3743V24.5908Z" fill="#03ff17"></path>
+        <path d="M33.3743 28.75H8.7793V30.75H33.3743V28.75Z" fill="#03ff17"></path>
     </symbol>
-    <symbol width="43" height="32" viewBox="0 0 43 32" id="sunrise" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M33.3743 22.49H31.3743C31.3743 16.812 26.7553 12.192 21.0773 12.192C15.3993 12.192 10.7793 16.812 10.7793 22.49H8.7793C8.7793 15.709 14.2963 10.192 21.0773 10.192C27.8573 10.192 33.3743 15.708 33.3743 22.49Z" fill="#00FF19"/>
-        <path d="M22.0771 0.400024H20.0771V7.80302H22.0771V0.400024Z" fill="#00FF19"/>
-        <path d="M12.1147 11.1005L6.88 5.86584L5.4658 7.28004L10.7005 12.5147L12.1147 11.1005Z" fill="#00FF19"/>
-        <path d="M36.6869 7.27907L35.2727 5.86487L30.038 11.0995L31.4522 12.5137L36.6869 7.27907Z" fill="#00FF19"/>
-        <path d="M42.153 20.4767H34.75V22.4767H42.153V20.4767Z" fill="#00FF19"/>
-        <path d="M7.402 20.4767H0V22.4767H7.402V20.4767Z" fill="#00FF19"/>
-        <path d="M33.3743 24.9908H8.7793V26.9908H33.3743V24.9908Z" fill="#00FF19"/>
-        <path d="M33.3743 29.15H8.7793V31.15H33.3743V29.15Z" fill="#00FF19"/>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 32" id="sunset-black">
+        <path d="M42.153 21.3545H0V23.3545H42.153V21.3545Z" fill="#03ff17"></path>
+        <path d="M42.153 25.3545H0V27.3545H42.153V25.3545Z" fill="#03ff17"></path>
+        <path d="M42.153 29.3545H0V31.3545H42.153V29.3545Z" fill="#03ff17"></path>
+        <path d="M13.8678 5.28278C14.9598 4.19078 16.2398 3.40778 17.6028 2.90878C17.3388 6.32378 18.4848 9.82677 21.0538 12.4578L21.0498 12.4618C21.0648 12.4778 21.0798 12.4888 21.0948 12.5028C21.1148 12.5228 21.1298 12.5438 21.1498 12.5638L21.1558 12.5578C23.7858 15.1278 27.2908 16.2728 30.7048 16.0088C30.4108 16.8128 30.0058 17.5808 29.5088 18.3058H31.8478C32.3068 17.4498 32.6718 16.5548 32.9158 15.6318C33.1078 14.9048 33.2348 14.1668 33.2928 13.4208C32.6188 13.6678 31.9268 13.8398 31.2248 13.9418C28.1398 14.3848 24.8908 13.4418 22.5098 11.0898C20.1678 8.71078 19.2298 5.46977 19.6718 2.38977C19.7728 1.68677 19.9448 0.994777 20.1908 0.321777C19.4458 0.379777 18.7078 0.506777 17.9808 0.697777C15.9558 1.23478 14.0398 2.28277 12.4548 3.86777C8.55078 7.77077 7.83578 13.6608 10.2878 18.3048H12.6138C9.91877 14.3038 10.3318 8.81978 13.8678 5.28278Z" fill="#03ff17"></path>
+    </symbol>
+    <symbol viewBox="0 0 26 36" id="place" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#03ff17" d="M13 0.000189578C9.57287 -0.0185244 6.27862 1.34894 3.84103 3.80212C1.40345 6.2553 0.0219198 9.59353 0 13.0834C0 23.8594 13 36 13 36C13 36 26 23.789 26 13.0834C25.9781 9.59353 24.5965 6.2553 22.159 3.80212C19.7214 1.34894 16.4271 -0.0185244 13 0.000189578ZM13 20.7504C11.4999 20.7504 10.0336 20.2974 8.78629 19.4488C7.53903 18.6001 6.56691 17.3939 5.99285 15.9827C5.4188 14.5714 5.26859 13.0185 5.56124 11.5203C5.85389 10.0222 6.57625 8.64602 7.63696 7.5659C8.69767 6.48578 10.0491 5.75021 11.5203 5.45221C12.9916 5.1542 14.5166 5.30714 15.9024 5.8917C17.2883 6.47626 18.4729 7.46617 19.3063 8.73626C20.1396 10.0063 20.5845 11.4996 20.5845 13.0271C20.5772 15.0705 19.7749 17.0278 18.3533 18.4701C16.9317 19.9124 15.0068 20.7223 13 20.7222V20.7504Z"></path>
     </symbol>
 
 </svg>
 <div class="informer2-table-box">
     <div class="informer2-neon__background">
+    <div class="informer2-neon__background-1"></div>
+    <div class="informer2-neon__background-2"></div>
+
+
+        
 
         <table class="informer2-neon">
             <tbody>
             <tr class="informer2-neon__tr">
-                <td class="informer2-neon__td" colspan="2">
+                <td class="informer2-neon__td" colspan="4">
                     <div class="informer2-neon__td-flexbox-middle">
-                        <div class="informer2-neon__box-small-icons">
-                            <svg viewBox="0 0 43 31">
-                                <use xlink:href="#sunrise"/>
+                        <div class="informer2-neon__box-small-icons-1">
+                            <svg width="45%" height="45%">
+                                <use xlink:href="#sunrise-black"/>
                             </svg>
                         </div>
                         <p class="informer2-neon__text-small">
@@ -109,12 +117,10 @@
                         <p class="informer2-neon__text-middle">
                             <span class="informer2__number-font"><?php echo $abstractData->getGmtTime($object['gmtMin'], $mainObject['sr']); ?></span>
                         </p>
-                </td>
-                <td class="informer2-neon__td" colspan="2">
                     <div class="informer2-neon__td-flexbox-middle">
-                        <div class="informer2-neon__box-small-icons">
-                            <svg viewBox="0 0 43 32">
-                                <use xlink:href="#sunset"/>
+                        <div class="informer2-neon__box-small-icons-1">
+                            <svg width="45%" height="45%">
+                                <use xlink:href="#sunset-black"/>
                             </svg>
                         </div>
                         <p class="informer2-neon__text-small">
@@ -150,14 +156,22 @@
                     </div>
                 </td>
                 <td class="informer2-neon__td" colspan="3">
-                    <p class="informer2-neon__text-middle">
-                        <span class="informer2__number-font"><?php echo $abstractData->getDate('H:i') ?> GMT<?php echo '+' .$object['gmtMin']/60 ?></span>
-                    </p>
-                    <p class="informer2-neon__text-big">
-                        <span class="informer2__text-font"><?php echo $object['name'] ?></span>
-                    </p>
+                        <p class="informer2-neon__text-middle">
+                            <span class="informer2__number-font"><?php echo $abstractData->getDate('H:i') ?> GMT<?php echo '+' .$object['gmtMin']/60 ?></span>
+                        </p>
+                        <div class="informer2-neon__flexbox-place">
+                            <div class="informer2-neon__box-small-icons">
+                                <svg width="60%" height="60%">
+                                    <use xlink:href="#place"/>
+                                </svg>
+                            </div>
+
+                        <p class="informer2-neon__text-big">
+                            <span class="informer2__text-font"> <?php echo $object['name'] ?></span>
+                        </p>
+                    </div>
                     <p class="informer2-neon__text-small">
-                        <span class="informer2__text-font"><?php echo $object['country'] ?></span>
+                        <span class="informer2__text-font"> <?php echo $object['country'] ?></span>
                     </p>
                 </td>
             </tr>
@@ -237,7 +251,7 @@
                 <td class="informer2-neon__td" colspan="2" rowspan="2">
                     <div class="informer2-neon__td-flexbox-small">
                         <div class="informer2-neon__box-small-icons">
-                            <svg  viewBox="0 0 26 26">
+                            <svg  width="40%" height="40%">
                                 <use xlink:href="#wind-route-1"/>
                             </svg>
                         </div>
@@ -249,7 +263,7 @@
                     </div>
                     <div class="informer2-neon__td-flexbox-small">
                         <div class="informer2-neon__box-small-icons">
-                            <svg viewBox="0 0 7 26">
+                            <svg width="15%" height="15%">
                                 <use xlink:href="#pressure-1"/>
                             </svg>
 
@@ -257,12 +271,12 @@
                         <p class="informer2-neon__text-small">
                             <span class="informer2__text-font">Давление</span>
                             <span class="informer2__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?></span>
-                            <span class="informer2__text-font">мм рт. ст.</span>
+                            <span class="informer2__text-font">мм.рт.ст.</span>
                         </p>
                     </div>
                     <div class="informer2-neon__td-flexbox-small">
                         <div class="informer2-neon__box-small-icons">
-                            <svg viewBox="0 0 12 18">
+                            <svg width="30%" height="30%">
                                 <use xlink:href="#wet-1"/>
                             </svg>
                         </div>
@@ -275,7 +289,7 @@
                 <td class="informer2-neon__td" rowspan="2">
                     <div class="informer2-neon__td-flexbox-small">
                         <div class="informer2-neon__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg width="40%" height="40%">
                                 <use xlink:href="#dpf-2"/>
                             </svg>
                         </div>
@@ -286,7 +300,7 @@
                     </div>
                     <div class="informer2-neon__td-flexbox-small">
                         <div class="informer2-neon__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg width="40%" height="40%">
                                 <use xlink:href="#degree-2"/>
                             </svg>
                         </div>
@@ -296,7 +310,7 @@
                     </div>
                     <div class="informer2-neon__td-flexbox-small">
                         <div class="informer2-neon__box-small-icons">
-                            <svg viewBox="0 0 33 24">
+                            <svg width="40%" height="40%">
                                 <use xlink:href="#windspeed-s-1"/>
                             </svg>
                         </div>
@@ -356,7 +370,6 @@
                     </p>
                 </td>
             </tr>
-            <tr class="informer2-neon__background-1"></tr>
 
             </tbody>
         </table>

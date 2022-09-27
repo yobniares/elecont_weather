@@ -85,6 +85,17 @@ foreach ($objects['0'] as $forecast) {
 <div class="informer7-table-box">
 
     <div class="informer7-blue__background">
+    
+    <img class="informer7-blue__background-1"src="./icons/112.svg" width="" height="" alt=""> <!-- фон менять тут -->
+
+
+    <div class="informer7-blue__background-2"></div>
+    <div class="informer7-blue__background-3"></div>
+    <div class="informer7-blue__background-4"></div>
+    <div class="informer7-blue__background-5"></div>
+
+
+
         <table class="informer7-blue">
             <tbody>
             <tr class="informer7-blue__tr">
@@ -107,30 +118,30 @@ foreach ($objects['0'] as $forecast) {
                 <td class="informer7-blue__td">
                     <div class="informer7-blue__td-flexbox-small">
                         <div class="informer7-blue__box-small-icons">
-                            <svg viewBox="0 0 26 36">
+                            <svg viewBox="0 0 26 36" width="45%" height="45%">
                                 <use xlink:href="#place"/>
                             </svg>
                         </div>
                         <p class="informer7-blue__text-small">
-                <span><?php echo $object['name'] ?><span>
-                <span class="informer7-blue__text-font"><?php echo $abstractData->getWeatherDescription($object['icon']) ?><span>
+                            <span class="informer7-blue__text-font"><?php echo $object['name'] ?><span>
+                            <span class="informer7-blue__text-font"><?php echo $abstractData->getWeatherDescription($object['icon']) ?><span>
                         </p>
                     </div>
                     <div class="informer7-blue__td-flexbox-small">
                         <div class="informer7-blue__box-small-icons">
-                            <svg  viewBox="0 0 16 16">
+                            <svg  viewBox="0 0 16 16" width="50%" height="50%">
                                 <use xlink:href="#wind-route-2"/>
                             </svg>
                         </div>
                         <p class="informer7-blue__text-small">
                             <span class="informer7-blue__text-font"><?php echo $abstractData->getWwindDirection($object['wd']) ?>:</span>
-                            <span class="informer7-blue__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?>
+                            <span class="informer7-blue__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?> </span>
                             <span class="informer7-blue__text-font">м/с</span>
                         </p>
                     </div>
                     <div class="informer7-blue__td-flexbox-small">
                         <div class="informer7-blue__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg viewBox="0 0 16 16" width="51%" height="51%">
                                 <use xlink:href="#grade"/>
                             </svg>
                         </div>
@@ -140,7 +151,7 @@ foreach ($objects['0'] as $forecast) {
                     </div>
                     <div class="informer7-blue__td-flexbox-small">
                         <div class="informer7-blue__box-small-icons">
-                            <svg viewBox="0 0 12 18">
+                            <svg viewBox="0 0 12 18" width="50%" height="50%">
                                 <use xlink:href="#wet-3"/>
                             </svg>
                         </div>
@@ -151,7 +162,7 @@ foreach ($objects['0'] as $forecast) {
                     </div>
                     <div class="informer7-blue__td-flexbox-small">
                         <div class="informer7-blue__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg viewBox="0 0 16 16" width="50%" height="50%">
                                 <use xlink:href="#pressure-2"/>
                             </svg>
                         </div>
@@ -163,7 +174,7 @@ foreach ($objects['0'] as $forecast) {
                     </div>
                     <div class="informer7-blue__td-flexbox-small">
                         <div class="informer7-blue__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg viewBox="0 0 16 16" width="50%" height="50%">
                                 <use xlink:href="#dpf-2"/>
                             </svg>
                         </div>
@@ -188,8 +199,6 @@ foreach ($objects['0'] as $forecast) {
                     <?php
                 }?>
             </tr>
-            <tr class="informer7-blue__background-1"></tr>
-
             </tbody>
         </table>
     </div>

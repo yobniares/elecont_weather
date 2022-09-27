@@ -90,17 +90,24 @@
         <path d="M45.5258 27.7745H16.748V31.7212H45.5258C46.7726 31.7266 47.9667 32.2243 48.8483 33.1059C49.73 33.9875 50.2276 35.1816 50.233 36.4284C50.233 36.6751 50.233 36.9012 50.233 37.1478C50.0672 38.2586 49.508 39.2728 48.6573 40.006C47.8065 40.7391 46.7208 41.1424 45.5978 41.1424C44.4747 41.1424 43.389 40.7391 42.5383 40.006C41.6875 39.2728 41.1283 38.2586 40.9625 37.1478H36.8514C37.0343 39.3089 38.022 41.3225 39.6189 42.79C41.2159 44.2575 43.3056 45.0719 45.4744 45.0719C47.6432 45.0719 49.733 44.2575 51.3299 42.79C52.9269 41.3225 53.9146 39.3089 54.0975 37.1478C54.0975 36.9012 54.0975 36.6751 54.0975 36.4284C54.1029 35.2904 53.8828 34.1627 53.4498 33.1103C53.0169 32.0579 52.3796 31.1017 51.575 30.297C50.7703 29.4924 49.8141 28.8551 48.7617 28.4222C47.7093 27.9892 46.5816 27.7691 45.4436 27.7745H45.5258Z" fill="black"></path>
         <path d="M60.6547 0.826172C59.0711 0.82617 57.5031 1.13842 56.0403 1.74505C54.5775 2.35168 53.2487 3.24078 52.1299 4.36149C51.0111 5.48221 50.1243 6.81253 49.5202 8.27634C48.916 9.74015 48.6064 11.3087 48.6092 12.8923C48.6102 13.8756 48.7275 14.8554 48.9586 15.8112H53.0697C52.6896 14.885 52.4941 13.8934 52.4942 12.8923C52.4942 11.2954 52.9674 9.73437 53.8542 8.40635C54.7409 7.07832 56.0014 6.04289 57.4763 5.43086C58.9512 4.81883 60.5745 4.65765 62.1409 4.96769C63.7074 5.27773 65.1469 6.04509 66.2775 7.17281C67.4081 8.30053 68.1791 9.73803 68.4931 11.3037C68.8071 12.8694 68.65 14.493 68.0418 15.9695C67.4335 17.446 66.4013 18.7091 65.0755 19.5992C63.7497 20.4893 62.1899 20.9665 60.593 20.9706H0.981934V24.9173H60.593C63.277 24.9232 65.8856 24.0294 68.002 22.3787C70.1184 20.7281 71.6206 18.4158 72.2686 15.8112C72.5167 14.8581 72.6411 13.8771 72.6386 12.8923C72.6387 9.70634 71.3787 6.64968 69.1336 4.38919C66.8885 2.1287 63.8406 0.847882 60.6547 0.826172Z" fill="black"></path>
     </symbol>
+    <symbol viewBox="0 0 26 36" id="place" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#111111" d="M13 0.000189578C9.57287 -0.0185244 6.27862 1.34894 3.84103 3.80212C1.40345 6.2553 0.0219198 9.59353 0 13.0834C0 23.8594 13 36 13 36C13 36 26 23.789 26 13.0834C25.9781 9.59353 24.5965 6.2553 22.159 3.80212C19.7214 1.34894 16.4271 -0.0185244 13 0.000189578ZM13 20.7504C11.4999 20.7504 10.0336 20.2974 8.78629 19.4488C7.53903 18.6001 6.56691 17.3939 5.99285 15.9827C5.4188 14.5714 5.26859 13.0185 5.56124 11.5203C5.85389 10.0222 6.57625 8.64602 7.63696 7.5659C8.69767 6.48578 10.0491 5.75021 11.5203 5.45221C12.9916 5.1542 14.5166 5.30714 15.9024 5.8917C17.2883 6.47626 18.4729 7.46617 19.3063 8.73626C20.1396 10.0063 20.5845 11.4996 20.5845 13.0271C20.5772 15.0705 19.7749 17.0278 18.3533 18.4701C16.9317 19.9124 15.0068 20.7223 13 20.7222V20.7504Z"></path>
+    </symbol>
 </svg>
 <div class="informer2-table-box">
     <div class="informer2-grey__background">
+    <div class="informer2-grey__background-1"></div>
+    <div class="informer2-grey__background-2"></div> <!-- фон менять тут display: block/none -->
+
+
 
         <table class="informer2-grey">
             <tbody>
             <tr class="informer2-grey__tr">
-                <td class="informer2-grey__td" colspan="2">
+                <td class="informer2-grey__td" colspan="4">
                     <div class="informer2-grey__td-flexbox-middle">
-                        <div class="informer2-grey__box-small-icons">
-                            <svg viewBox="0 0 43 31">
+                        <div class="informer2-grey__box-small-icons-1">
+                            <svg width="45%" height="45%">
                                 <use xlink:href="#sunrise-black"/>
                             </svg>
                         </div>
@@ -110,11 +117,9 @@
                         <p class="informer2-grey__text-middle">
                             <span class="informer2__number-font"><?php echo $abstractData->getGmtTime($object['gmtMin'], $mainObject['sr']); ?></span>
                         </p>
-                </td>
-                <td class="informer2-grey__td" colspan="2">
                     <div class="informer2-grey__td-flexbox-middle">
-                        <div class="informer2-grey__box-small-icons">
-                            <svg viewBox="0 0 43 32">
+                        <div class="informer2-grey__box-small-icons-1">
+                            <svg width="45%" height="45%">
                                 <use xlink:href="#sunset-black"/>
                             </svg>
                         </div>
@@ -151,14 +156,22 @@
                     </div>
                 </td>
                 <td class="informer2-grey__td" colspan="3">
-                    <p class="informer2-grey__text-middle">
-                        <span class="informer2__number-font"><?php echo $abstractData->getDate('H:i') ?> GMT<?php echo '+' .$object['gmtMin']/60 ?></span>
-                    </p>
-                    <p class="informer2-grey__text-big">
-                        <span class="informer2__text-font"><?php echo $object['name'] ?></span>
-                    </p>
+                        <p class="informer2-grey__text-middle">
+                            <span class="informer2__number-font"><?php echo $abstractData->getDate('H:i') ?> GMT<?php echo '+' .$object['gmtMin']/60 ?></span>
+                        </p>
+                        <div class="informer2-grey__flexbox-place">
+                            <div class="informer2-grey__box-small-icons">
+                                <svg width="60%" height="60%">
+                                    <use xlink:href="#place"/>
+                                </svg>
+                            </div>
+
+                        <p class="informer2-grey__text-big">
+                            <span class="informer2__text-font"> <?php echo $object['name'] ?></span>
+                        </p>
+                    </div>
                     <p class="informer2-grey__text-small">
-                        <span class="informer2__text-font"><?php echo $object['country'] ?></span>
+                        <span class="informer2__text-font"> <?php echo $object['country'] ?></span>
                     </p>
                 </td>
             </tr>
@@ -237,7 +250,7 @@
                 <td class="informer2-grey__td" colspan="2" rowspan="2">
                     <div class="informer2-grey__td-flexbox-small">
                         <div class="informer2-grey__box-small-icons">
-                            <svg  viewBox="0 0 26 26">
+                            <svg  width="95%" height="95%">
                                 <use xlink:href="#wind-route"/>
                             </svg>
                         </div>
@@ -249,7 +262,7 @@
                     </div>
                     <div class="informer2-grey__td-flexbox-small">
                         <div class="informer2-grey__box-small-icons">
-                            <svg viewBox="0 0 7 26">
+                            <svg  width="20%" height="20%">
                                 <use xlink:href="#pressure-b-2"/>
                             </svg>
 
@@ -257,12 +270,12 @@
                         <p class="informer2-grey__text-small">
                             <span class="informer2__text-font">Давление</span>
                             <span class="informer2__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?></span>
-                            <span class="informer2__text-font">мм рт. ст.</span>
+                            <span class="informer2__text-font">мм.рт.ст.</span>
                         </p>
                     </div>
                     <div class="informer2-grey__td-flexbox-small">
                         <div class="informer2-grey__box-small-icons">
-                            <svg viewBox="0 0 12 18">
+                            <svg width="45%" height="45%">
                                 <use xlink:href="#wet-1-b"/>
                             </svg>
 
@@ -276,7 +289,7 @@
                 <td class="informer2-grey__td" rowspan="2">
                     <div class="informer2-grey__td-flexbox-small">
                         <div class="informer2-grey__box-small-icons">
-                            <svg viewBox="0 0 8 12">
+                            <svg width="40%" height="40%">
                                 <use xlink:href="#dpf-black"/>
                             </svg>
                         </div>
@@ -287,7 +300,7 @@
                     </div>
                     <div class="informer2-grey__td-flexbox-small">
                         <div class="informer2-grey__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg width="70%" height="70%">
                                 <use xlink:href="#grade-b"/>
                             </svg>
                         </div>
@@ -297,7 +310,7 @@
                     </div>
                     <div class="informer2-grey__td-flexbox-small">
                         <div class="informer2-grey__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg width="70%" height="70%">
                                 <use xlink:href="#wet-b-2"/>
                             </svg>
                         </div>
@@ -357,7 +370,6 @@
                     </p>
                 </td>
             </tr>
-            <tr class="informer2-grey__background-1"></tr>
 
             </tbody>
         </table>

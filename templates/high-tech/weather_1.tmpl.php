@@ -67,6 +67,11 @@
 </svg>
 <div class="table-box">
     <div class="informer1-grey__background">
+        <div class="informer1-grey__background-1"></div>
+        <div class="informer1-grey__background-2"></div>
+        <div class="informer1-grey__background-3"></div> <!-- фон менять тут display: block/none -->
+
+
         <table class="informer1-grey">
             <tbody>
             <tr class="informer1-grey__tr">
@@ -94,7 +99,7 @@
             <tr class="informer1-grey__tr">
                 <td class="informer1-grey__td informer1-grey__td-icons" >
                     <div class="informer1-grey__box-big-icons">
-                        <?php echo $abstractData->getWeatherIcon($object, 'informer1-grey__box-big-icons-img', '', '', '80%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer1-grey__box-big-icons-img', '', '', '100%', '100%') ?>
                     </div>
                 </td>
             </tr>
@@ -119,7 +124,7 @@
                 <td class="informer1-grey__td">
                     <div class="informer1-grey__td-flexbox-small">
                         <div class="informer1-grey__box-small-icons">
-                            <svg viewBox="0 0 26 26" >
+                            <svg width="90%" height="90%">
                                 <use xlink:href="#wind-route-b-2"/>
                             </svg>
                         </div>
@@ -134,7 +139,7 @@
                 <td class="informer1-grey__td">
                     <div class="informer1-grey__td-flexbox-small">
                         <div class="informer1-grey__box-small-icons">
-                            <svg viewBox="0 0 33 24">
+                            <svg width="100%" height="100%">
                                 <use xlink:href="#wind-speed-b"/>
                             </svg>
                         </div>
@@ -150,7 +155,7 @@
                 <td class="informer1-grey__td">
                     <div class="informer1-grey__td-flexbox-small">
                         <div class="informer1-grey__box-small-icons">
-                            <svg viewBox="0 0 16 16">
+                            <svg width="70%" height="70%">
                                 <use xlink:href="#grade-b"/>
                             </svg>
                         </div>
@@ -165,7 +170,7 @@
                 <td class="informer1-grey__td">
                     <div class="informer1-grey__td-flexbox-small">
                         <div class="informer1-grey__box-small-icons">
-                            <svg viewBox="0 0 12 18">
+                            <svg width="40%" height="40%">
                                 <use xlink:href="#wet-b-2"/>
                             </svg>
                         </div>
@@ -181,14 +186,14 @@
                 <td class="informer1-grey__td">
                     <div class="informer1-grey__td-flexbox-small">
                         <div class="informer1-grey__box-small-icons" >
-                            <svg viewBox="0 0 7 26">
+                            <svg width="25%" height="25%">
                                 <use xlink:href="#pressure-b-2"/>
                             </svg>
                         </div>
                         <p class="informer1-grey__text-small">
                             <span class="informer1__text-font informer1__text-font-light">Давление:</span>
                             <span class="informer1__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?></span>
-                            <span class="informer1__text-font informer1__text-font-light">мм. рт. ст.</span>
+                            <span class="informer1__text-font informer1__text-font-light">мм.рт.ст.</span>
                         </p>
                     </div>
                 </td>
@@ -221,8 +226,7 @@
                 </tr>
                 <?php
             }?>
-            <tr class="informer1-grey__background-1">
-            </tr>
+
 
             </tbody>
         </table>

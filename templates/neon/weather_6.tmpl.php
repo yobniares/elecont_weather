@@ -58,6 +58,8 @@
 <div class="informer6-table-box">
 
     <div class="informer6-neon__background">
+    <div class="informer6-neon__background-1"></div>
+
         <table class="informer6-neon">
             <tbody>
 
@@ -95,8 +97,6 @@
                     </div>
                 </td>
             </tr>
-            <tr class="informer6-neon__background-1"></tr>
-
             </tbody>
         </table>
     </div>

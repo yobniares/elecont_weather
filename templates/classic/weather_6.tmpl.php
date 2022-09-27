@@ -85,34 +85,28 @@ foreach ($objects['0'] as $forecast) {
     });
 </script>
 
-
-<div class="view-6-classic-circle" id="clock">
-    <li id="sec"></li>
-    <li id="hour"></li>
-    <li id="min"></li>
-</div>
-
 <div class="informer6-table-box">
     <div class="informer6-blue__background">
-        <div class="informer6-blue__background-1"></div>
+        <div class="informer6-blue__background-1"></div> <!-- менять фон display: block/none; -->
+        <div class="informer6-blue__background-2"></div>
+
+        <div class="informer6-blue__background-3">
+            <div class="view-6-classic-circle" id="clock">
+                <li id="sec"></li>
+                <li id="hour"></li>
+                <li id="min"></li>
+            </div>
+        </div>
         <table class="informer6-blue">
             <tbody>
             <tr class="informer6-blue__tr">
                 <td class="informer6-blue__td">
-                    <div class="informer6-blue__box-middle-icons">
+                    <div class="informer6-blue__box-small-icons">
                         <?php echo $abstractData->getWeatherIcon($object, 'informer6-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
                         <div class="view-6-classic-arrow-small">
                         </div>
                         <div class="view-6-classic-arrow-big">
                         </div>
-                    </div>
-                </td>
-            </tr>
-
-            <tr class="informer6-blue__tr">
-                <td class="informer6-blue__td">
-                    <div class="informer6-blue__box-middle-icons">
-                        <!--<img width="100%" height="100%" class="informer6-blue__box-middle-icons-img" src="" alt="Нет иконки стрелок">-->
                     </div>
                 </td>
             </tr>
@@ -127,9 +121,7 @@ foreach ($objects['0'] as $forecast) {
                     <p class="informer6-blue__text-day-week">
                         <span class="informer6__text-font informer6__text-font-light"><?php echo $abstractData->getNameOfTheDate($time = date('d.m', time())); ?>,</span>
                     </p>
-                    <p class="informer6-blue__text-day">
-                        <span class="informer6__number-font"><?php echo $abstractData->getDate('d.m.Y') ?></span>
-                    </p>
+                    <p class="informer6__number-font"><?php echo $abstractData->getDate('d.m.Y') ?></p>
                 </td>
             </tr>
             </tbody>

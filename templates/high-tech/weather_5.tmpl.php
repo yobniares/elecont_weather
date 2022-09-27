@@ -56,27 +56,32 @@
 <div class="informer5-table-box">
 
     <div class="informer5-grey__background">
+    <div class="informer5-grey__background-1"></div>
+
         <table class="informer5-grey">
 
             <tbody>
             <tr class="informer5-grey__tr">
-                <td  class="informer5-grey__td">
-                    <p class="informer5__number-font"><?php echo $abstractData->getFullDate(); ?></p>
+                <td class="informer5-grey__td">
+                    <p class="informer5__number-font informer5-grey__text-middle"><?php echo $abstractData->getFullDate(); ?></p>
                     <p class="informer5-grey__text-big informer5__number-font-time"><?php echo $abstractData->getDate('H:i') ?></p>
-                    <p class="informer5-grey__day"><?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?></p>
-                    <p class="informer5-grey__day-week"><?php echo $abstractData->getWeek() ?></p>
+                    <p class="informer5-grey__day informer5-grey__text-middle"><?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?></p>
+                    <p class="informer5-grey__day-week informer5-grey__text-middle"><?php echo $abstractData->getWeek() ?></p>
                 </td>
                 <td class="informer5-grey__td">
                     <div class="informer5-grey__box-big-icons">
                         <?php echo $abstractData->getWeatherIcon($object, 'informer5-grey__box-big-icons-img', '', '', '100%', '100%') ?>
-                        <p class="informer5-grey__text-small"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
                     </div>
+                    <p class="informer5-grey__text-middle"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
                 </td>
                 <td class="informer5-grey__td">
-                    <p class="informer5-grey__city"><?php echo $object['name'] ?>, <?php echo $object['country'] ?></p>
-                    <p class="informer5-grey__text-big informer5__number-font temp"><?php echo $object['tempC'] ?>°</p>
-                    <p class="informer5-grey__text-small informer5__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?> м/с, <?php echo $object['rh'] ?>%</p>
-                    <p class="informer5-grey__text-small informer5__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм рт. ст.</p>
+                    <p class="informer5-grey__city informer5-grey__text-middle">
+                        <span class="informer5__text-font"><?php echo $object['name'] ?>,</span><br>
+                        <span class="informer5__text-font"><?php echo $object['country'] ?></span><br>
+                    </p>
+                    <p class="informer5-grey__text-big-1 informer5__number-font informer5__number-font-time temp"><?php echo $object['tempC'] ?>°</p><br>
+                    <p class="informer5-grey__text-middle informer5__number-font"><?php echo $abstractData->getMetersPerSecond($object['ws']) ?> м/с, <?php echo $object['rh'] ?>%</p><br>
+                    <p class="informer5-grey__text-middle informer5__number-font"><?php echo $abstractData->getMillimetersOfMercury($object['psl']) ?> мм рт. ст.</p>
                 </td>
             </tr>
 
@@ -87,12 +92,11 @@
                         <div class="informer5-grey__box-middle-icons">
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer5-grey__box-middle-icons-img', '', '', '100%', '100%') ?>
                         </div>
-                        <p class="informer5-grey__temperature informer5__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</p>
+                        <p class="informer5-grey__text-big informer5-grey__temperature informer5__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</p>
                     </td>
                     <?php
                 }?>
             </tr>
-            <tr class="informer5-grey__background-1"></tr>
             </tbody>
         </table>
     </div>
