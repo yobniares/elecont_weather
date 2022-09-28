@@ -397,6 +397,43 @@ p {
   margin: 0 auto;
   z-index: 1;
 }
+
+.informer5-blue__background-1 {
+  position: absolute;
+  top: -2%;
+  left: -1%;
+  width: 102%;
+  height: 56%;
+  object-fit: cover;
+  border: 2vw solid var(--dark-blue);
+  box-sizing: border-box;
+  border-top-left-radius: 4vw;
+  border-top-right-radius: 4vw;
+  border-bottom-left-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.informer5-blue__background-2 {
+  position: absolute;
+  top: -2%;
+  left: -1%;
+  width: 102%;
+  height: 56%;
+  object-fit: cover;
+  object-position: center;
+  background-color: var(--light-blue);
+  border: 2vw solid var(--dark-blue);
+  box-sizing: border-box;
+  border-top-left-radius: 4vw;
+  border-top-right-radius: 4vw;
+  border-bottom-left-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+  margin: 0 auto;
+  z-index: -1;
+}
+
 .informer5-blue {
   table-layout: fixed;
   position: relative;
@@ -419,10 +456,14 @@ p {
   font-size: 2vw;
 }
 .informer5-blue__tr .informer5-blue__td {
-  background-color: rgba(123, 179, 220, 1);
   padding: 2%;
   border: 3px solid var(--dark-blue);
 }
+
+.informer5-blue__tr:nth-child(2) .informer5-blue__td {
+  background-color: var(--light-blue);
+}
+
 
 .informer5-blue__tr:nth-child(1) .informer5-blue__td:last-child .informer5-blue__text-big {
   font-size: 200%;
@@ -430,19 +471,19 @@ p {
 
 .informer5-blue__tr:nth-child(1) .informer5-blue__td:first-child,
 .informer5-blue__tr:nth-child(2) .informer5-blue__td:first-child {
-  border-top-left-radius: 20%;
+  border-top-left-radius: 4vw;
 }
 .informer5-blue__tr:nth-child(1) .informer5-blue__td:last-child,
 .informer5-blue__tr:nth-child(2) .informer5-blue__td:last-child {
-  border-top-right-radius: 20%;
+  border-top-right-radius: 4vw;
 }
 .informer5-blue__tr:nth-child(1) .informer5-blue__td:first-child,
 .informer5-blue__tr:nth-child(2) .informer5-blue__td:first-child {
-  border-bottom-left-radius: 20%;
+  border-bottom-left-radius: 4vw;
 }
 .informer5-blue__tr:nth-child(1) .informer5-blue__td:last-child,
 .informer5-blue__tr:nth-child(2) .informer5-blue__td:last-child {
-  border-bottom-right-radius: 20%;
+  border-bottom-right-radius: 4vw;
 }
 .informer5-blue__box-middle-icons {
   width: 40%;

@@ -419,7 +419,7 @@ p {
   z-index: 1;
 }
 
-.informer9-blue__background-1 { /* менять фон display: block/none; */
+.informer9-blue__background-1 {
   display: block;
   position: absolute;
   top: 0;
@@ -427,10 +427,9 @@ p {
   width: 100%;
   height: 100%;
   background-color: transparent; 
-  background: url(./icons/112.svg);
-  background-position: top center;
+  object-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   box-sizing: border-box;
   margin: 0 auto;
   z-index: 1;

@@ -90,10 +90,13 @@ foreach ($objects['0'] as $forecast) {
         <div class="informer8-blue__background-5"></div>
         <div class="informer8-blue__background-3"></div>
         <div class="informer8-blue__background-4"></div>
-        <div class="informer8-blue__background-6"></div> <!-- менять фон display: block/none; -->
+        
+        <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer8-blue__background-6"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+    <?php }?>
+
         <div class="informer8-blue__background-2"></div>
-
-
 
         <table class="informer8-blue">
             <tbody>

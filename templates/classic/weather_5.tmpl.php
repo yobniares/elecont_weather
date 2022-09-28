@@ -63,6 +63,14 @@ foreach ($objects['0'] as $forecast) {
 
 <div class="informer5-table-box">
     <div class="informer5-blue__background">
+        <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer5-blue__background-1"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+    <?php }else{?>
+    <div class="informer5-blue__background-2" style="display:block"></div><!-- если фон-img есть то скрыть, если нет фона-img то показать этот блок style="display:none/block"-->
+
+        <?php }?>
+
         <table class="informer5-blue">
             <tbody>
             <tr class="informer5-blue__tr">

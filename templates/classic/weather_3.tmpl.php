@@ -74,7 +74,11 @@ foreach ($objects['0'] as $forecast) {
 </svg>
 <div class="informer3-table-box">
     <div class="informer3-blue__background">
-    <div class="informer3-blue__background-1"></div> <!-- менять фон display: block/none; -->
+        <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer3-blue__background-1"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+    <?php }?>
+
 
         <table class="informer3-blue">
         <tr class="informer3-blue__tr">
@@ -156,8 +160,7 @@ foreach ($objects['0'] as $forecast) {
                 </div>
                 <p class="informer3-blue__text-small">
                     <span class="informer3__text-font">Влажность:</span>
-                    <span class="informer3__number-font"><?php echo $object['rh'] ?><span>
-                    <span class="informer3__number-font">%</span> <!-- почему-то span вкладывается в span(в браузере в devtools видно) по этому % отображаются другого размера, можно ли сделать чтобы не вкладывался? Если нет то переделаю верстку -->
+                    <span class="informer3__number-font"><?php echo $object['rh'] ?>%<span>
                 </p>
                 </div>
             </td>

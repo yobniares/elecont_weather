@@ -78,12 +78,14 @@ p {
 }
 
 .informer6-blue__background {
-  
   position: relative;
   top: 0;
   left: 0;
   width: 100vw;
+  max-width: 100%;
   height: 100vw;
+  max-height: 100vw;
+
   box-sizing: border-box;
   border-radius: 50%;
   background-color: var(--dark-blue);
@@ -91,20 +93,21 @@ p {
   z-index: 1;
 }
 
-.informer6-blue__background-1 { /* менять фон display: block/none; */
+.informer6-blue__background-1 {
   display: block;
   position: absolute;
   top: -5px;
-  left: -5px;
+  left: 0;
   width: 100vw;
+  max-width: 100%;
   height: 100vw;
+  max-height: 100vw;
+
   box-sizing: border-box;
   border-radius: 50%;
-  background-color: transparent;
-  background: url(./icons/112.svg);
-  background-position: center;
+  object-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   border: 5px solid var(--white);
   z-index: 2;
 }

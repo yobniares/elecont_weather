@@ -434,7 +434,7 @@ p {
   z-index: 1;
 }
 
-.informer8-blue__background-6 { /* менять фон display: block/none; */
+.informer8-blue__background-6 {
   display: block;
   position: absolute;
   top: 0;
@@ -442,14 +442,11 @@ p {
   width: 66.1%;
   height: 100%;
   background-color: transparent; 
-  background: url(./icons/112.svg);
-  background-position: top center;
+  object-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   border-top-right-radius: 17%;
   border-bottom-right-radius: 17%;
-
-
   z-index: 1;
 }
 

@@ -86,8 +86,8 @@ foreach ($objects['0'] as $forecast) {
 
     <div class="informer7-blue__background">
     
-<?php if($_REQUEST['transpar']=='1'){?>
-    <img class="informer7-blue__background-1"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+    <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer7-blue__background-1"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
 
     <?php }?>
     <div class="informer7-blue__background-2"></div>

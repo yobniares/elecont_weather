@@ -402,18 +402,15 @@ p {
   z-index: 1;
 }
 
-.informer4-blue__background-1 { /* менять фон display: block/none; */
+.informer4-blue__background-1 {
   display: block; 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent;
-  background: url(./icons/111.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
+  object-position: center;
   box-sizing: border-box;
   z-index: 2;
 }
