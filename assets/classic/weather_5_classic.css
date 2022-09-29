@@ -405,6 +405,7 @@ p {
   width: 102%;
   height: 56%;
   object-fit: cover;
+  object-position: center;
   border: 2vw solid var(--dark-blue);
   box-sizing: border-box;
   border-top-left-radius: 4vw;

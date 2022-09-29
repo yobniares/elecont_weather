@@ -98,7 +98,11 @@
         <div class="informer8-grey__background-1"></div>
         <div class="informer8-grey__background-2"></div>
         <div class="informer8-grey__background-3"></div>
-        <div class="informer8-grey__background-4"></div>
+
+        <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer8-grey__background-4"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+        <?php }?>
 
         <table class="informer8-grey">
             <tbody>

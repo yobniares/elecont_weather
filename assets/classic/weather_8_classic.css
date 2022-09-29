@@ -399,11 +399,6 @@ p {
   z-index: 1;
 }
 
-
-
-
-
-
 .informer8-blue {
   table-layout: fixed;
   position: relative;
@@ -442,9 +437,9 @@ p {
   width: 66.1%;
   height: 100%;
   background-color: transparent; 
-  object-position: top center;
-  background-repeat: no-repeat;
   object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
   border-top-right-radius: 17%;
   border-bottom-right-radius: 17%;
   z-index: 1;

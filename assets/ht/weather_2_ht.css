@@ -391,24 +391,19 @@ p {
   z-index: -1;
 }
 
-.informer2-grey__background-2 { /* фон менять тут display: block/none */
+.informer2-grey__background-2 { 
   display: block;
   position: absolute;
   top: 11%;
-  left: 50%;
+  left: 86%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 95%;
   height: 81%;
   background-color: transparent;
-  background: url(./icons/112.svg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-position: top center;
+  object-fit: cover;
   box-sizing: border-box;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+  clip-path: polygon(0 50%, 60% 196%, 60% -98%);
   z-index: 1;
 }
 

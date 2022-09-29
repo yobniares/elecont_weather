@@ -395,17 +395,17 @@ p {
   display: block;
   position: absolute;
   top: 16%;
-  left: 50%;
+  left: 84%;
   transform: translateX(-50%);
-  width: 85%;
-  height: 78%;
+  width: 87%;
+  height: 77%;
   box-sizing: border-box;
   background-color: transparent;
-  background: url(./icons/112.svg);
-  background-position: top left;
+  object-fit: cover;
+  object-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 1em;
+  clip-path: polygon(0 49%, 60% 200%, 60% -100%);
+  border-radius: 2vw;
   z-index: 1;
 }
 

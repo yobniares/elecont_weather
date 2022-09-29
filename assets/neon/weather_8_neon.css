@@ -424,6 +424,23 @@ p {
   background-size: contain;
   z-index: -1;
 }
+.informer8-neon__background-2 {
+  position: absolute;
+  top: 28%;
+  left: 2.7%;
+  width: 94.7%;
+  height: 62%;
+  box-sizing: border-box;
+  background-color: transparent;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 3vw;
+  border-top-right-radius: 3vw;
+  border-bottom-left-radius: 3vw;
+  border-bottom-right-radius: 3vw;
+  z-index: -1;
+}
 
 .informer8-neon__td {
   background-color: transparent;

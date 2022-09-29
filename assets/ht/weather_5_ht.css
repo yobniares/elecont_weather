@@ -392,6 +392,7 @@ p {
   background-color: transparent;
   z-index: 1;
 }
+
 .informer5-grey__background-1 {
   position: absolute;
   top: 0;
@@ -407,6 +408,24 @@ p {
   padding-bottom: 0;
   z-index: -1;
 }
+
+.informer5-grey__background-2 {
+  position: absolute;
+  top: 0%;
+  left: 0.6%;
+  width: 98.8%;
+  height: 44%;
+  background-color: transparent;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  border-top-right-radius: 4vw;
+  border-top-left-radius: 4vw;
+  padding: 0;
+  padding-bottom: 0;
+  z-index: -1;
+}
+
 .informer5-grey {
   table-layout: fixed;
   position: relative;

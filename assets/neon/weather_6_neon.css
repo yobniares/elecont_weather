@@ -115,6 +115,22 @@ body {
 
 }
 
+.informer6-neon__background-2 {
+  position: absolute;
+  top: 6.7%;
+  left: 6%;
+  width: 57%;
+  height: 87%;
+  background-color: transparent;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  padding-bottom: 0;
+  border-radius: 17vw;
+  z-index: -1;
+}
+
 .informer6-neon__td {
   background-color: transparent;
   font-size: 2vw;

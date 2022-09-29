@@ -425,6 +425,36 @@ p {
   padding-bottom: 0;
   z-index: -1;
 }
+
+.informer7-neon__background-5 {
+  position: absolute;
+  top: 19%;
+  left: 4%;
+  width: 48.5%;
+  height: 63%;
+  background-color: transparent;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2vw;
+  border: 1px solid var(--neon);
+  z-index: -1;
+}
+
+.informer7-neon__background-6 {
+  position: absolute;
+  top: 19%;
+  left: 4%;
+  width: 48.5%;
+  height: 63%;
+  background-color: var(--black);
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2vw;
+  border: 1px solid var(--neon);
+  z-index: -1;
+}
 .informer7-neon__background-2 {
   position: absolute;
   top: 47%;
@@ -454,9 +484,9 @@ p {
 }
 .informer7-neon__background-4 {
   position: absolute;
-  top: 5%;
+  top: 5.2%;
   left: 48%;
-  width: 48%;
+  width: 48.08%;
   height: 50%;
   -webkit-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -467,6 +497,7 @@ p {
   background-size: contain;
   z-index: -1;
 }
+
 
 .informer7-neon__td {
   background-color: transparent;
@@ -479,28 +510,13 @@ p {
 }
 .informer7-neon__tr:nth-child(1) .informer7-neon__td:nth-child(1) {
   width: 12.5%;
-  border-top-left-radius: 20%;
-  border-bottom-left-radius: 20%;
-  border-top: 1px solid var(--neon);
-  border-bottom: 1px solid var(--neon);
-  border-left: 1px solid var(--neon);
-  background-color: var(--black);
   padding-left: 2%;
 }
 .informer7-neon__tr:nth-child(1) .informer7-neon__td:nth-child(2) {
   width: 12.5%;
-  border-top: 1px solid var(--neon);
-  border-bottom: 1px solid var(--neon);
-  background-color: var(--black);
 }
 .informer7-neon__tr:nth-child(1) .informer7-neon__td:nth-child(3) {
   width: 25%;
-  border-top-right-radius: 20%;
-  border-bottom-right-radius: 20%;
-  border-right: 1px solid var(--neon);
-  border-top: 1px solid var(--neon);
-  border-bottom: 1px solid var(--neon);
-  background-color: var(--black);
 }
 .informer7-neon__tr:nth-child(1) .informer7-neon__td:nth-child(4) {
   text-align: right;

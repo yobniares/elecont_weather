@@ -69,7 +69,11 @@
     <div class="informer1-grey__background">
         <div class="informer1-grey__background-1"></div>
         <div class="informer1-grey__background-2"></div>
-        <div class="informer1-grey__background-3"></div> <!-- фон менять тут display: block/none -->
+
+        <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer1-grey__background-3"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+        <?php }?>
 
 
         <table class="informer1-grey">

@@ -77,6 +77,13 @@
 
     <div class="informer4-neon__background-2"></div>
 
+    <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer4-neon__background-3"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+        <?php }?>
+
+
+
         <table class="informer4-neon">
             <tbody>
             <tr class="informer4-neon__tr">

@@ -431,10 +431,9 @@ p {
   width: 98%;
   height: 97%;
   background-color: transparent;
-  background: url(./icons/112.svg);
-  background-position: top left;
+  object-fit: cover;
+  object-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 19%;
   z-index: -1;
 }

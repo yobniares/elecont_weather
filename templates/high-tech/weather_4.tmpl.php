@@ -71,8 +71,25 @@
 <div class="informer4-table-box">
     <div class="informer4-grey__background">
     <div class="informer4-grey__background-1"></div>
-    <div class="informer4-grey__background-2"></div>
     <div class="informer4-grey__background-3"></div>
+
+
+
+    <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer4-grey__background-4"src="<?php echo $abstractData->getWeatherBackground($forecatsArr[0],$abstractData->getDateFromString($forecatsArr[0]['dt'], 'H'))?>" width="20%" height="50%" alt="">
+
+        <img class="informer4-grey__background-5"src="<?php echo $abstractData->getWeatherBackground($forecatsArr[1],$abstractData->getDateFromString($forecatsArr[1]['dt'], 'H'))?>" width="20%" height="50%" alt="">
+
+        <img class="informer4-grey__background-6"src="<?php echo $abstractData->getWeatherBackground($forecatsArr[2],$abstractData->getDateFromString($forecatsArr[2]['dt'], 'H'))?>" width="20%" height="50%" alt="">
+
+        <img class="informer4-grey__background-7"src="<?php echo $abstractData->getWeatherBackground($forecatsArr[3],$abstractData->getDateFromString($forecatsArr[3]['dt'], 'H'))?>" width="20%" height="50%" alt="">
+
+    <?php }else{?>
+    <div class="informer4-grey__background-2"></div> <!-- скрыть, если есть фон с погодой -->
+
+    <?php }?>
+
+
 
 
         <table class="informer4-grey">

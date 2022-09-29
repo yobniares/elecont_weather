@@ -426,16 +426,15 @@ p {
 .informer7-grey__background-5 {
   display: block;
   position: absolute;
-  top: 9%;
-  left: 4%;
-  width: 55%;
-  height: 84%;
+  top: 12%;
+  left: 3%;
+  width: 57%;
+  height: 77%;
   background-color: transparent;
-  background: url(./icons/112.svg);
-  background-position: top left;
+  object-fit: cover;
+  object-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 6%;
+  border-radius: 2vw;
   z-index: 1;
 }
 
@@ -466,6 +465,7 @@ p {
   background-size: contain;
   z-index: -1;
 }
+
 .informer7-grey__background-4 {
   position: absolute;
   top: 1%;
@@ -484,12 +484,12 @@ p {
 
 .informer7-grey__background-6 {
   position: absolute;
-  top: 9%;
-  left: 4%;
-  width: 55%;
-  height: 84%;
+  top: 12%;
+  left: 3%;
+  width: 57%;
+  height: 77%;
   background-color: var(--white);
-  border-radius: 6%;
+  border-radius: 2vw;
   box-sizing: border-box;
   border: 1px solid grey;
   z-index: -1;

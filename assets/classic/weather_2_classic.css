@@ -410,6 +410,7 @@ p {
   height: 70%;
   object-fit: cover;
   object-position: center;
+
   background-color: transparent;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;

@@ -121,16 +121,15 @@ p {
   display: block;
   position: absolute;
   top: 12%;
-  left: 4%;
-  width: 60%;
+  left: 1%;
+  width: 67%;
   height: 77%;
   box-sizing: border-box;
   background-color: transparent;
-  background: url(./icons/112.svg);
-  background-position: top left;
+  object-fit: cover;
+  object-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 2em;
+  border-radius: 2vw;
   z-index: -1;
 }
 
@@ -154,8 +153,8 @@ p {
 .informer8-grey__background-3 {
   position: absolute;
   top: 10%;
-  left: 4%;
-  width: 60%;
+  left: 1%;
+  width: 63%;
   height: 81%;
   background-image: url(./img/v-8-1.svg);
   background-color: transparent;
@@ -435,22 +434,4 @@ p {
 .informer8-grey__tr:nth-child(1) .informer8-grey__td:nth-child(1) .informer8-grey__text-small {
   text-align: center;
   padding-bottom: 2%;
-}
-
-@media only screen and (max-width: 1200px)  {
-  .informer8-grey__background-4 {
-    border-radius: 1.5em;
-  }
-}
-
-@media only screen and (max-width: 748px)  {
-  .informer8-grey__background-4 {
-    border-radius: 1.5em;
-  }
-}
-
-@media only screen and (max-width: 533px)  {
-  .informer8-grey__background-4 {
-    border-radius: 1em;
-  }
 }

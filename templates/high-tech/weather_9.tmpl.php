@@ -53,11 +53,15 @@
 <div class="informer9-table-box">
     <div class="informer9-grey__background">
     <div class="informer9-grey__background-1"></div>
-    <div class="informer9-grey__background-2"></div>
+
+    <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer9-grey__background-2"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+        <?php }?>
+
     <div class="informer9-grey__background-3"></div>
     <div class="informer9-grey__background-4"></div>
     <div class="informer9-grey__background-5"></div>
-
 
 
         <table class="informer9-grey">

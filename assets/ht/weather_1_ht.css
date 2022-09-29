@@ -110,8 +110,7 @@ p {
   z-index: -1;
 }
 
-.informer1-grey__background-2 { /* новый фон */
-  display: none;
+.informer1-grey__background-2 {
   position: absolute;
   top: 1%;
   left: 50%;
@@ -121,14 +120,14 @@ p {
   background-color: var(--white);
   background-position: top;
   box-sizing: border-box;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+  border-top-left-radius: 9vw;
+  border-top-right-radius: 9vw;
+  border-bottom-left-radius: 9vw;
+  border-bottom-right-radius: 9vw;
   z-index: -1;
 }
 
-.informer1-grey__background-3 { 
+.informer1-grey__background-3 {
   display: block;
   position: absolute;
   top: 1%;
@@ -136,18 +135,15 @@ p {
   transform: translateX(-50%);
   width: 87%;
   height: 50%;
-
   background-color: transparent;
-  background: url(./icons/112.svg);
-  background-position: top center;
+  object-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-
+  object-fit: cover;
   box-sizing: border-box;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+  border-top-left-radius: 9vw;
+  border-top-right-radius: 9vw;
+  border-bottom-left-radius: 9vw;
+  border-bottom-right-radius: 9vw;
   z-index: 1;
 }
 

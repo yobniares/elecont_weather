@@ -83,7 +83,11 @@
 
     <div class="informer1-neon__background-1"></div>
     <div class="informer1-neon__background-2"></div>
-    <div class="informer1-neon__background-3"></div><!-- новый фон  -->
+
+    <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer1-neon__background-3"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+        <?php }?>
 
 
 
