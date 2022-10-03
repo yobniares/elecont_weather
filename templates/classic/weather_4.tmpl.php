@@ -72,10 +72,27 @@ foreach ($objects['0'] as $forecast) {
 </svg>
 <div class="informer4-table-box">
     <div class="informer4-blue__background">
-        <?php if($_REQUEST['transpar']=='1'){?>
+    <?php if($_REQUEST['transpar']=='1'){?>
         <img class="informer4-blue__background-1"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
-
     <?php }?>
+
+    <img src="bg/night/23.svg" class="informer4-blue__background-1"src="" width="100%" height="100%" alt=""/>    <!-- менять фоны -->
+    <img src="bg/day/0.svg" class="informer4-blue__background-2"src="" width="100%" height="100%" alt=""/>    <!-- менять фоны -->
+    <img src="bg/night/0.svg" class="informer4-blue__background-3"src="" width="100%" height="100%" alt=""/>    <!-- менять фоны -->
+    <img src="bg/day/26.svg" class="informer4-blue__background-4"src="" width="100%" height="100%" alt=""/>    <!-- менять фоны -->
+
+
+
+
+
+
+
+
+
+    <div class="informer4-blue__background-5"></div>  <!-- ;) это не трогать-->
+
+
+
 
 
         <table class="informer4-blue">

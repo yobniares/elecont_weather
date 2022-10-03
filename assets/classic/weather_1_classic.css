@@ -55,6 +55,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  max-height: 100vh;
   max-width: 100%;
 }
 
@@ -72,7 +73,8 @@ p {
 
 
 .table-box {
-  width: 100%;
+  width: 30%;
+  max-height: 100vh;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -82,8 +84,9 @@ p {
   top: 0;
   left: 0;
   width: 100%;
+  max-height: 100vh;
   background-color: var(--light-blue);
-  border: 2vw solid var(--dark-blue);
+  border: 0.5vw solid var(--dark-blue);
   box-sizing: border-box;
   margin: 0 auto;
   z-index: 1;
@@ -94,7 +97,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2.55vw solid var(--dark-blue);
+  border: 0.8vw solid var(--dark-blue);
   background-color: transparent;
   border-top: 0;
   border-bottom: 0;
@@ -112,7 +115,7 @@ p {
   max-width: 100%;
   object-fit: cover;
   object-position: center;
-  background-color: transparent; 
+  background-color: transparent;
   z-index: 1;
 }
 
@@ -122,7 +125,7 @@ p {
   left: 0;
   width: 100%;
   max-width: 100%;
-  height: 9.8%;
+  height: 10vh;
   background-color: var(--light-blue-2);
   border-bottom-right-radius: 25%;
   border-bottom-left-radius: 25%;
@@ -131,18 +134,21 @@ p {
 
 
 .informer1-blue {
+  /* display: block; */
   table-layout: fixed;
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
+  /* height: 100vh; */
+  max-height: 100%;
   font-family: "Geometria-Medium", Arial, Helvetica;
   text-align: center;
   color: var(--white);
   white-space: pre-wrap;
   border-spacing: 0px;
   background-color: transparent;
-  border: 0.5vw solid var(--white);
+  border: 0.2vw solid var(--white);
   box-sizing: border-box;
   padding: 0;
   margin: 0 auto;
@@ -156,17 +162,20 @@ p {
 }
 
 .informer1-blue__td {
-  font-size: 2vw;
+  display: block;
+  height: 7vh;
+  font-size: 1vw;
   line-height: 20%;
-  padding: 2vw;
+  /* padding: 2vw; */
+  /* overflow-y: hidden; */
 }
 
 
 .informer1-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
-  border: 2vw solid var(--dark-blue);
+  border: 0.5vw solid var(--dark-blue);
   border-bottom-right-radius: 20%;
   border-bottom-left-radius: 20%;
-  padding-bottom: 10%;
+  /* padding-bottom: 10%; */
 }
 
 .informer1-blue__tr:nth-child(2) .informer1-blue__td:nth-child(1),
@@ -178,7 +187,7 @@ p {
 .informer1-blue__tr:nth-child(8) .informer1-blue__td:nth-child(1),
 .informer1-blue__tr:nth-child(9) .informer1-blue__td:nth-child(1),
 .informer1-blue__tr:nth-child(10) .informer1-blue__td:nth-child(1) {
-  border: 2vw solid var(--dark-blue);
+  border: 0.5vw solid var(--dark-blue);
   border-bottom: none;
   border-top: none;
 }
@@ -192,11 +201,11 @@ p {
 }
 
 .informer1-blue__tr:nth-child(10) .informer1-blue__td:nth-child(1) {
-  padding-bottom: 10%;
+  /* padding-bottom: 10%; */
 }
 
 .informer1-blue__tr:nth-child(10) .informer1-blue__td:nth-child(1) {
-  border: 2vw solid var(--dark-blue);
+  border: 0.5vw solid var(--dark-blue);
   border-top: none;
   border-bottom-right-radius: 20%;
   border-bottom-left-radius: 20%;
@@ -210,9 +219,57 @@ p {
 .informer1-blue__tr:nth-child(12) .informer1-blue__td:nth-child(1),
 .informer1-blue__tr:nth-child(13) .informer1-blue__td:nth-child(1),
 .informer1-blue__tr:nth-child(14) .informer1-blue__td:nth-child(1) {
-  border: 2vw solid var(--dark-blue);
+  border: 0.5vw solid var(--dark-blue);
   border-top: none;
 }
+
+.informer1-blue__tr:nth-child(1) .informer1-blue__td {
+  height: 10vh;
+}
+.informer1-blue__tr:nth-child(2) .informer1-blue__td {
+  height: 2vh;
+
+}
+.informer1-blue__tr:nth-child(3) .informer1-blue__td {
+  height: 10vh;
+
+}
+.informer1-blue__tr:nth-child(4) .informer1-blue__td {
+  height: 4vh;
+
+}
+.informer1-blue__tr:nth-child(5) .informer1-blue__td {
+  height: 4vh;
+
+}
+.informer1-blue__tr:nth-child(6) .informer1-blue__td {
+  height: 5vh;
+
+}
+.informer1-blue__tr:nth-child(7) .informer1-blue__td {
+  height: 5vh;
+
+}
+.informer1-blue__tr:nth-child(8) .informer1-blue__td {
+  height: 5vh;
+
+}
+.informer1-blue__tr:nth-child(9) .informer1-blue__td {
+  height: 5vh;
+}
+
+.informer1-blue__tr:nth-child(10) .informer1-blue__td {
+  height: 13vh;
+}
+.informer1-blue__tr:nth-child(11) .informer1-blue__td {
+  height: 13vh;
+}
+.informer1-blue__tr:nth-child(12) .informer1-blue__td {
+  height: 13vh;
+}
+/* .informer1-blue__tr:nth-child(13) .informer1-blue__td {
+  height: 5vh;
+} */
 
 
 .informer1-blue__td-flexbox-small {
@@ -273,14 +330,14 @@ p {
   flex-wrap: nowrap;
   align-items: end;
   justify-content: center;
-  font-size: 320%;
+  font-size: 120%;
 }
 
 .informer1-blue__text-middle {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 500%;
+  font-size: 200%;
   line-height: 30%;
 }
 
@@ -288,16 +345,16 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 450%;
+  font-size: 250%;
   line-height: 30%;
 }
 
 .informer1__temperature-big {
-  font-size: 200%;
+  /* font-size: 200%; */
 }
 
 .informer1__temperature-middle {
-  font-size: 140%;
+  /* font-size: 140%; */
 }
 .informer1-blue__tr:nth-child(11) .informer1-blue__td:nth-child(1) .informer1-blue__text-big,
 .informer1-blue__tr:nth-child(12) .informer1-blue__td:nth-child(1) .informer1-blue__text-big,
@@ -310,9 +367,9 @@ p {
 .informer1-blue__tr:nth-child(12) .informer1-blue__td:nth-child(1),
 .informer1-blue__tr:nth-child(13) .informer1-blue__td:nth-child(1) {
   text-transform: uppercase;
+  /* padding-top: 10%;
   padding-top: 10%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 10%; */
 }
 
 .informer1-blue__tr:nth-child(4) .informer1-blue__td:nth-child(1),
@@ -321,34 +378,34 @@ p {
 }
 
 .informer1-blue__box-small-icons {
-  width: 10%;
-  padding-bottom: 3%;
+  width: 5%;
+  /* padding-bottom: 3%; */
 }
 
 .informer1-blue__tr:nth-child(8) .informer1-blue__td:nth-child(1) .informer1-blue__td-flexbox-small .informer1-blue__box-small-icons {
-  width: 9%;
-}
-
-.informer1-blue__tr:nth-child(9) .informer1-blue__td:nth-child(1) .informer1-blue__td-flexbox-small .informer1-blue__box-small-icons {
   width: 6%;
 }
 
+.informer1-blue__tr:nth-child(9) .informer1-blue__td:nth-child(1) .informer1-blue__td-flexbox-small .informer1-blue__box-small-icons {
+  width: 4%;
+}
+
 .informer1-blue__tr:nth-child(10) .informer1-blue__td:nth-child(1) .informer1-blue__td-flexbox-small .informer1-blue__box-small-icons {
-  width: 3%;
+  width: 2%;
 }
 
 .informer1-blue__box-middle-icons {
-  width: 70%;
+  width: 30%;
   margin: 0 auto;
 }
 
 .informer1-blue__box-big-icons {
-  width: 90%;
+  width: 45%;
   margin: 0 auto;
 }
 
 .informer1-blue__box-middle-icons-img {
   display: block;
   margin: 0 auto;
-  padding-bottom: 2%;
+  /* padding-bottom: 2%; */
 }

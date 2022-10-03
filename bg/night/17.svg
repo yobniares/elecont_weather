@@ -454,7 +454,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="6" result="effect1_foregroundBlur_122_1855"/>
 </filter>
-<filter id="filter29_f_122_1855" x="35.6572" y="552.657" width="43.3135" height="43.3138" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter29_f_122_1855" x="35.6572" y="552.657" width="43.3135" height="43.3137" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="6" result="effect1_foregroundBlur_122_1855"/>
