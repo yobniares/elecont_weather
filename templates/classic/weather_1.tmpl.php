@@ -79,13 +79,19 @@
 </svg>
 <div class="table-box">
     <div class="informer1-blue__background">
-        <div class="informer1-blue__background-1"></div>
+        <div class="informer1-blue__background-4"></div>
 
         <?php if($_REQUEST['transpar']=='1'){?>
-        <img class="informer1-blue__background-2"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+        <img class="informer1-blue__background-5"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+        <?php for($i = 0;$i<3;$i++){?>
+                            <img class="informer1-blue__background-<? echo $i ?>" src="<?php echo $abstractData->getWeatherBackground($forecatsArr[$i],$abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H'))?>" width="100%" height="100%" alt="">
+
+            <?php }?>
 
     <?php }?>
-        <div class="informer1-blue__background-3"></div> <!-- в стилях фон ячеек display: block/none; (согласовать) -->
+
+        <div class="informer1-blue__background-3"></div>
         
 
             <table class="informer1-blue">

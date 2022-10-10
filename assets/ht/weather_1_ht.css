@@ -5,15 +5,15 @@
   --black: #111111;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
   src: local("Play"),
     url("./fonts/Play/Play-Regular.woff") format("woff");
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "Play-Bold";
   font-style: normal;
   font-weight: 400;
@@ -44,7 +44,7 @@
   font-weight: 900;
   src: local("Geometria-bold"),
     url("./fonts/Geometria/Geometria-Bold.woff") format("woff");
-}
+} */
 
 .hidden {
   display: none;
@@ -67,7 +67,8 @@ p {
 }
 
 .table-box {
-  width: 100%;
+  width: 30%;
+  margin: 0 auto;
 }
 
 .informer1-grey__background {
@@ -120,10 +121,10 @@ p {
   background-color: var(--white);
   background-position: top;
   box-sizing: border-box;
-  border-top-left-radius: 9vw;
-  border-top-right-radius: 9vw;
-  border-bottom-left-radius: 9vw;
-  border-bottom-right-radius: 9vw;
+  border-top-left-radius: 3vw;
+  border-top-right-radius: 3vw;
+  border-bottom-left-radius: 3vw;
+  border-bottom-right-radius: 3vw;
   z-index: -1;
 }
 
@@ -140,10 +141,10 @@ p {
   background-repeat: no-repeat;
   object-fit: cover;
   box-sizing: border-box;
-  border-top-left-radius: 9vw;
-  border-top-right-radius: 9vw;
-  border-bottom-left-radius: 9vw;
-  border-bottom-right-radius: 9vw;
+  border-top-left-radius: 3vw;
+  border-top-right-radius: 3vw;
+  border-bottom-left-radius: 3vw;
+  border-bottom-right-radius: 3vw;
   z-index: 1;
 }
 
@@ -155,7 +156,7 @@ p {
 .informer1-grey__td {
   background-color: transparent;
   padding: 3%;
-  font-size: 3vw;
+  font-size: 1vw;
   padding-bottom:7%
 }
 
@@ -270,7 +271,7 @@ p {
 
 .informer1-grey__tr:nth-child(11) .informer1-grey__td:nth-child(1) {
   box-sizing: border-box;
-  padding-top: 52%;
+  padding-top: 42%;
 }
 
 .informer1-grey__tr:nth-child(12) .informer1-grey__td:nth-child(1) {

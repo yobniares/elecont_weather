@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 900;
   src: local("Geometria-bold"), url("./fonts/Geometria/Geometria-Bold.woff") format("woff");
-}
+} */
 /*stylelint-disable*/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -343,7 +343,7 @@ template {
   --white: #ffffff;
   --black: #111111;
 }
-@font-face {
+/* @font-face {
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
@@ -372,7 +372,7 @@ template {
   font-style: normal;
   font-weight: 900;
   src: local("Geometria-bold"), url("./fonts/geometria/Geometria-Bold.woff") format("woff");
-}
+} */
 h3 {
   margin: 0;
   padding: 0;
@@ -409,10 +409,10 @@ p {
 }
 .informer5-neon__background-2 {
   position: absolute;
-  top: 9%;
-  left: 4.8%;
-  width: 90.5%;
-  height: 36%;
+  top: 8.3%;
+  left: 4.2%;
+  width: 91.7%;
+  height: 36.5%;
   background-color: transparent;
   object-fit: cover;
   object-position: center;

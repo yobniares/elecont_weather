@@ -90,9 +90,15 @@ foreach ($objects['0'] as $forecast) {
         <div class="informer8-blue__background-5"></div>
         <div class="informer8-blue__background-3"></div>
         <div class="informer8-blue__background-4"></div>
+
         
         <?php if($_REQUEST['transpar']=='1'){?>
         <img class="informer8-blue__background-6"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+
+        <?php for($i = 0;$i<3;$i++){?>
+                    <img class="informer8-blue__background-1"src="<?php echo $abstractData->getWeatherBackground($forecatsArr[$i],$abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H'))?>" style="top: <?php echo 1+$i*33?>%"  alt="">
+
+            <?php }?>
 
     <?php }?>
 

@@ -6,15 +6,15 @@
 
 
 
-@font-face {
+/* @font-face {
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
   src: local("Play"),
     url("./fonts/Play/Play-Regular.woff") format("woff");
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "Play-Bold";
   font-style: normal;
   font-weight: 400;
@@ -45,7 +45,7 @@
   font-weight: 900;
   src: local("Geometria-bold"),
     url("./fonts/Geometria/Geometria-Bold.woff") format("woff");
-}
+} */
 
 .hidden {
   display: none;
@@ -144,7 +144,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   width: 97%;
-  height: 97.5%;
+  height: 95.5%;
   background-color: transparent;
   object-fit: cover;
   object-position: center;

@@ -97,23 +97,26 @@ foreach ($objects['0'] as $forecast) {
 <div class="informer2-table-box">
     <div class="informer2-blue__background">
 
-    <div class="informer2-blue__background-1"></div> 
-    <?php if($_REQUEST['transpar']=='1'){?>
-        <img class="informer2-blue__background-2"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
-
+    <?php for($i = 1;$i<=6;$i++){?>
+        <?php if($_REQUEST['transpar']=='1'){?>
+        <img class="informer2-blue__background-1" src="<?php echo $abstractData->getWeatherBackground($forecatsArr[$i-1],date('H', time()))?>" style="top: <?php echo 7+(($i-1)*14.30)?>%" alt="">
+<!-- <?php echo json_encode($forecatsArr[$i-1]) ?> -->
+        <?php }?>
     <?php }?>
 
+    <!-- <div class="informer2-blue__background-1"></div>  -->
+        <!-- <div class="informer2-blue__background-2"></div>  -->
+
+
     <div class="informer2-blue__background-3"></div>
+    <div class="informer2-blue__background-4"></div>
+    <div class="informer2-blue__background-5"></div>
+    <!-- <div class="informer2-blue__background-6"></div> -->
 
     <?php if($_REQUEST['transpar']=='1'){?>
         <img class="informer2-blue__background-7"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
 
     <?php }?>
-
-
-    <div class="informer2-blue__background-4"></div>
-    <div class="informer2-blue__background-5"></div>
-    <div class="informer2-blue__background-6"></div>
 
         <table class="informer2-blue">
             <tbody>

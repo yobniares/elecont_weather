@@ -314,7 +314,7 @@ template {
   --white: #ffffff;
   --black: #111111;
 }
-@font-face {
+/* @font-face {
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
@@ -343,7 +343,7 @@ template {
   font-style: normal;
   font-weight: 900;
   src: local("Geometria-bold"), url("./fonts/Geometria/Geometria-Bold.woff") format("woff");
-}
+} */
 h3 {
   margin: 0;
   padding: 0;
@@ -405,10 +405,10 @@ p {
 .informer9-grey__background-2 {
   display: block;
   position: absolute;
-  top: 2%;
-  left: 5%;
-  width: 90%;
-  height: 96%;
+  top: 2.8%;
+  left: 2.8%;
+  width: 94.7%;
+  height: 94.6%;
   box-sizing: border-box;
   background-color: transparent;
   object-fit: cover;

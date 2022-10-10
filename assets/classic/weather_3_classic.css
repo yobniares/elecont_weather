@@ -4,7 +4,7 @@
   --light-blue-2: #ABCDE5;
   --white: #ffffff;
 }
-
+/* 
 
 @font-face {
   font-family: "Play";
@@ -45,7 +45,7 @@
   font-weight: 900;
   src: local("Geometria-bold"),
     url("./fonts/Geometria/Geometria-Bold.woff") format("woff");
-}
+} */
 
 .hidden {
   display: none;
@@ -103,7 +103,7 @@ img {
   z-index: 1;
 }
 
-.informer3-blue__background-1 { 
+.informer3-blue__background-1 {
   display: block;
   position: absolute;
   top: 0;
@@ -112,7 +112,7 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center;
-
+  filter: brightness(70%);
   z-index: 1;
 }
 
@@ -146,13 +146,15 @@ img {
 
 .informer3-blue__tr:nth-child(2) .informer3-blue__td:nth-child(1),
 .informer3-blue__tr:nth-child(2) .informer3-blue__td:nth-child(2),
-.informer3-blue__tr:nth-child(2) .informer3-blue__td:nth-child(3){
+.informer3-blue__tr:nth-child(2) .informer3-blue__td:nth-child(3) {
   padding-top: 0;
 }
+
 .informer3-blue__tr:nth-child(1) .informer3-blue__td:nth-child(1) .informer3-blue__text-middle {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
+
 .informer3-blue__tr:nth-child(1) .informer3-blue__td:nth-child(1) .informer3-blue__text-middle .informer3__text-font {
   word-wrap: break-word;
   white-space: pre-wrap;
@@ -163,7 +165,7 @@ img {
 .informer3-blue__tr:nth-child(2) .informer3-blue__td:nth-child(1) {
   border: 0;
   border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, transparent 5%,  #ffffff 5%, #ffffff 100%);
+  border-image: linear-gradient(to right, transparent 5%, #ffffff 5%, #ffffff 100%);
   border-image-slice: 1;
   text-align: left;
 }
