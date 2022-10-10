@@ -64,6 +64,10 @@ if (!isset($_REQUEST['transpar'])) {
     $_REQUEST['transpar'] = '0';
 }
 
+if (!isset($_REQUEST['clear'])) {
+    $_REQUEST['clear'] = '0';
+}
+
 $xmlData = new XmlDataClass($key, $additionalParams);
 $objects = $xmlData->getObjects();
 $template = new RenderClass();

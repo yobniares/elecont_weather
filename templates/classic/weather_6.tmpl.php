@@ -17,6 +17,11 @@ foreach ($objects['0'] as $forecast) {
         <?php } ?>
 
         /* Background */
+        <?php if ($_REQUEST['clear']=='1'){?>
+        .informer6-blue__background{
+            background-color:transparent;
+        }
+        <?php }?>
         <?php
         if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
         .informer6-blue__background-1,
@@ -35,7 +40,10 @@ foreach ($objects['0'] as $forecast) {
 
         /* Text color */
         <?php
-        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        $text_color = "white";
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {
+            $text_color = $_REQUEST['font_text'];
+            ?>
         .informer6-blue {
             color: <?php echo  $_REQUEST['font_text'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
@@ -85,6 +93,16 @@ foreach ($objects['0'] as $forecast) {
     });
 </script>
 
+<!-- фильтр для иконок в img -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <filter id="recolourFilter" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="<?php echo $text_color?>" result="flood" />
+      <feComposite in="flood" in2="SourceAlpha" operator="in" />
+    </filter>
+  </defs>
+</svg>
+
 <div class="informer6-table-box">
     <div class="informer6-blue__background">
         <?php if($_REQUEST['transpar']=='1'){?>
@@ -106,7 +124,7 @@ foreach ($objects['0'] as $forecast) {
             <tr class="informer6-blue__tr">
                 <td class="informer6-blue__td">
                     <div class="informer6-blue__box-small-icons">
-                        <?php echo $abstractData->getWeatherIcon($object, 'informer6-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer6-blue__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                         <div class="view-6-classic-arrow-small">
                         </div>
                         <div class="view-6-classic-arrow-big">

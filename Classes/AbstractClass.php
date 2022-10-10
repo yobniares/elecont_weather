@@ -557,6 +557,11 @@ class AbstractClass
         } else {
             $string.= '&transpar=0';
         }
+        if (isset($requestArray['clear']) && $requestArray['clear'] =='1') {
+            $string.= '&clear=1';
+        } else {
+            $string.= '&clear=0';
+        }
         if (isset($_SERVER['HTTPS']) &&
             ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
             isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&

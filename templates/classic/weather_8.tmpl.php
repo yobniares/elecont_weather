@@ -19,6 +19,11 @@ foreach ($objects['0'] as $forecast) {
         <?php } ?>
 
         /* Background */
+        <?php if ($_REQUEST['clear']=='1'){?>
+        .informer8-blue__background{
+            background-color:transparent;
+        }
+        <?php }?>
         <?php
         if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
         .informer8-blue__background-1,
@@ -37,7 +42,10 @@ foreach ($objects['0'] as $forecast) {
 
         /* Text color */
         <?php
-        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        $text_color = "white";
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {
+            $text_color = $_REQUEST['font_text'];
+            ?>
         .informer8-blue {
             color: <?php echo  $_REQUEST['font_text'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
@@ -55,6 +63,15 @@ foreach ($objects['0'] as $forecast) {
     </style>
 <?php }?>
 
+<!-- фильтр для иконок в img -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <filter id="recolourFilter" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="<?php echo $text_color?>" result="flood" />
+      <feComposite in="flood" in2="SourceAlpha" operator="in" />
+    </filter>
+  </defs>
+</svg>
 
 <svg width="0" height="0" class="hidden">
     <symbol viewBox="0 0 26 36" id="place" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +127,7 @@ foreach ($objects['0'] as $forecast) {
                 <td rowspan="3" class="informer8-blue__td">
                     <div class="informer8-blue__box-small-icons">
                         <svg viewBox="0 0 26 36" width="45%" height="45%">
-                            <use xlink:href="#place"/>
+                            <use fill="currentColor" xlink:href="#place"/>
                         </svg>
                     </div>
                     <p class="informer8-blue__text-small">
@@ -131,7 +148,7 @@ foreach ($objects['0'] as $forecast) {
                     <div class="informer8-blue__td-flexbox-big">
                         <p class="informer8-blue__text-middle"><?php echo $abstractData->getTimesOfDay($time = date('H:i', time())) ?></p>
                         <div class="informer8-blue__box-big-icons">
-                            <?php echo $abstractData->getWeatherIcon($object, 'informer8-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                            <?php echo $abstractData->getWeatherIcon($object, 'informer8-blue__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                         </div>
                     </div>
                 </td>
@@ -139,7 +156,7 @@ foreach ($objects['0'] as $forecast) {
                     <div class="informer8-blue__td-flexbox-small">
                         <div class="informer8-blue__box-small-icons">
                             <svg viewBox="0 0 26 36" width="45%" height="45%">
-                                <use xlink:href="#place"/>
+                                <use fill="currentColor" xlink:href="#place"/>
                             </svg>
                         </div>
                         <p class="informer8-blue__text-small">
@@ -150,7 +167,7 @@ foreach ($objects['0'] as $forecast) {
                     <div class="informer8-blue__td-flexbox-small">
                         <div class="informer8-blue__box-small-icons">
                             <svg  viewBox="0 0 16 16" width="50%" height="50%">
-                                <use xlink:href="#wind-route-2"/>
+                                <use fill="currentColor" xlink:href="#wind-route-2"/>
                             </svg>
                         </div>
                         <p class="informer8-blue__text-small">
@@ -162,7 +179,7 @@ foreach ($objects['0'] as $forecast) {
                     <div class="informer8-blue__td-flexbox-small">
                         <div class="informer8-blue__box-small-icons">
                             <svg viewBox="0 0 16 16" width="50%" height="50%">
-                                <use xlink:href="#grade"/>
+                                <use fill="currentColor" xlink:href="#grade"/>
                             </svg>
                         </div>
                         <p class="informer8-blue__text-small">
@@ -172,7 +189,7 @@ foreach ($objects['0'] as $forecast) {
                     <div class="informer8-blue__td-flexbox-small">
                         <div class="informer8-blue__box-small-icons">
                             <svg viewBox="0 0 12 18" width="50%" height="50%">
-                                <use xlink:href="#wet-3"/>
+                                <use fill="currentColor" xlink:href="#wet-3"/>
                             </svg>
                         </div>
                         <p class="informer8-blue__text-small">
@@ -183,7 +200,7 @@ foreach ($objects['0'] as $forecast) {
                     <div class="informer8-blue__td-flexbox-small">
                         <div class="informer8-blue__box-small-icons">
                             <svg viewBox="0 0 16 16" width="50%" height="50%">
-                                <use xlink:href="#pressure-2"/>
+                                <use fill="currentColor" xlink:href="#pressure-2"/>
                             </svg>
                         </div>
                         <p class="informer8-blue__text-small">
@@ -195,7 +212,7 @@ foreach ($objects['0'] as $forecast) {
                     <div class="informer8-blue__td-flexbox-small">
                         <div class="informer8-blue__box-small-icons">
                             <svg viewBox="0 0 16 16" width="50%" height="50%">
-                                <use xlink:href="#dpf-2"/>
+                                <use fill="currentColor" xlink:href="#dpf-2"/>
                             </svg>
                         </div>
                         <p class="informer8-blue__number-small">
@@ -212,7 +229,7 @@ foreach ($objects['0'] as $forecast) {
                 </td>
                 <td class="informer8-blue__td">
                     <div class="informer8-blue__box-middle-icons">
-                        <?php echo $abstractData->getWeatherIcon($object, 'informer8-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer8-blue__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                     </div>
                 </td>
                 <td class="informer8-blue__td">
@@ -232,7 +249,7 @@ foreach ($objects['0'] as $forecast) {
 
                     <td class="informer8-blue__td">
                         <div class="informer8-blue__box-middle-icons">
-                            <?php echo $abstractData->getWeatherIcon($object, 'informer8-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                            <?php echo $abstractData->getWeatherIcon($object, 'informer8-blue__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                         </div>
                     </td>
 

@@ -38,7 +38,12 @@ $cities = $abstractData->getDomain() . 'cities.php';
         </script>
         <tr>
             <td colspan="3" align="center">
-                <p><label for="color_fon">Прозрачный фон:</label> <input type='checkbox' name='transpar' value='1' /></p>
+                <p><label for="color_fon">Фон погоды:</label> <input type='checkbox' name='transpar' value='1' /></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <p><label for="color_fon">Прозрачный фон:</label> <input type='checkbox' name='clear' value='1' /></p>
             </td>
         </tr>
         <tr>

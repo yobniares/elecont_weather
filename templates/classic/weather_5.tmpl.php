@@ -20,6 +20,11 @@ foreach ($objects['0'] as $forecast) {
         ?>
 
         /* Background */
+        <?php if ($_REQUEST['clear']=='1'){?>
+        /* .informer5-blue__background{
+            background-color:transparent;
+        } */
+        <?php }?>
         <?php
         if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
         .informer5-blue__background-1,
@@ -39,7 +44,10 @@ foreach ($objects['0'] as $forecast) {
 
         /* Text color */
         <?php
-        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        $text_color = "white";
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {
+            $text_color = $_REQUEST['font_text'];
+            ?>
         .informer5-blue {
             color: <?php echo  $_REQUEST['font_text'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
@@ -60,6 +68,16 @@ foreach ($objects['0'] as $forecast) {
 
     </style>
 <?php }?>
+
+<!-- фильтр для иконок в img -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <filter id="recolourFilter" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="<?php echo $text_color?>" result="flood" />
+      <feComposite in="flood" in2="SourceAlpha" operator="in" />
+    </filter>
+  </defs>
+</svg>
 
 <div class="informer5-table-box">
     <div class="informer5-blue__background">
@@ -82,7 +100,7 @@ foreach ($objects['0'] as $forecast) {
                 </td>
                 <td class="informer5-blue__td">
                     <div class="informer5-blue__box-big-icons">
-                        <?php echo $abstractData->getWeatherIcon($object, 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer5-blue__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                         <p class="informer5-blue__text-small"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
                     </div>
                 </td>
@@ -98,7 +116,7 @@ foreach ($objects['0'] as $forecast) {
                     <td class="informer5-blue__td">
                         <p class="informer5-blue__text-big"><?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?></p>
                         <div class="informer5-blue__box-middle-icons">
-                            <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer5-blue__box-middle-icons-img', '', '', '100%', '100%') ?>
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer5-blue__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                         </div>
                         <p class="informer5-blue__temperature informer5__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</p>
                     </td>
