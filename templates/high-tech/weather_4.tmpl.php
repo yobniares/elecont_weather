@@ -70,7 +70,9 @@
 </svg>
 <div class="informer4-table-box">
     <div class="informer4-grey__background">
-    <div class="informer4-grey__background-1"></div>
+        <?php if($_REQUEST['clear']=='0'){?>
+        <div class="informer4-grey__background-1"></div>
+        <?php }?>
     <div class="informer4-grey__background-3"></div>
 
 

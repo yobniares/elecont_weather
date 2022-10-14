@@ -76,7 +76,9 @@
 
 <div class="informer3-table-box">
     <div class="informer3-grey__background">
+        <?php if($_REQUEST['clear']=='0'){?>
         <div class="informer3-grey__background-1"></div>
+        <?php }?>
         <?php if($_REQUEST['transpar']=='1'){?>
         <img class="informer3-grey__background-2"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
 

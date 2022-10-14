@@ -155,6 +155,7 @@ img {
   border-bottom-left-radius: 3vw;
   border-bottom-right-radius: 3vw;
   z-index: 1;
+  filter: brightness(140%);
 }
 
 .informer3-grey__td {
@@ -169,13 +170,15 @@ img {
 
 .informer3-grey__tr:nth-child(2) .informer3-grey__td:nth-child(1),
 .informer3-grey__tr:nth-child(2) .informer3-grey__td:nth-child(2),
-.informer3-grey__tr:nth-child(2) .informer3-grey__td:nth-child(3){
+.informer3-grey__tr:nth-child(2) .informer3-grey__td:nth-child(3) {
   padding-bottom: 3%
 }
+
 .informer3-grey__tr:nth-child(1) .informer3-grey__td:nth-child(1) .informer3-grey__text-middle {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
+
 .informer3-grey__tr:nth-child(1) .informer3-grey__td:nth-child(1) .informer3-grey__text-middle .informer3__text-font {
   word-wrap: break-word;
   white-space: pre-wrap;

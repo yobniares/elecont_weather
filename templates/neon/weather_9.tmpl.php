@@ -53,7 +53,9 @@
 
 <div class="informer9-table-box">
     <div class="informer9-neon__background">
-    <div class="informer9-neon__background-1"></div>
+    <?php if($_REQUEST['clear']=='0'){?>
+        <div class="informer9-neon__background-1"></div>
+        <?php }?>
     <div class="informer9-neon__background-2"></div>
 
     <div class="informer9-neon__background-3"></div>

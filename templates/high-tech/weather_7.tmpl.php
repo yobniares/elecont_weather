@@ -93,7 +93,9 @@
 
     <div class="informer7-grey__background">
 
+    <?php if($_REQUEST['clear']=='0'){?>
         <div class="informer7-grey__background-1"></div>
+        <?php }?>
         <div class="informer7-grey__background-2"></div>
         <div class="informer7-grey__background-3"></div>
         <div class="informer7-grey__background-4"></div>

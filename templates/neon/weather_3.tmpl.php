@@ -74,7 +74,9 @@
 </svg>
 <div class="informer3-table-box">
     <div class="informer3-neon__background">
+        <?php if($_REQUEST['clear']=='0'){?>
         <div class="informer3-neon__background-1"></div>
+        <?php }?>
         <div class="informer3-neon__background-2"></div>
 
         <?php if($_REQUEST['transpar']=='1'){?>

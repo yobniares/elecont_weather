@@ -81,7 +81,9 @@
 <div class="table-box">
     <div class="informer1-neon__background">
 
-    <div class="informer1-neon__background-1"></div>
+    <?php if($_REQUEST['clear']=='0'){?>
+        <div class="informer1-neon__background-1"></div>
+        <?php }?>
     <div class="informer1-neon__background-2"></div>
 
     <?php if($_REQUEST['transpar']=='1'){?>

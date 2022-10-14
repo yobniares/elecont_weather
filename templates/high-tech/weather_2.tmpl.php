@@ -96,7 +96,9 @@
 </svg>
 <div class="informer2-table-box">
     <div class="informer2-grey__background">
-    <div class="informer2-grey__background-1"></div>
+        <?php if($_REQUEST['clear']=='0'){?>
+        <div class="informer2-grey__background-1"></div>
+        <?php }?>
     <?php if($_REQUEST['transpar']=='1'){?>
         <img class="informer2-grey__background-2"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
 

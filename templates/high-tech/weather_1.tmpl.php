@@ -7,6 +7,7 @@
 <?php if (!empty($_REQUEST['weather_tip'])) {?>
     <style>
 
+
         /* Font family */
         <?php
         if(isset($_REQUEST['font_family']) && $_REQUEST['font_family'] !=='') {?>
@@ -67,7 +68,9 @@
 </svg>
 <div class="table-box">
     <div class="informer1-grey__background">
+        <?php if($_REQUEST['clear']=='0'){?>
         <div class="informer1-grey__background-1"></div>
+        <?php }?>
         <div class="informer1-grey__background-2"></div>
 
         <?php if($_REQUEST['transpar']=='1'){?>

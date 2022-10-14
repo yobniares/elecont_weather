@@ -146,6 +146,7 @@ p {
   border-bottom-left-radius: 3vw;
   border-bottom-right-radius: 3vw;
   z-index: 1;
+  filter: brightness(140%);
 }
 
 
@@ -157,7 +158,7 @@ p {
   background-color: transparent;
   padding: 3%;
   font-size: 1vw;
-  padding-bottom:7%
+  padding-bottom: 7%
 }
 
 .informer1-grey__tr:nth-child(2) .informer1-grey__td:nth-child(1) {
@@ -225,11 +226,13 @@ p {
 }
 
 .informer1__text-font-bold {
-  font-family: "Geometria-bold", Arial, Helvetica, sans-serif;;
+  font-family: "Geometria-bold", Arial, Helvetica, sans-serif;
+  ;
 }
 
 .informer1__text-font-light {
-  font-family: "Geometria-Light", Arial, Helvetica, sans-serif;;
+  font-family: "Geometria-Light", Arial, Helvetica, sans-serif;
+  ;
 }
 
 
@@ -262,6 +265,7 @@ p {
 .informer1__temperature-middle {
   font-size: 140%;
 }
+
 .informer1-grey__tr:nth-child(11) .informer1-grey__td:nth-child(1) .informer1-grey__text-big,
 .informer1-grey__tr:nth-child(12) .informer1-grey__td:nth-child(1) .informer1-grey__text-big,
 .informer1-grey__tr:nth-child(13) .informer1-grey__td:nth-child(1) .informer1-grey__text-big {
@@ -319,5 +323,5 @@ p {
 
 .informer1-grey__box-middle-icons-img {
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
