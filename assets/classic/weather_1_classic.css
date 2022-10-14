@@ -92,11 +92,11 @@ p {
 .informer1-blue__background-0 {
   display: block;
   position: absolute;
-  bottom: 0%;
+  top: 90%;
   left: 0;
   width: 100%;
   max-width: 100%;
-  height: 12%;
+  height: 10%;
   object-fit: cover;
   object-position: center;
   background-color: transparent;
@@ -107,11 +107,11 @@ p {
 .informer1-blue__background-1 {
   display: block;
   position: absolute;
-  bottom: 12%;
+  top: 77%;
   left: 0;
   width: 100%;
   max-width: 100%;
-  height: 12%;
+  height: 11.5%;
   object-fit: cover;
   object-position: center;
   background-color: transparent;
@@ -123,10 +123,10 @@ p {
 .informer1-blue__background-2 {
   display: block;
   position: absolute;
-  bottom: 24%;
+  top: 66%;
   left: 0;
   width: 100%;
-  height: 11.5%;
+  height: 10%;
   object-fit: cover;
   object-position: center;
   background-color: transparent;
@@ -370,7 +370,7 @@ p {
   width: 13%;
 }
 
-.informer1-blue__tr:nth-child(8) .informer1-blue__td:nth-child(1) .informer1-blue__td-flexbox-small .informer1-blue__text-small .informer1__number-font{
+.informer1-blue__tr:nth-child(8) .informer1-blue__td:nth-child(1) .informer1-blue__td-flexbox-small .informer1-blue__text-small .informer1__number-font {
   line-height: 110%;
 }
 

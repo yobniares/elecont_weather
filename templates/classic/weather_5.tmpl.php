@@ -21,9 +21,20 @@ foreach ($objects['0'] as $forecast) {
 
         /* Background */
         <?php if ($_REQUEST['clear']=='1'){?>
-        /* .informer5-blue__background{
+        .informer5-blue__background{
             background-color:transparent;
-        } */
+                        border: none;
+
+        }
+        .informer5-blue__background-2{
+            border: none;
+            background-color:transparent;
+
+        }
+        .informer5-blue__tr:nth-child(2) .informer5-blue__td{
+            background-color:transparent;
+
+        }
         <?php }?>
         <?php
         if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
@@ -82,7 +93,7 @@ foreach ($objects['0'] as $forecast) {
 <div class="informer5-table-box">
     <div class="informer5-blue__background">
         <?php if($_REQUEST['transpar']=='1'){?>
-        <img class="informer5-blue__background-1"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+        <img class="informer5-blue__background-2"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
 
     <?php }else{?>
     <div class="informer5-blue__background-2" style="display:block"></div><!-- если фон-img есть то скрыть, если нет фона-img то показать этот блок style="display:none/block"-->
@@ -113,7 +124,17 @@ foreach ($objects['0'] as $forecast) {
             </tr>
             <tr class="informer5-blue__tr">
                 <?php for ($i=0; $i < 3; $i++) {?>
-                    <td class="informer5-blue__td">
+                    <?php 
+                        $style = "";
+                        if($_REQUEST['transpar']=='1'){
+                            $style = "background: url(".$abstractData->getWeatherBackground($forecatsArr[$i],$abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H')).");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            ";
+                        }
+                        ?>
+                    <td class="informer5-blue__td" style="<?php echo $style?>">
                         <p class="informer5-blue__text-big"><?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?></p>
                         <div class="informer5-blue__box-middle-icons">
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer5-blue__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>

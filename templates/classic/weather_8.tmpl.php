@@ -22,6 +22,7 @@ foreach ($objects['0'] as $forecast) {
         <?php if ($_REQUEST['clear']=='1'){?>
         .informer8-blue__background{
             background-color:transparent;
+            border:none;
         }
         <?php }?>
         <?php

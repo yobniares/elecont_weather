@@ -23,6 +23,7 @@
         <?php if ($_REQUEST['clear']=='1'){?>
         .informer1-blue__background{
             background-color:transparent;
+            border: none;
         }
         <?php }?>
         <?php
@@ -35,9 +36,9 @@
             --light-blue: <?php echo $_REQUEST['color_fon'] ?>;
             --light-blue2: <?php echo $_REQUEST['color_fon'] ?>;
         }
-        .informer1-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
+        /* .informer1-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
             background-color: <?php echo $_REQUEST['color_fon'] ?>;
-        }
+        } */
         <?php } ?>
 
         /* Text color */
@@ -102,7 +103,8 @@
         <?php if($_REQUEST['transpar']=='1'){?>
         <img class="informer1-blue__background-5"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
 
-        <?php for($i = 0;$i<3;$i++){?>
+        <?php for($i = 0;$i<3;$i++){ break;?>
+
                             <img class="informer1-blue__background-<? echo $i ?>" src="<?php echo $abstractData->getWeatherBackground($forecatsArr[$i],$abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H'))?>" width="100%" height="100%" alt="">
 
             <?php }?>
@@ -250,9 +252,19 @@
                         $className = 'evening';
                     }
                     ?>
+                    <?php 
+                        $style = "";
+                        if($_REQUEST['transpar']=='1'){
+                            $style = "background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(".$abstractData->getWeatherBackground($forecatsArr[$i],$abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H')).");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            ";
+                        }
+                        ?>
 
                     <tr class="informer1-blue__tr">
-                        <td class="informer1-blue__td">
+                        <td class="informer1-blue__td" style="<?php echo $style?>">
                             <p class="informer1-blue__text-big">
                                 <span class="informer1__text-font"><?php echo $abstractData->getTimesOfDay($abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H:i')) ?></span>
                             </p>

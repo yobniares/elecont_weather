@@ -19,6 +19,10 @@ foreach ($objects['0'] as $forecast) {
         <?php if ($_REQUEST['clear']=='1'){?>
         .informer2-blue__background{
             background-color:transparent;
+            border:none;
+        }
+        .informer2-blue__background-5{
+            display:none;
         }
         <?php }?>
         <?php
@@ -117,7 +121,7 @@ foreach ($objects['0'] as $forecast) {
 
     <?php for($i = 1;$i<=6;$i++){?>
         <?php if($_REQUEST['transpar']=='1'){?>
-        <img class="informer2-blue__background-1" src="<?php echo $abstractData->getWeatherBackground($forecatsArr[$i-1],date('H', time()))?>" style="top: <?php echo 7+(($i-1)*14.30)?>%" alt="">
+        <img class="informer2-blue__background-1" src="<?php echo $abstractData->getWeatherBackground($forecatsArr[$i-1],date('H', time()))?>" style="top: <?php echo 6.6+(($i-1)*14.5)?>%" alt="">
 <!-- <?php echo json_encode($forecatsArr[$i-1]) ?> -->
         <?php }?>
     <?php }?>

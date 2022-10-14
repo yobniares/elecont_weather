@@ -42,6 +42,7 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
+
 /* Sections
    ========================================================================== */
 /**
@@ -56,6 +57,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -64,6 +66,7 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+
 /* Grouping content
    ========================================================================== */
 /**
@@ -72,13 +75,14 @@ h1 {
  */
 hr {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
   overflow: visible;
   /* 2 */
 }
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -89,6 +93,7 @@ pre {
   font-size: 1em;
   /* 2 */
 }
+
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -97,6 +102,7 @@ pre {
 a {
   background-color: transparent;
 }
+
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -107,9 +113,10 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
+
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -117,6 +124,7 @@ b,
 strong {
   font-weight: bolder;
 }
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -129,12 +137,14 @@ samp {
   font-size: 1em;
   /* 2 */
 }
+
 /**
  * Add the correct font size in all browsers.
  */
 small {
   font-size: 80%;
 }
+
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
@@ -146,12 +156,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }
+
 /* Embedded content
    ========================================================================== */
 /**
@@ -160,6 +173,7 @@ sup {
 img {
   border-style: none;
 }
+
 /* Forms
    ========================================================================== */
 /**
@@ -180,6 +194,7 @@ textarea {
   margin: 0;
   /* 2 */
 }
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -189,6 +204,7 @@ input {
   /* 1 */
   overflow: visible;
 }
+
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -198,6 +214,7 @@ select {
   /* 1 */
   text-transform: none;
 }
+
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
@@ -207,6 +224,7 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
 }
+
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -217,6 +235,7 @@ button::-moz-focus-inner,
   border-style: none;
   padding: 0;
 }
+
 /**
  * Restore the focus styles unset by the previous rule.
  */
@@ -226,12 +245,14 @@ button:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
+
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
@@ -240,7 +261,7 @@ fieldset {
  */
 legend {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -253,18 +274,21 @@ legend {
   white-space: normal;
   /* 1 */
 }
+
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
   vertical-align: baseline;
 }
+
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
   overflow: auto;
 }
+
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
@@ -272,11 +296,12 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
 }
+
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
@@ -284,6 +309,7 @@ textarea {
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
+
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
@@ -294,12 +320,14 @@ textarea {
   outline-offset: -2px;
   /* 2 */
 }
+
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
@@ -310,6 +338,7 @@ textarea {
   font: inherit;
   /* 2 */
 }
+
 /* Interactive
    ========================================================================== */
 /*
@@ -318,12 +347,14 @@ textarea {
 details {
   display: block;
 }
+
 /*
  * Add the correct display in all browsers.
  */
 summary {
   display: list-item;
 }
+
 /* Misc
    ========================================================================== */
 /**
@@ -332,17 +363,20 @@ summary {
 template {
   display: none;
 }
+
 /**
  * Add the correct display in IE 10.
  */
 [hidden] {
   display: none;
 }
+
 :root {
   --dark-blue: #2A88CD;
   --light-blue: #7bb3dc;
   --white: #ffffff;
 }
+
 /* @font-face {
   font-family: "Play";
   font-style: normal;
@@ -377,15 +411,18 @@ h3 {
   margin: 0;
   padding: 0;
 }
+
 p {
   margin: 0;
   padding: 0;
 }
+
 .informer5-table-box {
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
 }
+
 .informer5-blue__background {
   position: relative;
   top: 0;
@@ -418,10 +455,10 @@ p {
 
 .informer5-blue__background-2 {
   position: absolute;
-  top: -2%;
-  left: -1%;
-  width: 102%;
-  height: 56%;
+  top: 2%;
+  left: 0.5%;
+  width: 99%;
+  height: 47%;
   object-fit: cover;
   object-position: center;
   background-color: var(--light-blue);
@@ -429,8 +466,8 @@ p {
   box-sizing: border-box;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
-  border-bottom-left-radius: 5vw;
-  border-bottom-right-radius: 5vw;
+  border-bottom-left-radius: 4vw;
+  border-bottom-right-radius: 4vw;
   margin: 0 auto;
   z-index: -1;
 }
@@ -452,10 +489,12 @@ p {
   margin: 0 auto;
   z-index: 4;
 }
+
 .informer5-blue__td {
   width: 20%;
   font-size: 2vw;
 }
+
 .informer5-blue__tr .informer5-blue__td {
   padding: 2%;
   border: 3px solid var(--dark-blue);
@@ -474,42 +513,52 @@ p {
 .informer5-blue__tr:nth-child(2) .informer5-blue__td:first-child {
   border-top-left-radius: 4vw;
 }
+
 .informer5-blue__tr:nth-child(1) .informer5-blue__td:last-child,
 .informer5-blue__tr:nth-child(2) .informer5-blue__td:last-child {
   border-top-right-radius: 4vw;
 }
+
 .informer5-blue__tr:nth-child(1) .informer5-blue__td:first-child,
 .informer5-blue__tr:nth-child(2) .informer5-blue__td:first-child {
   border-bottom-left-radius: 4vw;
 }
+
 .informer5-blue__tr:nth-child(1) .informer5-blue__td:last-child,
 .informer5-blue__tr:nth-child(2) .informer5-blue__td:last-child {
   border-bottom-right-radius: 4vw;
 }
+
 .informer5-blue__box-middle-icons {
   width: 40%;
   margin: 0 auto;
 }
+
 .informer5-blue__box-big-icons {
   width: 50%;
   margin: 0 auto;
 }
+
 .informer5-blue__text-middle {
   font-size: 220%;
   word-break: nowrap;
 }
+
 .informer5-blue__text-big {
   font-size: 130%;
   text-transform: uppercase;
 }
+
 .informer5-blue__tr:nth-child(1) .informer5-blue__td:nth-child(1) .informer5__number-font-time {
   font-size: 200%;
   font-family: "Play", Arial, Helvetica;
 }
+
 .informer5-blue__text-small {
   font-family: "Geometria-Light", Arial, Helvetica;
   font-size: 100%;
 }
+
 .informer5__number-font {
   font-family: "Play", Arial, Helvetica;
 }
