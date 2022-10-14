@@ -37,7 +37,10 @@
 
         /* Text color */
         <?php
-        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        $text_color = "#0FF19";
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {
+            $text_color = $_REQUEST['font_text'];
+            ?>
         .informer6-neon {
             color: <?php echo  $_REQUEST['font_text'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
@@ -54,6 +57,16 @@
         <?php } ?>
     </style>
 <?php }?>
+
+<!-- фильтр для иконок в img -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <filter id="recolourFilter" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="<?php echo $text_color?>" result="flood" />
+      <feComposite in="flood" in2="SourceAlpha" operator="in" />
+    </filter>
+  </defs>
+</svg>
 
 <div class="informer6-table-box">
 
@@ -78,7 +91,7 @@
                     <div class="informer6-neon__box-middle-icons">
                         <?php
                         for ($i=0; $i < 3; $i++) {
-                            echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer6-neon__box-middle-icons-img', '', '', '100%', '100%');
+                            echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer6-neon__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%');
                         }
                         ?>
                     </div>

@@ -33,7 +33,10 @@
 
         /* Text color */
         <?php
-        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        $text_color = "#0FF19";
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {
+            $text_color = $_REQUEST['font_text'];
+            ?>
         .informer9-neon {
             color: <?php echo  $_REQUEST['font_text'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
@@ -50,6 +53,16 @@
         <?php } ?>
     </style>
 <?php }?>
+
+<!-- фильтр для иконок в img -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <filter id="recolourFilter" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="<?php echo $text_color?>" result="flood" />
+      <feComposite in="flood" in2="SourceAlpha" operator="in" />
+    </filter>
+  </defs>
+</svg>
 
 <div class="informer9-table-box">
     <div class="informer9-neon__background">
@@ -77,7 +90,7 @@
                         <span class="informer9__text-font"><?php echo $abstractData->getWeatherDescription($mainObject['icon']) ?></span>
                     </p>
                     <div class="informer9-neon__box-big-icons">
-                        <?php echo $abstractData->getWeatherIcon($object, 'informer5-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer5-neon__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                     </div>
                 </td>
                 <td class="informer9-neon__td" colspan="3" rowspan="2">
@@ -100,17 +113,17 @@
             <tr class="informer9-neon__tr">
                 <td class="informer9-neon__td" colspan="2">
                     <div class="informer9-neon__box-middle-icons">
-                        <?php echo $abstractData->getWeatherIcon($forecatsArr[0], 'informer5-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($forecatsArr[0], 'informer5-neon__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                     </div>
                 </td>
                 <td class="informer9-neon__td" colspan="2">
                     <div class="informer9-neon__box-middle-icons">
-                        <?php echo $abstractData->getWeatherIcon($forecatsArr[1], 'informer5-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($forecatsArr[1], 'informer5-neon__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                     </div>
                 </td>
                 <td class="informer9-neon__td" colspan="2">
                     <div class="informer9-neon__box-middle-icons">
-                        <?php echo $abstractData->getWeatherIcon($forecatsArr[2], 'informer5-neon__box-middle-icons-img', '', '', '100%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($forecatsArr[2], 'informer5-neon__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                     </div>
                 </td>
             </tr>

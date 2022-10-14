@@ -35,7 +35,10 @@
 
         /* Text color */
         <?php
-        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        $text_color = "black";
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {
+            $text_color = $_REQUEST['font_text'];
+            ?>
         .informer5-grey {
             color: <?php echo  $_REQUEST['font_text'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
@@ -52,6 +55,16 @@
         <?php } ?>
     </style>
 <?php }?>
+
+<!-- фильтр для иконок в img -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <filter id="recolourFilter" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="<?php echo $text_color?>" result="flood" />
+      <feComposite in="flood" in2="SourceAlpha" operator="in" />
+    </filter>
+  </defs>
+</svg>
 
 <div class="informer5-table-box">
 
@@ -78,7 +91,7 @@
                 </td>
                 <td class="informer5-grey__td">
                     <div class="informer5-grey__box-big-icons">
-                        <?php echo $abstractData->getWeatherIcon($object, 'informer5-grey__box-big-icons-img', '', '', '100%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer5-grey__box-big-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                     </div>
                     <p class="informer5-grey__text-middle"><?php echo $abstractData->getWeatherDescription($object['icon']) ?></p>
                 </td>
@@ -98,7 +111,7 @@
                     <td class="informer5-grey__td">
                         <p class="informer5-grey__text-big">Ночь</p>
                         <div class="informer5-grey__box-middle-icons">
-                            <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer5-grey__box-middle-icons-img', '', '', '100%', '100%') ?>
+                            <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer5-grey__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                         </div>
                         <p class="informer5-grey__text-big informer5-grey__temperature informer5__number-font temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</p>
                     </td>

@@ -37,7 +37,10 @@
 
         /* Text color */
         <?php
-        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {?>
+        $text_color = "black";
+        if(isset($_REQUEST['font_text']) && $_REQUEST['font_text'] !=='#') {
+            $text_color = $_REQUEST['font_text'];
+            ?>
         .informer6-grey {
             color: <?php echo  $_REQUEST['font_text'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
@@ -55,6 +58,15 @@
     </style>
 <?php }?>
 
+<!-- фильтр для иконок в img -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <filter id="recolourFilter" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="<?php echo $text_color?>" result="flood" />
+      <feComposite in="flood" in2="SourceAlpha" operator="in" />
+    </filter>
+  </defs>
+</svg>
 <div class="informer6-table-box">
     <div class="informer6-grey__background">
         <?php if($_REQUEST['clear']=='0'){?>
@@ -72,7 +84,7 @@
             <tr class="informer6-grey__tr">
                 <td colspan="2" class="informer6-grey__td">
                     <div class="informer6-grey__box-middle-icons">
-                        <?php echo $abstractData->getWeatherIcon($object, 'informer6-grey__box-middle-icons-img', '', '', '80%', '100%') ?>
+                        <?php echo $abstractData->getWeatherIcon($object, 'informer6-grey__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '80%', '100%') ?>
                     </div>
                 </td>
             </tr>
