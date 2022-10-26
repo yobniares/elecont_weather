@@ -418,6 +418,7 @@ p {
   box-sizing: border-box;
   margin: 0 auto;
   z-index: 1;
+  overflow: hidden;
 }
 
 .informer2-grey__background-1 {

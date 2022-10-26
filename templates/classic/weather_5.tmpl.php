@@ -26,6 +26,9 @@ foreach ($objects['0'] as $forecast) {
                         border: none;
 
         }
+        .informer5-blue__tr .informer5-blue__td {
+  border: none;
+}
         .informer5-blue__background-2{
             border: none;
             background-color:transparent;

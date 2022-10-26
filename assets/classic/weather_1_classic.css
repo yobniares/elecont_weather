@@ -179,7 +179,7 @@ p {
 
 .informer1-blue__td {
   display: block;
-  max-height: 15vh;
+  /* max-height: 20vh; */
   font-size: 1.5vw;
   line-height: 0%;
   padding: 1vh;

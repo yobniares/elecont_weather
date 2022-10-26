@@ -106,11 +106,12 @@
 
 <?php if($_REQUEST['clear']=='0'){?>
         <div class="informer7-neon__background-1"></div>
-        <?php }?>
-                    <div class="informer7-neon__background-2"></div>
+        <div class="informer7-neon__background-2"></div>
             <div class="informer7-neon__background-3"></div>
             <div class="informer7-neon__background-4"></div>
-            <div class="informer7-neon__background-6"></div>
+            
+        <?php }?>
+                    <div class="informer7-neon__background-6"></div>
 
             <?php if($_REQUEST['transpar']=='1'){?>
                 <img class="informer7-neon__background-5"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">

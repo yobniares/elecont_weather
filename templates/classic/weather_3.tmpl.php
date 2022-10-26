@@ -198,9 +198,27 @@ foreach ($objects['0'] as $forecast) {
             </td>
 		</tr>
 		<?php
-            for ($i=0; $i < 3; $i++) {?>
-                <tr class="informer3-blue__tr">
-                    <td colspan="2" class="informer3-blue__td" >
+        
+            for ($i=0; $i < 3; $i++) {
+                $style = "";
+                $style_td = "";
+                        if($_REQUEST['transpar']=='1'){
+
+                            $style = "background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(".$abstractData->getWeatherBackground($forecatsArr[$i],$abstractData->getDateFromString($forecatsArr[$i]['dt'], 'H')).");
+                            
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            ";
+                            $style_td = "background-color: transparent";
+                        }
+                        if($_REQUEST['clear']=='1'){
+$style_td = "background-color: transparent";
+                        }
+
+                ?>
+                <tr class="informer3-blue__tr" style="<?php echo $style?>">
+                    <td colspan="2" class="informer3-blue__td" style="<?php echo $style_td?>" >
                         <p class="informer3-blue__text-big">
                             <span class="informer3__text-font"> <?php echo $abstractData->getNameOfTheDate($forecatsArr[$i]['dt']); ?></span>
                         </p>
@@ -208,12 +226,12 @@ foreach ($objects['0'] as $forecast) {
                             <span class="informer3__number-font informer2__number-font-bold"><?php echo $abstractData->getDateFromString($forecatsArr[$i]['dt'], 'd.m'); ?></span>
                         </p>
                     </td>
-                    <td colspan="2" class="informer3-blue__td">
+                    <td colspan="2" class="informer3-blue__td" style="<?php echo $style_td?>">
                         <p class="informer3-blue__text-middle">
                             <span class="informer3__number-font informer3-blue__temperature temp"><?php echo $forecatsArr[$i]['tempC']; ?>°</span>
                         </p>
                     </td>
-                    <td colspan="2" class="informer3-blue__td">
+                    <td colspan="2" class="informer3-blue__td" style="<?php echo $style_td?>">
                         <div class="informer3-blue__box-middle-icons">
                             <?php echo $abstractData->getWeatherIcon($forecatsArr[$i], 'informer3-blue__box-middle-icons-img', '', 'filter: url(#recolourFilter);', '100%', '100%') ?>
                         </div>

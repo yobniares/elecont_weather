@@ -99,7 +99,9 @@ img {
   box-sizing: border-box;
   margin: 0 auto;
   z-index: 1;
+
 }
+
 .informer3-neon__background-1 {
   position: absolute;
   top: 0%;
@@ -186,13 +188,15 @@ img {
 
 .informer3-neon__tr:nth-child(2) .informer3-neon__td:nth-child(1),
 .informer3-neon__tr:nth-child(2) .informer3-neon__td:nth-child(2),
-.informer3-neon__tr:nth-child(2) .informer3-neon__td:nth-child(3){
+.informer3-neon__tr:nth-child(2) .informer3-neon__td:nth-child(3) {
   padding-top: 8%
 }
+
 .informer3-neon__tr:nth-child(1) .informer3-neon__td:nth-child(1) .informer3-neon__text-middle {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
+
 .informer3-neon__tr:nth-child(1) .informer3-neon__td:nth-child(1) .informer3-neon__text-middle .informer3__text-font {
   word-wrap: break-word;
   white-space: pre-wrap;
@@ -260,15 +264,18 @@ img {
   border-top-left-radius: 1em;
   border-bottom: 0.063em solid #111111;
 }
+
 .informer3-neon__tr:nth-child(4) .informer3-neon__td:nth-child(2) {
   background-color: transparent;
   border-bottom: 0.063em solid var(--black);
 }
+
 .informer3-neon__tr:nth-child(4) .informer3-neon__td:nth-child(3) {
   background-color: transparent;
   border-top-right-radius: 1em;
   border-bottom: 0.063em solid var(--black);
 }
+
 .informer3-neon__tr:nth-child(4) .informer3-neon__td {
   border-bottom: 0.063em solid var(--black);
 }
@@ -279,16 +286,19 @@ img {
   border-top: 0.063em solid var(--neon);
   border-bottom: 0.063em solid var(--black);
 }
+
 .informer3-neon__tr:nth-child(5) .informer3-neon__td:nth-child(2) {
   background-color: transparent;
   border-top: 0.063em solid var(--neon);
   border-bottom: 0.063em solid var(--black);
 }
+
 .informer3-neon__tr:nth-child(5) .informer3-neon__td:nth-child(3) {
   background-color: transparent;
   border-top: 0.063em solid var(--neon);
   border-bottom: 0.063em solid var(--black);
 }
+
 .informer3-neon__tr:nth-child(5) .informer3-neon__td {
   border-top: 0.063em solid var(--neon);
   border-bottom: 0.063em solid var(--black);
@@ -304,6 +314,7 @@ img {
   background-color: transparent;
   border-top: 0.063em solid var(--neon);
 }
+
 .informer3-neon__tr:nth-child(6) .informer3-neon__td:nth-child(3) {
   background-color: transparent;
   border-top: 0.063em solid var(--neon);
@@ -365,6 +376,7 @@ img {
 
 
 .informer3-neon__text-big {
+  overflow: hidden;
   white-space: pre-line;
   font-size: 125%;
 }
