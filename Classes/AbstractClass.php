@@ -461,13 +461,18 @@ class AbstractClass
     public function getWeatherIcon($object, $className = '', $color = '', $style = '', $width = '', $height = '')
     {
         if (!empty($_REQUEST['weather_tip_img'])) {
-            if ($color !=='') {
-                $img = '<img width="'.$width.'" height="'.$height.'" class="'.$className. '" style="'.$style.'" src="assets/'. $_REQUEST['weather_tip_img'] .
-                    '/icons/icon_' . $color .'_'.$object['icon'] . '.svg" />';
-            } else {
-                $img = '<img width="'.$width.'" height="'.$height.'" class="'.$className. '" style="'.$style.'" src="assets/'. $_REQUEST['weather_tip_img'] .
-                    '/icons/icon_' . $object['icon'] . '.svg" />';
+            $src = 'assets/'. $_REQUEST['weather_tip_img'] .
+                    '/icons/icon_'.$object['icon'] . '.svg';
+            if(!file_exists(''.$src)){
+                $src = 'assets/'. $_REQUEST['weather_tip_img'] .
+                    '/icons/icon_28.svg';
             }
+            // if ($color !=='') {
+                $img = '<img width="'.$width.'" height="'.$height.'" class="'.$className. '" style="'.$style.'" src="'.$src.'" />';
+            // } else {
+            //     $img = '<img width="'.$width.'" height="'.$height.'" class="'.$className. '" style="'.$style.'" src="assets/'. $_REQUEST['weather_tip_img'] .
+            //         '/icons/icon_' . $object['icon'] . '.svg" />';
+            // }
         } else {
             $img = '';
         }

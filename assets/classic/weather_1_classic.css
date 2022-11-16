@@ -163,7 +163,7 @@ p {
   font-family: "Geometria-Medium", Arial, Helvetica;
   text-align: center;
   color: var(--white);
-  white-space: pre-wrap;
+  white-space: inherit;
   border-spacing: 0px;
   background-color: transparent;
   border: 0.2vw solid var(--white);
