@@ -460,11 +460,13 @@ class AbstractClass
      */
     public function getWeatherIcon($object, $className = '', $color = '', $style = '', $width = '', $height = '')
     {
-        if (!empty($_REQUEST['weather_tip_img'])) {
-            $src = 'assets/'. $_REQUEST['weather_tip_img'] .
+        $tip = $_REQUEST['weather_tip_img'];
+        // $tip = 'classic';
+        if (!empty($tip)) {
+            $src = 'assets/'. $tip .
                     '/icons/icon_'.$object['icon'] . '.svg';
             if(!file_exists(''.$src)){
-                $src = 'assets/'. $_REQUEST['weather_tip_img'] .
+                $src = 'assets/'. $tip .
                     '/icons/icon_28.svg';
             }
             // if ($color !=='') {

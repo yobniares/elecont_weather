@@ -505,6 +505,7 @@ p {
 }
 
 .informer7-blue__background-5 {
+  /* display: none; */
   position: absolute;
   left: 1%;
   top: 5%;
@@ -539,6 +540,7 @@ p {
 .informer7-blue__td {
   background-color: transparent;
   width: 15%;
+  height: 90%;
 }
 
 .informer7-blue__tr .informer7-blue__td {

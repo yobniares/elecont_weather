@@ -27,11 +27,15 @@ foreach ($objects['0'] as $forecast) {
         <?php }?>
         <?php
         if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
-        .informer8-blue__background-1,
+
+        <?php if ($_REQUEST['transparent']=='1'){?>
+       .informer8-blue__background-1,
         .informer8-blue__tr .informer8-blue__td {
-            background:<?php echo $_REQUEST['color_fon'] ?>;
-            border-radius: 30px;
+            background:transparent;
+            /* border-radius: 30px; */
         }
+        <?php }?>
+        
         :root {
             --dark-blue: <?php echo $_REQUEST['color_fon'] ?>;
             --light-blue: <?php echo $_REQUEST['color_fon'] ?>;
@@ -39,6 +43,7 @@ foreach ($objects['0'] as $forecast) {
         .informer8-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
             background-color: <?php echo $_REQUEST['color_fon'] ?>;
         }
+
         <?php } ?>
 
         /* Text color */
@@ -65,7 +70,7 @@ foreach ($objects['0'] as $forecast) {
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />

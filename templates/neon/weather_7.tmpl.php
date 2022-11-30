@@ -21,7 +21,7 @@
 
         /* Background */
         <?php
-        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#' && $_REQUEST['transpar']=='0') {?>
         .informer7-neon__background-1,
         .informer7-neon__tr .informer7-neon__td {
             background:<?php echo $_REQUEST['color_fon'] ?>;
@@ -29,7 +29,7 @@
         }
         :root {
             --black: <?php echo $_REQUEST['color_fon'] ?>;
-            --neon: <?php echo $_REQUEST['color_fon'] ?>;
+            /* --neon: <?php// echo $_REQUEST['color_fon'] ?>; */
         }
         .informer7-neon__tr:nth-child(1) .informer1-neon__td:nth-child(1) {
             background-color: <?php echo $_REQUEST['color_fon'] ?>;
@@ -52,6 +52,9 @@
             color: <?php echo  $_REQUEST['font_text'] ?>;
             font-family:<?php echo $_REQUEST['font_family'] ?>;
         }
+        :root {
+             --neon: <?php echo $_REQUEST['color_fon'] ?>; 
+        }
         <?php } ?>
 
         /* Temperature color and font */
@@ -66,7 +69,7 @@
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />

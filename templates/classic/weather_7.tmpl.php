@@ -26,12 +26,16 @@ foreach ($objects['0'] as $forecast) {
         }
         <?php }?>
         <?php
-        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {
+            if($_REQUEST['transpar']=='0'){
+            ?>
+        
         .informer7-blue__background-1,
         .informer7-blue__tr .informer7-blue__td {
             background:<?php echo $_REQUEST['color_fon'] ?>;
             border-radius: 30px;
         }
+        <?php }?>
         :root {
             --dark-blue: <?php echo $_REQUEST['color_fon'] ?>;
             --light-blue: <?php echo $_REQUEST['color_fon'] ?>;
@@ -65,7 +69,7 @@ foreach ($objects['0'] as $forecast) {
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />

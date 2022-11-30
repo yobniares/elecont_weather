@@ -63,7 +63,7 @@ foreach ($objects['0'] as $forecast) {
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />

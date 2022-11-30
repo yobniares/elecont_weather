@@ -18,7 +18,7 @@
 
         /* Background */
         <?php
-        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
+        if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#' && $_REQUEST['transpar']=='0') {?>
         .informer5-grey__background-1,
         .informer5-grey__tr .informer5-grey__td {
             background:<?php echo $_REQUEST['color_fon'] ?>;
@@ -57,7 +57,7 @@
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />
