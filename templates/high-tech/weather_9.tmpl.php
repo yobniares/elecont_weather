@@ -28,6 +28,10 @@
         .informer9-grey__tr:nth-child(1) .informer1-grey__td:nth-child(1) {
             background-color: <?php echo $_REQUEST['color_fon'] ?>;
         }
+        .informer9-grey__background-1{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='400' viewBox='0 0 350 400' fill='none'%3E%3Crect x='345' y='5.00002' width='390' height='340' rx='30' transform='rotate(90 345 5.00002)' fill='<?php echo str_replace('#','%23',$_REQUEST['color_fon']) ?>' stroke='url(%23paint0_radial_181_9063)' stroke-width='10'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_181_9063' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(550 175) rotate(180) scale(200 4587.52)'%3E%3Cstop/%3E%3Cstop offset='1' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
+
+        }
         <?php } ?>
 
         /* Text color */
@@ -54,7 +58,7 @@
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg style="position: absolute; height: 0; width: 0;" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />

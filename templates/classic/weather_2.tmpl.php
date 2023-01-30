@@ -24,18 +24,73 @@ foreach ($objects['0'] as $forecast) {
         .informer2-blue__background-5{
             display:none;
         }
+        .informer2-blue__tr:nth-child(2) .informer2-blue__td:nth-child(1){
+            border-image:linear-gradient(90deg, transparent 120%, transparent 120%);
+        }
+        .informer2-blue__tr:nth-child(3) .informer2-blue__td:nth-child(1) {
+            border-image:linear-gradient(90deg, transparent 120%, transparent 120%);
+        }
+        .informer2-blue__tr:nth-child(4) .informer2-blue__td:nth-child(1){
+            border-image:linear-gradient(90deg, transparent 120%, transparent 120%);
+        }
+        .informer2-blue__tr:nth-child(5) .informer2-blue__td:nth-child(1){
+            border-image:linear-gradient(90deg, transparent 120%, transparent 120%);
+        }
+        .informer2-blue__tr:nth-child(6) .informer2-blue__td:nth-child(1){
+            border-image:linear-gradient(90deg, transparent 120%, transparent 120%);
+        }
+
+        :root{
+            --dark-blue:transparent;
+        }
         <?php }?>
         <?php
+        function make_lighter($color){
+            $factor = 1;
+            $plus = 70;
+            $hex = substr($color,1);
+            $r=intval(hexdec(substr($hex,0,2))*$factor+$plus);
+            $g=intval(hexdec(substr($hex,2,2))*$factor+$plus);
+            $b=intval(hexdec(substr($hex,4,2))*$factor+$plus);
+            
+            if($r>255)$r=255;
+            if($g>255)$g=255;
+            if($b>255)$b=255;
+            
+            $r_hex=str_pad(dechex($r), 2, "0", STR_PAD_LEFT);
+            $g_hex=str_pad(dechex($g), 2, "0", STR_PAD_LEFT);
+            $b_hex=str_pad(dechex($b), 2, "0", STR_PAD_LEFT);
+            
+            $result = '#'.$r_hex.$g_hex.$b_hex;
+            return $result;
+        }
+        
         if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
-        ._informer2-blue__background-1 {
-            background:<?php echo $_REQUEST['color_fon'] ?>
-        }
+        
         :root {
-            --light-blue: <?php echo $_REQUEST['color_fon'] ?>;
-            --light-blue2: <?php echo $_REQUEST['color_fon'] ?>;
+            --dark-blue: <?php echo $_REQUEST['color_fon'] ?>;
+            --light-blue: <?php echo make_lighter($_REQUEST['color_fon']) ?>;
+
         }
-        .informer2-blue__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
-            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+        .informer2-blue__tr:nth-child(2) .informer2-blue__td:nth-child(1){
+            border-image:linear-gradient(90deg, var(--dark-blue) 120%, transparent 120%);
+                border-image-slice: 1;
+        }
+        
+        .informer2-blue__tr:nth-child(3) .informer2-blue__td:nth-child(1) {
+border-image:linear-gradient(90deg, var(--dark-blue) 90%, transparent 90%);
+                border-image-slice: 1;        }
+        .informer2-blue__tr:nth-child(4) .informer2-blue__td:nth-child(1){
+border-image:linear-gradient(90deg, var(--dark-blue) 90%, transparent 90%);
+                border-image-slice: 1;         }
+        .informer2-blue__tr:nth-child(5) .informer2-blue__td:nth-child(1){
+border-image:linear-gradient(90deg, var(--dark-blue) 90%, transparent 90%);
+                border-image-slice: 1;         }
+        .informer2-blue__tr:nth-child(6) .informer2-blue__td:nth-child(1){
+border-image:linear-gradient(90deg, var(--dark-blue) 120%, transparent 120%);
+                border-image-slice: 1;         }
+        .informer2-blue__background-4{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='460' height='420' viewBox='0 0 460 420' fill='none'%3E%3Cpath d='M208.476 0C153.185 8.29927e-07 100.158 22.1249 61.0613 61.5076C21.9644 100.89 0 154.305 0 210C0 265.695 21.9644 319.11 61.0613 358.492C100.158 397.875 153.185 420 208.476 420H460V0H208.476Z' fill='<?php echo str_replace('#','%23',$_REQUEST['color_fon'])?>'/%3E%3C/svg%3E");
         }
         <?php } ?>
 
@@ -65,7 +120,7 @@ foreach ($objects['0'] as $forecast) {
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg style="position: absolute; height: 0; width: 0;" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />

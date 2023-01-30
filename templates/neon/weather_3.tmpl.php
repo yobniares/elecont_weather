@@ -24,12 +24,21 @@
             background:<?php echo $_REQUEST['color_fon'] ?>;
             border-radius: 30px;
         }
-        :root {
-            --neon: <?php echo $_REQUEST['color_fon'] ?>;
-        }
+        
         .informer3-neon__tr:nth-child(1) .informer1-blue__td:nth-child(1) {
             background-color: <?php echo $_REQUEST['color_fon'] ?>;
         }
+
+        .informer3-neon__background-2 {
+
+            background-color: <?php echo $_REQUEST['color_fon'] ?>;
+            background-image: -webkit-gradient(linear, left top, right top, from(<?php echo $_REQUEST['color_fon'] ?>), color-stop(80%, #111111));
+            background-image: linear-gradient(90deg, <?php echo $_REQUEST['color_fon'] ?> 0%, #111111 80%);
+            background-image: -moz-linear-gradient(deg, <?php echo $_REQUEST['color_fon'] ?> 0%, #111111 80%);
+
+            border-top: 1px solid <?php echo $_REQUEST['color_fon'] ?>;
+            border-bottom: 1px solid <?php echo $_REQUEST['color_fon'] ?>;
+            }
         <?php } ?>
 
         /* Text color */
@@ -57,7 +66,7 @@
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg style="position: absolute; height: 0; width: 0;" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />
@@ -123,7 +132,7 @@
                 <td class="informer3-neon__td" colspan="2">
                     <p class="informer3-neon__text-middle">
                         <span class="informer3__text-font"><?php echo $abstractData->getWeek() ?></span>
-                        <span class="informer3__number-font informer3__number-font-bold informer3-neon__temperature shine-neon"><?php echo $abstractData->getDate('H:i') ?></span>
+                        <span class="informer3__number-font informer3__number-font-bold informer3-neon__time shine-neon"><?php echo $abstractData->getDate('H:i') ?></span>
                     </p>
                 </td>
                 <td class="informer3-neon__td" colspan="2">

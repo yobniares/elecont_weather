@@ -405,6 +405,10 @@ img {
   font-weight: bold;
 }
 
+.informer3-neon__time {
+  font-size: 220%;
+}
+
 .informer3-neon__tr:first-child .informer3-neon__td:first-child .informer3-neon__text-big .informer3-neon__temperature {
   font-size: 220%;
 }

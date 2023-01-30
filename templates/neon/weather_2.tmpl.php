@@ -54,7 +54,7 @@
     </style>
 <?php }?>
 <!-- фильтр для иконок в img -->
-<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg style="position: absolute; height: 0; width: 0;" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />
@@ -108,8 +108,10 @@
 <div class="informer2-table-box">
     <div class="informer2-neon__background">
         <?php if($_REQUEST['clear']=='0'){?>
-        <div class="informer2-neon__background-1"></div>
+                            <div class="informer2-neon__background-1"></div>
+
         <?php }?>
+
 
     <?php if($_REQUEST['transpar']=='1'){?>
         <img class="informer2-neon__background-2"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">

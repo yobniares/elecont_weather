@@ -22,6 +22,9 @@ foreach ($objects['0'] as $forecast) {
             background-color:transparent;
             border: none;
         }
+        :root{
+            --dark-blue:white;
+        }
         <?php }?>
         <?php
         if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
@@ -63,7 +66,7 @@ foreach ($objects['0'] as $forecast) {
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg style="position: absolute; height: 0; width: 0;" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />

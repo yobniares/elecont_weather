@@ -58,7 +58,7 @@
 <?php }?>
 
 <!-- фильтр для иконок в img -->
-<svg hidden xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<svg style="position: absolute; height: 0; width: 0;" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <defs>
     <filter id="recolourFilter" filterUnits="userSpaceOnUse">
       <feFlood flood-color="<?php echo $text_color?>" result="flood" />
@@ -93,9 +93,15 @@
     <div class="informer4-neon__background-2"></div>
 
     <?php if($_REQUEST['transpar']=='1'){?>
-        <img class="informer4-neon__background-3"src="<?php echo $abstractData->getWeatherBackground($object,date('H', time()))?>" width="100%" height="100%" alt="">
+        <img class="informer4-neon__background-4 informer4-neon__background-imgs"src="<?php echo $abstractData->getWeatherBackground($forecatsArr[0],$abstractData->getDateFromString($forecatsArr[0]['dt'], 'H'))?>" width="20%" height="50%" alt="">
 
-        <?php }?>
+        <img class="informer4-neon__background-5 informer4-neon__background-imgs"src="<?php echo $abstractData->getWeatherBackground($forecatsArr[1],$abstractData->getDateFromString($forecatsArr[1]['dt'], 'H'))?>" width="20%" height="50%" alt="">
+
+        <img class="informer4-neon__background-6 informer4-neon__background-imgs"src="<?php echo $abstractData->getWeatherBackground($forecatsArr[2],$abstractData->getDateFromString($forecatsArr[2]['dt'], 'H'))?>" width="20%" height="50%" alt="">
+
+        <img class="informer4-neon__background-7 informer4-neon__background-imgs"src="<?php echo $abstractData->getWeatherBackground($forecatsArr[3],$abstractData->getDateFromString($forecatsArr[3]['dt'], 'H'))?>" width="20%" height="50%" alt="">
+
+    <?php }?>
 
 
 

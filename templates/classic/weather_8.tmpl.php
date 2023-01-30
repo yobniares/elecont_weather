@@ -24,6 +24,9 @@ foreach ($objects['0'] as $forecast) {
             background-color:transparent;
             border:none;
         }
+        :root{
+            --dark-blue:transparent
+        }
         <?php }?>
         <?php
         if(isset($_REQUEST['color_fon']) && $_REQUEST['color_fon'] !=='#') {?>
